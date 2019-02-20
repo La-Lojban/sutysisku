@@ -1,0 +1,11 @@
+{
+ "bangudesc": "<h1><b>la sutysisku</b> は、素早く検索できるロジバンの辞書です。</h1><div style=\"text-align:justify;\">――インターネットに接続していない時にでも使えるの？<br/>――使えます。接続していない時にこのブラウザから今のこのアドレスを開いてみて下さい。開くはずです。 Chrome か Safari か Firefox の最新版が必要です。<ul class='liste'><li>探索欄に焦点を当てさせるために、<code>「／」</code>というキーを押してください。</li><li>韻を探索するには、何らかの言葉を記入し、その後直ちに<code>「@」</code>を加えることで、一致さ によって整列された韻を探し当てることができます。たとえば<code>「klama@」</code>。</li><li>上級ユーザーの場合：正規表現でタイトルに探索することを可能にするには、文字列が<code>「^」</code>で始め、又は文字列が<code>「$」</code>で終わることにしてください。例えば<code>「^mi, gau$」</code>。</li></ul>他の教材については<a href='http://mw.lojban.org/index.php?title=Lojban&setlang=ja' target='_blank'>ロジバンのウィキ</a>を訪れて下さい。</div>",
+ "bangusisku": "日本 - ロジバン",
+ "bangulo": "辞書を読み込んでいます ...",
+ "siskudescr": "ロジバン辞書 la jbovlaste で検索。",
+ "opdescr": "オフラインで使える、ロジバン・日本語・その他の言語対応辞書。",
+ "xuzganalojudri": "true",
+ "lojbo": "true",
+ "kunti": "消去",
+ "rimni": "韻探索"
+}

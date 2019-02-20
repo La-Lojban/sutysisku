@@ -1,0 +1,23 @@
+{
+  "background_color": "#ffffff",
+  "name": "La Muplis e Lai Sutysisku",
+  "short_name": "La Sutysisku",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "./144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "./96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "./32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}

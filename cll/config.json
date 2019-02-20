@@ -1,0 +1,11 @@
+{
+ "bangudesc": "<h1 style='font-size:1em;font-weight:normal;'><b>Red Book Sisku</b> is a searchable version of the reference grammar of Lojban spoken/logical language.</h1><p>- Can I use it if I lose internet access?<br/>- Yes, if this happens try opening this very address from this browser.<br/>It should still open. A latest version of Chrome, Safari or Firefox is required.<br/>Press \"/\" to focus the search field.<br/>To search for rhymes: enter a word and type \"@\" after it to find its rhymes sorted by relevance. \"klama@\" is an example.<br/>For advanced users: to enable regular expressions search in titles<br/>either start the string with \"^\" or end with \"$\":<br/>\"^mi\", \"gau$\" are examples. <br/>For more resources visit <a href='https://mw.lojban.org' target='_blank'>Lojban Wiki</a>.</p><p><span id='searchengine'><i><a href='#' title='cll-sutysisku' onclick=\"window.external.AddSearchProvider('https://la-lojban.github.io/sutysisku/cll/sisku.xml')\">Add as a search engine</a></i></span></p>",
+ "bangusisku": "search",
+ "bangulo": "Loading Red Book ...",
+ "title": "Lojban dictionary Red Book Sisku",
+ "siskudescr": "Lojban reference grammar, searchable",
+ "opdescr": "Lojban grammar tool: works offline (+ English and other languages)",
+ "bangu": "english",
+ "lojbo": "true",
+ "xuzganalojudri": "true"
+}

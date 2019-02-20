@@ -1,0 +1,12 @@
+{
+  "bangudesc": "<h1><b>la sutysisku</b> 是逻辑语的快速词典。</h1><div style=\"text-align:justify;\">- 离线时还能使用吗？<br/>- 只要使用该网址打开就可以。这个功能要求最新版的 QQ Browser、UC Browser、Safari 或 Firefox。<ul class='liste'><li>按 <code>/</code> 键定位到搜索框。</li><li>韵脚搜索：输入一个单词并输入在后面输入 @，即可找到按相关度排序的押韵词。例如 <a href='#sisku/grana%40' class='judri'><code>grana@</code></a>。</li><li>对于高级用户：如果查询以 <code>^</code> 开始或以 <code>$</code> 结束，则启用正则表达式搜索。例如 <a href='#sisku/%5Eui' class='judri'><code>^ui</code>, <a href='#sisku/sku%24' class='judri'><code>sku$</code></a>。</li></ul></div>",
+  "bangusisku": "中文 - 逻辑语",
+  "bangulo": "正在加载词典 ...",
+  "title": "逻辑语词典 la sutysisku",
+  "siskudescr": "搜索逻辑语词典 la jbovlaste.",
+  "opdescr": "逻辑语词典：离线工作（+汉语和其他语言）",
+  "bangu": "chinese",
+  "lojbo": "true",
+  "muplis": "false",
+  "xuzganalojudri": "true"
+}

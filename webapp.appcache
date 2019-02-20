@@ -1,0 +1,24 @@
+CACHE MANIFEST
+# 2017-04-01:v2
+CACHE:
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/config/TeX-MML-AM_CHTML.js?V=2.7.4
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/jax/input/TeX/config.js?V=2.7.4
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/jax/output/HTML-CSS/config.js?V=2.7.4
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/extensions/tex2jax.js?V=2.7.4
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/jax/output/CommonHTML/jax.js?V=2.7.4
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/jax/output/CommonHTML/fonts/TeX/fontdata.js?V=2.7.4
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff
+
+index.html?version=35
+lib/Metro-UI-CSS/build/js/metro.js
+lib/Metro-UI-CSS/build/css/metro.css
+./pixra/snime.svg
+./pixra/taplamuplis.svg
+./pixra/taplasance.svg
+./pixra/rimni.png
+./pixra/ldp.svg
+https://mw.lojban.org/images/2/20/lanci_epo.svg
+NETWORK:
+*

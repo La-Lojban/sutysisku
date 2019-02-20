@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html manifest='webapp.appcache' xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+<script>
+(function(i, s, o, g, r, a, m) {
+i['GoogleAnalyticsObject'] = r;
+i[r] = i[r] || function() {
+(i[r].q = i[r].q || []).push(arguments)
+}, i[r].l = 1 * new Date();
+a = s.createElement(o),
+m = s.getElementsByTagName(o)[0];
+a.async = 1;
+a.src = g;
+m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-45171210-6', 'auto', {
+'allowLinker': true
+});
+ga('require', 'linker');
+ga('linker:autoLink', ['la-lojban.github.io/sutysisku']);
+ga('set', 'forceSSL', true);
+ga('send', 'pageview');
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({ showMathMenu: false, extensions: ["tex2jax.js"], jax: ["input/TeX", "output/HTML-CSS"], tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script>
+ArcBTracker = {
+fire: function(env) {
+if (typeof(env) == "undefined") {
+env = {};
+}
+env.u = document.location.href;
+env.bw = window.innerWidth;
+env.bh = window.innerHeight;
+if (document.referrer && document.referrer != "") {
+env.ref = document.referrer;
+}
+env.rnd = Math.floor(Math.random() * 10e12);
+var params = [];
+for (var key in env) {
+if (env.hasOwnProperty(key)) {
+params.push(encodeURIComponent(key) + "=" + encodeURIComponent(env[key]));
+}
+}
+var img = new Image();
+img.src = 'https://jbotcan.org:3021/acceptor.gif?' + params.join('&');
+}
+};
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script>
+<script>
+var socket = io.connect('https://jbotcan.org:3020');
+socket.on('la_arxivo_cu_cusku', function(data) {
+if(seskari ==='arxivo'){
+results = data.message;
+outp.innerHTML = '';
+window.jimte = 30;
+resultCount = 0;
+CLL();
+skicu_lo_ro_valsi();
+displayDescription(true);
+}
+});
+</script>
+<title>la sutysisku - словарь языка ложбан</title>
+<meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=0,viewport-fit=cover" />
+<meta name="theme-color" content="#1941a5">
+<meta property="og:title" content="Sutysisku" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://la-lojban.github.io/sutysisku/ru/index.html" />
+<meta property="og:image" content="https://mw.lojban.org/images/1/11/sutysisku2015-06-22.png" />
+<meta property="og:site_name" content="Sutysisku" />
+<meta property="fb:app_id" content="191051864394489" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@Jbotcan" />
+<meta name='apple-mobile-web-app-title' content="Sutysisku">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="../pixra/57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../pixra/114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../pixra/72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../pixra/144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../pixra/120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../pixra/152.png" />
+<link rel="icon" type="image/png" href="../pixra/32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="../pixra/16.png" sizes="16x16" />
+<meta name="application-name" content="Sutysisku" />
+<meta name="msapplication-TileColor" content="#1941a5">
+<meta name="msapplication-TileImage" content="../pixra/144.png">
+<meta property="og:description" content="Словарь ложбана (Lojban), английского и других языков, может работать без подключения к интернету." />
+<link rel="shortcut icon" href="../pixra/snime.svg" />
+<link rel="search" type="application/opensearchdescription+xml" href="/sutysisku/ru/sisku.xml" title="ru-sutysisku">
+<style type="text/css">
+#arxivo {
+display: none;
+}
+body {
+font-family: Tahoma, Lato, sans-serif;
+font-size: 90%;
+overflow: hidden;
+margin: 0;
+height: 100vh;
+}
+h1 {
+font-size: 1em;
+font-weight: normal;
+}
+h4 {
+display: inline;
+margin: 0;
+}
+.liste {
+list-style-image: url(../pixra/cmalu_snime.svg);
+}
+.judri {
+color: inherit;
+}
+code {
+border: 1px solid #aaa;
+display: inline-block;
+padding: 3px;
+border-radius: 3px;
+margin-left: 1px;
+margin-right: 1px;
+}
+.hilite {
+background-color: #d1ff9e;
+}
+.type {
+display: inline;
+float: right;
+font-style: italic;
+margin: -3px 0 0 13px;
+color: rgb(118, 118, 118);
+font-size: 12px;
+border: 1px solid rgb(118, 118, 118);
+background-color: #ffffff;
+padding: 5px 7px 5px 5px;
+border-radius: 5px;
+z-index: 1;
+}
+.type:hover {
+box-shadow: 0 0 3pt 1pt #999999;
+}
+.heading {
+align-items: flex-start;
+flex-direction: row;
+display: flex;
+flex: 1;
+}
+.tfm {
+display: inline;
+font-style: italic;
+color: rgb(118, 118, 118);
+}
+.nasezvafahi {
+font-style: italic;
+color: rgb(118, 118, 118);
+cursor: default;
+user-select: none;
+}
+.nalojbo {
+color: #6A5ACD;
+}
+.valsi {
+overflow-wrap: break-word;
+word-wrap: break-word;
+-ms-word-break: break-all;
+word-break: break-all;
+word-break: break-word;
+-ms-hyphens: auto;
+-moz-hyphens: auto;
+-webkit-hyphens: auto;
+hyphens: auto;
+}
+.definition {
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.notes {
+margin-left: 10px;
+}
+.mupligreku {
+border: 1px dashed #aaa;
+padding: 5px;
+}
+.subdefinitions {
+padding-left: 0px;
+border-left: solid 3px #1E90FF;
+}
+.term {
+margin-top: 9px;
+padding: 9px;
+text-align: justify;
+background: white; 
+} 
+.termouter:hover {
+outline: #999999 solid 3px; 
+z-index: 2;
+}
+.terminner {
+border-top: solid 1px #ccc;
+border-right: solid 1px #ccc;
+border-bottom: solid 1px #ccc;
+box-shadow: 3px 3px 1px #ccc;
+}
+.rafsi {
+margin-top: 8px;
+font-size: 90%;
+}
+.rafsi .pamei {
+font-style: italic;
+margin-left: 15px;
+}
+.galtu-dasri {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 48px;
+width: auto;
+font-size: 18px;
+padding: 0;
+background: rgb(56,136,233);
+background: -moz-linear-gradient(top, rgba(56,136,233, 1) 0%, rgba(34,87,213, 1) 13%, rgba(38,99,224, 1) 88%, rgba(25,65,165, 1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(56,136,233, 1)), color-stop(13%, rgba(34,87,213, 1)), color-stop(88%, rgba(38,99,224, 1)), color-stop(100%, rgba(25,65,165, 1)));
+background: -webkit-linear-gradient(top, rgba(56,136,233, 1) 0%, rgba(34,87,213, 1) 13%, rgba(38,99,224, 1) 88%, rgba(56,136,233, 1) 100%);
+background: -o-linear-gradient(top, rgba(56,136,233, 1) 0%, rgba(34,87,213, 1) 13%, rgba(38,99,224, 1) 88%, rgba(25,65,165, 1) 100%);
+background: -ms-linear-gradient(top, rgba(56,136,233, 1) 0%, rgba(34,87,213, 1) 13%, rgba(38,99,224, 1) 88%, rgba(25,65,165, 1) 100%);
+background: linear-gradient(to bottom, rgba(56,136,233, 1) 0%, rgba(34,87,213, 1) 13%, rgba(38,99,224, 1) 88%, rgba(25,65,165, 1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de', GradientType=0);
+color: #FFF;
+user-select: none;
+}
+.rimni-dasri {
+background: rgb(230,47,0);
+background: -moz-linear-gradient(top, rgba(230,47,0, 1) 0%, rgba(119,29,29, 1) 10%, rgba(220,4,4, 1) 91%, rgba(95,29,0, 1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(230,47,0, 1)), color-stop(10%, rgba(119,29,29, 1)), color-stop(91%, rgba(220,4,4, 1)), color-stop(100%, rgba(95,29,0, 1)));
+background: -webkit-linear-gradient(top, rgba(230,47,0, 1) 0%, rgba(119,29,29, 1) 10%, rgba(220,4,4, 1) 91%, rgba(230,47,0, 1) 100%);
+background: -o-linear-gradient(top, rgba(230,47,0, 1) 0%, rgba(119,29,29, 1) 10%, rgba(220,4,4, 1) 91%, rgba(95,29,0, 1) 100%);
+background: -ms-linear-gradient(top, rgba(230,47,0, 1) 0%, rgba(119,29,29, 1) 10%, rgba(220,4,4, 1) 91%, rgba(95,29,0, 1) 100%);
+background: linear-gradient(to bottom, rgba(230,47,0, 1) 0%, rgba(119,29,29, 1) 10%, rgba(220,4,4, 1) 91%, rgba(95,29,0, 1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de', GradientType=0);
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 48px;
+width: auto;
+font-size: 18px;
+padding: 0;
+color: #FFF;
+user-select: none;
+}
+#se-vasru-lo-galtu-dasri {
+max-width: 700px;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+}
+#site-title {
+font-size: 18px;
+font-weight: bold;
+float: left;
+border-radius: 0px 0px 14px 14px;
+border-color: #333;
+border-width: 0px 1px 1px 1px;
+border-style: solid;
+height: 22px;
+padding: 12px 10px 14px 10px;
+}
+.desktop-mode-title-color {
+background: rgba(38,99,224, 1);
+cursor: default;
+}
+.rimni-search-mode-title-color {
+background: linear-gradient( to top right, rgba(119,29,29, 1) 0%, rgba(220,4,4, 1) 40%);
+box-shadow: 1px 1px 30px rgba(95,29,0, 1);
+cursor: pointer;
+}
+.normal-search-mode-title-color {
+background: linear-gradient( to top right, rgba(63, 81, 181, 1) 0%, rgba(4, 119, 218, 1) 40%);
+box-shadow: 1px 1px 30px rgba(2, 119, 189, 1);
+cursor: pointer;
+}
+#ciska {
+height: 30px;
+font-size: 130%;
+font-family: Arial, Helvetica, sans-serif;
+border: 1px solid #777;
+padding: 2px 42px 2px 16px;
+transition: background 0.4s;
+float: right;
+margin-top: 6px;
+outline: 0;
+min-width: 0;
+}
+#ciska:not(:valid)~#kunti {
+display: none;
+}
+#ciska:not(:valid)~#clear {
+display: none;
+}
+#clear {
+position: absolute;
+border: 1px solid transparent;
+display: inline-block;
+vertical-align: middle;
+outline: 0;
+cursor: pointer;
+margin-top: 7px;
+height: 0;
+}
+#title {
+cursor: default;
+}
+#purci {
+display: inline;
+}
+@media screen and (min-width: 510px) {
+#clear {
+padding: 22px 30px 10px 30px;
+right: 0px;
+background-color: transparent;
+background-image: url(../pixra/x.svg);
+background-position: center;
+background-repeat: no-repeat;
+}
+#title>#site-title>font {
+width: auto;
+}
+#kicne1,
+#kicne2 {
+display: none;
+}
+#se-vasru-lo-galtu-dasri {
+display: block;
+}
+.sidju {
+margin-left: 10%;
+cursor: default;
+user-select: none;
+}
+#ciska {
+border-radius: 1em;
+-webkit-border-radius: 1em;
+-moz-border-radius: 1em;
+}
+}
+@media screen and (max-width: 509px) {
+#clear {
+padding: 22px 20px 10px 20px;
+right: 5px;
+width: 23px;
+background-color: rgba(255, 255, 255, 0.8);
+background-image: url(../pixra/x.svg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: 22px;
+}
+div {
+line-height: 150%;
+}
+#title>#site-title>img {
+width: 23px;
+height: 23px;
+}
+#title>#site-title>img:nth-child(1)~img {
+display: none;
+}
+#title>#site-title>font {
+display: none;
+}
+#kicne1 {
+display: block;
+width: 6px;
+}
+#kicne2 {
+display: block;
+width: 6px;
+}
+#ciska:not(:valid)~#kicne2 {
+width: 6px;
+}
+#se-vasru-lo-galtu-dasri {
+display: inline-flex;
+width: 100%;
+}
+.sidju {
+margin-left: 0%;
+}
+#ciska {
+width: 100%;
+padding: 2px 30px 2px 6px;
+border-radius: 2px;
+}
+}
+::selection {
+background: rgba(56,136,233, 1);
+color: #fff;
+text-shadow: none;
+}
+#content {
+padding-left: 5px;
+padding-right: 5px;
+overflow: auto;
+border-top: 48px solid transparent;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box; 
+background: #222222 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+background-size: 40px 40px !important; 
+}
+#content-panel {
+max-width: 700px;
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+}
+#outp {
+margin-bottom: 15px;
+}
+a {
+color: #2B79E0;
+text-decoration: none;
+}
+#descr {
+margin: 5px 0 15px 0;
+text-align: center;
+text-shadow: 0px 1px 0px rgba(255, 255, 255, .5);
+color: #333;
+}
+#loading {
+text-align: center;
+}
+sup,
+sub {
+vertical-align: baseline;
+position: relative;
+top: -0.4em;
+font-size: 70%;
+}
+sub {
+top: 0.4em;
+}
+.tutci {
+-moz-box-shadow: inset 0px -3px 7px 0px #29bbff;
+-webkit-box-shadow: inset 0px -3px 7px 0px #29bbff;
+box-shadow: inset 0px -3px 7px 0px #29bbff;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2dabf9), color-stop(1, #0688fa));
+background: -moz-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+background: -webkit-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+background: -o-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+background: -ms-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2dabf9', endColorstr='#0688fa', GradientType=0);
+background-color: #2dabf9;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+border: 1px solid #000000;
+display: inline-block;
+cursor: pointer;
+color: #ffffff;
+padding: 3px 10px;
+text-decoration: none;
+text-shadow: 0px 1px 0px #263666;
+height: 21px;
+}
+.tutci:hover {
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0688fa), color-stop(1, #2dabf9));
+background: -moz-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+background: -webkit-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+background: -o-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+background: -ms-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0688fa', endColorstr='#2dabf9', GradientType=0);
+background-color: #0688fa;
+}
+.tutci:active {
+position: relative;
+top: 1px;
+}
+#DIV_1 {
+display: inline-block;
+position: relative;
+margin: 5px;
+}
+#DIV_1:hover {
+outline: rgb(153, 153, 153) solid 3px;
+}
+#DIV_1:active {
+position: relative;
+top: 1px;
+}
+#DIV_2 {
+position: absolute;
+}
+#SPAN_3 {
+bottom: 0px;
+box-sizing: border-box;
+position: absolute;
+right: 0px;
+z-index: 999;
+background: rgba(255, 255, 255, 0.6) none repeat scroll 0% 0% / auto padding-box border-box;
+font: normal normal normal normal 14px / 15.4px "Segoe UI", "Open Sans", sans-serif, serif;
+padding: 4px 4px;
+pointer-events: none;
+text-align: right;
+}
+#B_4 {
+text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px;
+font: normal normal bold normal 14px / 15.4px "Segoe UI", "Open Sans", sans-serif, serif;
+}
+#A_7 {
+display: inline-block;
+border-collapse: collapse;
+box-sizing: border-box;
+text-decoration: none;
+text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px;
+user-select: none;
+border: 0;
+font: normal normal normal normal 14px / 15.4px "Segoe UI", "Open Sans", sans-serif, serif;
+}
+#DIV_8 {
+background-position: center;
+background-color: #ffffff;
+background-size: contain;
+background-repeat: no-repeat;
+}
+.sidju {
+margin-top: 0px;
+margin-bottom: 15px;
+padding: 8px 12px 6px;
+text-align: left;
+background: white;
+border-bottom-left-radius: 7px 7px;
+border-bottom-right-radius: 7px 7px;
+border-width: 0px;
+border-style: solid;
+border-top: none;
+box-shadow: 0 0 0 1px rgb(56,136,233),
+0 0 0 2px rgb(34,87,213),
+0 0 0 3px rgb(38,99,224),
+0 0 0 4px rgb(25,65,165);
+-moz-box-shadow: 0 0 0 1px rgb(56,136,233),
+0 0 0 2px rgb(34,87,213),
+0 0 0 3px rgb(38,99,224),
+0 0 0 4px rgb(25,65,165);
+-webkit-box-shadow: 0 0 0 1px rgb(56,136,233),
+0 0 0 2px rgb(34,87,213),
+0 0 0 3px rgb(38,99,224),
+0 0 0 4px rgb(25,65,165);
+line-height: 150%;
+}
+#cpacu {
+position: relative;
+display: block;
+width: 30%;
+margin: auto;
+background-color: #eee;
+padding: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-o-border-radius: 3px;
+border-radius: 3px;
+-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+-o-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2)
+}
+#kernelo_lo_cpacu {
+height: 5px;
+display: block;
+background-color: cornflowerblue;
+width: 0%;
+border-radius: 3px;
+-webkit-transition: width .8s ease;
+-moz-transition: width .8s ease;
+-o-transition: width .8s ease;
+transition: width .8s ease
+}
+</style>
+<link rel="manifest" href="../manifest.json">
+<script src="bangu.js"></script>
+</head>
+<body>
+<div id='galtu-dasri' class='galtu-dasri'>
+<form id='se-vasru-lo-galtu-dasri' onsubmit="return false" novalidate>
+<a id='title' href='#'><span id='site-title'><img src="../pixra/snime.svg" height='16' width='16'><font color='#fff'>la sutysisku</font></span></a>
+<div id="kicne1"></div>
+<input id='ciska' class="ciska" type="text" name="focus" required placeholder="русский - lojban" autofocus autocorrect="off" autocapitalize="off" autocomplete="false" />
+<div id="kicne2"></div>
+<button id="clear" type="reset"></button>
+</form>
+</div>
+<div id='content'>
+<div id='content-panel'>
+<div id='sidju' class='sidju'><a class='tutci' id='rimni'>Поиск рифм</a><a class='tutci' id='cnano'>Normal search</a><a class='tutci' id='arxivo'>arxivo</a>
+<div id="purci"></div>
+</div>
+<div id='loading' class="term">
+<span id='caho_cpacu'>Загружаем словарь ...</span><br>
+<div id="cpacu">
+<span id='kernelo_lo_cpacu'></span>
+</div>
+</div>
+<div id='drata' style="text-align:center;"></div>
+<div id='descr' class="term termouter"><h1><b>la sutysisku</b> - быстрый словарь языка 'ложбан'.</h1><div style="text-align:justify;">- Будет ли эта страничка открываться, если у меня будет недоступен интернет?<br>- Да, если это случится, всё равно откройте этот же адрес с этого же самого браузера. Страничка всё равно должна открыться. Требуется последняя версия браузера Chrome, Яндекс Браузера, Safari или Firefox. Работает на устройствах Android и Apple.<ul class='liste'><li>Нажмите <code>/</code>, чтобы перейти в поле поиска.</li><li>Поиск рифм: введите слово и добавьте <code>@</code> (пример: <code>klama@</code>) после него, чтобы найти рифмы, отсортированные по убыванию их 'лучшести'.</li><li>Для гиков: поиск слов ложбана регулярными выражениями доступен добавлением перед словом символа <code>^</code> или позади слова символа <code>$</code>. Примеры: <code>^mi</code>, <code>gau$</code>.</li></ul>Больше ресурсов на русском на сайте <a href='http://mw.lojban.org/index.php?title=Lojban&setlang=ru' target='_blank'>lojban.org</a>.</div></div>
+<div id='outp'></div>
+</div>
+</div>
+<script>
+var seskari = localStorage.getItem('seskari') || 'cnano';
+var ciska = document.getElementById('ciska');
+var outp = document.getElementById('outp');
+var descr = document.getElementById('descr');
+var drata = document.getElementById('drata');
+var purci = document.getElementById('purci');
+var sidju = document.getElementById('sidju');
+var pb = document.getElementById('kernelo_lo_cpacu');
+var worker = new Worker('worker.js');
+var SiteTitle = document.querySelector('#title > font');
+var SiteTitleFull = document.querySelector('#site-title');
+SiteTitleFull.classList.add("desktop-mode-title-color");
+var dasri = document.getElementById('galtu-dasri');
+var SiteImage = document.querySelectorAll('#title > img');
+var fm = {
+BE: "bei",
+BEI: "be'o",
+BY: "boi",
+COI: "do'u",
+DOI: "do'u",
+FIhO: "fe'u",
+FUhE: "fu'o",
+GIhA: "vau",
+GOI: "ge'u",
+JOhI: "te'u",
+KE: "ke'e",
+LAhE: "lu'u",
+LA: "ku",
+LE: "ku",
+LI: "lo'o",
+LOhU: "le'u",
+LU: "li'u",
+ME: "me'u",
+"NAhE+BO": "lu'u",
+NOI: "ku'o",
+NUhI: "nu'u",
+NU: "kei",
+PA: "boi",
+PEhO: "ku'e",
+SEI: "se'u",
+SOI: "se'u",
+TO: "toi",
+TUhE: "tu'u",
+VEI: "ve'o",
+LOhAI: "sa'ai",
+SAhAI: "le'ai",
+LOhOI: "ku'au",
+NAhU: "te'u",
+NIhE: "te'u",
+MOhE: "te'u"
+};
+var query = "";
+var rock = "";
+var einingau;
+var resultCount;
+var results = [];
+var ready;
+var prevQuery, drataQuery = '';
+var lastQueried = cati();
+var typingTimer;
+var delay = (function() {
+var timer = 0;
+return function(callback, ms) {
+clearTimeout(timer);
+timer = setTimeout(callback, ms);
+};
+})();
+window.addEventListener('popstate', sisku_rahilejudri);
+window.addEventListener('resize', calcVH, true);
+document.getElementById('clear').addEventListener('click', zero);
+document.getElementById('title').addEventListener('click', zero);
+purci.addEventListener("click", clicked);
+document.getElementById('content').addEventListener('scroll', checkScrolledNearBottom);
+if (document.attachEvent) {
+document.attachEvent('onkeyup', handler);
+} else {
+document.addEventListener('keyup', handler);
+}
+ciska.addEventListener("keyup", function() {
+typing()
+});
+ciska.addEventListener("keydown", function() {
+clearTimeout(typingTimer);
+displayDescription();
+});
+ciska.addEventListener("paste", typing(0));
+ciska.addEventListener("input", typing());
+ciska.addEventListener("focus", doSearch);
+ciska.addEventListener("textInput", typing());
+if (document.readyState === 'loading') {
+pb.style.width = '37%';
+document.addEventListener('DOMContentLoaded', doSearch);
+} else {
+doSearch();
+}
+calcVH();
+sisku_rahilejudri();
+document.getElementById('rimni').addEventListener("click", function() {
+if (!ready) return;
+seskari = 'rimni';
+query = plukaquery(ciska.value);
+if (query === '') {
+var arrpurc = JSON.parse(localStorage.getItem('purci')) || [];
+if (arrpurc && arrpurc[0]) query = arrpurc[0];
+}
+query = query.replace(/@+$/, '');
+if (query === '') return;
+ciska.value = query;
+triggerEvent(ciska, 'input');
+doSearch();
+});
+document.getElementById('cnano').addEventListener("click", function() {
+seskari = 'cnano';
+if (!ready) return;
+doSearch();
+});
+document.getElementById('arxivo').addEventListener("click", function() {
+seskari = 'arxivo';
+query = ciska.value;
+if (query === '') {
+var arrpurc = JSON.parse(localStorage.getItem('purci')) || [];
+if (arrpurc && arrpurc[0]) query = arrpurc[0];
+}
+socket.emit('cpedu_fi_la_arxivo', {
+data: query
+});
+});
+function triggerEvent(el, type) {
+if ('createEvent' in document) {
+var e = document.createEvent('HTMLEvents');
+e.initEvent(type, false, true);
+el.dispatchEvent(e);
+} else {
+var e = document.createEventObject();
+e.eventType = type;
+el.fireEvent('on' + e.eventType, e);
+}
+}
+function zero(e) {
+if (this.toString() === 'kunti')
+document.getElementsByTagName('input')[0].value = "";
+if (query !== '') {
+query = '';
+prevQuery = '';
+displayDescription();
+CnanoSutysisku();
+} else {
+doSearch();
+}
+}
+function calcVH() {
+document.getElementById("content").setAttribute("style", "height:" + Math.max(document.documentElement.clientHeight, window.innerHeight || 0) + "px;");
+}
+worker.onmessage = function(ev) {
+if (ev.data.kind == 'ready') {
+ready = true;
+var l = document.getElementById('loading');
+l.parentNode.removeChild(l);
+} else if (ev.data.kind == 'searchResults') {
+if (ev.data.query !== query) return;
+results = ev.data.results;
+outp.innerHTML = '';
+CLL();
+skicu_lo_ro_valsi();
+displayDescription();
+} else if (ev.data.kind == 'loading') {
+document.getElementById('caho_cpacu').textContent = window.bangubuild;
+pb.style.width = '51%';
+} else if (ev.data.kind == 'progress') {
+pb.style.width = (ev.data.percent * 100) + '%';
+}
+};
+function getCLLSections(te_gerna) {
+return Object.keys(window.arrcll || []).reduce(function(init, i) {
+if (i.indexOf(te_gerna) === 0) {
+init = init.concat(window.arrcll[i]);
+}
+return init;
+}, []).filter(function(a, b, mi) {
+return mi.indexOf(a) === b;
+});
+}
+function CLL() {
+var sc = getCLLSections(query);
+if (sc.length === 0 && results && results[0] && results[0].s) sc = getCLLSections(results[0].s);
+if (sc && sc.length > 0) {
+sc = window.cllnotci + "<ul class='liste'>" + sc.map(function(arg) {
+var a = window.cylylypoicnino[arg]
+return "<li><a target='_blank' href=\"http:\/\/lojban.org\/publications/cll\/cll_v1.1_xhtml-section-chunks\/" + a.judri + "\">" + escHtml(a.cmene) + "</a></li>";
+}).join("") + "</ul>";
+var div = document.createElement('div');
+div.className = 'sidju';
+div.innerHTML = sc;
+outp.appendChild(div);
+}
+}
+function checkScrolledNearBottom(ev) {
+if ((ev.target.scrollTop + window.innerHeight) >= (outp.clientHeight - 700)) {
+window.jimte += 10;
+skicu_lo_ro_valsi();
+MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+}
+}
+function melbi_uenzi(a) {
+return ("<span>" + a
+.replace(/\$.*?\$/g, function(c) {
+return c
+.replace(/\{/g, "\\curlyleft")
+.replace(/\}/g, "\\curlyright");
+})
+.replace(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g, function(c) {
+return '</span><a href="' + c + '" target="_blank">' + hilite(c) + "</a><span>"
+})
+.replace(/@@@(.*?)@@@/g, "<i>$1</i>")
+.replace(/\{.*?\}/g, function(c) {
+var c = c.substring(1, c.length - 1);
+return '</span><a href="#sisku/' + encodeUrl(c) + '">' + hilite(escHtml(c, true)) + "</a><span>"
+})
+.replace(/\$.*?\$/g, function(c) {
+return c
+.replace(/\\curlyleft/g, "{")
+.replace(/\\curlyright/g, "}");
+}) + "</span>")
+.replace(/<span><\/span>/g, '')
+.replace(/<span>.*?<\/span>/g, function(c) {
+var c = c.substring(6, c.length - 7);
+return hilite(c)
+})
+}
+function hilite(txt) {
+return txt.replace(rock, "<span class='hilite'>$1</span>")
+}
+function skicu_pavalsi(def, inner) {
+if (!def) def = [];
+var out = document.createElement('div');
+out.className = (inner === 1) ? 'terminner' : 'termouter';
+out.classList.add('term');
+if (typeof fm[def.s] !== 'undefined') {
+var fmm = document.createElement('h4');
+fmm.className = 'tfm';
+fmm.innerHTML = '&nbsp;&nbsp;<i><sup>[&nbsp;...&nbsp;&nbsp;&nbsp;<a href="#sisku/' +
+encodeUrl(fm[def.s]) + '">' + escHtml(fm[def.s]) + "</a>]</sup></i>";
+}
+var sh = [];
+for (var key in fm) {
+if (fm[key] === def.w) sh.push('<a href="#sisku/' + encodeUrl(key) + '">' + escHtml(key) + '</a>');
+}
+if (sh.length !== 0) {
+var tfm = document.createElement('div');
+tfm.classList.add('valsi');
+if (def.l) tfm.classList.add('nalojbo');
+tfm.innerHTML = '<i><sup>[' + sh.join(", ") + '&nbsp;&nbsp;&nbsp;...&nbsp;]</sup></i>&nbsp;&nbsp;';
+}
+if (def.s) {
+var ss = document.createElement('div');
+ss.className = 'type';
+ss.innerHTML = '<a href="#sisku/' + encodeUrl(def.s) + '">' + hilite(escHtml(def.s)) + "</a> ";
+}
+if (def.t) {
+var jvs = document.createElement('div');
+jvs.className = 'type';
+jvs.innerHTML = def.t;
+if (window.xuzganalojudri && !def.l) {
+jvs.innerHTML = "<a style='color: #000;' target='_blank' href=\"" + window.judri +
+encodeUrl(def.w).replace(/_/g, '%20') + "\">" + escHtml(def.t) + "<font color='#aaa'>#</font></a> ";
+}
+}
+if (def.date) {
+var jvs = document.createElement('div');
+jvs.className = 'type';
+jvs.innerHTML = def.date;
+}
+if (def.from) {
+var ss = document.createElement('div');
+ss.className = 'type';
+ss.innerHTML = def.from;
+}
+var word = document.createElement('h4');
+word.classList.add('valsi');
+if (def.l) word.classList.add('nalojbo');
+if (plukaquery(def.w) == query) {
+word.innerHTML = hilite(query) + ' ';
+} else {
+word.innerHTML = '<a class="valsi' + (def.l ? '' : ' nalojbo') + '" href="#sisku/' + encodeUrl(def.w) + '">' + hilite(escHtml(def.w, true)) + "</a>" + ' ';
+}
+var heading = document.createElement('heading');
+heading.classList.add('heading');
+var flex = document.createElement('heading');
+flex.style.flex = 1;
+if (tfm) heading.appendChild(tfm);
+heading.appendChild(word);
+if (fmm) heading.appendChild(fmm);
+heading.appendChild(flex);
+if (jvs) out.appendChild(jvs);
+if (ss) out.appendChild(ss);
+out.appendChild(heading);
+if (def.d) {
+var n = document.createElement('div');
+n.className = 'definition';
+n.classList.add('valsi');
+if (def.d.nasezvafahi) {
+n.classList.add('nasezvafahi');
+n.innerHTML = window.nasezvafahi;
+} else {
+n.innerHTML = melbi_uenzi(def.d).replace(/\n/g,'<br/>') + ' ';
+}
+out.appendChild(n);
+}
+if (def.n) {
+var n = document.createElement('div');
+n.className = 'notes';
+n.classList.add('valsi');
+n.innerHTML = melbi_uenzi(def.n) + ' ';
+out.appendChild(n);
+}
+if (def.e) {
+var n = document.createElement('div');
+n.className = 'examples';
+n.classList.add('valsi');
+n.innerHTML = "<table style='width:100%;border-collapse:collapse;margin-top:10px;margin-bottom:10px;'>" + melbi_uenzi((def.e + "\n").replace(/%/g, "\n").replace(/(.*?) — (.*?)\n/g,
+"<tr><td class='mupligreku'><b>$1<\/b><\/td><td class='mupligreku'><i>$2<\/i><\/td><\/tr>\n")) + '</table> ';
+out.appendChild(n);
+}
+if (def.k) {
+var n = document.createElement('div');
+n.className = 'related';
+n.innerHTML = 'See also: ' + melbi_uenzi(def.k) + ' ';
+out.appendChild(n);
+}
+if ((def.r || []).length > 0 && !def.l && window.xuzganalojudri) {
+var rafsi = document.createElement('div');
+rafsi.className = 'rafsi';
+rafsi.innerHTML = "rafsi: ";
+for (i = 0; i < def.r.length; i++) {
+var rafElem = document.createElement('span');
+rafElem.className = 'pamei';
+var raf = def.r[i];
+if ((def.t || '').match(/lujvo/)) {
+var a = document.createElement('a');
+a.setAttribute('href', '#sisku/' + encodeUrl(raf));
+a.text = raf;
+rafElem.appendChild(a);
+} else {
+rafElem.innerHTML = hilite(raf);
+}
+rafElem.innerHTML = rafElem.innerHTML + ' ';
+rafsi.appendChild(rafElem);
+}
+out.appendChild(rafsi);
+}
+if ((def.rafsiDocuments || []).length > 0) {
+var subDefs = document.createElement('div');
+subDefs.classList.add('definition');
+subDefs.classList.add('subdefinitions');
+for (var i = 0; i < def.rafsiDocuments.length; i++) {
+subDefs.appendChild(skicu_pavalsi(def.rafsiDocuments[i], 1));
+}
+out.appendChild(subDefs);
+}
+out.addEventListener("click", clicked);
+return out;
+}
+function displayDescription(ban_tex) {
+if (query == '') {
+SiteTitleFull.classList.remove("normal-search-mode-title-color");
+SiteTitleFull.classList.remove("rimni-search-mode-title-color");
+SiteTitleFull.classList.add("desktop-mode-title-color");
+dasri.className = 'galtu-dasri';
+outp.style.display = 'none';
+descr.style.display = 'block';
+var arrpurc = JSON.parse(localStorage.getItem('purci')) || [];
+var obj = {
+"@cirkotci": [0, "lojbo sance", "../pixra/taplasance.svg", 1, "../sance/"],
+"@CLL": ['.inglic.', "Reference Grammar", "../pixra/cll.png", 1, "http://lojban.org/publications/cll/cll_v1.1_xhtml-no-chunks/"],
+"@Jbotcan": ['.inglic.', "Lojban-Chan", "../pixra/jbotcan.svg", 1, "https://jbotcan.org"],
+"muplis": [0, "la muplis", "../pixra/taplamuplis.svg", 2.1],
+"jb": [0, "English - Lojban examples", "../pixra/snime-1.svg", 1],
+"en": [0, "English-Lojban", "../pixra/selsku_lanci_eng.svg", 1],
+"jbo": [0, "fanva fi le'e lojbo ri", "../pixra/lanci_jbo.svg", 1],
+"ja": [0, "日本 - <span style=\"white-space:pre;\">ロジバン</span>", "../pixra/selsku_lanci_jpn.svg", 1],
+"fr-facile": [0, "français facile - lojban", "../pixra/selsku_lanci_fra.svg", 1],
+"ru": [0, "русский - ложбан", "../pixra/selsku_lanci_rus.svg", 1],
+"eo": [0, "Esperanto - Loĵbano", "../pixra/lanci_epo.svg", 1],
+"es": [0, "español - lojban", "../pixra/selsku_lanci_spa.svg", 1],
+"zh": [0, "中文 - 逻辑语", "../pixra/selsku_lanci_zho.svg", 1],
+"@CC": ['.inglic.', "The Crash Course", "../pixra/cogwheel-5.svg", 1, "https://mw.lojban.org/papri/The_Crash_Course_in_Lojban"]
+}
+var acc = "";
+var cisn = 100;
+for (var key in obj) {
+if (obj[key][0] === 0 || obj[key][0] === window.bangu) {
+acc += "<div id='DIV_1' style='height:" + (cisn) + "px;width:" + (obj[key][3] * cisn) + "px;'><div id='DIV_2' style='height:" + (cisn) + "px;width:" + (
+obj[key][3] * cisn) + "px;'><span id='SPAN_3' style='width:auto;'><b id='B_4'>" + obj[key][1] + "</b></span><a" + ((obj[key][4] || '').indexOf("http") === 0 ? " target='_blank'" : '') + " href=\"" + ((key.indexOf(
+"@") === 0) ? obj[key][4] : ("https://la-lojban.github.io/sutysisku/" + key + "/#sisku/" + encodeUrl(drataQuery))) + "\" id='A_7'><div id='DIV_8' style='height:" +
+(cisn) + "px;width:" + (obj[key][3] * cisn) + "px;background-image:url(\"" + obj[key][2] + "\")'></div></a></div></div>";
+}
+}
+if (!drataQuery || (drataQuery === '')) drataQuery = (arrpurc[0] || '');
+drata.innerHTML = acc;
+drata.style.display = 'block';
+if (arrpurc.length > 0) {
+purci.innerHTML = " " + window.purc +
+arrpurc.map(
+function(a) {
+return '<a href="#sisku/' + encodeUrl(a) + '">' + escHtml(a) + "</a>";
+}
+).join(", ");
+sidju.style.display = 'block';
+}
+} else {
+if (!ban_tex) MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+outp.style.display = 'block';
+descr.style.display = 'none';
+drata.style.display = 'none';
+sidju.style.display = 'none';
+document.getElementById('content').scrollTop = 0;
+}
+}
+function plukaquery(a) {
+if (a.charAt(0) !== '^' && a.slice(-1) !== '$') return a.replace(/[,\.]/g, " ").replace(/ {2,}/g, " ").replace(/’/g,"'").trim();
+return a;
+}
+function clicked(event) {
+if (event.target.nodeName === 'A') {
+var el = event.target;
+if (el.ctrlKey || el.metaKey) return;
+lecnino_judri_gaumeluhacitri(el.getAttribute('href'));
+sisku_rahilejudri();
+}
+return false;
+}
+function lecnino_judri_gaumeluhacitri(a) {
+if (a !== location.href.substring(location.href.indexOf("#"))) {
+a = a.match(/(\#sisku\/)(.*)/);
+if (a) a = a[1] + encodeUrl(decodeUrl(a[2]));
+window.history.pushState({}, null, a || '');
+}
+}
+function sisku_rahilejudri() {
+var searchMatch = window.location.href.match(/\#sisku\/(.*)/);
+if (searchMatch && searchMatch.indexOf('/') === -1) {
+query = decodeUrl(searchMatch[1]).trim();
+ciska.value = query;
+triggerEvent(ciska, 'input');
+if (ready) doSearch();
+}
+}
+function doSearch() {
+query = plukaquery(ciska.value);
+rock = new RegExp("(" + query.replace(/ /g, "|") + "|" + query.replace(/'/g, "h").replace(/ /g, "|") + ")", "gi");
+if (query === '') {
+displayDescription();
+} else {
+drataQuery = query;
+}
+if (query === prevQuery) return;
+prevQuery = query;
+var url = '';
+if (query.length > 0) url = '#sisku/' + encodeUrl(query);
+if (url == '' || document.referrer === document.location.href) return;
+worker.postMessage({
+'kind': 'newSearch',
+'query': query,
+'type': seskari
+});
+var difference = cati() - lastQueried;
+if (difference > 2000) {
+lecnino_judri_gaumeluhacitri(url);
+ga('send', 'pageview', '#sisku/' + query);
+var pageViewData = {
+dl: window.location.href,
+dt: document.title,
+dr: document.referrer,
+dp: '#sisku/' + query,
+dh: window.location.protocol + "//" + window.location.hostname,
+z: Math.round(Math.random() * 1e12)
+};
+socket.emit('sisku', pageViewData);
+if (einingau) window.location.reload();
+} else {
+window.history.replaceState({}, null, url);
+}
+lastQueried = cati();
+window.jimte = 30;
+resultCount = 0;
+var ampersand = query.indexOf('@');
+if (seskari==='rimni') {
+SiteTitleFull.classList.add("rimni-search-mode-title-color");
+SiteTitleFull.classList.remove("normal-search-mode-title-color");
+SiteTitleFull.classList.remove("desktop-mode-title-color");
+dasri.className = 'rimni-dasri';
+for (var i = 0; i < SiteImage.length; i++) {
+SiteImage[i].style.filter = "sepia(1.0)";
+SiteImage[i].style.WebkitFilter = "sepia(1.0)";
+}
+} else if (seskari === 'cnano'){
+SiteTitleFull.classList.add("normal-search-mode-title-color");
+SiteTitleFull.classList.remove("desktop-mode-title-color");
+dasri.className = 'galtu-dasri';
+CnanoSutysisku();
+}
+}
+function CnanoSutysisku() {
+for (var i = 0; i < SiteImage.length; i++) {
+SiteImage[i].style.filter = "none";
+SiteImage[i].style.WebkitFilter = "none";
+}
+}
+function typing(a) {
+clearTimeout(typingTimer);
+typingTimer = setTimeout(doSearch, a ? a : 250);
+delay(function() {
+if (query === '' || !results || results.length === 0) return;
+var a = JSON.parse(localStorage.getItem('purci')) || [];
+var index = a.indexOf(query);
+if (index >= 0) a.splice(index, 1);
+a.unshift(query);
+if (a.length > 10) a.length = 10;
+localStorage.setItem('purci', JSON.stringify(a));
+}, 2000);
+};
+function encodeUrl(uenzi) {
+return encodeURIComponent(uenzi.replace(/ /g, "_")).replace(/'/g, "%27");
+}
+function decodeUrl(urli) {
+return decodeURIComponent(urli.replace(/&amp;/g, "&").replace(/%27/g, "'")).replace(/_/g, " ");
+}
+function escHtml(a, apos) {
+a = a
+.replace(/</g, "&lt;")
+.replace(/>/g, "&gt;")
+.replace(/"/g, "&quot;")
+.replace(/\(/g, "&#40;")
+.replace(/\)/g, "&#41;");
+if (!apos) a = a
+.replace(/'/g, "&#039;");
+return a;
+}
+function handler(e) {
+if (e.keyCode && e.keyCode === 191) ciska.focus();
+}
+function skicu_lo_ro_valsi() {
+var displayUpTo = Math.min(window.jimte, results.length);
+for (; resultCount < displayUpTo; resultCount++) {
+outp.appendChild(skicu_pavalsi(results[resultCount]));
+}
+}
+function cati() {
+if (window.performance) {
+if (performance.now) return performance.now();
+}
+return +new Date();
+}
+var appCache = window.applicationCache;
+appCache.update();
+if (appCache.status == window.applicationCache.UPDATEREADY) appCache.swapCache();
+window.applicationCache.addEventListener('updateready', function(e) {
+if (window.applicationCache.status == window.applicationCache.UPDATEREADY) einingau = true;
+}, false);
+</script>
+</body>
+</html>

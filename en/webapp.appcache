@@ -1,0 +1,40 @@
+CACHE MANIFEST
+# 2019-02-20T09:41:50
+CACHE:
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/config/TeX-MML-AM_CHTML.js?V=2.7.4
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/jax/input/TeX/config.js?V=2.7.4
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/jax/output/HTML-CSS/config.js?V=2.7.4
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/extensions/tex2jax.js?V=2.7.4
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/jax/output/CommonHTML/jax.js?V=2.7.4
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/jax/output/CommonHTML/fonts/TeX/fontdata.js?V=2.7.4
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff
+https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff
+index.html
+../data/parsed-en.js?sisku=2019_02_20_09_41_50
+../sisku.js?sisku=2019_02_20_09_41_50
+worker.js
+bangu.js
+../pixra/cll.png
+../pixra/snime.svg
+../pixra/x.svg
+../pixra/16.png
+../pixra/32.png
+../pixra/jbotcan.svg
+../pixra/taplasance.svg
+../pixra/taplamuplis.svg
+../pixra/snime-1.svg
+../pixra/selsku_lanci_eng.svg
+../pixra/selsku_lanci_zho.svg
+../pixra/lanci_jbo.svg
+../pixra/selsku_lanci_jpn.svg
+../pixra/selsku_lanci_fra.svg
+../pixra/selsku_lanci_rus.svg
+../pixra/lanci_epo.svg
+../pixra/selsku_lanci_spa.svg
+../pixra/cogwheel-5.svg
+NETWORK:
+*
+FALLBACK:
+/sisku/ ./
+../index.html ./

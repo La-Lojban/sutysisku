@@ -1,0 +1,11 @@
+{
+  "bangudesc": "<h1><b>la sutysisku</b> is a fast dictionary with examples for the Lojban language.</h1><div style=\"text-align:justify;\">- Can I use it if I lose internet access?<br/>- Yes, if this happens try opening this very address from this browser.<br/>It should still open. A latest version of Chrome, Safari or Firefox is required.<ul class='liste'><li>Press <code>/</code> to focus the search field.</li><li>To search for rhymes: enter a word and type <code>@</code> after it to find its rhymes sorted by relevance. <a href='#sisku/grana%40' class='judri'><code>grana@</code></a> is an example.</li><li>For advanced users: to enable regular expressions search in titles either start the string with <code>^</code> or end with <code>$</code>: <a href='#sisku/%5Eui' class='judri'><code>^ui</code>, <a href='#sisku/sku%24' class='judri'><code>sku$</code></a> are examples.</li></ul></div>",
+ "bangusisku": "search",
+ "bangulo": "Loading dictionary ...",
+ "title": "Lojban with example phrases - la sutysisku",
+ "siskudescr": "Search Dictionary with Examples used in 'The Crash Course in Lojban'.",
+ "opdescr": "A dictionary for Lojban language (with examples), English and other languages. Also works offline.",
+ "bangu": "english",
+ "xuzganalojudri": "true",
+ "lojbo": "true"
+}

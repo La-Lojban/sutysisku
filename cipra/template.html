@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html manifest='webapp.appcache' xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-45171210-6', 'auto', {
+			'allowLinker': true
+		});
+		ga('require', 'linker');
+		ga('linker:autoLink', ['la-lojban.github.io/sutysisku']);
+		ga('set', 'forceSSL', true);
+		ga('send', 'pageview');
+	</script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({ showMathMenu: false, extensions: ["tex2jax.js"], jax: ["input/TeX", "output/HTML-CSS"], tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });
+	</script>
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+	<script>
+		ArcBTracker = {
+			fire: function(env) {
+				if (typeof(env) == "undefined") {
+					env = {};
+				}
+
+				// send some miscellaneous info about the request
+				env.u = document.location.href;
+				env.bw = window.innerWidth;
+				env.bh = window.innerHeight;
+
+				// example of sending a cookie named 'guid'
+				// env.guid = (document.cookie.match(/guid=([^\_]*)_([^;]*)/) || [])[2];
+
+				if (document.referrer && document.referrer != "") {
+					env.ref = document.referrer;
+				}
+
+				env.rnd = Math.floor(Math.random() * 10e12);
+
+				var params = [];
+				for (var key in env) {
+					if (env.hasOwnProperty(key)) {
+						params.push(encodeURIComponent(key) + "=" + encodeURIComponent(env[key]));
+					}
+				}
+
+				var img = new Image();
+				img.src = 'https://jbotcan.org:3021/acceptor.gif?' + params.join('&');
+			}
+		};
+	</script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script>
+	<script>
+		var socket = io.connect('https://jbotcan.org:3020');
+		socket.on('la_arxivo_cu_cusku', function(data) {
+			if(seskari ==='arxivo'){
+			// console.log(data.message);
+			results = data.message;
+			outp.innerHTML = '';
+			window.jimte = 30;
+			resultCount = 0;
+			//<xuzganalojudri|lojbo>
+			CLL();
+			//</xuzganalojudri|lojbo>
+			skicu_lo_ro_valsi();
+			displayDescription(true);
+			}
+		});
+	</script>
+	<!-- Google Tag Manager -->
+	<!--<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-PL4CFMX');</script>-->
+	<!-- End Google Tag Manager -->
+	<title>%title%</title>
+	<meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=0,viewport-fit=cover" />
+	<meta name="theme-color" content="%mupliskariralju%">
+	<meta property="og:title" content="%ogtitle%" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="%ogurl%" />
+	<meta property="og:image" content="https://mw.lojban.org/images/1/11/sutysisku2015-06-22.png" />
+	<meta property="og:site_name" content="%ogtitle%" />
+	<meta property="fb:app_id" content="191051864394489" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@Jbotcan" />
+	<!--<meta property="al:android:url" content="la sutysisku://" />
+	<meta property="al:android:app_name" content="%ogtitle%" />
+	<meta property="al:android:package" content="%ogtitle%" />
+	<meta property="al:windows_phone:app_name" content="%ogtitle%" />
+	<meta property="al:windows_phone:app_id" content="" />
+	<meta name="apple-itunes-app" content="app-id=" />
+	<meta name="google-play-app" content="app-id=" />-->
+	<meta name='apple-mobile-web-app-title' content="%ogtitle%">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="../pixra/57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../pixra/114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../pixra/72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../pixra/144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../pixra/120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../pixra/152.png" />
+	<link rel="icon" type="image/png" href="%icon32%" sizes="32x32" />
+	<link rel="icon" type="image/png" href="%icon16%" sizes="16x16" />
+	<meta name="application-name" content="%ogtitle%" />
+	<meta name="msapplication-TileColor" content="%mupliskariralju%">
+	<meta name="msapplication-TileImage" content="../pixra/144.png">
+	<meta property="og:description" content="%opdescr%" />
+	<link rel="shortcut icon" href="%favicon%" />
+	<link rel="search" type="application/opensearchdescription+xml" href="%searchurl%" title="%searchtitle%">
+	<style type="text/css">
+		#arxivo {
+			display: none;
+		}
+
+		body {
+			font-family: Tahoma, Lato, sans-serif;
+			font-size: 90%;
+			overflow: hidden;
+			margin: 0;
+			height: 100vh;
+		}
+
+		h1 {
+			font-size: 1em;
+			font-weight: normal;
+		}
+
+		h4 {
+			display: inline;
+			margin: 0;
+		}
+
+		.liste {
+			list-style-image: url(../pixra/cmalu_snime.svg);
+		}
+
+		.judri {
+			color: inherit;
+		}
+
+
+		/*
+		.border_gradient {
+			border: 8px solid #000;
+			-moz-border-bottom-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+			-moz-border-top-colors:  #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+			-moz-border-left-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+			-moz-border-right-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+			padding: 5px 5px 5px 15px;
+			width: 300px;
+		}
+
+		#grad:after  {
+					 content: '';
+					 position: absolute;
+					 background-color: rgba(0,0,0, .7);
+					 top: 8px;
+					 bottom: 8px;
+					 left: 8px;
+					 right: 8px;
+					 background-image: -webkit-gradient(
+									 linear,right bottom,left bottom,
+									 color-stop(.75, #52882d),
+									 color-stop(0,  #eee)
+					 );
+					 border: 1px solid #fff;
+		}
+		div {
+		    display: block;
+		    height: 200px;
+		    width: 500px;
+		    border: solid 1px #CCC;
+		    border-bottom: none;
+		    position: relative;
+		}
+		div:after {
+		    content:"";
+		    background: -webkit-linear-gradient(left, rgba(92, 7, 52, 1) 0%, rgba(134, 29, 84, 1) 12%, rgba(255, 93, 177, 1) 47%, rgba(83, 0, 30, 1) 100%);
+		    display: block;
+		    height:10px;
+		    width: 500px;
+		    position: absolute;
+		    bottom: 0;
+		}
+		*/
+
+		code {
+			border: 1px solid #aaa;
+			display: inline-block;
+			padding: 3px;
+			border-radius: 3px;
+			margin-left: 1px;
+			margin-right: 1px;
+		}
+
+		.hilite {
+			background-color: #d1ff9e;
+		}
+
+		.type {
+			display: inline;
+			float: right;
+			font-style: italic;
+			margin: -3px 0 0 13px;
+			color: rgb(118, 118, 118);
+			font-size: 12px;
+			border: 1px solid rgb(118, 118, 118);
+			background-color: #ffffff;
+			padding: 5px 7px 5px 5px;
+			border-radius: 5px;
+			z-index: 1;
+		}
+
+		.type:hover {
+			box-shadow: 0 0 3pt 1pt #999999;
+		}
+
+		.heading {
+			align-items: flex-start;
+			flex-direction: row;
+			display: flex;
+			flex: 1;
+		}
+
+		.tfm {
+			display: inline;
+			font-style: italic;
+			color: rgb(118, 118, 118);
+		}
+
+		.nasezvafahi {
+			font-style: italic;
+			color: rgb(118, 118, 118);
+			cursor: default;
+			user-select: none;
+		}
+
+		.nalojbo {
+			color: #6A5ACD;
+		}
+
+		.valsi {
+			/* These are technically the same, but use both */
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+
+			-ms-word-break: break-all;
+			/* This is the dangerous one in WebKit, as it breaks things wherever */
+			word-break: break-all;
+			/* Instead use this non-standard one: */
+			word-break: break-word;
+
+			/* Adds a hyphen where the word breaks, if supported (No Blink) */
+			-ms-hyphens: auto;
+			-moz-hyphens: auto;
+			-webkit-hyphens: auto;
+			hyphens: auto;
+		}
+
+		.definition {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		.notes {
+			margin-left: 10px;
+		}
+
+		.mupligreku {
+			border: 1px dashed #aaa;
+			padding: 5px;
+		}
+
+		.subdefinitions {
+			padding-left: 0px;
+			border-left: solid 3px #1E90FF;
+		}
+
+		.term {
+			margin-top: 9px;
+			padding: 9px;
+			text-align: justify;
+			background: white; //<muplis>
+			border-radius: 5px;
+			border: 1px solid #ddd; //</muplis>
+		} //<muplis>
+		.plise {
+			width: 18px;
+			height: 18px;
+		}
+
+		.termouter {
+			box-shadow: 1px 1px 1px #ccc;
+		} //</muplis>
+		.termouter:hover {
+			//<muplis false>
+			outline: #999999 solid 3px; //</muplis>
+			//<muplis>
+			border: 1px solid #ccc;
+			box-shadow: 0; //</muplis>
+			z-index: 2;
+		}
+
+		.terminner {
+			//<muplis>
+			border-radius: 0; //</muplis>
+			border-top: solid 1px #ccc;
+			border-right: solid 1px #ccc;
+			border-bottom: solid 1px #ccc;
+			box-shadow: 3px 3px 1px #ccc;
+		}
+
+		.rafsi {
+			margin-top: 8px;
+			font-size: 90%;
+		}
+
+		.rafsi .pamei {
+			font-style: italic;
+			margin-left: 15px;
+		}
+
+		.galtu-dasri {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 48px;
+			width: auto;
+			font-size: 18px;
+			padding: 0;
+			background: rgb(%mupliskari1%);
+			/* Old browsers */
+			background: -moz-linear-gradient(top, rgba(%mupliskari1%, 1) %gradpos1%, rgba(%mupliskari2%, 1) %gradpos2%, rgba(%mupliskari3%, 1) %gradpos3%, rgba(%mupliskari4%, 1) %gradpos4%);
+			/* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(%gradpos1%, rgba(%mupliskari1%, 1)), color-stop(%gradpos2%, rgba(%mupliskari2%, 1)), color-stop(%gradpos3%, rgba(%mupliskari3%, 1)), color-stop(%gradpos4%, rgba(%mupliskari4%, 1)));
+			/* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, rgba(%mupliskari1%, 1) %gradpos1%, rgba(%mupliskari2%, 1) %gradpos2%, rgba(%mupliskari3%, 1) %gradpos3%, rgba(%mupliskari1%, 1) %gradpos4%);
+			/* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, rgba(%mupliskari1%, 1) %gradpos1%, rgba(%mupliskari2%, 1) %gradpos2%, rgba(%mupliskari3%, 1) %gradpos3%, rgba(%mupliskari4%, 1) %gradpos4%);
+			/* Opera 11.10+ */
+			background: -ms-linear-gradient(top, rgba(%mupliskari1%, 1) %gradpos1%, rgba(%mupliskari2%, 1) %gradpos2%, rgba(%mupliskari3%, 1) %gradpos3%, rgba(%mupliskari4%, 1) %gradpos4%);
+			/* IE10+ */
+			background: linear-gradient(to bottom, rgba(%mupliskari1%, 1) %gradpos1%, rgba(%mupliskari2%, 1) %gradpos2%, rgba(%mupliskari3%, 1) %gradpos3%, rgba(%mupliskari4%, 1) %gradpos4%);
+			/* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de', GradientType=0);
+			/* IE6-9 */
+			color: #FFF;
+			user-select: none;
+		}
+
+		.rimni-dasri {
+			background: rgb(%rimniskari1%);
+			/* Old browsers */
+			background: -moz-linear-gradient(top, rgba(%rimniskari1%, 1) %rimnigradpos1%, rgba(%rimniskari2%, 1) %rimnigradpos2%, rgba(%rimniskari3%, 1) %rimnigradpos3%, rgba(%rimniskari4%, 1) %rimnigradpos4%);
+			/* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(%rimnigradpos1%, rgba(%rimniskari1%, 1)), color-stop(%rimnigradpos2%, rgba(%rimniskari2%, 1)), color-stop(%rimnigradpos3%, rgba(%rimniskari3%, 1)), color-stop(%rimnigradpos4%, rgba(%rimniskari4%, 1)));
+			/* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, rgba(%rimniskari1%, 1) %rimnigradpos1%, rgba(%rimniskari2%, 1) %rimnigradpos2%, rgba(%rimniskari3%, 1) %rimnigradpos3%, rgba(%rimniskari1%, 1) %rimnigradpos4%);
+			/* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, rgba(%rimniskari1%, 1) %rimnigradpos1%, rgba(%rimniskari2%, 1) %rimnigradpos2%, rgba(%rimniskari3%, 1) %rimnigradpos3%, rgba(%rimniskari4%, 1) %rimnigradpos4%);
+			/* Opera 11.10+ */
+			background: -ms-linear-gradient(top, rgba(%rimniskari1%, 1) %rimnigradpos1%, rgba(%rimniskari2%, 1) %rimnigradpos2%, rgba(%rimniskari3%, 1) %rimnigradpos3%, rgba(%rimniskari4%, 1) %rimnigradpos4%);
+			/* IE10+ */
+			background: linear-gradient(to bottom, rgba(%rimniskari1%, 1) %rimnigradpos1%, rgba(%rimniskari2%, 1) %rimnigradpos2%, rgba(%rimniskari3%, 1) %rimnigradpos3%, rgba(%rimniskari4%, 1) %rimnigradpos4%);
+			/* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de', GradientType=0);
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 48px;
+			width: auto;
+			font-size: 18px;
+			padding: 0;
+			/* IE6-9 */
+			color: #FFF;
+			user-select: none;
+		}
+
+		#se-vasru-lo-galtu-dasri {
+			max-width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+			position: relative;
+		}
+
+		#site-title {
+			font-size: 18px;
+			font-weight: bold;
+			float: left;
+			border-radius: 0px 0px 14px 14px;
+			/* margin-top: 3px; */
+			border-color: #333;
+			border-width: 0px 1px 1px 1px;
+			border-style: solid;
+			height: 22px;
+			padding: 12px 10px 14px 10px;
+		}
+
+		.desktop-mode-title-color {
+			background: rgba(%mupliskari3%, 1);
+			cursor: default;
+		}
+
+		.rimni-search-mode-title-color {
+			background: linear-gradient( to top right, rgba(%rimniskari2%, 1) 0%, rgba(%rimniskari3%, 1) 40%);
+			box-shadow: 1px 1px 30px rgba(%rimniskari4%, 1);
+			cursor: pointer;
+		}
+
+		.normal-search-mode-title-color {
+			background: linear-gradient( to top right, rgba(63, 81, 181, 1) 0%, rgba(4, 119, 218, 1) 40%);
+			box-shadow: 1px 1px 30px rgba(2, 119, 189, 1);
+			cursor: pointer;
+			/* box-shadow: '0px 0px 40px 20px #2d68d4'; */
+		}
+
+		#ciska {
+			height: 30px;
+			font-size: 130%;
+			font-family: Arial, Helvetica, sans-serif;
+			border: 1px solid #777;
+			padding: 2px 42px 2px 16px;
+			transition: background 0.4s;
+			float: right;
+			margin-top: 6px;
+			outline: 0;
+			min-width: 0;
+		}
+
+		#ciska:not(:valid)~#kunti {
+			display: none;
+		}
+
+		#ciska:not(:valid)~#clear {
+			display: none;
+		}
+
+		#clear {
+			position: absolute;
+			border: 1px solid transparent;
+			display: inline-block;
+			vertical-align: middle;
+			outline: 0;
+			cursor: pointer;
+			margin-top: 7px;
+			height: 0;
+		}
+
+		#title {
+			cursor: default;
+		}
+
+		#purci {
+			display: inline;
+		}
+
+		@media screen and (min-width: 510px) {
+			#clear {
+				padding: 22px 30px 10px 30px;
+				right: 0px;
+				background-color: transparent;
+				background-image: url(../pixra/x.svg);
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+
+			#title>#site-title>font {
+				width: auto;
+			}
+
+			#kicne1,
+			#kicne2 {
+				display: none;
+			}
+
+			#se-vasru-lo-galtu-dasri {
+				display: block;
+			}
+			.sidju {
+				margin-left: 10%;
+				cursor: default;
+				user-select: none;
+			}
+			#ciska {
+				border-radius: 1em;
+				-webkit-border-radius: 1em;
+				-moz-border-radius: 1em;
+			}
+		}
+
+		@media screen and (max-width: 509px) {
+			#clear {
+				padding: 22px 20px 10px 20px;
+				right: 5px;
+				width: 23px;
+				background-color: rgba(255, 255, 255, 0.8);
+				background-image: url(../pixra/x.svg);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 22px;
+			}
+
+			div {
+				line-height: 150%;
+			}
+
+			#title>#site-title>img {
+				/* padding: 0 4px 0 10px; */
+				width: 23px;
+				height: 23px;
+			}
+
+			#title>#site-title>img:nth-child(1)~img {
+				display: none;
+			}
+
+			#title>#site-title>font {
+				display: none;
+			}
+
+			#kicne1 {
+				display: block;
+				width: 6px;
+			}
+
+			#kicne2 {
+				display: block;
+				width: 6px;
+			}
+
+			#ciska:not(:valid)~#kicne2 {
+				width: 6px;
+			}
+
+			#se-vasru-lo-galtu-dasri {
+				display: inline-flex;
+				width: 100%;
+			}
+
+			.sidju {
+				margin-left: 0%;
+			}
+
+			#ciska {
+				width: 100%;
+				padding: 2px 30px 2px 6px;
+				border-radius: 2px;
+			}
+		}
+
+		::selection {
+			background: rgba(%mupliskari1%, 1);
+			color: #fff;
+			text-shadow: none;
+		}
+
+		#content {
+			padding-left: 5px;
+			padding-right: 5px;
+			overflow: auto;
+			/*height:100%;*/
+			border-top: 48px solid transparent;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box; //<muplis false>
+			background: #222222 linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+			background-size: 40px 40px !important; //</muplis>
+			/*background: radial-gradient(circle farthest-side at 0% 50%, #FDBF00 23.5%, rgba(240, 166, 17, 0) 0)21px 30px,
+			radial-gradient(circle farthest-side at 0% 50%, #BB7000 24%, rgba(240, 166, 17, 0) 0)19px 30px,
+			linear-gradient(#FDBF00 14%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 85%, #FDBF00 0)0 0,
+			linear-gradient(150deg, #FDBF00 24%, #BB7000 0, #BB7000 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, #BB7000 0, #BB7000 76%, #FDBF00 0)0 0,
+			linear-gradient(30deg, #FDBF00 24%, #BB7000 0, #BB7000 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, #BB7000 0, #BB7000 76%, #FDBF00 0)0 0,
+			linear-gradient(90deg, #BB7000 2%, #FDBF00 0, #FDBF00 98%, #BB7000 0%)0 0 #FDBF00;
+			background-size: 40px 60px;*/
+			//<muplis>
+			background-color: #FDBF00;
+			background-image: url('../pixra/bifce.svg');
+			background-image: url('../pixra/bifce.svg'), -webkit-linear-gradient(to bottom right, #FDBF00, #BB7000, #BB7000);
+			background-image: url('../pixra/bifce.svg'), -o-linear-gradient(to bottom right, #FDBF00, #BB7000, #BB7000);
+			background-image: url('../pixra/bifce.svg') -moz-linear-gradient(to bottom right, #FDBF00, #BB7000, #BB7000);
+			background-image: url('../pixra/bifce.svg'), linear-gradient(to bottom right, #FDBF00, #BB7000, #BB7000); //</muplis>
+		}
+
+		#content-panel {
+			max-width: 700px;
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		#outp {
+			margin-bottom: 15px;
+		}
+
+		a {
+			color: #2B79E0;
+			text-decoration: none;
+		}
+
+		#descr {
+			margin: 5px 0 15px 0;
+			text-align: center;
+			text-shadow: 0px 1px 0px rgba(255, 255, 255, .5);
+			color: #333;
+		}
+
+		#loading {
+			text-align: center;
+		}
+
+		sup,
+		sub {
+			vertical-align: baseline;
+			position: relative;
+			top: -0.4em;
+			font-size: 70%;
+		}
+
+		sub {
+			top: 0.4em;
+		}
+
+		.tutci {
+			-moz-box-shadow: inset 0px -3px 7px 0px #29bbff;
+			-webkit-box-shadow: inset 0px -3px 7px 0px #29bbff;
+			box-shadow: inset 0px -3px 7px 0px #29bbff;
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2dabf9), color-stop(1, #0688fa));
+			background: -moz-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+			background: -webkit-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+			background: -o-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+			background: -ms-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+			background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2dabf9', endColorstr='#0688fa', GradientType=0);
+			background-color: #2dabf9;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			border: 1px solid #000000;
+			display: inline-block;
+			cursor: pointer;
+			color: #ffffff;
+			/* font-family:Arial; */
+			/* font-size:15px; */
+			padding: 3px 10px;
+			text-decoration: none;
+			text-shadow: 0px 1px 0px #263666;
+			height: 21px;
+		}
+
+		.tutci:hover {
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0688fa), color-stop(1, #2dabf9));
+			background: -moz-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+			background: -webkit-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+			background: -o-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+			background: -ms-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+			background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0688fa', endColorstr='#2dabf9', GradientType=0);
+			background-color: #0688fa;
+		}
+
+		.tutci:active {
+			position: relative;
+			top: 1px;
+		}
+
+		#DIV_1 {
+			/* border-collapse: collapse; */
+			/* bottom: 0px; */
+			/* box-shadow: rgb(255, 255, 204) 0px 0px 1px 0px inset; */
+			/* box-sizing: border-box; */
+			display: inline-block;
+			/*height: 150px;*/
+			/* left: 0px; */
+			position: relative;
+			/* right: 0px; */
+			/* text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px; */
+			/* top: 0px; */
+			/* width: 150px;*/
+			/* perspective-origin: 75px 75px; */
+			/* transform-origin: 75px 75px; */
+			/* user-select: none; */
+			/* font: normal normal normal normal 14px / 15.4px "Segoe UI", "Open Sans", sans-serif, serif; */
+			margin: 5px;
+			/*outline: rgb(153, 153, 153) solid 1px;*/
+		}
+
+		/*#DIV_1*/
+
+		#DIV_1:hover {
+			outline: rgb(153, 153, 153) solid 3px;
+		}
+
+		#DIV_1:active {
+			position: relative;
+			top: 1px;
+		}
+
+		#DIV_2 {
+			/* border-collapse: collapse;
+			bottom: 0px;
+			box-sizing: border-box; */
+			/* height: 150px;*/
+			/* left: 0px; */
+			position: absolute;
+			/* right: 0px;
+			text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px;
+			top: 0px; */
+			/*width: 150px;*/
+			/* perspective-origin: 75px 75px;
+			transform-origin: 75px 75px;
+			user-select: none;
+			font: normal normal normal normal 14px / 15.4px "Segoe UI", "Open Sans", sans-serif, serif;
+			overflow: hidden; */
+		}
+
+		/*#DIV_2*/
+
+		#SPAN_3 {
+			/* border-collapse: collapse; */
+			bottom: 0px;
+			box-sizing: border-box;
+			/* display: block; */
+			/* height: 53px;*/
+			/*left: 10px;*/
+			position: absolute;
+			right: 0px;
+			/* text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px; */
+			/*top: 97px;*/
+			/*width: 140px;*/
+			z-index: 999;
+			/* perspective-origin: 70px 26.5px;
+			transform-origin: 70px 26.5px;
+			user-select: none; */
+			background: rgba(255, 255, 255, 0.6) none repeat scroll 0% 0% / auto padding-box border-box;
+			font: normal normal normal normal 14px / 15.4px "Segoe UI", "Open Sans", sans-serif, serif;
+			padding: 4px 4px;
+			pointer-events: none;
+			text-align: right;
+		}
+
+		/*#SPAN_3*/
+
+		#B_4 {
+			/* border-collapse: collapse;
+			box-sizing: border-box; */
+			text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px;
+			/* user-select: none; */
+			font: normal normal bold normal 14px / 15.4px "Segoe UI", "Open Sans", sans-serif, serif;
+		}
+
+		#A_7 {
+			display: inline-block;
+			border-collapse: collapse;
+			box-sizing: border-box;
+			/*color: rgb(32, 134, 191);*/
+			text-decoration: none;
+			text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px;
+			/*column-rule-color: rgb(32, 134, 191);*/
+			user-select: none;
+			border: 0;
+			font: normal normal normal normal 14px / 15.4px "Segoe UI", "Open Sans", sans-serif, serif;
+			/*outline: rgb(32, 134, 191) none 0px;*/
+		}
+
+		/*#A_7*/
+
+		#DIV_8 {
+			/* border-collapse: collapse;
+			box-sizing: border-box;
+			/*color: rgb(32, 134, 191);*/
+			/* height: 150px;*/
+			/* text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px; */
+			/* width: 150px;*/
+			/* column-rule-color: rgb(32, 134, 191);
+			perspective-origin: 75px 75px;
+			transform-origin: 75px 75px;
+			user-select: none; */
+			/*background: rgba(0, 0, 0, 0) no-repeat scroll 0% 0% / cover padding-box border-box;*/
+			background-position: center;
+			background-color: #ffffff;
+			background-size: contain;
+			background-repeat: no-repeat;
+			/*border: 0px none rgb(32, 134, 191);*/
+			/* font: normal normal normal normal 14px / 15.4px "Segoe UI", "Open Sans", sans-serif, serif; */
+			/*outline: rgb(32, 134, 191) none 0px;*/
+		}
+
+		/*#DIV_8*/
+
+		.sidju {
+			margin-top: 0px;
+			margin-bottom: 15px;
+			padding: 8px 12px 6px;
+			text-align: left;
+			/*background: #F7F7F2;*/
+			background: white;
+			border-bottom-left-radius: 7px 7px;
+			border-bottom-right-radius: 7px 7px;
+			border-width: 0px;
+			border-style: solid;
+			border-top: none;
+			box-shadow: 0 0 0 1px rgb(%mupliskari1%),
+			0 0 0 2px rgb(%mupliskari2%),
+			0 0 0 3px rgb(%mupliskari3%),
+			0 0 0 4px rgb(%mupliskari4%);
+			-moz-box-shadow: 0 0 0 1px rgb(%mupliskari1%),
+			0 0 0 2px rgb(%mupliskari2%),
+			0 0 0 3px rgb(%mupliskari3%),
+			0 0 0 4px rgb(%mupliskari4%);
+			-webkit-box-shadow: 0 0 0 1px rgb(%mupliskari1%),
+			0 0 0 2px rgb(%mupliskari2%),
+			0 0 0 3px rgb(%mupliskari3%),
+			0 0 0 4px rgb(%mupliskari4%);
+			line-height: 150%;
+		}
+
+		#cpacu {
+			position: relative;
+			display: block;
+			width: 30%;
+			margin: auto;
+			background-color: #eee;
+			padding: 3px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			-o-border-radius: 3px;
+			border-radius: 3px;
+			-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+			-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+			-o-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+			box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2)
+		}
+
+		#kernelo_lo_cpacu {
+			height: 5px;
+			display: block;
+			background-color: cornflowerblue;
+			width: 0%;
+			border-radius: 3px;
+			-webkit-transition: width .8s ease;
+			-moz-transition: width .8s ease;
+			-o-transition: width .8s ease;
+			transition: width .8s ease
+		}
+	</style>
+	<link rel="manifest" href="../manifest.json">
+	<script src="bangu.js"></script>
+</head>
+
+<body>
+	<!-- Yandex.Metrika counter -->
+	<!--<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter45446487 = new Ya.Metrika({
+                    id:45446487,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/45446487" style="position:absolute; left:-9999px;" alt="" /></div></noscript>-->
+	<!-- /Yandex.Metrika counter -->
+	<!-- Google Tag Manager (noscript) -->
+	<!--<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PL4CFMX"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>-->
+	<!-- End Google Tag Manager (noscript) -->
+	<div id='galtu-dasri' class='galtu-dasri'>
+		<form id='se-vasru-lo-galtu-dasri' onsubmit="return false" novalidate>
+			%titlelogo%
+			<div id="kicne1"></div>
+			<input id='ciska' class="ciska" type="text" name="focus" required placeholder="%bangusisku%" autofocus autocorrect="off" autocapitalize="off" autocomplete="false" />
+			<div id="kicne2"></div>
+			<button id="clear" type="reset"></button>
+		</form>
+	</div>
+	<div id='content'>
+		<div id='content-panel'>
+			<div id='sidju' class='sidju'><a class='tutci' id='rimni'>%rimni%</a><a class='tutci' id='cnano'>%cnano%</a><a class='tutci' id='arxivo'>arxivo</a>
+				<div id="purci"></div>
+			</div>
+			<div id='loading' class="term">
+				<span id='caho_cpacu'>%bangulo%</span><br>
+				<div id="cpacu">
+					<span id='kernelo_lo_cpacu'></span>
+				</div>
+			</div>
+			<div id='drata' style="text-align:center;"></div>
+			<div id='descr' class="term termouter">%bangudesc%</div>
+			<div id='outp'></div>
+		</div>
+	</div>
+	<script>
+		var seskari = localStorage.getItem('seskari') || 'cnano';
+		var ciska = document.getElementById('ciska');
+		var outp = document.getElementById('outp');
+		var descr = document.getElementById('descr');
+		var drata = document.getElementById('drata');
+		var purci = document.getElementById('purci');
+		var sidju = document.getElementById('sidju');
+		var pb = document.getElementById('kernelo_lo_cpacu');
+		var worker = new Worker('worker.js');
+		var SiteTitle = document.querySelector('#title > font');
+		var SiteTitleFull = document.querySelector('#site-title');
+		SiteTitleFull.classList.add("desktop-mode-title-color");
+		// var firstSiteTitleValue = SiteTitle.firstChild.nodeValue;
+		var dasri = document.getElementById('galtu-dasri');
+		var SiteImage = document.querySelectorAll('#title > img');
+
+		var fm = {
+			BE: "bei",
+			BEI: "be'o",
+			BY: "boi",
+			COI: "do'u",
+			DOI: "do'u",
+			FIhO: "fe'u",
+			FUhE: "fu'o",
+			GIhA: "vau",
+			GOI: "ge'u",
+			JOhI: "te'u",
+			KE: "ke'e",
+			LAhE: "lu'u",
+			LA: "ku",
+			LE: "ku",
+			LI: "lo'o",
+			LOhU: "le'u",
+			LU: "li'u",
+			ME: "me'u",
+			"NAhE+BO": "lu'u",
+			NOI: "ku'o",
+			NUhI: "nu'u",
+			NU: "kei",
+			PA: "boi",
+			PEhO: "ku'e",
+			SEI: "se'u",
+			SOI: "se'u",
+			TO: "toi",
+			TUhE: "tu'u",
+			VEI: "ve'o",
+			LOhAI: "sa'ai",
+			SAhAI: "le'ai",
+			LOhOI: "ku'au",
+			NAhU: "te'u",
+			NIhE: "te'u",
+			MOhE: "te'u"
+		};
+		var query = "";
+		var rock = "";
+		var einingau;
+		var resultCount;
+		var results = [];
+		var ready;
+		var prevQuery, drataQuery = '';
+		var lastQueried = cati();
+
+		//search after timeout
+		var typingTimer;
+		var delay = (function() {
+			var timer = 0;
+			return function(callback, ms) {
+				clearTimeout(timer);
+				timer = setTimeout(callback, ms);
+			};
+		})();
+
+		window.addEventListener('popstate', sisku_rahilejudri);
+		window.addEventListener('resize', calcVH, true);
+		document.getElementById('clear').addEventListener('click', zero);
+		document.getElementById('title').addEventListener('click', zero);
+		purci.addEventListener("click", clicked);
+		document.getElementById('content').addEventListener('scroll', checkScrolledNearBottom);
+		if (document.attachEvent) {
+			document.attachEvent('onkeyup', handler);
+		} else {
+			document.addEventListener('keyup', handler);
+		}
+		ciska.addEventListener("keyup", function() {
+			typing()
+		});
+		ciska.addEventListener("keydown", function() {
+			clearTimeout(typingTimer);
+			displayDescription();
+		});
+		ciska.addEventListener("paste", typing(0));
+		ciska.addEventListener("input", typing());
+		ciska.addEventListener("focus", doSearch);
+		ciska.addEventListener("textInput", typing());
+		if (document.readyState === 'loading') {
+			pb.style.width = '37%';
+			document.addEventListener('DOMContentLoaded', doSearch);
+		} else {
+			doSearch();
+		}
+
+		calcVH();
+		sisku_rahilejudri();
+
+		// functions
+		document.getElementById('rimni').addEventListener("click", function() {
+			if (!ready) return;
+			seskari = 'rimni';
+			query = plukaquery(ciska.value);
+			if (query === '') {
+				var arrpurc = JSON.parse(localStorage.getItem('purci')) || [];
+				if (arrpurc && arrpurc[0]) query = arrpurc[0];
+			}
+			query = query.replace(/@+$/, '');
+			if (query === '') return;
+			ciska.value = query;
+			triggerEvent(ciska, 'input');
+			doSearch();
+		});
+
+		document.getElementById('cnano').addEventListener("click", function() {
+			seskari = 'cnano';
+			if (!ready) return;
+			doSearch();
+		});
+
+		document.getElementById('arxivo').addEventListener("click", function() {
+			seskari = 'arxivo';
+			query = ciska.value;
+			if (query === '') {
+				var arrpurc = JSON.parse(localStorage.getItem('purci')) || [];
+				if (arrpurc && arrpurc[0]) query = arrpurc[0];
+			}
+			socket.emit('cpedu_fi_la_arxivo', {
+				data: query
+			});
+		});
+
+		function triggerEvent(el, type) {
+			if ('createEvent' in document) {
+				// modern browsers, IE9+
+				var e = document.createEvent('HTMLEvents');
+				e.initEvent(type, false, true);
+				el.dispatchEvent(e);
+			} else {
+				// IE 8
+				var e = document.createEventObject();
+				e.eventType = type;
+				el.fireEvent('on' + e.eventType, e);
+			}
+		}
+
+		function zero(e) {
+			if (this.toString() === 'kunti')
+				document.getElementsByTagName('input')[0].value = "";
+			// ciska.value === '';
+			if (query !== '') {
+				query = '';
+				prevQuery = '';
+				displayDescription();
+				CnanoSutysisku();
+			} else {
+				doSearch();
+			}
+		}
+
+		// function sance(e) {
+		// 	ciska.value === '';
+		// 	query = '';
+		// 	prevQuery = '';
+		// 	displaySounds();
+		// }
+
+		function calcVH() {
+			document.getElementById("content").setAttribute("style", "height:" + Math.max(document.documentElement.clientHeight, window.innerHeight || 0) + "px;");
+		}
+
+		worker.onmessage = function(ev) {
+			if (ev.data.kind == 'ready') {
+				ready = true;
+				var l = document.getElementById('loading');
+				l.parentNode.removeChild(l);
+			} else if (ev.data.kind == 'searchResults') {
+				if (ev.data.query !== query) return;
+				results = ev.data.results;
+				outp.innerHTML = '';
+				//<xuzganalojudri|lojbo>
+				CLL();
+				//</xuzganalojudri|lojbo>
+				skicu_lo_ro_valsi();
+				displayDescription();
+			} else if (ev.data.kind == 'loading') {
+				document.getElementById('caho_cpacu').textContent = window.bangubuild;
+				pb.style.width = '51%';
+			} else if (ev.data.kind == 'progress') {
+				pb.style.width = (ev.data.percent * 100) + '%';
+			}
+		};
+		//<xuzganalojudri|lojbo>
+		function getCLLSections(te_gerna) {
+			return Object.keys(window.arrcll || []).reduce(function(init, i) {
+				if (i.indexOf(te_gerna) === 0) {
+					init = init.concat(window.arrcll[i]);
+				}
+				return init;
+			}, []).filter(function(a, b, mi) {
+				return mi.indexOf(a) === b;
+			});
+		}
+
+		function CLL() {
+			var sc = getCLLSections(query);
+			if (sc.length === 0 && results && results[0] && results[0].s) sc = getCLLSections(results[0].s);
+			if (sc && sc.length > 0) {
+				sc = window.cllnotci + "<ul class='liste'>" + sc.map(function(arg) {
+					var a = window.cylylypoicnino[arg]
+					return "<li><a target='_blank' href=\"http:\/\/lojban.org\/publications/cll\/cll_v1.1_xhtml-section-chunks\/" + a.judri + "\">" + escHtml(a.cmene) + "</a></li>";
+				}).join("") + "</ul>";
+				var div = document.createElement('div');
+				div.className = 'sidju';
+				div.innerHTML = sc;
+				outp.appendChild(div);
+			}
+		}
+		//</xuzganalojudri|lojbo>
+		function checkScrolledNearBottom(ev) {
+			if ((ev.target.scrollTop + window.innerHeight) >= (outp.clientHeight - 700)) {
+				window.jimte += 10;
+				skicu_lo_ro_valsi();
+				MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+			}
+		}
+
+		function melbi_uenzi(a) {
+			return ("<span>" + a
+					.replace(/\$.*?\$/g, function(c) {
+						return c
+							.replace(/\{/g, "\\curlyleft")
+							.replace(/\}/g, "\\curlyright");
+					})
+					.replace(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g, function(c) {
+						return '</span><a href="' + c + '" target="_blank">' + hilite(c) + "</a><span>"
+					})
+					.replace(/@@@(.*?)@@@/g, "<i>$1</i>")
+					.replace(/\{.*?\}/g, function(c) {
+						var c = c.substring(1, c.length - 1);
+						return '</span><a href="#sisku/' + encodeUrl(c) + '">' + hilite(escHtml(c, true)) + "</a><span>"
+					})
+					.replace(/\$.*?\$/g, function(c) {
+						return c
+							.replace(/\\curlyleft/g, "{")
+							.replace(/\\curlyright/g, "}");
+					}) + "</span>")
+				.replace(/<span><\/span>/g, '')
+				.replace(/<span>.*?<\/span>/g, function(c) {
+					var c = c.substring(6, c.length - 7);
+					return hilite(c)
+				})
+		}
+
+		function hilite(txt) {
+			return txt.replace(rock, "<span class='hilite'>$1</span>")
+		}
+
+		function skicu_pavalsi(def, inner) {
+			if (!def) def = [];
+			var out = document.createElement('div');
+			out.className = (inner === 1) ? 'terminner' : 'termouter';
+			out.classList.add('term');
+			if (typeof fm[def.s] !== 'undefined') {
+				var fmm = document.createElement('h4');
+				fmm.className = 'tfm';
+				fmm.innerHTML = '&nbsp;&nbsp;<i><sup>[&nbsp;...&nbsp;&nbsp;&nbsp;<a href="#sisku/' +
+					encodeUrl(fm[def.s]) + '">' + escHtml(fm[def.s]) + "</a>]</sup></i>";
+			}
+			var sh = [];
+			for (var key in fm) {
+				if (fm[key] === def.w) sh.push('<a href="#sisku/' + encodeUrl(key) + '">' + escHtml(key) + '</a>');
+			}
+			if (sh.length !== 0) {
+				var tfm = document.createElement('div');
+				tfm.classList.add('valsi');
+				if (def.l) tfm.classList.add('nalojbo');
+				tfm.innerHTML = '<i><sup>[' + sh.join(", ") + '&nbsp;&nbsp;&nbsp;...&nbsp;]</sup></i>&nbsp;&nbsp;';
+			}
+			if (def.s) {
+				var ss = document.createElement('div');
+				ss.className = 'type';
+				ss.innerHTML = '<a href="#sisku/' + encodeUrl(def.s) + '">' + hilite(escHtml(def.s)) + "</a> ";
+			}
+			if (def.t) {
+				var jvs = document.createElement('div');
+				jvs.className = 'type';
+				jvs.innerHTML = def.t;
+				if (window.xuzganalojudri && !def.l) {
+					jvs.innerHTML = "<a style='color: #000;' target='_blank' href=\"" + window.judri +
+						encodeUrl(def.w).replace(/_/g, '%20') + "\">" + escHtml(def.t) + "<font color='#aaa'>#</font></a> ";
+				}
+				//<muplis>
+				var deft = '';
+				if (def.t.search('sampu staile') >= 0) deft += "<img src='../pixra/plise.png' height='16' width='16' title='lo staile poi sampu'>";
+				if (def.t.search('mansa staile') >= 0) deft += "<img src='../pixra/pelxuplise.png' height='16' width='16' title=\"lo staile poi na mutce cinri\">";
+				if (def.t.search('plixau jufra') >= 0) deft += "<img src='../pixra/crinoplise.png' height='16' width='16' title=\"lo jufra poi ka'e xamgu lo di'i fanva\">";
+				if (def.t.search('cnano staile') >= 0) deft += "<img src='../pixra/blabiplise.png' height='16' width='16' title=\"lo staile poi ka'e pluja\">";
+				if (def.t.search('non-standard') >= 0) deft += "<img src='../pixra/cicnaplise.png' height='16' width='16' title=\"na'e catni se ciska staile\">";
+				if (deft !== '') jvs.innerHTML = deft;
+				//</muplis>
+			}
+			if (def.date) {
+				var jvs = document.createElement('div');
+				jvs.className = 'type';
+				jvs.innerHTML = def.date;
+			}
+			if (def.from) {
+				var ss = document.createElement('div');
+				ss.className = 'type';
+				ss.innerHTML = def.from;
+			}
+			var word = document.createElement('h4');
+			word.classList.add('valsi');
+			if (def.l) word.classList.add('nalojbo');
+			if (plukaquery(def.w) == query) {
+				word.innerHTML = hilite(query) + ' ';
+			} else {
+				word.innerHTML = '<a class="valsi' + (def.l ? '' : ' nalojbo') + '" href="#sisku/' + encodeUrl(def.w) + '">' + hilite(escHtml(def.w, true)) + "</a>" + ' ';
+			}
+			var heading = document.createElement('heading');
+			heading.classList.add('heading');
+			var flex = document.createElement('heading');
+			flex.style.flex = 1;
+
+			if (tfm) heading.appendChild(tfm);
+			heading.appendChild(word);
+			if (fmm) heading.appendChild(fmm);
+			heading.appendChild(flex);
+			if (jvs) out.appendChild(jvs);
+			if (ss) out.appendChild(ss);
+			out.appendChild(heading);
+
+			if (def.d) {
+				var n = document.createElement('div');
+				n.className = 'definition';
+				n.classList.add('valsi');
+				if (def.d.nasezvafahi) {
+					n.classList.add('nasezvafahi');
+					n.innerHTML = window.nasezvafahi;
+				} else {
+					n.innerHTML = melbi_uenzi(def.d).replace(/\n/g,'<br/>') + ' ';
+				}
+				out.appendChild(n);
+			}
+			if (def.n) {
+				var n = document.createElement('div');
+				n.className = 'notes';
+				n.classList.add('valsi');
+				n.innerHTML = melbi_uenzi(def.n) + ' ';
+				out.appendChild(n);
+			}
+			if (def.e) {
+				var n = document.createElement('div');
+				n.className = 'examples';
+				n.classList.add('valsi');
+				n.innerHTML = "<table style='width:100%;border-collapse:collapse;margin-top:10px;margin-bottom:10px;'>" + melbi_uenzi((def.e + "\n").replace(/%/g, "\n").replace(/(.*?) — (.*?)\n/g,
+					"<tr><td class='mupligreku'><b>$1<\/b><\/td><td class='mupligreku'><i>$2<\/i><\/td><\/tr>\n")) + '</table> ';
+				out.appendChild(n);
+			}
+			if (def.k) {
+				var n = document.createElement('div');
+				n.className = 'related';
+				n.innerHTML = 'See also: ' + melbi_uenzi(def.k) + ' ';
+				out.appendChild(n);
+			}
+			if ((def.r || []).length > 0 && !def.l && window.xuzganalojudri) {
+				var rafsi = document.createElement('div');
+				rafsi.className = 'rafsi';
+				rafsi.innerHTML = "rafsi: ";
+				for (i = 0; i < def.r.length; i++) {
+					var rafElem = document.createElement('span');
+					rafElem.className = 'pamei';
+					var raf = def.r[i];
+					if ((def.t || '').match(/lujvo/)) {
+						var a = document.createElement('a');
+						a.setAttribute('href', '#sisku/' + encodeUrl(raf));
+						a.text = raf;
+						rafElem.appendChild(a);
+					} else {
+						rafElem.innerHTML = hilite(raf);
+					}
+					rafElem.innerHTML = rafElem.innerHTML + ' ';
+					rafsi.appendChild(rafElem);
+				}
+				out.appendChild(rafsi);
+			}
+			if ((def.rafsiDocuments || []).length > 0) {
+				var subDefs = document.createElement('div');
+				subDefs.classList.add('definition');
+				subDefs.classList.add('subdefinitions');
+				for (var i = 0; i < def.rafsiDocuments.length; i++) {
+					subDefs.appendChild(skicu_pavalsi(def.rafsiDocuments[i], 1));
+				}
+				out.appendChild(subDefs);
+			}
+
+			out.addEventListener("click", clicked);
+			return out;
+		}
+
+		function displayDescription(ban_tex) {
+			if (query == '') {
+				SiteTitleFull.classList.remove("normal-search-mode-title-color");
+				SiteTitleFull.classList.remove("rimni-search-mode-title-color");
+				SiteTitleFull.classList.add("desktop-mode-title-color");
+				dasri.className = 'galtu-dasri';
+				outp.style.display = 'none';
+				descr.style.display = 'block';
+				var arrpurc = JSON.parse(localStorage.getItem('purci')) || [];
+				//<xuzganalojudri|lojbo>
+				var obj = {
+					"@cirkotci": [0, "lojbo sance", "../pixra/taplasance.svg", 1, "../sance/"],
+					"@CLL": ['.inglic.', "Reference Grammar", "../pixra/cll.png", 1, "http://lojban.org/publications/cll/cll_v1.1_xhtml-no-chunks/"],
+					"@Jbotcan": ['.inglic.', "Lojban-Chan", "../pixra/jbotcan.svg", 1, "https://jbotcan.org"],
+					"muplis": [0, "la muplis", "../pixra/taplamuplis.svg", 2.1],
+					"jb": [0, "English - Lojban examples", "../pixra/snime-1.svg", 1],
+					"en": [0, "English-Lojban", "../pixra/selsku_lanci_eng.svg", 1],
+					"jbo": [0, "fanva fi le'e lojbo ri", "../pixra/lanci_jbo.svg", 1],
+					"ja": [0, "日本 - <span style=\"white-space:pre;\">ロジバン</span>", "../pixra/selsku_lanci_jpn.svg", 1],
+					"fr-facile": [0, "français facile - lojban", "../pixra/selsku_lanci_fra.svg", 1],
+					"ru": [0, "русский - ложбан", "../pixra/selsku_lanci_rus.svg", 1],
+					"eo": [0, "Esperanto - Loĵbano", "../pixra/lanci_epo.svg", 1],
+					"es": [0, "español - lojban", "../pixra/selsku_lanci_spa.svg", 1],
+					"zh": [0, "中文 - 逻辑语", "../pixra/selsku_lanci_zho.svg", 1],
+					"@CC": ['.inglic.', "The Crash Course", "../pixra/cogwheel-5.svg", 1, "https://mw.lojban.org/papri/The_Crash_Course_in_Lojban"]
+				}
+				//</xuzganalojudri|lojbo>
+				//<lojbo false>
+				var obj = {
+					"muplis-eng-pol": [0, "English - polski", "../pixra/muplis-eng-pol.png", 2.1],
+					"en-pt-BR": [0, "English - Portugueze", "../pixra/152.png", 1],
+					"zamenhofo": [0, "Esperanto - English", "../pixra/lanci_epo.svg", 1],
+					"toki": [0, "toki pona - English", "../pixra/Toki_pona.svg", 1],
+					"laadan": [0, "English - Láadan", "../pixra/Double_girl_sign.svg", 1],
+					"simplingua-zho": [0, "Simplingua - 中文", "../pixra/simplingua.svg", 1],
+					"ktv-eng": [0, "Kotava - English", "../pixra/ktv-eng.svg", 1],
+					"ina": [0, "English - Interlingua", "../pixra/Flag_of_Interlingua.svg", 1],
+					"ldp": [0, "English - Lingwa de Planeta", "../pixra/ldp.svg", 1],
+					"ile": [0, "English - Occidental / Interlingue", "../pixra/Flag_of_Interlingue.svg", 1],
+					"epo-thai": [0, "Esperanto - Thai", "../pixra/lanci_epo.svg", 1],
+				}
+				//</lojbo>
+				var acc = "";
+				var cisn = 100;
+				for (var key in obj) {
+					if (obj[key][0] === 0 || obj[key][0] === window.bangu) {
+						acc += "<div id='DIV_1' style='height:" + (cisn) + "px;width:" + (obj[key][3] * cisn) + "px;'><div id='DIV_2' style='height:" + (cisn) + "px;width:" + (
+								obj[key][3] * cisn) + "px;'><span id='SPAN_3' style='width:auto;'><b id='B_4'>" + obj[key][1] + "</b></span><a" + ((obj[key][4] || '').indexOf("http") === 0 ? " target='_blank'" : '') + " href=\"" + ((key.indexOf(
+								"@") === 0) ? obj[key][4] : ("https://la-lojban.github.io/sutysisku/" + key + "/#sisku/" + encodeUrl(drataQuery))) + "\" id='A_7'><div id='DIV_8' style='height:" +
+							(cisn) + "px;width:" + (obj[key][3] * cisn) + "px;background-image:url(\"" + obj[key][2] + "\")'></div></a></div></div>";
+					}
+				}
+				if (!drataQuery || (drataQuery === '')) drataQuery = (arrpurc[0] || '');
+				drata.innerHTML = acc;
+				drata.style.display = 'block';
+				if (arrpurc.length > 0) {
+					purci.innerHTML = " " + window.purc +
+						arrpurc.map(
+							function(a) {
+								return '<a href="#sisku/' + encodeUrl(a) + '">' + escHtml(a) + "</a>";
+							}
+						).join(", ");
+					sidju.style.display = 'block';
+				}
+			} else {
+				if (!ban_tex) MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+				outp.style.display = 'block';
+				descr.style.display = 'none';
+				drata.style.display = 'none';
+				sidju.style.display = 'none';
+				document.getElementById('content').scrollTop = 0;
+			}
+		}
+
+		/*function displaySounds() {
+			sance.style.display = 'block';
+			outp.style.display = 'none';
+			descr.style.display = 'none';
+			drata.style.display = 'none';
+			purci.style.display = 'none';
+			document.getElementById('content').scrollTop = 0;
+		}*/
+
+		function plukaquery(a) {
+			if (a.charAt(0) !== '^' && a.slice(-1) !== '$') return a.replace(/[,\.]/g, " ").replace(/ {2,}/g, " ").replace(/’/g,"'").trim();
+			return a;
+		}
+
+		function clicked(event) {
+			if (event.target.nodeName === 'A') {
+				var el = event.target;
+				if (el.ctrlKey || el.metaKey) return;
+				lecnino_judri_gaumeluhacitri(el.getAttribute('href'));
+				sisku_rahilejudri();
+			}
+			return false;
+		}
+
+		function lecnino_judri_gaumeluhacitri(a) {
+			if (a !== location.href.substring(location.href.indexOf("#"))) {
+				a = a.match(/(\#sisku\/)(.*)/);
+				if (a) a = a[1] + encodeUrl(decodeUrl(a[2]));
+				window.history.pushState({}, null, a || '');
+			}
+		}
+
+		function sisku_rahilejudri() {
+			var searchMatch = window.location.href.match(/\#sisku\/(.*)/);
+			if (searchMatch && searchMatch.indexOf('/') === -1) {
+				query = decodeUrl(searchMatch[1]).trim();
+				ciska.value = query;
+				triggerEvent(ciska, 'input');
+				if (ready) doSearch();
+			}
+			//if (window.location.href.match(/\#sance/)) displaySounds();
+		}
+
+		function doSearch() {
+			query = plukaquery(ciska.value);
+			rock = new RegExp("(" + query.replace(/ /g, "|") + "|" + query.replace(/'/g, "h").replace(/ /g, "|") + ")", "gi");
+			if (query === '') {
+				displayDescription();
+			} else {
+				drataQuery = query;
+			}
+			if (query === prevQuery) return;
+			prevQuery = query;
+			var url = '';
+			if (query.length > 0) url = '#sisku/' + encodeUrl(query);
+			if (url == '' || document.referrer === document.location.href) return;
+			worker.postMessage({
+				'kind': 'newSearch',
+				'query': query,
+				'type': seskari
+			});
+			var difference = cati() - lastQueried;
+			if (difference > 2000) {
+				lecnino_judri_gaumeluhacitri(url);
+				ga('send', 'pageview', '#sisku/' + query);
+				var pageViewData = {
+					dl: window.location.href,
+					dt: document.title,
+					dr: document.referrer,
+					dp: '#sisku/' + query,
+					dh: window.location.protocol + "//" + window.location.hostname,
+					z: Math.round(Math.random() * 1e12)
+				};
+				socket.emit('sisku', pageViewData);
+				if (einingau) window.location.reload();
+			} else {
+				window.history.replaceState({}, null, url);
+			}
+			lastQueried = cati();
+
+			window.jimte = 30;
+			resultCount = 0;
+			//window.dataLayer = window.dataLayer || [];
+			/*dataLayer.push({
+				event: 'formSubmit',
+				customPagePath: '#sisku/' + query
+			});*/
+			var ampersand = query.indexOf('@');
+			if (seskari==='rimni') {
+				// SiteTitle.firstChild.nodeValue = window.rimni;
+				SiteTitleFull.classList.add("rimni-search-mode-title-color");
+				SiteTitleFull.classList.remove("normal-search-mode-title-color");
+				SiteTitleFull.classList.remove("desktop-mode-title-color");
+				dasri.className = 'rimni-dasri';
+				for (var i = 0; i < SiteImage.length; i++) {
+					SiteImage[i].style.filter = "sepia(1.0)";
+					SiteImage[i].style.WebkitFilter = "sepia(1.0)";
+				}
+			} else if (seskari === 'cnano'){
+				SiteTitleFull.classList.add("normal-search-mode-title-color");
+				SiteTitleFull.classList.remove("desktop-mode-title-color");
+				dasri.className = 'galtu-dasri';
+				CnanoSutysisku();
+			}
+		}
+
+		function CnanoSutysisku() {
+			// SiteTitle.firstChild.nodeValue = firstSiteTitleValue;
+			for (var i = 0; i < SiteImage.length; i++) {
+				SiteImage[i].style.filter = "none";
+				SiteImage[i].style.WebkitFilter = "none";
+			}
+		}
+
+		function typing(a) {
+			clearTimeout(typingTimer);
+			typingTimer = setTimeout(doSearch, a ? a : 250);
+			delay(function() {
+				//lo diklo sorcu xau lo uenzi poi pu se mitysisku
+				if (query === '' || !results || results.length === 0) return;
+				var a = JSON.parse(localStorage.getItem('purci')) || [];
+				var index = a.indexOf(query);
+				if (index >= 0) a.splice(index, 1);
+				a.unshift(query);
+				if (a.length > 10) a.length = 10;
+				localStorage.setItem('purci', JSON.stringify(a));
+			}, 2000);
+		};
+
+		function encodeUrl(uenzi) {
+			//for bookmarkable urls
+			return encodeURIComponent(uenzi.replace(/ /g, "_")).replace(/'/g, "%27");
+		}
+
+		function decodeUrl(urli) {
+			//for query
+			return decodeURIComponent(urli.replace(/&amp;/g, "&").replace(/%27/g, "'")).replace(/_/g, " ");
+		}
+
+		function escHtml(a, apos) {
+			//for displaying text
+			a = a
+				.replace(/</g, "&lt;")
+				.replace(/>/g, "&gt;")
+				.replace(/"/g, "&quot;")
+				.replace(/\(/g, "&#40;")
+				.replace(/\)/g, "&#41;");
+			if (!apos) a = a
+				.replace(/'/g, "&#039;");
+			return a;
+		}
+
+		function handler(e) {
+			if (e.keyCode && e.keyCode === 191) ciska.focus();
+		}
+
+		function skicu_lo_ro_valsi() {
+			var displayUpTo = Math.min(window.jimte, results.length);
+			for (; resultCount < displayUpTo; resultCount++) {
+				// console.log(results[resultCount]);
+				outp.appendChild(skicu_pavalsi(results[resultCount]));
+			}
+		}
+
+		function cati() {
+			if (window.performance) {
+				if (performance.now) return performance.now();
+			}
+			return +new Date();
+		}
+		// jimpe le jei su'o cnino sorcu ka'e se pilno ca lo nu jai gau akti fai le cnino papri
+		var appCache = window.applicationCache;
+		appCache.update();
+		if (appCache.status == window.applicationCache.UPDATEREADY) appCache.swapCache();
+		window.applicationCache.addEventListener('updateready', function(e) {
+			if (window.applicationCache.status == window.applicationCache.UPDATEREADY) einingau = true;
+		}, false);
+	</script>
+</body>
+
+</html>

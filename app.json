@@ -1,0 +1,6 @@
+{
+  "name": "la sutysisku",
+  "description": "A fast dictionary for Lojban and other languages",
+  "repository": "https://github.com/la-lojban/sutysisku/",
+  "keywords": ["lojban", "English", "sutysisku", "heroku"]
+}
