@@ -751,6 +751,7 @@ el.fireEvent('on' + e.eventType, e);
 }
 }
 function zero(e) {
+document.getElementsByTagName('input')[0].focus();
 if (this.toString() === 'kunti')
 document.getElementsByTagName('input')[0].value = "";
 if (query !== '') {
