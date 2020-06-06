@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+   <ShortName>ithkuil-sutysisku</ShortName>
+   <Description>%siskudescr%</Description>
+   <Tags>lojban dictionary sutsis sutysisku muplis vlasisku jbovlaste</Tags>
+   <Contact>bangu@lojban.org</Contact>
+   <Url type="text/html"
+        template="https://la-lojban.github.io/sutysisku/ithkuil/index.html#seskari=cnano&amp;sisku={searchTerms}"/>
+ </OpenSearchDescription>

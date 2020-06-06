@@ -1,0 +1,851 @@
+<html>
+<head>
+  <style type="text/css">
+body { font-family: monospace; color: white; background-color: black; }
+table { float: left; margin: .5em; }
+.clear { clear: left; }
+tr { border: none; margin: 0; padding: 0; }
+td { border: none; margin: 0; padding: .2em; border: thin black solid; }
+.hilite { border: thin red solid; background-color: black; color: yellow; }
+.legend { float: left; min-width: 7em; margin-bottom: .5em; }
+.BE { background-color: #000; }
+.SEhU { background-color: #000; }
+.BO { background-color: #000; }
+.BU { background-color: #000; }
+.LIhU { background-color: #000; }
+.BY { background-color: #2b0; }
+.LUhU { background-color: #000; }
+.DAhO { background-color: #000; }
+.NUhU { background-color: #000; }
+.GIhA { background-color: #90b; }
+.NUhI { background-color: #000; }
+.VIhA { background-color: #0b9; }
+.BAhE { background-color: #702; }
+.JOI { background-color: #b20; }
+.NUhA { background-color: #000; }
+.VEI { background-color: #000; }
+.ZEhA { background-color: #555; }
+.MOhI { background-color: #000; }
+.NAI { background-color: #000; }
+.ZAhO { background-color: #222; }
+.GA { background-color: #9f0; }
+.JAI { background-color: #000; }
+.TAhE { background-color: #0f2; }
+.GI { background-color: #000; }
+.VAU { background-color: #000; }
+.KE { background-color: #000; }
+.BOI { background-color: #000; }
+.BEhO { background-color: #000; }
+.MAI { background-color: #b00; }
+.LAU { background-color: #02b; }
+.LOhU { background-color: #000; }
+.BEI { background-color: #000; }
+.VUhO { background-color: #000; }
+.KEhE { background-color: #000; }
+.VUhU { background-color: #0f9; }
+.ROI { background-color: #f02; }
+.PU { background-color: #b02; }
+.CEI { background-color: #000; }
+.JA { background-color: #720; }
+.PA { background-color: #f00; }
+.FAhA { background-color: #9b0; }
+.FAhO { background-color: #000; }
+.ZO { background-color: #000; }
+.ZI { background-color: #888; }
+.ZOI { background-color: #aaa; }
+.LAhE { background-color: #02f; }
+.KUhO { background-color: #000; }
+.KUhE { background-color: #000; }
+.ME { background-color: #000; }
+.NOI { background-color: #00b; }
+.TUhU { background-color: #000; }
+.NAhU { background-color: #000; }
+.LEhU { background-color: #000; }
+.MOI { background-color: #097; }
+.UI { background-color: #00f; }
+.ZIhE { background-color: #000; }
+.TUhE { background-color: #000; }
+.NAhE { background-color: #09f; }
+.DOI { background-color: #000; }
+.FA { background-color: #970; }
+.COI { background-color: #20b; }
+.TEI { background-color: #000; }
+.KOhA { background-color: #b09; }
+.PEhE { background-color: #000; }
+.MOhE { background-color: #000; }
+.NA { background-color: #09b; }
+.RAhO { background-color: #000; }
+.PEhO { background-color: #000; }
+.FOI { background-color: #000; }
+.FUhA { background-color: #000; }
+.CUhE { background-color: #20f; }
+.FUhE { background-color: #000; }
+.MEhU { background-color: #000; }
+.FUhO { background-color: #000; }
+.NU { background-color: #f20; }
+.SEI { background-color: #0b2; }
+.NIhE { background-color: #000; }
+.XI { background-color: #000; }
+.CO { background-color: #000; }
+.NIhO { background-color: #007; }
+.CAhA { background-color: #207; }
+.JOhI { background-color: #000; }
+.CU { background-color: #000; }
+.CEhE { background-color: #000; }
+.KEI { background-color: #000; }
+.KI { background-color: #000; }
+.ZEI { background-color: #000; }
+.SU { background-color: #000; }
+.LOhO { background-color: #000; }
+.SI { background-color: #000; }
+.KU { background-color: #000; }
+.GOhA { background-color: #070; }
+.SA { background-color: #000; }
+.SE { background-color: #072; }
+.BIhI { background-color: #270; }
+.BIhE { background-color: #000; }
+.CAI { background-color: #2f0; }
+.TOI { background-color: #000; }
+.TEhU { background-color: #000; }
+.GEhU { background-color: #000; }
+.BAI { background-color: #f90; }
+.LE { background-color: #790; }
+.LA { background-color: #027; }
+.SOI { background-color: #000; }
+.VEhA { background-color: #079; }
+.LI { background-color: #b90; }
+.TO { background-color: #709; }
+.LU { background-color: #000; }
+.GUhA { background-color: #0b0; }
+.A { background-color: #700; }
+.VA { background-color: #f09; }
+.GOI { background-color: #90f; }
+.MAhO { background-color: #000; }
+.FEhE { background-color: #000; }
+.I { background-color: #0f0; }
+.ZOhU { background-color: #000; }
+.FEhU { background-color: #000; }
+.Y { background-color: #000; }
+.FIhO { background-color: #000; }
+.DOhU { background-color: #000; }
+.GAhO { background-color: #907; }
+.VEhO { background-color: #000; }
+</style>
+  <script type="text/javascript">
+function hilite(selmao) {
+  divs = document.getElementsByTagName("div")
+  for (i=0; i < divs.length; i++) {
+    div=divs[i]
+    if (div.className == "hilite") {
+      div.className = ""
+    }
+    else if (div.id == selmao) {
+      div.className = "hilite"
+    }
+  }
+  tds = document.getElementsByTagName("td")
+  for (i=0; i < tds.length; i++) {
+    td=tds[i]
+    if (td.getAttribute('name') == selmao) {
+      td.className = "hilite"
+    } 
+    else {
+      td.className = td.getAttribute('name')
+    }
+  }
+}
+</script></head>
+<body><table><tr>
+<td name="A" class="A" title="sumti or" onclick="hilite(this.getAttribute('name'))" id=".a">.a</td>
+<td name="UI" class="UI" title="attentive" onclick="hilite(this.getAttribute('name'))" id=".a'a">.a'a</td>
+<td name="UI" class="UI" title="alertness" onclick="hilite(this.getAttribute('name'))" id=".a'e">.a'e</td>
+<td name="UI" class="UI" title="effort" onclick="hilite(this.getAttribute('name'))" id=".a'i">.a'i</td>
+<td name="UI" class="UI" title="hope" onclick="hilite(this.getAttribute('name'))" id=".a'o">.a'o</td>
+<td name="UI" class="UI" title="interest" onclick="hilite(this.getAttribute('name'))" id=".a'u">.a'u</td>
+<td name="UI" class="UI" title="intent" onclick="hilite(this.getAttribute('name'))" id=".ai">.ai</td>
+<td name="UI" class="UI" title="desire" onclick="hilite(this.getAttribute('name'))" id=".au">.au</td></tr><tr>
+<td name="PU" class="PU" title="after" onclick="hilite(this.getAttribute('name'))" id="ba">ba</td>
+<td name="UI" class="UI" title="I anticipate" onclick="hilite(this.getAttribute('name'))" id="ba'a">ba'a</td>
+<td name="BAhE" class="BAhE" title="emphasize next" onclick="hilite(this.getAttribute('name'))" id="ba'e">ba'e</td>
+<td name="BAI" class="BAI" title="replaced by" onclick="hilite(this.getAttribute('name'))" id="ba'i">ba'i</td>
+<td name="ZAhO" class="ZAhO" title="perfective" onclick="hilite(this.getAttribute('name'))" id="ba'o">ba'o</td>
+<td name="UI" class="UI" title="exaggeration" onclick="hilite(this.getAttribute('name'))" id="ba'u">ba'u</td>
+<td name="BAI" class="BAI" title="compelled by" onclick="hilite(this.getAttribute('name'))" id="bai">bai</td>
+<td name="BAI" class="BAI" title="in language" onclick="hilite(this.getAttribute('name'))" id="bau">bau</td></tr><tr>
+<td name="PU" class="PU" title="during" onclick="hilite(this.getAttribute('name'))" id="ca">ca</td>
+<td name="CAhA" class="CAhA" title="actually is" onclick="hilite(this.getAttribute('name'))" id="ca'a">ca'a</td>
+<td name="UI" class="UI" title="I define" onclick="hilite(this.getAttribute('name'))" id="ca'e">ca'e</td>
+<td name="BAI" class="BAI" title="by authority of" onclick="hilite(this.getAttribute('name'))" id="ca'i">ca'i</td>
+<td name="ZAhO" class="ZAhO" title="continuative" onclick="hilite(this.getAttribute('name'))" id="ca'o">ca'o</td>
+<td name="FAhA" class="FAhA" title="in front of" onclick="hilite(this.getAttribute('name'))" id="ca'u">ca'u</td>
+<td name="CAI" class="CAI" title="intense emotion" onclick="hilite(this.getAttribute('name'))" id="cai">cai</td>
+<td name="BAI" class="BAI" title="lacked by" onclick="hilite(this.getAttribute('name'))" id="cau">cau</td></tr><tr>
+<td name="KOhA" class="KOhA" title="something 1" onclick="hilite(this.getAttribute('name'))" id="da">da</td>
+<td name="PA" class="PA" title="all except" onclick="hilite(this.getAttribute('name'))" id="da'a">da'a</td>
+<td name="KOhA" class="KOhA" title="eventual utterance" onclick="hilite(this.getAttribute('name'))" id="da'e">da'e</td>
+<td name="UI" class="UI" title="supposing" onclick="hilite(this.getAttribute('name'))" id="da'i">da'i</td>
+<td name="DAhO" class="DAhO" title="cancel pro-assigns" onclick="hilite(this.getAttribute('name'))" id="da'o">da'o</td>
+<td name="KOhA" class="KOhA" title="earlier utterance" onclick="hilite(this.getAttribute('name'))" id="da'u">da'u</td>
+<td name="UI" class="UI" title="empathy" onclick="hilite(this.getAttribute('name'))" id="dai">dai</td>
+<td name="PA" class="PA" title="hex digit A" onclick="hilite(this.getAttribute('name'))" id="dau">dau</td></tr><tr>
+<td name="FA" class="FA" title="1st sumti place" onclick="hilite(this.getAttribute('name'))" id="fa">fa</td>
+<td name="FAhA" class="FAhA" title="towards point" onclick="hilite(this.getAttribute('name'))" id="fa'a">fa'a</td>
+<td name="BAI" class="BAI" title="reverse of" onclick="hilite(this.getAttribute('name'))" id="fa'e">fa'e</td>
+<td name="VUhU" class="VUhU" title="reciprocal of" onclick="hilite(this.getAttribute('name'))" id="fa'i">fa'i</td>
+<td name="FAhO" class="FAhO" title="end of text" onclick="hilite(this.getAttribute('name'))" id="fa'o">fa'o</td>
+<td name="JOI" class="JOI" title="and respectively" onclick="hilite(this.getAttribute('name'))" id="fa'u">fa'u</td>
+<td name="FA" class="FA" title="extra sumti place" onclick="hilite(this.getAttribute('name'))" id="fai">fai</td>
+<td name="BAI" class="BAI" title="in the event of" onclick="hilite(this.getAttribute('name'))" id="fau">fau</td></tr><tr>
+<td name="GA" class="GA" title="fore or" onclick="hilite(this.getAttribute('name'))" id="ga">ga</td>
+<td name="BAI" class="BAI" title="to observer" onclick="hilite(this.getAttribute('name'))" id="ga'a">ga'a</td>
+<td name="BY" class="BY" title="upper-case shift" onclick="hilite(this.getAttribute('name'))" id="ga'e">ga'e</td>
+<td name="UI" class="UI" title="hauteur" onclick="hilite(this.getAttribute('name'))" id="ga'i">ga'i</td>
+<td name="GAhO" class="GAhO" title="inclusive interval" onclick="hilite(this.getAttribute('name'))" id="ga'o">ga'o</td>
+<td name="FAhA" class="FAhA" title="above" onclick="hilite(this.getAttribute('name'))" id="ga'u">ga'u</td>
+<td name="PA" class="PA" title="hex digit C" onclick="hilite(this.getAttribute('name'))" id="gai">gai</td>
+<td name="BAI" class="BAI" title="with active agent" onclick="hilite(this.getAttribute('name'))" id="gau">gau</td></tr><tr>
+<td name="JA" class="JA" title="tanru or" onclick="hilite(this.getAttribute('name'))" id="ja">ja</td>
+<td name="NA" class="NA" title="bridi affirmer" onclick="hilite(this.getAttribute('name'))" id="ja'a">ja'a</td>
+<td name="BAI" class="BAI" title="therefore result" onclick="hilite(this.getAttribute('name'))" id="ja'e">ja'e</td>
+<td name="BAI" class="BAI" title="by rule" onclick="hilite(this.getAttribute('name'))" id="ja'i">ja'i</td>
+<td name="UI" class="UI" title="I conclude" onclick="hilite(this.getAttribute('name'))" id="ja'o">ja'o</td><td></td>
+<td name="JAI" class="JAI" title="modal conversion" onclick="hilite(this.getAttribute('name'))" id="jai">jai</td>
+<td name="PA" class="PA" title="hex digit D" onclick="hilite(this.getAttribute('name'))" id="jau">jau</td></tr><tr>
+<td name="NU" class="NU" title="property abstract" onclick="hilite(this.getAttribute('name'))" id="ka">ka</td>
+<td name="BAI" class="BAI" title="gone to by" onclick="hilite(this.getAttribute('name'))" id="ka'a">ka'a</td>
+<td name="CAhA" class="CAhA" title="innately capable of" onclick="hilite(this.getAttribute('name'))" id="ka'e">ka'e</td>
+<td name="BAI" class="BAI" title="represented by" onclick="hilite(this.getAttribute('name'))" id="ka'i">ka'i</td>
+<td name="PA" class="PA" title="imaginary i" onclick="hilite(this.getAttribute('name'))" id="ka'o">ka'o</td>
+<td name="UI" class="UI" title="I know culturally" onclick="hilite(this.getAttribute('name'))" id="ka'u">ka'u</td>
+<td name="BAI" class="BAI" title="characterizing" onclick="hilite(this.getAttribute('name'))" id="kai">kai</td>
+<td name="UI" class="UI" title="indirect question" onclick="hilite(this.getAttribute('name'))" id="kau">kau</td></tr><tr>
+<td name="LA" class="LA" title="that named" onclick="hilite(this.getAttribute('name'))" id="la">la</td>
+<td name="UI" class="UI" title="probability" onclick="hilite(this.getAttribute('name'))" id="la'a">la'a</td>
+<td name="LAhE" class="LAhE" title="the referent of" onclick="hilite(this.getAttribute('name'))" id="la'e">la'e</td>
+<td name="LA" class="LA" title="the set of named" onclick="hilite(this.getAttribute('name'))" id="la'i">la'i</td>
+<td name="ZOI" class="ZOI" title="the non-Lojban named" onclick="hilite(this.getAttribute('name'))" id="la'o">la'o</td>
+<td name="BAI" class="BAI" title="quantifying" onclick="hilite(this.getAttribute('name'))" id="la'u">la'u</td>
+<td name="LA" class="LA" title="the mass of named" onclick="hilite(this.getAttribute('name'))" id="lai">lai</td>
+<td name="LAU" class="LAU" title="punctuation mark" onclick="hilite(this.getAttribute('name'))" id="lau">lau</td></tr><tr>
+<td name="KOhA" class="KOhA" title="sumti ?" onclick="hilite(this.getAttribute('name'))" id="ma">ma</td>
+<td name="KOhA" class="KOhA" title="we with you" onclick="hilite(this.getAttribute('name'))" id="ma'a">ma'a</td>
+<td name="BAI" class="BAI" title="material object" onclick="hilite(this.getAttribute('name'))" id="ma'e">ma'e</td>
+<td name="BAI" class="BAI" title="in reference frame" onclick="hilite(this.getAttribute('name'))" id="ma'i">ma'i</td>
+<td name="MAhO" class="MAhO" title="operand to operator" onclick="hilite(this.getAttribute('name'))" id="ma'o">ma'o</td>
+<td name="PA" class="PA" title="positive number" onclick="hilite(this.getAttribute('name'))" id="ma'u">ma'u</td>
+<td name="MAI" class="MAI" title="sentence ordinal" onclick="hilite(this.getAttribute('name'))" id="mai">mai</td>
+<td name="BAI" class="BAI" title="exceeded by" onclick="hilite(this.getAttribute('name'))" id="mau">mau</td></tr><tr>
+<td name="NA" class="NA" title="bridi negator" onclick="hilite(this.getAttribute('name'))" id="na">na</td>
+<td name="BY" class="BY" title="cancel shifts" onclick="hilite(this.getAttribute('name'))" id="na'a">na'a</td>
+<td name="NAhE" class="NAhE" title="scalar contrary" onclick="hilite(this.getAttribute('name'))" id="na'e">na'e</td>
+<td name="UI" class="UI" title="metalinguistic not" onclick="hilite(this.getAttribute('name'))" id="na'i">na'i</td>
+<td name="TAhE" class="TAhE" title="typically" onclick="hilite(this.getAttribute('name'))" id="na'o">na'o</td>
+<td name="NAhU" class="NAhU" title="selbri to operator" onclick="hilite(this.getAttribute('name'))" id="na'u">na'u</td>
+<td name="NAI" class="NAI" title="negate last word" onclick="hilite(this.getAttribute('name'))" id="nai">nai</td>
+<td name="CUhE" class="CUhE" title="reference point" onclick="hilite(this.getAttribute('name'))" id="nau">nau</td></tr><tr>
+<td name="PA" class="PA" title="1" onclick="hilite(this.getAttribute('name'))" id="pa">pa</td>
+<td name="BAI" class="BAI" title="in addition to" onclick="hilite(this.getAttribute('name'))" id="pa'a">pa'a</td>
+<td name="UI" class="UI" title="justice" onclick="hilite(this.getAttribute('name'))" id="pa'e">pa'e</td>
+<td name="VUhU" class="VUhU" title="ratio" onclick="hilite(this.getAttribute('name'))" id="pa'i">pa'i</td>
+<td name="FAhA" class="FAhA" title="transfixing" onclick="hilite(this.getAttribute('name'))" id="pa'o">pa'o</td>
+<td name="BAI" class="BAI" title="having component" onclick="hilite(this.getAttribute('name'))" id="pa'u">pa'u</td>
+<td name="PA" class="PA" title="pi" onclick="hilite(this.getAttribute('name'))" id="pai">pai</td>
+<td name="UI" class="UI" title="question follows" onclick="hilite(this.getAttribute('name'))" id="pau">pau</td></tr><tr>
+<td name="KOhA" class="KOhA" title="recent sumti" onclick="hilite(this.getAttribute('name'))" id="ra">ra</td>
+<td name="BAI" class="BAI" title="pertained to by" onclick="hilite(this.getAttribute('name'))" id="ra'a">ra'a</td>
+<td name="PA" class="PA" title="repeating decimal" onclick="hilite(this.getAttribute('name'))" id="ra'e">ra'e</td>
+<td name="BAI" class="BAI" title="from source" onclick="hilite(this.getAttribute('name'))" id="ra'i">ra'i</td>
+<td name="RAhO" class="RAhO" title="pro-assign update" onclick="hilite(this.getAttribute('name'))" id="ra'o">ra'o</td>
+<td name="UI" class="UI" title="chiefly" onclick="hilite(this.getAttribute('name'))" id="ra'u">ra'u</td>
+<td name="BAI" class="BAI" title="with superlative" onclick="hilite(this.getAttribute('name'))" id="rai">rai</td>
+<td name="PA" class="PA" title="enough" onclick="hilite(this.getAttribute('name'))" id="rau">rau</td></tr><tr>
+<td name="SA" class="SA" title="erase utterance" onclick="hilite(this.getAttribute('name'))" id="sa">sa</td>
+<td name="UI" class="UI" title="editorial insertion" onclick="hilite(this.getAttribute('name'))" id="sa'a">sa'a</td>
+<td name="UI" class="UI" title="precisely speaking" onclick="hilite(this.getAttribute('name'))" id="sa'e">sa'e</td>
+<td name="VUhU" class="VUhU" title="matrix of columns" onclick="hilite(this.getAttribute('name'))" id="sa'i">sa'i</td>
+<td name="VUhU" class="VUhU" title="derivative" onclick="hilite(this.getAttribute('name'))" id="sa'o">sa'o</td>
+<td name="UI" class="UI" title="simply speaking" onclick="hilite(this.getAttribute('name'))" id="sa'u">sa'u</td>
+<td name="CAI" class="CAI" title="strong emotion" onclick="hilite(this.getAttribute('name'))" id="sai">sai</td>
+<td name="BAI" class="BAI" title="requiring" onclick="hilite(this.getAttribute('name'))" id="sau">sau</td></tr><tr>
+<td name="KOhA" class="KOhA" title="that there" onclick="hilite(this.getAttribute('name'))" id="ta">ta</td>
+<td name="COI" class="COI" title="interruption" onclick="hilite(this.getAttribute('name'))" id="ta'a">ta'a</td>
+<td name="TAhE" class="TAhE" title="habitually" onclick="hilite(this.getAttribute('name'))" id="ta'e">ta'e</td>
+<td name="BAI" class="BAI" title="by method" onclick="hilite(this.getAttribute('name'))" id="ta'i">ta'i</td>
+<td name="UI" class="UI" title="by the way" onclick="hilite(this.getAttribute('name'))" id="ta'o">ta'o</td>
+<td name="UI" class="UI" title="making a tanru" onclick="hilite(this.getAttribute('name'))" id="ta'u">ta'u</td>
+<td name="BAI" class="BAI" title="in form" onclick="hilite(this.getAttribute('name'))" id="tai">tai</td>
+<td name="LAU" class="LAU" title="shift next lerfu" onclick="hilite(this.getAttribute('name'))" id="tau">tau</td></tr><tr>
+<td name="VA" class="VA" title="there at" onclick="hilite(this.getAttribute('name'))" id="va">va</td>
+<td name="VUhU" class="VUhU" title="additive inverse" onclick="hilite(this.getAttribute('name'))" id="va'a">va'a</td>
+<td name="MOI" class="MOI" title="scalar selbri" onclick="hilite(this.getAttribute('name'))" id="va'e">va'e</td>
+<td name="UI" class="UI" title="in other words" onclick="hilite(this.getAttribute('name'))" id="va'i">va'i</td>
+<td name="BAI" class="BAI" title="under conditions" onclick="hilite(this.getAttribute('name'))" id="va'o">va'o</td>
+<td name="BAI" class="BAI" title="benefiting from" onclick="hilite(this.getAttribute('name'))" id="va'u">va'u</td>
+<td name="PA" class="PA" title="hex digit F" onclick="hilite(this.getAttribute('name'))" id="vai">vai</td>
+<td name="VAU" class="VAU" title="end simple bridi" onclick="hilite(this.getAttribute('name'))" id="vau">vau</td></tr><tr>
+<td name="PA" class="PA" title="6" onclick="hilite(this.getAttribute('name'))" id="xa">xa</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr>
+<td name="ZI" class="ZI" title="medium time" onclick="hilite(this.getAttribute('name'))" id="za">za</td>
+<td name="UI" class="UI" title="I observe" onclick="hilite(this.getAttribute('name'))" id="za'a">za'a</td>
+<td name="BAhE" class="BAhE" title="nonce-word next" onclick="hilite(this.getAttribute('name'))" id="za'e">za'e</td>
+<td name="NU" class="NU" title="state abstract" onclick="hilite(this.getAttribute('name'))" id="za'i">za'i</td>
+<td name="ZAhO" class="ZAhO" title="superfective" onclick="hilite(this.getAttribute('name'))" id="za'o">za'o</td>
+<td name="PA" class="PA" title="greater than" onclick="hilite(this.getAttribute('name'))" id="za'u">za'u</td>
+<td name="LAU" class="LAU" title="select alphabet" onclick="hilite(this.getAttribute('name'))" id="zai">zai</td>
+<td name="BAI" class="BAI" title="approved by" onclick="hilite(this.getAttribute('name'))" id="zau">zau</td></tr></table><table><tr>
+<td name="A" class="A" title="sumti and" onclick="hilite(this.getAttribute('name'))" id=".e">.e</td>
+<td name="UI" class="UI" title="permission" onclick="hilite(this.getAttribute('name'))" id=".e'a">.e'a</td>
+<td name="UI" class="UI" title="competence" onclick="hilite(this.getAttribute('name'))" id=".e'e">.e'e</td>
+<td name="UI" class="UI" title="constraint" onclick="hilite(this.getAttribute('name'))" id=".e'i">.e'i</td>
+<td name="UI" class="UI" title="request" onclick="hilite(this.getAttribute('name'))" id=".e'o">.e'o</td>
+<td name="UI" class="UI" title="suggestion" onclick="hilite(this.getAttribute('name'))" id=".e'u">.e'u</td>
+<td name="UI" class="UI" title="obligation" onclick="hilite(this.getAttribute('name'))" id=".ei">.ei</td></tr><tr>
+<td name="BE" class="BE" title="link sumti" onclick="hilite(this.getAttribute('name'))" id="be">be</td>
+<td name="FAhA" class="FAhA" title="north of" onclick="hilite(this.getAttribute('name'))" id="be'a">be'a</td>
+<td name="COI" class="COI" title="request to send" onclick="hilite(this.getAttribute('name'))" id="be'e">be'e</td>
+<td name="BAI" class="BAI" title="sent by" onclick="hilite(this.getAttribute('name'))" id="be'i">be'i</td>
+<td name="BEhO" class="BEhO" title="end linked sumti" onclick="hilite(this.getAttribute('name'))" id="be'o">be'o</td>
+<td name="UI" class="UI" title="lack" onclick="hilite(this.getAttribute('name'))" id="be'u">be'u</td>
+<td name="BEI" class="BEI" title="link more sumti" onclick="hilite(this.getAttribute('name'))" id="bei">bei</td></tr><tr>
+<td name="JOI" class="JOI" title="in a set with" onclick="hilite(this.getAttribute('name'))" id="ce">ce</td>
+<td name="LAU" class="LAU" title="font shift" onclick="hilite(this.getAttribute('name'))" id="ce'a">ce'a</td>
+<td name="CEhE" class="CEhE" title="afterthought termset" onclick="hilite(this.getAttribute('name'))" id="ce'e">ce'e</td>
+<td name="PA" class="PA" title="percent" onclick="hilite(this.getAttribute('name'))" id="ce'i">ce'i</td>
+<td name="JOI" class="JOI" title="in a sequence with" onclick="hilite(this.getAttribute('name'))" id="ce'o">ce'o</td>
+<td name="KOhA" class="KOhA" title="lambda" onclick="hilite(this.getAttribute('name'))" id="ce'u">ce'u</td>
+<td name="CEI" class="CEI" title="pro-bridi assign" onclick="hilite(this.getAttribute('name'))" id="cei">cei</td></tr><tr>
+<td name="KOhA" class="KOhA" title="something 2" onclick="hilite(this.getAttribute('name'))" id="de">de</td>
+<td name="ZAhO" class="ZAhO" title="pausative" onclick="hilite(this.getAttribute('name'))" id="de'a">de'a</td>
+<td name="KOhA" class="KOhA" title="soon utterance" onclick="hilite(this.getAttribute('name'))" id="de'e">de'e</td>
+<td name="BAI" class="BAI" title="dated" onclick="hilite(this.getAttribute('name'))" id="de'i">de'i</td>
+<td name="VUhU" class="VUhU" title="logarithm" onclick="hilite(this.getAttribute('name'))" id="de'o">de'o</td>
+<td name="KOhA" class="KOhA" title="recent utterance" onclick="hilite(this.getAttribute('name'))" id="de'u">de'u</td>
+<td name="KOhA" class="KOhA" title="this utterance" onclick="hilite(this.getAttribute('name'))" id="dei">dei</td></tr><tr>
+<td name="FA" class="FA" title="2nd sumti place" onclick="hilite(this.getAttribute('name'))" id="fe">fe</td>
+<td name="VUhU" class="VUhU" title="nth root of" onclick="hilite(this.getAttribute('name'))" id="fe'a">fe'a</td>
+<td name="FEhE" class="FEhE" title="space aspects" onclick="hilite(this.getAttribute('name'))" id="fe'e">fe'e</td>
+<td name="VUhU" class="VUhU" title="divided by" onclick="hilite(this.getAttribute('name'))" id="fe'i">fe'i</td>
+<td name="COI" class="COI" title="over and out" onclick="hilite(this.getAttribute('name'))" id="fe'o">fe'o</td>
+<td name="FEhU" class="FEhU" title="end modal selbri" onclick="hilite(this.getAttribute('name'))" id="fe'u">fe'u</td>
+<td name="PA" class="PA" title="hex digit B" onclick="hilite(this.getAttribute('name'))" id="fei">fei</td></tr><tr>
+<td name="GA" class="GA" title="fore and" onclick="hilite(this.getAttribute('name'))" id="ge">ge</td>
+<td name="VUhU" class="VUhU" title="null operator" onclick="hilite(this.getAttribute('name'))" id="ge'a">ge'a</td>
+<td name="UI" class="UI" title="unspecif emotion" onclick="hilite(this.getAttribute('name'))" id="ge'e">ge'e</td>
+<td name="GA" class="GA" title="fore conn ?" onclick="hilite(this.getAttribute('name'))" id="ge'i">ge'i</td>
+<td name="BY" class="BY" title="Greek shift" onclick="hilite(this.getAttribute('name'))" id="ge'o">ge'o</td>
+<td name="GEhU" class="GEhU" title="end relative phrase" onclick="hilite(this.getAttribute('name'))" id="ge'u">ge'u</td>
+<td name="VUhU" class="VUhU" title="exponential notation" onclick="hilite(this.getAttribute('name'))" id="gei">gei</td></tr><tr>
+<td name="JA" class="JA" title="tanru and" onclick="hilite(this.getAttribute('name'))" id="je">je</td>
+<td name="NAhE" class="NAhE" title="scalar affirmer" onclick="hilite(this.getAttribute('name'))" id="je'a">je'a</td>
+<td name="COI" class="COI" title="roger" onclick="hilite(this.getAttribute('name'))" id="je'e">je'e</td>
+<td name="JA" class="JA" title="tanru conn ?" onclick="hilite(this.getAttribute('name'))" id="je'i">je'i</td>
+<td name="BY" class="BY" title="Hebrew shift" onclick="hilite(this.getAttribute('name'))" id="je'o">je'o</td>
+<td name="UI" class="UI" title="truth" onclick="hilite(this.getAttribute('name'))" id="je'u">je'u</td>
+<td name="NU" class="NU" title="truth abstract" onclick="hilite(this.getAttribute('name'))" id="jei">jei</td></tr><tr>
+<td name="KE" class="KE" title="start grouping" onclick="hilite(this.getAttribute('name'))" id="ke">ke</td>
+<td name="KOhA" class="KOhA" title="relativized it" onclick="hilite(this.getAttribute('name'))" id="ke'a">ke'a</td>
+<td name="KEhE" class="KEhE" title="end grouping" onclick="hilite(this.getAttribute('name'))" id="ke'e">ke'e</td>
+<td name="GAhO" class="GAhO" title="exclusive interval" onclick="hilite(this.getAttribute('name'))" id="ke'i">ke'i</td>
+<td name="COI" class="COI" title="please repeat" onclick="hilite(this.getAttribute('name'))" id="ke'o">ke'o</td>
+<td name="UI" class="UI" title="repeating" onclick="hilite(this.getAttribute('name'))" id="ke'u">ke'u</td>
+<td name="KEI" class="KEI" title="end abstraction" onclick="hilite(this.getAttribute('name'))" id="kei">kei</td></tr><tr>
+<td name="LE" class="LE" title="the described" onclick="hilite(this.getAttribute('name'))" id="le">le</td>
+<td name="BAI" class="BAI" title="in category" onclick="hilite(this.getAttribute('name'))" id="le'a">le'a</td>
+<td name="LE" class="LE" title="the stereotypical" onclick="hilite(this.getAttribute('name'))" id="le'e">le'e</td>
+<td name="LE" class="LE" title="the set described" onclick="hilite(this.getAttribute('name'))" id="le'i">le'i</td>
+<td name="UI" class="UI" title="aggressive" onclick="hilite(this.getAttribute('name'))" id="le'o">le'o</td>
+<td name="LEhU" class="LEhU" title="end error quote" onclick="hilite(this.getAttribute('name'))" id="le'u">le'u</td>
+<td name="LE" class="LE" title="the mass described" onclick="hilite(this.getAttribute('name'))" id="lei">lei</td></tr><tr>
+<td name="ME" class="ME" title="sumti to selbri" onclick="hilite(this.getAttribute('name'))" id="me">me</td>
+<td name="BAI" class="BAI" title="undercut by" onclick="hilite(this.getAttribute('name'))" id="me'a">me'a</td>
+<td name="BAI" class="BAI" title="with name" onclick="hilite(this.getAttribute('name'))" id="me'e">me'e</td>
+<td name="PA" class="PA" title="less than" onclick="hilite(this.getAttribute('name'))" id="me'i">me'i</td>
+<td name="LI" class="LI" title="the mex" onclick="hilite(this.getAttribute('name'))" id="me'o">me'o</td>
+<td name="MEhU" class="MEhU" title="end sumti to selbri" onclick="hilite(this.getAttribute('name'))" id="me'u">me'u</td>
+<td name="MOI" class="MOI" title="cardinal selbri" onclick="hilite(this.getAttribute('name'))" id="mei">mei</td></tr><tr>
+<td name="GOI" class="GOI" title="incidental phrase" onclick="hilite(this.getAttribute('name'))" id="ne">ne</td>
+<td name="FAhA" class="FAhA" title="next to" onclick="hilite(this.getAttribute('name'))" id="ne'a">ne'a</td><td></td>
+<td name="FAhA" class="FAhA" title="within" onclick="hilite(this.getAttribute('name'))" id="ne'i">ne'i</td>
+<td name="VUhU" class="VUhU" title="factorial" onclick="hilite(this.getAttribute('name'))" id="ne'o">ne'o</td>
+<td name="FAhA" class="FAhA" title="south of" onclick="hilite(this.getAttribute('name'))" id="ne'u">ne'u</td>
+<td name="GOhA" class="GOhA" title="current bridi" onclick="hilite(this.getAttribute('name'))" id="nei">nei</td></tr><tr>
+<td name="GOI" class="GOI" title="restrictive phrase" onclick="hilite(this.getAttribute('name'))" id="pe">pe</td>
+<td name="UI" class="UI" title="figurative" onclick="hilite(this.getAttribute('name'))" id="pe'a">pe'a</td>
+<td name="PEhE" class="PEhE" title="termset conn mark" onclick="hilite(this.getAttribute('name'))" id="pe'e">pe'e</td>
+<td name="UI" class="UI" title="I opine" onclick="hilite(this.getAttribute('name'))" id="pe'i">pe'i</td>
+<td name="PEhO" class="PEhO" title="fore mex operator" onclick="hilite(this.getAttribute('name'))" id="pe'o">pe'o</td>
+<td name="COI" class="COI" title="please" onclick="hilite(this.getAttribute('name'))" id="pe'u">pe'u</td>
+<td name="CAI" class="CAI" title="emotion ?" onclick="hilite(this.getAttribute('name'))" id="pei">pei</td></tr><tr>
+<td name="PA" class="PA" title="2" onclick="hilite(this.getAttribute('name'))" id="re">re</td>
+<td name="VUhU" class="VUhU" title="transpose" onclick="hilite(this.getAttribute('name'))" id="re'a">re'a</td>
+<td name="UI" class="UI" title="spiritual" onclick="hilite(this.getAttribute('name'))" id="re'e">re'e</td>
+<td name="COI" class="COI" title="ready to receive" onclick="hilite(this.getAttribute('name'))" id="re'i">re'i</td>
+<td name="FAhA" class="FAhA" title="adjacent to" onclick="hilite(this.getAttribute('name'))" id="re'o">re'o</td>
+<td name="ROI" class="ROI" title="ordinal tense" onclick="hilite(this.getAttribute('name'))" id="re'u">re'u</td>
+<td name="PA" class="PA" title="hex digit E" onclick="hilite(this.getAttribute('name'))" id="rei">rei</td></tr><tr>
+<td name="SE" class="SE" title="2nd conversion" onclick="hilite(this.getAttribute('name'))" id="se">se</td>
+<td name="UI" class="UI" title="self-sufficiency" onclick="hilite(this.getAttribute('name'))" id="se'a">se'a</td>
+<td name="BY" class="BY" title="character code" onclick="hilite(this.getAttribute('name'))" id="se'e">se'e</td>
+<td name="UI" class="UI" title="self-oriented" onclick="hilite(this.getAttribute('name'))" id="se'i">se'i</td>
+<td name="UI" class="UI" title="I know internally" onclick="hilite(this.getAttribute('name'))" id="se'o">se'o</td>
+<td name="SEhU" class="SEhU" title="end discursive" onclick="hilite(this.getAttribute('name'))" id="se'u">se'u</td>
+<td name="SEI" class="SEI" title="discursive bridi" onclick="hilite(this.getAttribute('name'))" id="sei">sei</td></tr><tr>
+<td name="SE" class="SE" title="3rd conversion" onclick="hilite(this.getAttribute('name'))" id="te">te</td>
+<td name="VUhU" class="VUhU" title="to the power" onclick="hilite(this.getAttribute('name'))" id="te'a">te'a</td>
+<td name="FAhA" class="FAhA" title="bordering" onclick="hilite(this.getAttribute('name'))" id="te'e">te'e</td><td></td>
+<td name="PA" class="PA" title="exponential e" onclick="hilite(this.getAttribute('name'))" id="te'o">te'o</td>
+<td name="TEhU" class="TEhU" title="end mex converters" onclick="hilite(this.getAttribute('name'))" id="te'u">te'u</td>
+<td name="TEI" class="TEI" title="composite lerfu" onclick="hilite(this.getAttribute('name'))" id="tei">tei</td></tr><tr>
+<td name="SE" class="SE" title="4th conversion" onclick="hilite(this.getAttribute('name'))" id="ve">ve</td>
+<td name="VEhA" class="VEhA" title="small space interval" onclick="hilite(this.getAttribute('name'))" id="ve'a">ve'a</td>
+<td name="VEhA" class="VEhA" title="whole space interval" onclick="hilite(this.getAttribute('name'))" id="ve'e">ve'e</td>
+<td name="VEhA" class="VEhA" title="tiny space interval" onclick="hilite(this.getAttribute('name'))" id="ve'i">ve'i</td>
+<td name="VEhO" class="VEhO" title="right bracket" onclick="hilite(this.getAttribute('name'))" id="ve'o">ve'o</td>
+<td name="VEhA" class="VEhA" title="big space interval" onclick="hilite(this.getAttribute('name'))" id="ve'u">ve'u</td>
+<td name="VEI" class="VEI" title="left bracket" onclick="hilite(this.getAttribute('name'))" id="vei">vei</td></tr><tr>
+<td name="SE" class="SE" title="5th conversion" onclick="hilite(this.getAttribute('name'))" id="xe">xe</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr>
+<td name="PA" class="PA" title="7" onclick="hilite(this.getAttribute('name'))" id="ze">ze</td>
+<td name="ZEhA" class="ZEhA" title="medium time interval" onclick="hilite(this.getAttribute('name'))" id="ze'a">ze'a</td>
+<td name="ZEhA" class="ZEhA" title="whole time interval" onclick="hilite(this.getAttribute('name'))" id="ze'e">ze'e</td>
+<td name="ZEhA" class="ZEhA" title="short time interval" onclick="hilite(this.getAttribute('name'))" id="ze'i">ze'i</td>
+<td name="FAhA" class="FAhA" title="outward" onclick="hilite(this.getAttribute('name'))" id="ze'o">ze'o</td>
+<td name="ZEhA" class="ZEhA" title="long time interval" onclick="hilite(this.getAttribute('name'))" id="ze'u">ze'u</td>
+<td name="ZEI" class="ZEI" title="lujvo glue" onclick="hilite(this.getAttribute('name'))" id="zei">zei</td></tr></table><table><tr>
+<td name="I" class="I" title="sentence link" onclick="hilite(this.getAttribute('name'))" id=".i">.i</td>
+<td name="UI" class="UI" title="acceptance" onclick="hilite(this.getAttribute('name'))" id=".i'a">.i'a</td>
+<td name="UI" class="UI" title="approval" onclick="hilite(this.getAttribute('name'))" id=".i'e">.i'e</td>
+<td name="UI" class="UI" title="togetherness" onclick="hilite(this.getAttribute('name'))" id=".i'i">.i'i</td>
+<td name="UI" class="UI" title="appreciation" onclick="hilite(this.getAttribute('name'))" id=".i'o">.i'o</td>
+<td name="UI" class="UI" title="familiarity" onclick="hilite(this.getAttribute('name'))" id=".i'u">.i'u</td></tr><tr>
+<td name="PA" class="PA" title="8" onclick="hilite(this.getAttribute('name'))" id="bi">bi</td><td></td>
+<td name="BIhE" class="BIhE" title="hi priority operator" onclick="hilite(this.getAttribute('name'))" id="bi'e">bi'e</td>
+<td name="BIhI" class="BIhI" title="unordered interval" onclick="hilite(this.getAttribute('name'))" id="bi'i">bi'i</td>
+<td name="BIhI" class="BIhI" title="ordered interval" onclick="hilite(this.getAttribute('name'))" id="bi'o">bi'o</td>
+<td name="UI" class="UI" title="new information" onclick="hilite(this.getAttribute('name'))" id="bi'u">bi'u</td></tr><tr>
+<td name="PA" class="PA" title="3" onclick="hilite(this.getAttribute('name'))" id="ci">ci</td><td></td>
+<td name="BAI" class="BAI" title="in system" onclick="hilite(this.getAttribute('name'))" id="ci'e">ci'e</td>
+<td name="PA" class="PA" title="infinity" onclick="hilite(this.getAttribute('name'))" id="ci'i">ci'i</td>
+<td name="BAI" class="BAI" title="emotionally felt by" onclick="hilite(this.getAttribute('name'))" id="ci'o">ci'o</td>
+<td name="BAI" class="BAI" title="on the scale" onclick="hilite(this.getAttribute('name'))" id="ci'u">ci'u</td></tr><tr>
+<td name="KOhA" class="KOhA" title="something 3" onclick="hilite(this.getAttribute('name'))" id="di">di</td>
+<td name="ZAhO" class="ZAhO" title="resumptitive" onclick="hilite(this.getAttribute('name'))" id="di'a">di'a</td>
+<td name="KOhA" class="KOhA" title="next utterance" onclick="hilite(this.getAttribute('name'))" id="di'e">di'e</td>
+<td name="TAhE" class="TAhE" title="regularly" onclick="hilite(this.getAttribute('name'))" id="di'i">di'i</td>
+<td name="BAI" class="BAI" title="at the locus of" onclick="hilite(this.getAttribute('name'))" id="di'o">di'o</td>
+<td name="KOhA" class="KOhA" title="last utterance" onclick="hilite(this.getAttribute('name'))" id="di'u">di'u</td></tr><tr>
+<td name="FA" class="FA" title="3rd sumti place" onclick="hilite(this.getAttribute('name'))" id="fi">fi</td>
+<td name="FA" class="FA" title="sumti place ?" onclick="hilite(this.getAttribute('name'))" id="fi'a">fi'a</td>
+<td name="BAI" class="BAI" title="created by" onclick="hilite(this.getAttribute('name'))" id="fi'e">fi'e</td>
+<td name="COI" class="COI" title="hospitality" onclick="hilite(this.getAttribute('name'))" id="fi'i">fi'i</td>
+<td name="FIhO" class="FIhO" title="selbri to modal" onclick="hilite(this.getAttribute('name'))" id="fi'o">fi'o</td>
+<td name="PA" class="PA" title="fraction slash" onclick="hilite(this.getAttribute('name'))" id="fi'u">fi'u</td></tr><tr>
+<td name="GI" class="GI" title="connective medial" onclick="hilite(this.getAttribute('name'))" id="gi">gi</td>
+<td name="GIhA" class="GIhA" title="bridi or" onclick="hilite(this.getAttribute('name'))" id="gi'a">gi'a</td>
+<td name="GIhA" class="GIhA" title="bridi and" onclick="hilite(this.getAttribute('name'))" id="gi'e">gi'e</td>
+<td name="GIhA" class="GIhA" title="bridi conn ?" onclick="hilite(this.getAttribute('name'))" id="gi'i">gi'i</td>
+<td name="GIhA" class="GIhA" title="bridi iff" onclick="hilite(this.getAttribute('name'))" id="gi'o">gi'o</td>
+<td name="GIhA" class="GIhA" title="bridi whether" onclick="hilite(this.getAttribute('name'))" id="gi'u">gi'u</td></tr><tr>
+<td name="A" class="A" title="sumti conn ?" onclick="hilite(this.getAttribute('name'))" id="ji">ji</td>
+<td name="UI" class="UI" title="in addition" onclick="hilite(this.getAttribute('name'))" id="ji'a">ji'a</td>
+<td name="BAI" class="BAI" title="up to limit" onclick="hilite(this.getAttribute('name'))" id="ji'e">ji'e</td>
+<td name="PA" class="PA" title="approximately" onclick="hilite(this.getAttribute('name'))" id="ji'i">ji'i</td>
+<td name="BAI" class="BAI" title="under direction of" onclick="hilite(this.getAttribute('name'))" id="ji'o">ji'o</td>
+<td name="BAI" class="BAI" title="based on" onclick="hilite(this.getAttribute('name'))" id="ji'u">ji'u</td></tr><tr>
+<td name="KI" class="KI" title="tense default" onclick="hilite(this.getAttribute('name'))" id="ki">ki</td>
+<td name="UI" class="UI" title="textual confusion" onclick="hilite(this.getAttribute('name'))" id="ki'a">ki'a</td>
+<td name="COI" class="COI" title="thanks" onclick="hilite(this.getAttribute('name'))" id="ki'e">ki'e</td>
+<td name="BAI" class="BAI" title="as a relation of" onclick="hilite(this.getAttribute('name'))" id="ki'i">ki'i</td>
+<td name="PA" class="PA" title="number comma" onclick="hilite(this.getAttribute('name'))" id="ki'o">ki'o</td>
+<td name="BAI" class="BAI" title="because of reason" onclick="hilite(this.getAttribute('name'))" id="ki'u">ki'u</td></tr><tr>
+<td name="LI" class="LI" title="the number" onclick="hilite(this.getAttribute('name'))" id="li">li</td>
+<td name="UI" class="UI" title="clearly" onclick="hilite(this.getAttribute('name'))" id="li'a">li'a</td>
+<td name="BAI" class="BAI" title="preceded by" onclick="hilite(this.getAttribute('name'))" id="li'e">li'e</td>
+<td name="NU" class="NU" title="experience abstract" onclick="hilite(this.getAttribute('name'))" id="li'i">li'i</td>
+<td name="UI" class="UI" title="omitted text" onclick="hilite(this.getAttribute('name'))" id="li'o">li'o</td>
+<td name="LIhU" class="LIhU" title="end quote" onclick="hilite(this.getAttribute('name'))" id="li'u">li'u</td></tr><tr>
+<td name="KOhA" class="KOhA" title="me" onclick="hilite(this.getAttribute('name'))" id="mi">mi</td>
+<td name="KOhA" class="KOhA" title="we, not you" onclick="hilite(this.getAttribute('name'))" id="mi'a">mi'a</td>
+<td name="COI" class="COI" title="self-introduction" onclick="hilite(this.getAttribute('name'))" id="mi'e">mi'e</td>
+<td name="BIhI" class="BIhI" title="center-range" onclick="hilite(this.getAttribute('name'))" id="mi'i">mi'i</td>
+<td name="KOhA" class="KOhA" title="me and you" onclick="hilite(this.getAttribute('name'))" id="mi'o">mi'o</td>
+<td name="UI" class="UI" title="ditto" onclick="hilite(this.getAttribute('name'))" id="mi'u">mi'u</td></tr><tr>
+<td name="NU" class="NU" title="amount abstract" onclick="hilite(this.getAttribute('name'))" id="ni">ni</td>
+<td name="FAhA" class="FAhA" title="below" onclick="hilite(this.getAttribute('name'))" id="ni'a">ni'a</td>
+<td name="NIhE" class="NIhE" title="selbri to operand" onclick="hilite(this.getAttribute('name'))" id="ni'e">ni'e</td>
+<td name="BAI" class="BAI" title="because of logic" onclick="hilite(this.getAttribute('name'))" id="ni'i">ni'i</td>
+<td name="NIhO" class="NIhO" title="new topic" onclick="hilite(this.getAttribute('name'))" id="ni'o">ni'o</td>
+<td name="PA" class="PA" title="negative number" onclick="hilite(this.getAttribute('name'))" id="ni'u">ni'u</td></tr><tr>
+<td name="PA" class="PA" title="decimal point" onclick="hilite(this.getAttribute('name'))" id="pi">pi</td>
+<td name="VUhU" class="VUhU" title="matrix of rows" onclick="hilite(this.getAttribute('name'))" id="pi'a">pi'a</td>
+<td name="PA" class="PA" title="digit separator" onclick="hilite(this.getAttribute('name'))" id="pi'e">pi'e</td>
+<td name="VUhU" class="VUhU" title="times" onclick="hilite(this.getAttribute('name'))" id="pi'i">pi'i</td>
+<td name="BAI" class="BAI" title="used by" onclick="hilite(this.getAttribute('name'))" id="pi'o">pi'o</td>
+<td name="JOI" class="JOI" title="cross product" onclick="hilite(this.getAttribute('name'))" id="pi'u">pi'u</td></tr><tr>
+<td name="KOhA" class="KOhA" title="last sumti" onclick="hilite(this.getAttribute('name'))" id="ri">ri</td>
+<td name="BAI" class="BAI" title="because of cause" onclick="hilite(this.getAttribute('name'))" id="ri'a">ri'a</td>
+<td name="UI" class="UI" title="release of emotion" onclick="hilite(this.getAttribute('name'))" id="ri'e">ri'e</td>
+<td name="BAI" class="BAI" title="experienced by" onclick="hilite(this.getAttribute('name'))" id="ri'i">ri'i</td>
+<td name="VUhU" class="VUhU" title="integral" onclick="hilite(this.getAttribute('name'))" id="ri'o">ri'o</td>
+<td name="FAhA" class="FAhA" title="on the right of" onclick="hilite(this.getAttribute('name'))" id="ri'u">ri'u</td></tr><tr>
+<td name="SI" class="SI" title="erase word" onclick="hilite(this.getAttribute('name'))" id="si">si</td>
+<td name="UI" class="UI" title="similarly" onclick="hilite(this.getAttribute('name'))" id="si'a">si'a</td>
+<td name="MOI" class="MOI" title="portion selbri" onclick="hilite(this.getAttribute('name'))" id="si'e">si'e</td>
+<td name="VUhU" class="VUhU" title="sigma summation" onclick="hilite(this.getAttribute('name'))" id="si'i">si'i</td>
+<td name="NU" class="NU" title="concept abstract" onclick="hilite(this.getAttribute('name'))" id="si'o">si'o</td>
+<td name="BAI" class="BAI" title="aided by" onclick="hilite(this.getAttribute('name'))" id="si'u">si'u</td></tr><tr>
+<td name="KOhA" class="KOhA" title="this here" onclick="hilite(this.getAttribute('name'))" id="ti">ti</td>
+<td name="FAhA" class="FAhA" title="behind" onclick="hilite(this.getAttribute('name'))" id="ti'a">ti'a</td>
+<td name="UI" class="UI" title="I hear" onclick="hilite(this.getAttribute('name'))" id="ti'e">ti'e</td>
+<td name="BAI" class="BAI" title="suggested by" onclick="hilite(this.getAttribute('name'))" id="ti'i">ti'i</td>
+<td name="SEI" class="SEI" title="mex precedence" onclick="hilite(this.getAttribute('name'))" id="ti'o">ti'o</td>
+<td name="BAI" class="BAI" title="associated with time" onclick="hilite(this.getAttribute('name'))" id="ti'u">ti'u</td></tr><tr>
+<td name="VA" class="VA" title="here at" onclick="hilite(this.getAttribute('name'))" id="vi">vi</td>
+<td name="VIhA" class="VIhA" title="2-space interval" onclick="hilite(this.getAttribute('name'))" id="vi'a">vi'a</td>
+<td name="VIhA" class="VIhA" title="4-space interval" onclick="hilite(this.getAttribute('name'))" id="vi'e">vi'e</td>
+<td name="VIhA" class="VIhA" title="1-space interval" onclick="hilite(this.getAttribute('name'))" id="vi'i">vi'i</td>
+<td name="COI" class="COI" title="wilco" onclick="hilite(this.getAttribute('name'))" id="vi'o">vi'o</td>
+<td name="VIhA" class="VIhA" title="3-space interval" onclick="hilite(this.getAttribute('name'))" id="vi'u">vi'u</td></tr><tr>
+<td name="XI" class="XI" title="subscript" onclick="hilite(this.getAttribute('name'))" id="xi">xi</td><td></td><td></td><td></td><td></td><td></td></tr><tr>
+<td name="ZI" class="ZI" title="short time" onclick="hilite(this.getAttribute('name'))" id="zi">zi</td><td></td>
+<td name="ZIhE" class="ZIhE" title="rel clause joiner" onclick="hilite(this.getAttribute('name'))" id="zi'e">zi'e</td><td></td>
+<td name="KOhA" class="KOhA" title="nonexistent it" onclick="hilite(this.getAttribute('name'))" id="zi'o">zi'o</td><td></td></tr></table><table><tr>
+<td name="A" class="A" title="sumti iff" onclick="hilite(this.getAttribute('name'))" id=".o">.o</td>
+<td name="UI" class="UI" title="pride" onclick="hilite(this.getAttribute('name'))" id=".o'a">.o'a</td>
+<td name="UI" class="UI" title="closeness" onclick="hilite(this.getAttribute('name'))" id=".o'e">.o'e</td>
+<td name="UI" class="UI" title="caution" onclick="hilite(this.getAttribute('name'))" id=".o'i">.o'i</td>
+<td name="UI" class="UI" title="patience" onclick="hilite(this.getAttribute('name'))" id=".o'o">.o'o</td>
+<td name="UI" class="UI" title="relaxation" onclick="hilite(this.getAttribute('name'))" id=".o'u">.o'u</td>
+<td name="UI" class="UI" title="complaint" onclick="hilite(this.getAttribute('name'))" id=".oi">.oi</td></tr><tr>
+<td name="BO" class="BO" title="short scope link" onclick="hilite(this.getAttribute('name'))" id="bo">bo</td><td></td><td></td><td></td><td></td><td></td>
+<td name="BOI" class="BOI" title="end number or lerfu" onclick="hilite(this.getAttribute('name'))" id="boi">boi</td></tr><tr>
+<td name="CO" class="CO" title="tanru inversion" onclick="hilite(this.getAttribute('name'))" id="co">co</td>
+<td name="ZAhO" class="ZAhO" title="initiative" onclick="hilite(this.getAttribute('name'))" id="co'a">co'a</td>
+<td name="GOhA" class="GOhA" title="unspecif bridi" onclick="hilite(this.getAttribute('name'))" id="co'e">co'e</td>
+<td name="ZAhO" class="ZAhO" title="achievative" onclick="hilite(this.getAttribute('name'))" id="co'i">co'i</td>
+<td name="COI" class="COI" title="partings" onclick="hilite(this.getAttribute('name'))" id="co'o">co'o</td>
+<td name="ZAhO" class="ZAhO" title="cessative" onclick="hilite(this.getAttribute('name'))" id="co'u">co'u</td>
+<td name="COI" class="COI" title="greetings" onclick="hilite(this.getAttribute('name'))" id="coi">coi</td></tr><tr>
+<td name="KOhA" class="KOhA" title="you" onclick="hilite(this.getAttribute('name'))" id="do">do</td>
+<td name="UI" class="UI" title="generously" onclick="hilite(this.getAttribute('name'))" id="do'a">do'a</td>
+<td name="BAI" class="BAI" title="unspecif modal" onclick="hilite(this.getAttribute('name'))" id="do'e">do'e</td>
+<td name="KOhA" class="KOhA" title="unspecif utterance" onclick="hilite(this.getAttribute('name'))" id="do'i">do'i</td>
+<td name="KOhA" class="KOhA" title="you and others" onclick="hilite(this.getAttribute('name'))" id="do'o">do'o</td>
+<td name="DOhU" class="DOhU" title="end vocative" onclick="hilite(this.getAttribute('name'))" id="do'u">do'u</td>
+<td name="DOI" class="DOI" title="vocative marker" onclick="hilite(this.getAttribute('name'))" id="doi">doi</td></tr><tr>
+<td name="FA" class="FA" title="4th sumti place" onclick="hilite(this.getAttribute('name'))" id="fo">fo</td>
+<td name="KOhA" class="KOhA" title="it-6" onclick="hilite(this.getAttribute('name'))" id="fo'a">fo'a</td>
+<td name="KOhA" class="KOhA" title="it-7" onclick="hilite(this.getAttribute('name'))" id="fo'e">fo'e</td>
+<td name="KOhA" class="KOhA" title="it-8" onclick="hilite(this.getAttribute('name'))" id="fo'i">fo'i</td>
+<td name="KOhA" class="KOhA" title="it-9" onclick="hilite(this.getAttribute('name'))" id="fo'o">fo'o</td>
+<td name="KOhA" class="KOhA" title="it-10" onclick="hilite(this.getAttribute('name'))" id="fo'u">fo'u</td>
+<td name="FOI" class="FOI" title="end composite lerfu" onclick="hilite(this.getAttribute('name'))" id="foi">foi</td></tr><tr>
+<td name="GA" class="GA" title="fore iff" onclick="hilite(this.getAttribute('name'))" id="go">go</td>
+<td name="GOhA" class="GOhA" title="recent bridi" onclick="hilite(this.getAttribute('name'))" id="go'a">go'a</td>
+<td name="GOhA" class="GOhA" title="penultimate bridi" onclick="hilite(this.getAttribute('name'))" id="go'e">go'e</td>
+<td name="GOhA" class="GOhA" title="last bridi" onclick="hilite(this.getAttribute('name'))" id="go'i">go'i</td>
+<td name="GOhA" class="GOhA" title="future bridi" onclick="hilite(this.getAttribute('name'))" id="go'o">go'o</td>
+<td name="GOhA" class="GOhA" title="earlier bridi" onclick="hilite(this.getAttribute('name'))" id="go'u">go'u</td>
+<td name="GOI" class="GOI" title="pro-sumti assign" onclick="hilite(this.getAttribute('name'))" id="goi">goi</td></tr><tr>
+<td name="JA" class="JA" title="tanru iff" onclick="hilite(this.getAttribute('name'))" id="jo">jo</td>
+<td name="UI" class="UI" title="metalinguistic yes" onclick="hilite(this.getAttribute('name'))" id="jo'a">jo'a</td>
+<td name="JOI" class="JOI" title="union" onclick="hilite(this.getAttribute('name'))" id="jo'e">jo'e</td>
+<td name="JOhI" class="JOhI" title="array" onclick="hilite(this.getAttribute('name'))" id="jo'i">jo'i</td>
+<td name="BY" class="BY" title="Arabic shift" onclick="hilite(this.getAttribute('name'))" id="jo'o">jo'o</td>
+<td name="JOI" class="JOI" title="in common with" onclick="hilite(this.getAttribute('name'))" id="jo'u">jo'u</td>
+<td name="JOI" class="JOI" title="in a mass with" onclick="hilite(this.getAttribute('name'))" id="joi">joi</td></tr><tr>
+<td name="KOhA" class="KOhA" title="imperative" onclick="hilite(this.getAttribute('name'))" id="ko">ko</td>
+<td name="KOhA" class="KOhA" title="it-1" onclick="hilite(this.getAttribute('name'))" id="ko'a">ko'a</td>
+<td name="KOhA" class="KOhA" title="it-2" onclick="hilite(this.getAttribute('name'))" id="ko'e">ko'e</td>
+<td name="KOhA" class="KOhA" title="it-3" onclick="hilite(this.getAttribute('name'))" id="ko'i">ko'i</td>
+<td name="KOhA" class="KOhA" title="it-4" onclick="hilite(this.getAttribute('name'))" id="ko'o">ko'o</td>
+<td name="KOhA" class="KOhA" title="it-5" onclick="hilite(this.getAttribute('name'))" id="ko'u">ko'u</td>
+<td name="BAI" class="BAI" title="bounded by" onclick="hilite(this.getAttribute('name'))" id="koi">koi</td></tr><tr>
+<td name="LE" class="LE" title="the really is" onclick="hilite(this.getAttribute('name'))" id="lo">lo</td>
+<td name="BY" class="BY" title="Lojban shift" onclick="hilite(this.getAttribute('name'))" id="lo'a">lo'a</td>
+<td name="LE" class="LE" title="the typical" onclick="hilite(this.getAttribute('name'))" id="lo'e">lo'e</td>
+<td name="LE" class="LE" title="the set really is" onclick="hilite(this.getAttribute('name'))" id="lo'i">lo'i</td>
+<td name="LOhO" class="LOhO" title="end mex sumti" onclick="hilite(this.getAttribute('name'))" id="lo'o">lo'o</td>
+<td name="LOhU" class="LOhU" title="error quote" onclick="hilite(this.getAttribute('name'))" id="lo'u">lo'u</td>
+<td name="LE" class="LE" title="the mass really is" onclick="hilite(this.getAttribute('name'))" id="loi">loi</td></tr><tr>
+<td name="GOhA" class="GOhA" title="bridi ?" onclick="hilite(this.getAttribute('name'))" id="mo">mo</td>
+<td name="PA" class="PA" title="too few" onclick="hilite(this.getAttribute('name'))" id="mo'a">mo'a</td>
+<td name="MOhE" class="MOhE" title="sumti to operand" onclick="hilite(this.getAttribute('name'))" id="mo'e">mo'e</td>
+<td name="MOhI" class="MOhI" title="space motion" onclick="hilite(this.getAttribute('name'))" id="mo'i">mo'i</td>
+<td name="MAI" class="MAI" title="section ordinal" onclick="hilite(this.getAttribute('name'))" id="mo'o">mo'o</td>
+<td name="ZAhO" class="ZAhO" title="completive" onclick="hilite(this.getAttribute('name'))" id="mo'u">mo'u</td>
+<td name="MOI" class="MOI" title="ordinal selbri" onclick="hilite(this.getAttribute('name'))" id="moi">moi</td></tr><tr>
+<td name="PA" class="PA" title="0" onclick="hilite(this.getAttribute('name'))" id="no">no</td>
+<td name="GOhA" class="GOhA" title="next outer bridi" onclick="hilite(this.getAttribute('name'))" id="no'a">no'a</td>
+<td name="NAhE" class="NAhE" title="scalar midpoint not" onclick="hilite(this.getAttribute('name'))" id="no'e">no'e</td>
+<td name="NIhO" class="NIhO" title="old topic" onclick="hilite(this.getAttribute('name'))" id="no'i">no'i</td>
+<td name="PA" class="PA" title="typical value" onclick="hilite(this.getAttribute('name'))" id="no'o">no'o</td>
+<td name="GOI" class="GOI" title="incidental identity" onclick="hilite(this.getAttribute('name'))" id="no'u">no'u</td>
+<td name="NOI" class="NOI" title="incidental clause" onclick="hilite(this.getAttribute('name'))" id="noi">noi</td></tr><tr>
+<td name="GOI" class="GOI" title="is specific to" onclick="hilite(this.getAttribute('name'))" id="po">po</td><td></td>
+<td name="GOI" class="GOI" title="which belongs to" onclick="hilite(this.getAttribute('name'))" id="po'e">po'e</td>
+<td name="BAI" class="BAI" title="in the sequence" onclick="hilite(this.getAttribute('name'))" id="po'i">po'i</td>
+<td name="UI" class="UI" title="uniquely" onclick="hilite(this.getAttribute('name'))" id="po'o">po'o</td>
+<td name="GOI" class="GOI" title="restrictive identity" onclick="hilite(this.getAttribute('name'))" id="po'u">po'u</td>
+<td name="NOI" class="NOI" title="restrictive clause" onclick="hilite(this.getAttribute('name'))" id="poi">poi</td></tr><tr>
+<td name="PA" class="PA" title="each" onclick="hilite(this.getAttribute('name'))" id="ro">ro</td>
+<td name="UI" class="UI" title="social" onclick="hilite(this.getAttribute('name'))" id="ro'a">ro'a</td>
+<td name="UI" class="UI" title="mental" onclick="hilite(this.getAttribute('name'))" id="ro'e">ro'e</td>
+<td name="UI" class="UI" title="emotional" onclick="hilite(this.getAttribute('name'))" id="ro'i">ro'i</td>
+<td name="UI" class="UI" title="physical" onclick="hilite(this.getAttribute('name'))" id="ro'o">ro'o</td>
+<td name="UI" class="UI" title="sexual" onclick="hilite(this.getAttribute('name'))" id="ro'u">ro'u</td>
+<td name="ROI" class="ROI" title="quantified tense" onclick="hilite(this.getAttribute('name'))" id="roi">roi</td></tr><tr>
+<td name="PA" class="PA" title="9" onclick="hilite(this.getAttribute('name'))" id="so">so</td>
+<td name="PA" class="PA" title="almost all" onclick="hilite(this.getAttribute('name'))" id="so'a">so'a</td>
+<td name="PA" class="PA" title="most" onclick="hilite(this.getAttribute('name'))" id="so'e">so'e</td>
+<td name="PA" class="PA" title="many" onclick="hilite(this.getAttribute('name'))" id="so'i">so'i</td>
+<td name="PA" class="PA" title="several" onclick="hilite(this.getAttribute('name'))" id="so'o">so'o</td>
+<td name="PA" class="PA" title="few" onclick="hilite(this.getAttribute('name'))" id="so'u">so'u</td>
+<td name="SOI" class="SOI" title="reciprocal sumti" onclick="hilite(this.getAttribute('name'))" id="soi">soi</td></tr><tr>
+<td name="TO" class="TO" title="start parenthesis" onclick="hilite(this.getAttribute('name'))" id="to">to</td>
+<td name="BY" class="BY" title="lower-case shift" onclick="hilite(this.getAttribute('name'))" id="to'a">to'a</td>
+<td name="NAhE" class="NAhE" title="polar opposite" onclick="hilite(this.getAttribute('name'))" id="to'e">to'e</td>
+<td name="TO" class="TO" title="editorial unquote" onclick="hilite(this.getAttribute('name'))" id="to'i">to'i</td>
+<td name="FAhA" class="FAhA" title="away from point" onclick="hilite(this.getAttribute('name'))" id="to'o">to'o</td>
+<td name="UI" class="UI" title="in brief" onclick="hilite(this.getAttribute('name'))" id="to'u">to'u</td>
+<td name="TOI" class="TOI" title="end parenthesis" onclick="hilite(this.getAttribute('name'))" id="toi">toi</td></tr><tr>
+<td name="PA" class="PA" title="4" onclick="hilite(this.getAttribute('name'))" id="vo">vo</td>
+<td name="KOhA" class="KOhA" title="x1 it" onclick="hilite(this.getAttribute('name'))" id="vo'a">vo'a</td>
+<td name="KOhA" class="KOhA" title="x2 it" onclick="hilite(this.getAttribute('name'))" id="vo'e">vo'e</td>
+<td name="KOhA" class="KOhA" title="x3 it" onclick="hilite(this.getAttribute('name'))" id="vo'i">vo'i</td>
+<td name="KOhA" class="KOhA" title="x4 it" onclick="hilite(this.getAttribute('name'))" id="vo'o">vo'o</td>
+<td name="KOhA" class="KOhA" title="x5 it" onclick="hilite(this.getAttribute('name'))" id="vo'u">vo'u</td>
+<td name="NOI" class="NOI" title="descriptive clause" onclick="hilite(this.getAttribute('name'))" id="voi">voi</td></tr><tr>
+<td name="PA" class="PA" title="number ?" onclick="hilite(this.getAttribute('name'))" id="xo">xo</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr>
+<td name="ZO" class="ZO" title="1-word quote" onclick="hilite(this.getAttribute('name'))" id="zo">zo</td>
+<td name="FAhA" class="FAhA" title="tangential to" onclick="hilite(this.getAttribute('name'))" id="zo'a">zo'a</td>
+<td name="KOhA" class="KOhA" title="unspecif it" onclick="hilite(this.getAttribute('name'))" id="zo'e">zo'e</td>
+<td name="FAhA" class="FAhA" title="inward" onclick="hilite(this.getAttribute('name'))" id="zo'i">zo'i</td>
+<td name="UI" class="UI" title="humorously" onclick="hilite(this.getAttribute('name'))" id="zo'o">zo'o</td>
+<td name="ZOhU" class="ZOhU" title="end prenex" onclick="hilite(this.getAttribute('name'))" id="zo'u">zo'u</td>
+<td name="ZOI" class="ZOI" title="non-Lojban quote" onclick="hilite(this.getAttribute('name'))" id="zoi">zoi</td></tr></table><table><tr>
+<td name="A" class="A" title="sumti whether" onclick="hilite(this.getAttribute('name'))" id=".u">.u</td>
+<td name="UI" class="UI" title="gain" onclick="hilite(this.getAttribute('name'))" id=".u'a">.u'a</td>
+<td name="UI" class="UI" title="wonder" onclick="hilite(this.getAttribute('name'))" id=".u'e">.u'e</td>
+<td name="UI" class="UI" title="amusement" onclick="hilite(this.getAttribute('name'))" id=".u'i">.u'i</td>
+<td name="UI" class="UI" title="courage" onclick="hilite(this.getAttribute('name'))" id=".u'o">.u'o</td>
+<td name="UI" class="UI" title="repentance" onclick="hilite(this.getAttribute('name'))" id=".u'u">.u'u</td></tr><tr>
+<td name="BU" class="BU" title="word to lerfu" onclick="hilite(this.getAttribute('name'))" id="bu">bu</td>
+<td name="GOhA" class="GOhA" title="some selbri 1" onclick="hilite(this.getAttribute('name'))" id="bu'a">bu'a</td>
+<td name="GOhA" class="GOhA" title="some selbri 2" onclick="hilite(this.getAttribute('name'))" id="bu'e">bu'e</td>
+<td name="GOhA" class="GOhA" title="some selbri 3" onclick="hilite(this.getAttribute('name'))" id="bu'i">bu'i</td>
+<td name="UI" class="UI" title="start emotion" onclick="hilite(this.getAttribute('name'))" id="bu'o">bu'o</td>
+<td name="FAhA" class="FAhA" title="coincident with" onclick="hilite(this.getAttribute('name'))" id="bu'u">bu'u</td></tr><tr>
+<td name="CU" class="CU" title="selbri separator" onclick="hilite(this.getAttribute('name'))" id="cu">cu</td>
+<td name="VUhU" class="VUhU" title="absolute value" onclick="hilite(this.getAttribute('name'))" id="cu'a">cu'a</td>
+<td name="CUhE" class="CUhE" title="modal ?" onclick="hilite(this.getAttribute('name'))" id="cu'e">cu'e</td>
+<td name="CAI" class="CAI" title="neutral emotion" onclick="hilite(this.getAttribute('name'))" id="cu'i">cu'i</td>
+<td name="MOI" class="MOI" title="probability selbri" onclick="hilite(this.getAttribute('name'))" id="cu'o">cu'o</td>
+<td name="BAI" class="BAI" title="as said by" onclick="hilite(this.getAttribute('name'))" id="cu'u">cu'u</td></tr><tr>
+<td name="GOhA" class="GOhA" title="same identity as" onclick="hilite(this.getAttribute('name'))" id="du">du</td>
+<td name="FAhA" class="FAhA" title="east of" onclick="hilite(this.getAttribute('name'))" id="du'a">du'a</td>
+<td name="PA" class="PA" title="too many" onclick="hilite(this.getAttribute('name'))" id="du'e">du'e</td>
+<td name="BAI" class="BAI" title="as much as" onclick="hilite(this.getAttribute('name'))" id="du'i">du'i</td>
+<td name="BAI" class="BAI" title="according to" onclick="hilite(this.getAttribute('name'))" id="du'o">du'o</td>
+<td name="NU" class="NU" title="bridi abstract" onclick="hilite(this.getAttribute('name'))" id="du'u">du'u</td></tr><tr>
+<td name="FA" class="FA" title="5th sumti place" onclick="hilite(this.getAttribute('name'))" id="fu">fu</td>
+<td name="FUhA" class="FUhA" title="reverse Polish" onclick="hilite(this.getAttribute('name'))" id="fu'a">fu'a</td>
+<td name="FUhE" class="FUhE" title="indicator scope" onclick="hilite(this.getAttribute('name'))" id="fu'e">fu'e</td>
+<td name="UI" class="UI" title="easy" onclick="hilite(this.getAttribute('name'))" id="fu'i">fu'i</td>
+<td name="FUhO" class="FUhO" title="end indicator scope" onclick="hilite(this.getAttribute('name'))" id="fu'o">fu'o</td>
+<td name="VUhU" class="VUhU" title="unspecif operator" onclick="hilite(this.getAttribute('name'))" id="fu'u">fu'u</td></tr><tr>
+<td name="GA" class="GA" title="fore whether" onclick="hilite(this.getAttribute('name'))" id="gu">gu</td>
+<td name="GUhA" class="GUhA" title="fore tanru or" onclick="hilite(this.getAttribute('name'))" id="gu'a">gu'a</td>
+<td name="GUhA" class="GUhA" title="fore tanru and" onclick="hilite(this.getAttribute('name'))" id="gu'e">gu'e</td>
+<td name="GUhA" class="GUhA" title="fore tanru conn ?" onclick="hilite(this.getAttribute('name'))" id="gu'i">gu'i</td>
+<td name="GUhA" class="GUhA" title="fore tanru iff" onclick="hilite(this.getAttribute('name'))" id="gu'o">gu'o</td>
+<td name="GUhA" class="GUhA" title="fore tanru whether" onclick="hilite(this.getAttribute('name'))" id="gu'u">gu'u</td></tr><tr>
+<td name="JA" class="JA" title="tanru whether" onclick="hilite(this.getAttribute('name'))" id="ju">ju</td>
+<td name="UI" class="UI" title="I state" onclick="hilite(this.getAttribute('name'))" id="ju'a">ju'a</td>
+<td name="JOI" class="JOI" title="vague connective" onclick="hilite(this.getAttribute('name'))" id="ju'e">ju'e</td>
+<td name="COI" class="COI" title="attention" onclick="hilite(this.getAttribute('name'))" id="ju'i">ju'i</td>
+<td name="UI" class="UI" title="certainty" onclick="hilite(this.getAttribute('name'))" id="ju'o">ju'o</td>
+<td name="VUhU" class="VUhU" title="number base" onclick="hilite(this.getAttribute('name'))" id="ju'u">ju'u</td></tr><tr>
+<td name="KU" class="KU" title="end sumti" onclick="hilite(this.getAttribute('name'))" id="ku">ku</td>
+<td name="JOI" class="JOI" title="intersection" onclick="hilite(this.getAttribute('name'))" id="ku'a">ku'a</td>
+<td name="KUhE" class="KUhE" title="end mex forethought" onclick="hilite(this.getAttribute('name'))" id="ku'e">ku'e</td>
+<td name="UI" class="UI" title="however" onclick="hilite(this.getAttribute('name'))" id="ku'i">ku'i</td>
+<td name="KUhO" class="KUhO" title="end relative clause" onclick="hilite(this.getAttribute('name'))" id="ku'o">ku'o</td>
+<td name="BAI" class="BAI" title="in culture" onclick="hilite(this.getAttribute('name'))" id="ku'u">ku'u</td></tr><tr>
+<td name="LU" class="LU" title="quote" onclick="hilite(this.getAttribute('name'))" id="lu">lu</td>
+<td name="LAhE" class="LAhE" title="the individuals of" onclick="hilite(this.getAttribute('name'))" id="lu'a">lu'a</td>
+<td name="LAhE" class="LAhE" title="the symbol for" onclick="hilite(this.getAttribute('name'))" id="lu'e">lu'e</td>
+<td name="LAhE" class="LAhE" title="the set composed of" onclick="hilite(this.getAttribute('name'))" id="lu'i">lu'i</td>
+<td name="LAhE" class="LAhE" title="the mass composed of" onclick="hilite(this.getAttribute('name'))" id="lu'o">lu'o</td>
+<td name="LUhU" class="LUhU" title="end sumti qualifiers" onclick="hilite(this.getAttribute('name'))" id="lu'u">lu'u</td></tr><tr>
+<td name="PA" class="PA" title="5" onclick="hilite(this.getAttribute('name'))" id="mu">mu</td>
+<td name="UI" class="UI" title="for example" onclick="hilite(this.getAttribute('name'))" id="mu'a">mu'a</td>
+<td name="NU" class="NU" title="point-event abstract" onclick="hilite(this.getAttribute('name'))" id="mu'e">mu'e</td>
+<td name="BAI" class="BAI" title="because of motive" onclick="hilite(this.getAttribute('name'))" id="mu'i">mu'i</td>
+<td name="COI" class="COI" title="over" onclick="hilite(this.getAttribute('name'))" id="mu'o">mu'o</td>
+<td name="BAI" class="BAI" title="exemplified by" onclick="hilite(this.getAttribute('name'))" id="mu'u">mu'u</td></tr><tr>
+<td name="NU" class="NU" title="event abstract" onclick="hilite(this.getAttribute('name'))" id="nu">nu</td>
+<td name="NUhA" class="NUhA" title="operator to selbri" onclick="hilite(this.getAttribute('name'))" id="nu'a">nu'a</td>
+<td name="COI" class="COI" title="promise" onclick="hilite(this.getAttribute('name'))" id="nu'e">nu'e</td>
+<td name="NUhI" class="NUhI" title="start fore termset" onclick="hilite(this.getAttribute('name'))" id="nu'i">nu'i</td>
+<td name="CAhA" class="CAhA" title="can but has not" onclick="hilite(this.getAttribute('name'))" id="nu'o">nu'o</td>
+<td name="NUhU" class="NUhU" title="end fore termset" onclick="hilite(this.getAttribute('name'))" id="nu'u">nu'u</td></tr><tr>
+<td name="PU" class="PU" title="before" onclick="hilite(this.getAttribute('name'))" id="pu">pu</td>
+<td name="BAI" class="BAI" title="pleased by" onclick="hilite(this.getAttribute('name'))" id="pu'a">pu'a</td>
+<td name="BAI" class="BAI" title="by process" onclick="hilite(this.getAttribute('name'))" id="pu'e">pu'e</td>
+<td name="CAhA" class="CAhA" title="can and has" onclick="hilite(this.getAttribute('name'))" id="pu'i">pu'i</td>
+<td name="ZAhO" class="ZAhO" title="anticipative" onclick="hilite(this.getAttribute('name'))" id="pu'o">pu'o</td>
+<td name="NU" class="NU" title="process abstract" onclick="hilite(this.getAttribute('name'))" id="pu'u">pu'u</td></tr><tr>
+<td name="KOhA" class="KOhA" title="earlier sumti" onclick="hilite(this.getAttribute('name'))" id="ru">ru</td>
+<td name="UI" class="UI" title="I postulate" onclick="hilite(this.getAttribute('name'))" id="ru'a">ru'a</td>
+<td name="CAI" class="CAI" title="weak emotion" onclick="hilite(this.getAttribute('name'))" id="ru'e">ru'e</td>
+<td name="TAhE" class="TAhE" title="continuously" onclick="hilite(this.getAttribute('name'))" id="ru'i">ru'i</td>
+<td name="BY" class="BY" title="Cyrillic shift" onclick="hilite(this.getAttribute('name'))" id="ru'o">ru'o</td>
+<td name="FAhA" class="FAhA" title="surrounding" onclick="hilite(this.getAttribute('name'))" id="ru'u">ru'u</td></tr><tr>
+<td name="SU" class="SU" title="erase discourse" onclick="hilite(this.getAttribute('name'))" id="su">su</td>
+<td name="UI" class="UI" title="I generalize" onclick="hilite(this.getAttribute('name'))" id="su'a">su'a</td>
+<td name="PA" class="PA" title="at most" onclick="hilite(this.getAttribute('name'))" id="su'e">su'e</td>
+<td name="VUhU" class="VUhU" title="plus" onclick="hilite(this.getAttribute('name'))" id="su'i">su'i</td>
+<td name="PA" class="PA" title="at least" onclick="hilite(this.getAttribute('name'))" id="su'o">su'o</td>
+<td name="NU" class="NU" title="unspecif abstract" onclick="hilite(this.getAttribute('name'))" id="su'u">su'u</td></tr><tr>
+<td name="KOhA" class="KOhA" title="that yonder" onclick="hilite(this.getAttribute('name'))" id="tu">tu</td>
+<td name="LAhE" class="LAhE" title="the bridi implied by" onclick="hilite(this.getAttribute('name'))" id="tu'a">tu'a</td>
+<td name="TUhE" class="TUhE" title="start text scope" onclick="hilite(this.getAttribute('name'))" id="tu'e">tu'e</td>
+<td name="BAI" class="BAI" title="associated with site" onclick="hilite(this.getAttribute('name'))" id="tu'i">tu'i</td>
+<td name="PA" class="PA" title="null operand" onclick="hilite(this.getAttribute('name'))" id="tu'o">tu'o</td>
+<td name="TUhU" class="TUhU" title="end text scope" onclick="hilite(this.getAttribute('name'))" id="tu'u">tu'u</td></tr><tr>
+<td name="VA" class="VA" title="yonder at" onclick="hilite(this.getAttribute('name'))" id="vu">vu</td>
+<td name="FAhA" class="FAhA" title="west of" onclick="hilite(this.getAttribute('name'))" id="vu'a">vu'a</td>
+<td name="UI" class="UI" title="virtue" onclick="hilite(this.getAttribute('name'))" id="vu'e">vu'e</td>
+<td name="LAhE" class="LAhE" title="the sequence of" onclick="hilite(this.getAttribute('name'))" id="vu'i">vu'i</td>
+<td name="VUhO" class="VUhO" title="long scope relative" onclick="hilite(this.getAttribute('name'))" id="vu'o">vu'o</td>
+<td name="VUhU" class="VUhU" title="minus" onclick="hilite(this.getAttribute('name'))" id="vu'u">vu'u</td></tr><tr>
+<td name="UI" class="UI" title="true-false ?" onclick="hilite(this.getAttribute('name'))" id="xu">xu</td><td></td><td></td><td></td><td></td><td></td></tr><tr>
+<td name="ZI" class="ZI" title="long time" onclick="hilite(this.getAttribute('name'))" id="zu">zu</td>
+<td name="FAhA" class="FAhA" title="on the left of" onclick="hilite(this.getAttribute('name'))" id="zu'a">zu'a</td>
+<td name="BAI" class="BAI" title="with actor" onclick="hilite(this.getAttribute('name'))" id="zu'e">zu'e</td>
+<td name="KOhA" class="KOhA" title="typical it" onclick="hilite(this.getAttribute('name'))" id="zu'i">zu'i</td>
+<td name="NU" class="NU" title="activity abstract" onclick="hilite(this.getAttribute('name'))" id="zu'o">zu'o</td>
+<td name="UI" class="UI" title="on the one hand" onclick="hilite(this.getAttribute('name'))" id="zu'u">zu'u</td></tr></table>
+<hr class="clear"><div class="legend"><div id="A" onclick="hilite(this.id)"><span class="A">&nbsp;&nbsp;&nbsp;</span>&nbsp;A</div>
+<div id="BAI" onclick="hilite(this.id)"><span class="BAI">&nbsp;&nbsp;&nbsp;</span>&nbsp;BAI</div>
+<div id="BAhE" onclick="hilite(this.id)"><span class="BAhE">&nbsp;&nbsp;&nbsp;</span>&nbsp;BAhE</div>
+<div id="BIhI" onclick="hilite(this.id)"><span class="BIhI">&nbsp;&nbsp;&nbsp;</span>&nbsp;BIhI</div>
+<div id="BY" onclick="hilite(this.id)"><span class="BY">&nbsp;&nbsp;&nbsp;</span>&nbsp;BY</div>
+</div><div class="legend"><div id="CAI" onclick="hilite(this.id)"><span class="CAI">&nbsp;&nbsp;&nbsp;</span>&nbsp;CAI</div>
+<div id="CAhA" onclick="hilite(this.id)"><span class="CAhA">&nbsp;&nbsp;&nbsp;</span>&nbsp;CAhA</div>
+<div id="COI" onclick="hilite(this.id)"><span class="COI">&nbsp;&nbsp;&nbsp;</span>&nbsp;COI</div>
+<div id="CUhE" onclick="hilite(this.id)"><span class="CUhE">&nbsp;&nbsp;&nbsp;</span>&nbsp;CUhE</div>
+<div id="FA" onclick="hilite(this.id)"><span class="FA">&nbsp;&nbsp;&nbsp;</span>&nbsp;FA</div>
+</div><div class="legend"><div id="FAhA" onclick="hilite(this.id)"><span class="FAhA">&nbsp;&nbsp;&nbsp;</span>&nbsp;FAhA</div>
+<div id="GA" onclick="hilite(this.id)"><span class="GA">&nbsp;&nbsp;&nbsp;</span>&nbsp;GA</div>
+<div id="GAhO" onclick="hilite(this.id)"><span class="GAhO">&nbsp;&nbsp;&nbsp;</span>&nbsp;GAhO</div>
+<div id="GIhA" onclick="hilite(this.id)"><span class="GIhA">&nbsp;&nbsp;&nbsp;</span>&nbsp;GIhA</div>
+<div id="GOI" onclick="hilite(this.id)"><span class="GOI">&nbsp;&nbsp;&nbsp;</span>&nbsp;GOI</div>
+</div><div class="legend"><div id="GOhA" onclick="hilite(this.id)"><span class="GOhA">&nbsp;&nbsp;&nbsp;</span>&nbsp;GOhA</div>
+<div id="GUhA" onclick="hilite(this.id)"><span class="GUhA">&nbsp;&nbsp;&nbsp;</span>&nbsp;GUhA</div>
+<div id="I" onclick="hilite(this.id)"><span class="I">&nbsp;&nbsp;&nbsp;</span>&nbsp;I</div>
+<div id="JA" onclick="hilite(this.id)"><span class="JA">&nbsp;&nbsp;&nbsp;</span>&nbsp;JA</div>
+<div id="JOI" onclick="hilite(this.id)"><span class="JOI">&nbsp;&nbsp;&nbsp;</span>&nbsp;JOI</div>
+</div><div class="legend"><div id="KOhA" onclick="hilite(this.id)"><span class="KOhA">&nbsp;&nbsp;&nbsp;</span>&nbsp;KOhA</div>
+<div id="LA" onclick="hilite(this.id)"><span class="LA">&nbsp;&nbsp;&nbsp;</span>&nbsp;LA</div>
+<div id="LAU" onclick="hilite(this.id)"><span class="LAU">&nbsp;&nbsp;&nbsp;</span>&nbsp;LAU</div>
+<div id="LAhE" onclick="hilite(this.id)"><span class="LAhE">&nbsp;&nbsp;&nbsp;</span>&nbsp;LAhE</div>
+<div id="LE" onclick="hilite(this.id)"><span class="LE">&nbsp;&nbsp;&nbsp;</span>&nbsp;LE</div>
+</div><div class="legend"><div id="LI" onclick="hilite(this.id)"><span class="LI">&nbsp;&nbsp;&nbsp;</span>&nbsp;LI</div>
+<div id="MAI" onclick="hilite(this.id)"><span class="MAI">&nbsp;&nbsp;&nbsp;</span>&nbsp;MAI</div>
+<div id="MOI" onclick="hilite(this.id)"><span class="MOI">&nbsp;&nbsp;&nbsp;</span>&nbsp;MOI</div>
+<div id="NA" onclick="hilite(this.id)"><span class="NA">&nbsp;&nbsp;&nbsp;</span>&nbsp;NA</div>
+<div id="NAhE" onclick="hilite(this.id)"><span class="NAhE">&nbsp;&nbsp;&nbsp;</span>&nbsp;NAhE</div>
+</div><div class="legend"><div id="NIhO" onclick="hilite(this.id)"><span class="NIhO">&nbsp;&nbsp;&nbsp;</span>&nbsp;NIhO</div>
+<div id="NOI" onclick="hilite(this.id)"><span class="NOI">&nbsp;&nbsp;&nbsp;</span>&nbsp;NOI</div>
+<div id="NU" onclick="hilite(this.id)"><span class="NU">&nbsp;&nbsp;&nbsp;</span>&nbsp;NU</div>
+<div id="PA" onclick="hilite(this.id)"><span class="PA">&nbsp;&nbsp;&nbsp;</span>&nbsp;PA</div>
+<div id="PU" onclick="hilite(this.id)"><span class="PU">&nbsp;&nbsp;&nbsp;</span>&nbsp;PU</div>
+</div><div class="legend"><div id="ROI" onclick="hilite(this.id)"><span class="ROI">&nbsp;&nbsp;&nbsp;</span>&nbsp;ROI</div>
+<div id="SE" onclick="hilite(this.id)"><span class="SE">&nbsp;&nbsp;&nbsp;</span>&nbsp;SE</div>
+<div id="SEI" onclick="hilite(this.id)"><span class="SEI">&nbsp;&nbsp;&nbsp;</span>&nbsp;SEI</div>
+<div id="TAhE" onclick="hilite(this.id)"><span class="TAhE">&nbsp;&nbsp;&nbsp;</span>&nbsp;TAhE</div>
+<div id="TO" onclick="hilite(this.id)"><span class="TO">&nbsp;&nbsp;&nbsp;</span>&nbsp;TO</div>
+</div><div class="legend"><div id="UI" onclick="hilite(this.id)"><span class="UI">&nbsp;&nbsp;&nbsp;</span>&nbsp;UI</div>
+<div id="VA" onclick="hilite(this.id)"><span class="VA">&nbsp;&nbsp;&nbsp;</span>&nbsp;VA</div>
+<div id="VEhA" onclick="hilite(this.id)"><span class="VEhA">&nbsp;&nbsp;&nbsp;</span>&nbsp;VEhA</div>
+<div id="VIhA" onclick="hilite(this.id)"><span class="VIhA">&nbsp;&nbsp;&nbsp;</span>&nbsp;VIhA</div>
+<div id="VUhU" onclick="hilite(this.id)"><span class="VUhU">&nbsp;&nbsp;&nbsp;</span>&nbsp;VUhU</div>
+</div><div class="legend"><div id="ZAhO" onclick="hilite(this.id)"><span class="ZAhO">&nbsp;&nbsp;&nbsp;</span>&nbsp;ZAhO</div>
+<div id="ZEhA" onclick="hilite(this.id)"><span class="ZEhA">&nbsp;&nbsp;&nbsp;</span>&nbsp;ZEhA</div>
+<div id="ZI" onclick="hilite(this.id)"><span class="ZI">&nbsp;&nbsp;&nbsp;</span>&nbsp;ZI</div>
+<div id="ZOI" onclick="hilite(this.id)"><span class="ZOI">&nbsp;&nbsp;&nbsp;</span>&nbsp;ZOI</div>
+</div>
+<hr class="clear"><div class="legend"><div id="BE" onclick="hilite(this.id)"><span class="BE">&nbsp;&nbsp;&nbsp;</span>&nbsp;BE</div>
+<div id="BEI" onclick="hilite(this.id)"><span class="BEI">&nbsp;&nbsp;&nbsp;</span>&nbsp;BEI</div>
+<div id="BEhO" onclick="hilite(this.id)"><span class="BEhO">&nbsp;&nbsp;&nbsp;</span>&nbsp;BEhO</div>
+<div id="BIhE" onclick="hilite(this.id)"><span class="BIhE">&nbsp;&nbsp;&nbsp;</span>&nbsp;BIhE</div>
+<div id="BO" onclick="hilite(this.id)"><span class="BO">&nbsp;&nbsp;&nbsp;</span>&nbsp;BO</div>
+</div><div class="legend"><div id="BOI" onclick="hilite(this.id)"><span class="BOI">&nbsp;&nbsp;&nbsp;</span>&nbsp;BOI</div>
+<div id="BU" onclick="hilite(this.id)"><span class="BU">&nbsp;&nbsp;&nbsp;</span>&nbsp;BU</div>
+<div id="CEI" onclick="hilite(this.id)"><span class="CEI">&nbsp;&nbsp;&nbsp;</span>&nbsp;CEI</div>
+<div id="CEhE" onclick="hilite(this.id)"><span class="CEhE">&nbsp;&nbsp;&nbsp;</span>&nbsp;CEhE</div>
+<div id="CO" onclick="hilite(this.id)"><span class="CO">&nbsp;&nbsp;&nbsp;</span>&nbsp;CO</div>
+</div><div class="legend"><div id="CU" onclick="hilite(this.id)"><span class="CU">&nbsp;&nbsp;&nbsp;</span>&nbsp;CU</div>
+<div id="DAhO" onclick="hilite(this.id)"><span class="DAhO">&nbsp;&nbsp;&nbsp;</span>&nbsp;DAhO</div>
+<div id="DOI" onclick="hilite(this.id)"><span class="DOI">&nbsp;&nbsp;&nbsp;</span>&nbsp;DOI</div>
+<div id="DOhU" onclick="hilite(this.id)"><span class="DOhU">&nbsp;&nbsp;&nbsp;</span>&nbsp;DOhU</div>
+<div id="FAhO" onclick="hilite(this.id)"><span class="FAhO">&nbsp;&nbsp;&nbsp;</span>&nbsp;FAhO</div>
+</div><div class="legend"><div id="FEhE" onclick="hilite(this.id)"><span class="FEhE">&nbsp;&nbsp;&nbsp;</span>&nbsp;FEhE</div>
+<div id="FEhU" onclick="hilite(this.id)"><span class="FEhU">&nbsp;&nbsp;&nbsp;</span>&nbsp;FEhU</div>
+<div id="FIhO" onclick="hilite(this.id)"><span class="FIhO">&nbsp;&nbsp;&nbsp;</span>&nbsp;FIhO</div>
+<div id="FOI" onclick="hilite(this.id)"><span class="FOI">&nbsp;&nbsp;&nbsp;</span>&nbsp;FOI</div>
+<div id="FUhA" onclick="hilite(this.id)"><span class="FUhA">&nbsp;&nbsp;&nbsp;</span>&nbsp;FUhA</div>
+</div><div class="legend"><div id="FUhE" onclick="hilite(this.id)"><span class="FUhE">&nbsp;&nbsp;&nbsp;</span>&nbsp;FUhE</div>
+<div id="FUhO" onclick="hilite(this.id)"><span class="FUhO">&nbsp;&nbsp;&nbsp;</span>&nbsp;FUhO</div>
+<div id="GEhU" onclick="hilite(this.id)"><span class="GEhU">&nbsp;&nbsp;&nbsp;</span>&nbsp;GEhU</div>
+<div id="GI" onclick="hilite(this.id)"><span class="GI">&nbsp;&nbsp;&nbsp;</span>&nbsp;GI</div>
+<div id="JAI" onclick="hilite(this.id)"><span class="JAI">&nbsp;&nbsp;&nbsp;</span>&nbsp;JAI</div>
+</div><div class="legend"><div id="JOhI" onclick="hilite(this.id)"><span class="JOhI">&nbsp;&nbsp;&nbsp;</span>&nbsp;JOhI</div>
+<div id="KE" onclick="hilite(this.id)"><span class="KE">&nbsp;&nbsp;&nbsp;</span>&nbsp;KE</div>
+<div id="KEI" onclick="hilite(this.id)"><span class="KEI">&nbsp;&nbsp;&nbsp;</span>&nbsp;KEI</div>
+<div id="KEhE" onclick="hilite(this.id)"><span class="KEhE">&nbsp;&nbsp;&nbsp;</span>&nbsp;KEhE</div>
+<div id="KI" onclick="hilite(this.id)"><span class="KI">&nbsp;&nbsp;&nbsp;</span>&nbsp;KI</div>
+</div><div class="legend"><div id="KU" onclick="hilite(this.id)"><span class="KU">&nbsp;&nbsp;&nbsp;</span>&nbsp;KU</div>
+<div id="KUhE" onclick="hilite(this.id)"><span class="KUhE">&nbsp;&nbsp;&nbsp;</span>&nbsp;KUhE</div>
+<div id="KUhO" onclick="hilite(this.id)"><span class="KUhO">&nbsp;&nbsp;&nbsp;</span>&nbsp;KUhO</div>
+<div id="LEhU" onclick="hilite(this.id)"><span class="LEhU">&nbsp;&nbsp;&nbsp;</span>&nbsp;LEhU</div>
+<div id="LIhU" onclick="hilite(this.id)"><span class="LIhU">&nbsp;&nbsp;&nbsp;</span>&nbsp;LIhU</div>
+</div><div class="legend"><div id="LOhO" onclick="hilite(this.id)"><span class="LOhO">&nbsp;&nbsp;&nbsp;</span>&nbsp;LOhO</div>
+<div id="LOhU" onclick="hilite(this.id)"><span class="LOhU">&nbsp;&nbsp;&nbsp;</span>&nbsp;LOhU</div>
+<div id="LU" onclick="hilite(this.id)"><span class="LU">&nbsp;&nbsp;&nbsp;</span>&nbsp;LU</div>
+<div id="LUhU" onclick="hilite(this.id)"><span class="LUhU">&nbsp;&nbsp;&nbsp;</span>&nbsp;LUhU</div>
+<div id="MAhO" onclick="hilite(this.id)"><span class="MAhO">&nbsp;&nbsp;&nbsp;</span>&nbsp;MAhO</div>
+</div><div class="legend"><div id="ME" onclick="hilite(this.id)"><span class="ME">&nbsp;&nbsp;&nbsp;</span>&nbsp;ME</div>
+<div id="MEhU" onclick="hilite(this.id)"><span class="MEhU">&nbsp;&nbsp;&nbsp;</span>&nbsp;MEhU</div>
+<div id="MOhE" onclick="hilite(this.id)"><span class="MOhE">&nbsp;&nbsp;&nbsp;</span>&nbsp;MOhE</div>
+<div id="MOhI" onclick="hilite(this.id)"><span class="MOhI">&nbsp;&nbsp;&nbsp;</span>&nbsp;MOhI</div>
+<div id="NAI" onclick="hilite(this.id)"><span class="NAI">&nbsp;&nbsp;&nbsp;</span>&nbsp;NAI</div>
+</div><div class="legend"><div id="NAhU" onclick="hilite(this.id)"><span class="NAhU">&nbsp;&nbsp;&nbsp;</span>&nbsp;NAhU</div>
+<div id="NIhE" onclick="hilite(this.id)"><span class="NIhE">&nbsp;&nbsp;&nbsp;</span>&nbsp;NIhE</div>
+<div id="NUhA" onclick="hilite(this.id)"><span class="NUhA">&nbsp;&nbsp;&nbsp;</span>&nbsp;NUhA</div>
+<div id="NUhI" onclick="hilite(this.id)"><span class="NUhI">&nbsp;&nbsp;&nbsp;</span>&nbsp;NUhI</div>
+<div id="NUhU" onclick="hilite(this.id)"><span class="NUhU">&nbsp;&nbsp;&nbsp;</span>&nbsp;NUhU</div>
+</div><div class="legend"><div id="PEhE" onclick="hilite(this.id)"><span class="PEhE">&nbsp;&nbsp;&nbsp;</span>&nbsp;PEhE</div>
+<div id="PEhO" onclick="hilite(this.id)"><span class="PEhO">&nbsp;&nbsp;&nbsp;</span>&nbsp;PEhO</div>
+<div id="RAhO" onclick="hilite(this.id)"><span class="RAhO">&nbsp;&nbsp;&nbsp;</span>&nbsp;RAhO</div>
+<div id="SA" onclick="hilite(this.id)"><span class="SA">&nbsp;&nbsp;&nbsp;</span>&nbsp;SA</div>
+<div id="SEhU" onclick="hilite(this.id)"><span class="SEhU">&nbsp;&nbsp;&nbsp;</span>&nbsp;SEhU</div>
+</div><div class="legend"><div id="SI" onclick="hilite(this.id)"><span class="SI">&nbsp;&nbsp;&nbsp;</span>&nbsp;SI</div>
+<div id="SOI" onclick="hilite(this.id)"><span class="SOI">&nbsp;&nbsp;&nbsp;</span>&nbsp;SOI</div>
+<div id="SU" onclick="hilite(this.id)"><span class="SU">&nbsp;&nbsp;&nbsp;</span>&nbsp;SU</div>
+<div id="TEI" onclick="hilite(this.id)"><span class="TEI">&nbsp;&nbsp;&nbsp;</span>&nbsp;TEI</div>
+<div id="TEhU" onclick="hilite(this.id)"><span class="TEhU">&nbsp;&nbsp;&nbsp;</span>&nbsp;TEhU</div>
+</div><div class="legend"><div id="TOI" onclick="hilite(this.id)"><span class="TOI">&nbsp;&nbsp;&nbsp;</span>&nbsp;TOI</div>
+<div id="TUhE" onclick="hilite(this.id)"><span class="TUhE">&nbsp;&nbsp;&nbsp;</span>&nbsp;TUhE</div>
+<div id="TUhU" onclick="hilite(this.id)"><span class="TUhU">&nbsp;&nbsp;&nbsp;</span>&nbsp;TUhU</div>
+<div id="VAU" onclick="hilite(this.id)"><span class="VAU">&nbsp;&nbsp;&nbsp;</span>&nbsp;VAU</div>
+<div id="VEI" onclick="hilite(this.id)"><span class="VEI">&nbsp;&nbsp;&nbsp;</span>&nbsp;VEI</div>
+</div><div class="legend"><div id="VEhO" onclick="hilite(this.id)"><span class="VEhO">&nbsp;&nbsp;&nbsp;</span>&nbsp;VEhO</div>
+<div id="VUhO" onclick="hilite(this.id)"><span class="VUhO">&nbsp;&nbsp;&nbsp;</span>&nbsp;VUhO</div>
+<div id="XI" onclick="hilite(this.id)"><span class="XI">&nbsp;&nbsp;&nbsp;</span>&nbsp;XI</div>
+<div id="Y" onclick="hilite(this.id)"><span class="Y">&nbsp;&nbsp;&nbsp;</span>&nbsp;Y</div>
+<div id="ZEI" onclick="hilite(this.id)"><span class="ZEI">&nbsp;&nbsp;&nbsp;</span>&nbsp;ZEI</div>
+</div><div class="legend"><div id="ZIhE" onclick="hilite(this.id)"><span class="ZIhE">&nbsp;&nbsp;&nbsp;</span>&nbsp;ZIhE</div>
+<div id="ZO" onclick="hilite(this.id)"><span class="ZO">&nbsp;&nbsp;&nbsp;</span>&nbsp;ZO</div>
+<div id="ZOhU" onclick="hilite(this.id)"><span class="ZOhU">&nbsp;&nbsp;&nbsp;</span>&nbsp;ZOhU</div>
+</div></body></html>

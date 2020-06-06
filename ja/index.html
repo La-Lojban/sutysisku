@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html
+lang="ja"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:og="http://ogp.me/ns#"
+xmlns:fb="https://www.facebook.com/2008/fbml"
+>
+<head>
+<script>
+;(function (i, s, o, g, r, a, m) {
+i['GoogleAnalyticsObject'] = r
+;(i[r] =
+i[r] ||
+function () {
+;(i[r].q = i[r].q || []).push(arguments)
+}),
+(i[r].l = 1 * new Date())
+;(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
+a.async = 1
+a.src = g
+m.parentNode.insertBefore(a, m)
+})(
+window,
+document,
+'script',
+'//www.google-analytics.com/analytics.js',
+'ga'
+)
+ga('create', 'UA-45171210-6', 'auto', {
+allowLinker: true,
+})
+ga('require', 'linker')
+ga('linker:autoLink', ['la-lojban.github.io/sutysisku'])
+ga('set', 'forceSSL', true)
+ga('send', 'pageview')
+</script>
+<script defer>
+ArcBTracker = {
+fire: function (env) {
+if (typeof env == 'undefined') {
+env = {}
+}
+env.u = document.location.href
+env.bw = window.innerWidth
+env.bh = window.innerHeight
+if (document.referrer && document.referrer != '') {
+env.ref = document.referrer
+}
+env.rnd = Math.floor(Math.random() * 10e12)
+var params = []
+for (var key in env) {
+if (env.hasOwnProperty(key)) {
+params.push(
+encodeURIComponent(key) + '=' + encodeURIComponent(env[key])
+)
+}
+}
+var img = new Image()
+img.src = 'https://jbotcan.org:3021/acceptor.gif?' + params.join('&')
+},
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+<title>la sutysisku zo'u: ze'i mitysisku lo valsi</title>
+<meta
+name="viewport"
+content="initial-scale=1.0,width=device-width,user-scalable=yes,viewport-fit=cover"
+/>
+<meta name="theme-color" content="#1941a5" />
+<meta name="Description" content="Sutysisku" />
+<meta property="og:title" content="Sutysisku" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://la-lojban.github.io/sutysisku/ja/index.html" />
+<meta property="og:image" content="../pixra/sutysisku2015-06-22.png" />
+<meta property="og:site_name" content="Sutysisku" />
+<meta property="fb:app_id" content="191051864394489" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@Jbotcan" />
+<meta name="apple-mobile-web-app-title" content="Sutysisku" />
+<link rel="apple-touch-icon" sizes="192x192" href="../pixra/192.png" />
+<link rel="apple-touch-icon" sizes="512x512" href="../pixra/512.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="../pixra/57.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="../pixra/114.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="../pixra/72.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="../pixra/144.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="../pixra/120.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="../pixra/152.png" />
+<link rel="icon" type="image/png" href="../pixra/32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="../pixra/16.png" sizes="16x16" />
+<meta name="application-name" content="Sutysisku" />
+<meta name="msapplication-TileColor" content="#1941a5" />
+<meta name="msapplication-TileImage" content="../pixra/144.png" />
+<meta property="og:description" content="オフラインで使える、ロジバン・日本語・その他の言語対応辞書。" />
+<link rel="shortcut icon" href="../pixra/snime.svg" />
+<link
+rel="search"
+type="application/opensearchdescription+xml"
+href="/sutysisku/ja/sisku.xml"
+title="ja-sutysisku"
+/>
+<link rel="stylesheet" href="./index.css?detri=1591447742225" />
+<link rel="manifest" href="../manifest.json" />
+<script src="bangu.js?sisku=1591447742225"></script>
+<script src="../assets/scripts/leader-line.min.js"></script>
+</head>
+<body>
+<div id="galtu-dasri" class="kampu-dasri cnano-dasri noselect">
+<form id="se-vasru-lo-galtu-dasri" onsubmit="return false" novalidate>
+<a id='title' href='#' aria-label='la sutysisku'><span id='site-title'><img id="logo" src="../pixra/snime.svg" height='16' width='16' alt='logo'><font color='#fff'>la sutysisku</font></span></a>
+<div id="kicne1"></div>
+<input
+aria-label="+"
+id="ciska"
+class="ciska"
+type="text"
+name="focus"
+required
+placeholder="日本 - ロジバン"
+autocorrect="off"
+autocapitalize="off"
+autocomplete="false"
+/>
+<div id="kicne2"></div>
+<button aria-label="clear" id="clear" type="reset"></button>
+</form>
+</div>
+<div id="content" class="content">
+<button onclick="switchBorderScroll();" id="scrollToTop"></button>
+<div class="content-panel">
+<div id="sidju" class="sidju ralju noselect">
+<div id="citri" class="citri"></div>
+<div class="leitutci">
+<a class="tutci" id="catni">探す</a>
+<a class="tutci" id="cnano">+</a>
+<a class="tutci rimni-tutci" id="rimni">韻探索</a>
+</div>
+</div>
+<div id="loading" class="term noselect">
+<span id="caho_cpacu">辞書を読み込んでいます ...</span><br />
+<div id="cpacu">
+<span id="kernelo_lo_cpacu"></span>
+</div>
+</div>
+<div id="drata" style="text-align: center;"></div>
+<div id="descr">
+<div class="term termouter"><h1><b>la sutysisku</b> は、素早く検索できるロジバンの辞書です。</h1><div style="text-align:justify;">――インターネットに接続していない時にでも使えるの？<br/>――使えます。接続していない時にこのブラウザから今のこのアドレスを開いてみて下さい。開くはずです。 Chrome か Safari か Firefox の最新版が必要です。<ul class='liste'><li>探索欄に焦点を当てさせるために、<code>「／」</code>というキーを押してください。</li><li>上級ユーザーの場合：正規表現でタイトルに探索することを可能にするには、文字列が<code>「^」</code>で始め、又は文字列が<code>「$」</code>で終わることにしてください。例えば<code>「^mi, gau$」</code>。</li></ul>他の教材については<a href='http://mw.lojban.org/index.php?title=Lojban&setlang=ja' target='_blank'>ロジバンのウィキ</a>を訪れて下さい。</div></div>
+<div class="term termouter">
+<h1 id="pronunciation" style="font-weight: bold;">
+発音ガイド
+</h1>
+<div>. , a b c d e f g ' i j k l m n o p r s t u v x y z</div>
+<div id="table"></div>
+<audio id="audio"></audio>
+</div>
+</div>
+<div id="outp"></div>
+</div>
+</div>
+<script src="index.js?detri=1591447742225"></script>
+<script defer>
+window.MathJax = {
+options: {
+renderActions: {
+addMenu: [],
+checkLoading: [],
+},
+},
+tex: {
+inlineMath: [['$', '$']],
+},
+}
+</script>
+<script
+defer
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+id="MathJax-script"
+></script>
+</body>
+</html>
