@@ -544,6 +544,10 @@ text-decoration: none;
 text-shadow: 0px 1px 0px #263666;
 max-height: 24px;
 }
+.jvo_plumber {
+box-shadow: inset 0px -3px 7px 0px hsla(39, 100%, 58%, 1);
+background: linear-gradient(to bottom, hsla(43, 94%, 58%, 1) 5%, hsla(48, 96%, 50%, 1) 100%);
+}
 .sance {
 padding: 1px 6px;
 }
@@ -785,7 +789,7 @@ text-align: center;
 }
 @font-face {
 font-family: 'Libertine';
-src: url('../assets/fonts/LinLibertine_R.otf?sisku=1591450815659');
+src: url('../assets/fonts/LinLibertine_R.otf?sisku=1591460351858');
 }
 .display-block {
 display: block;
