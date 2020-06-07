@@ -355,6 +355,12 @@ padding: 0 3px 0 3px;
 margin-left: 10%;
 }
 }
+#galtu-dasri {
+z-index: 200
+}
+#content {
+z-index: 199
+}
 @media screen and (min-width: 510px) and (max-width: 710px) {
 #galtu-dasri {
 padding: 0 10px 0 10px;
@@ -792,7 +798,7 @@ text-align: center;
 }
 @font-face {
 font-family: 'Libertine';
-src: url('../assets/fonts/LinLibertine_R.otf?sisku=1591517288528');
+src: url('../assets/fonts/LinLibertine_R.otf?sisku=1591520560540');
 }
 .display-block {
 display: block;
