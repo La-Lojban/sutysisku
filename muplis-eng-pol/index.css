@@ -367,10 +367,10 @@ margin-left: 10%;
 }
 }
 #galtu-dasri {
-z-index: 200
+z-index: 200;
 }
 #content {
-z-index: 199
+z-index: 199;
 }
 @media screen and (min-width: 510px) and (max-width: 710px) {
 #galtu-dasri {
@@ -378,6 +378,9 @@ padding: 0 10px 0 10px;
 }
 }
 @media screen and (min-width: 510px) {
+#loading {
+width: 30%;
+}
 #clear {
 padding: 22px 10px 8px 30px;
 right: 9px;
@@ -398,6 +401,9 @@ border-radius: 0.3em 1em 0.618em 0.3em;
 }
 }
 @media screen and (max-width: 509px) {
+#loading {
+width: 90%;
+}
 body {
 font-size: 90%;
 }
@@ -516,6 +522,8 @@ font-size: 90%;
 }
 #loading {
 text-align: center;
+margin: 5px auto 5px auto;
+display: block;
 }
 sup,
 sub {
@@ -718,7 +726,6 @@ margin-top: 9px;
 #cpacu {
 position: relative;
 display: block;
-width: 30%;
 margin: 5px auto auto auto;
 background-color: #eee;
 padding: 3px;
@@ -801,7 +808,7 @@ text-align: center;
 }
 @font-face {
 font-family: 'Libertine';
-src: url('../assets/fonts/LinLibertine_R.otf?sisku=1591532176371');
+src: url('../assets/fonts/LinLibertine_R.otf?sisku=1591540085631');
 }
 .display-block {
 display: block;
