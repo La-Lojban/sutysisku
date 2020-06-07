@@ -61,13 +61,13 @@ opacity: 0;
 background-color: transparent;
 }
 body {
-font-family: Tahoma, Lato, sans-serif;
+font-family: Tahoma, Roboto, Helvetica, sans-serif;
 overflow: hidden;
 margin: 0;
 height: 100vh;
 }
 #outp {
-padding-bottom:10px
+padding-bottom: 10px;
 }
 h1 {
 font-size: 1em;
@@ -546,12 +546,18 @@ max-height: 24px;
 }
 .jvo_plumber {
 box-shadow: inset 0px -3px 7px 0px hsla(39, 100%, 58%, 1);
-background: linear-gradient(to bottom, hsla(43, 94%, 58%, 1) 5%, hsla(48, 96%, 50%, 1) 100%);
+background: linear-gradient(
+to bottom,
+hsla(43, 94%, 58%, 1) 5%,
+hsla(48, 96%, 50%, 1) 100%
+);
 }
 .sance {
 padding: 1px 6px;
 }
-.tutci:focus {outline:0;}
+.tutci:focus {
+outline: 0;
+}
 .tutci-hover {
 border-style: dashed;
 }
@@ -789,7 +795,7 @@ text-align: center;
 }
 @font-face {
 font-family: 'Libertine';
-src: url('../assets/fonts/LinLibertine_R.otf?sisku=1591465146224');
+src: url('../assets/fonts/LinLibertine_R.otf?sisku=1591512039273');
 }
 .display-block {
 display: block;
@@ -801,5 +807,5 @@ padding: 0 7px 0 6px;
 margin: 0 2px 0 2px;
 border-color: #aaa;
 border-radius: 3px;
-white-space:nowrap;
+white-space: nowrap;
 }
