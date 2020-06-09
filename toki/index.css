@@ -82,6 +82,7 @@ list-style-image: url(../pixra/cmalu_snime.svg);
 }
 .uoldeliste {
 list-style-image: url(../pixra/cukta.svg);
+margin: 5px 0 5px 0;
 }
 .judri {
 color: inherit;
@@ -485,7 +486,8 @@ margin-right: auto;
 }
 .valsi,
 .definition,
-.rafsi {
+.rafsi,
+.sidju.cll {
 font-family: Libertine, Tahoma, Lato, sans-serif;
 }
 .citri {
@@ -805,7 +807,7 @@ text-align: center;
 }
 @font-face {
 font-family: 'Libertine';
-src: url('../assets/fonts/LinLibertine_R.otf?sisku=1591705515352');
+src: url('../assets/fonts/LinLibertine_R.otf?sisku=1591711289808');
 }
 .display-block {
 display: block;
