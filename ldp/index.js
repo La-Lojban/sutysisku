@@ -15,7 +15,7 @@ var drata = document.getElementById('drata');
 var citri = document.getElementById('citri');
 var sidju = document.getElementById('sidju');
 var pb = document.getElementById('kernelo_lo_cpacu');
-var worker = new Worker('worker.js?sisku=1591877818109');
+var worker = new Worker('worker.js?sisku=1591878274057');
 var SiteTitle = document.querySelector('#title > font');
 var SiteTitleFull = document.querySelector('#site-title');
 var jvoPlumbsOn = false;
@@ -1274,19 +1274,13 @@ function cnino_sorcu() {
 
       if (response.ok) {
         response.json().then(function (json) {
-          var keys = Object.keys(json);
-
-          for (var _i2 = 0, _keys = keys; _i2 < _keys.length; _i2++) {
-            var key = _keys[_i2];
-            console.log(_objectSpread({
+          var keys = Object.keys(json).map(function (key) {
+            return _objectSpread({
               w: key,
               bangu: lang
-            }, json[key]));
-            db.valsi.put(_objectSpread({
-              w: key,
-              bangu: lang
-            }, json[key]));
-          }
+            }, json[key]);
+          });
+          db.valsi.putBulk(keys);
         });
       } else {
         alert('HTTP-Error: ' + response.status);
