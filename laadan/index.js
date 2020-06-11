@@ -15,7 +15,7 @@ var drata = document.getElementById('drata');
 var citri = document.getElementById('citri');
 var sidju = document.getElementById('sidju');
 var pb = document.getElementById('kernelo_lo_cpacu');
-var worker = new Worker('worker.js?sisku=1591878274057');
+var worker = new Worker('worker.js?sisku=1591878365310');
 var SiteTitle = document.querySelector('#title > font');
 var SiteTitleFull = document.querySelector('#site-title');
 var jvoPlumbsOn = false;
