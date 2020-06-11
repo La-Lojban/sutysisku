@@ -7,7 +7,7 @@ const drata = document.getElementById('drata')
 const citri = document.getElementById('citri')
 const sidju = document.getElementById('sidju')
 const pb = document.getElementById('kernelo_lo_cpacu')
-const worker = new Worker('worker.js?sisku=1591869690822')
+const worker = new Worker('worker.js?sisku=1591870966569')
 const SiteTitle = document.querySelector('#title > font')
 const SiteTitleFull = document.querySelector('#site-title')
 let jvoPlumbsOn = false
@@ -377,6 +377,7 @@ seskari: seskari,
 }
 })
 function parseQuery(queryString) {
+if (queryString==='') return
 const query = {}
 let pairs = ''
 if (queryString.search(/^#sisku\//) === 0) {
