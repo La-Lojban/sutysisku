@@ -1,16 +1,10 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
-var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
-
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
-
-var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
-
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var content = document.getElementById('content');
 var ciska = document.getElementById('ciska');
@@ -21,7 +15,7 @@ var drata = document.getElementById('drata');
 var citri = document.getElementById('citri');
 var sidju = document.getElementById('sidju');
 var pb = document.getElementById('kernelo_lo_cpacu');
-var worker = new Worker('worker.js?sisku=1591877457487');
+var worker = new Worker('worker.js?sisku=1591877635137');
 var SiteTitle = document.querySelector('#title > font');
 var SiteTitleFull = document.querySelector('#site-title');
 var jvoPlumbsOn = false;
@@ -1276,81 +1270,41 @@ function skicu_rolodovalsi(_ref16) {
 }
 
 function cnino_sorcu() {
-  return _cnino_sorcu.apply(this, arguments);
-}
+  var db = new Dexie('sorcu');
+  db.version(2).stores({
+    valsi: '++id, bangu, w, d, n, t, g, r'
+  });
 
-function _cnino_sorcu() {
-  _cnino_sorcu = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-    var db, _i, _arr, lang, response, json, keys, _i2, _keys, key;
+  var _loop2 = function _loop2() {
+    var lang = _arr[_i];
+    fetch("/sutysisku/data/parsed-".concat(lang, ".json?sisku=").concat(new Date().getTime())).then(function (response) {
+      var json;
 
-    return _regenerator.default.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            db = new Dexie('sorcu');
-            db.version(2).stores({
-              valsi: '++id, bangu, w, d, n, t, g, r'
-            });
-            _i = 0, _arr = ['en', 'ru', 'eo', 'es', 'fr-facile', 'ja', 'jbo', 'ru', 'zh'];
+      if (response.ok) {
+        response.json().then(function (json) {
+          var keys = Object.keys(json);
 
-          case 3:
-            if (!(_i < _arr.length)) {
-              _context.next = 21;
-              break;
-            }
-
-            lang = _arr[_i];
-            _context.next = 7;
-            return fetch("/sutysisku/data/parsed-".concat(lang, ".json?sisku=").concat(new Date().getTime()));
-
-          case 7:
-            response = _context.sent;
-            json = void 0;
-
-            if (!response.ok) {
-              _context.next = 15;
-              break;
-            }
-
-            _context.next = 12;
-            return response.json();
-
-          case 12:
-            json = _context.sent;
-            _context.next = 16;
-            break;
-
-          case 15:
-            alert("HTTP-Error: " + response.status);
-
-          case 16:
-            keys = Object.keys(json);
-
-            for (_i2 = 0, _keys = keys; _i2 < _keys.length; _i2++) {
-              key = _keys[_i2];
-              console.log(_objectSpread({
-                w: key,
-                bangu: lang
-              }, json[key]));
-              db.valsi.put(_objectSpread({
-                w: key,
-                bangu: lang
-              }, json[key]));
-            }
-
-          case 18:
-            _i++;
-            _context.next = 3;
-            break;
-
-          case 21:
-          case "end":
-            return _context.stop();
-        }
+          for (var _i2 = 0, _keys = keys; _i2 < _keys.length; _i2++) {
+            var key = _keys[_i2];
+            console.log(_objectSpread({
+              w: key,
+              bangu: lang
+            }, json[key]));
+            db.valsi.put(_objectSpread({
+              w: key,
+              bangu: lang
+            }, json[key]));
+          }
+        });
+      } else {
+        alert('HTTP-Error: ' + response.status);
       }
-    }, _callee);
-  }));
-  return _cnino_sorcu.apply(this, arguments);
+    });
+  };
+
+  for (var _i = 0, _arr = ['en', 'ru', 'eo', 'es', 'fr-facile', 'ja', 'jbo', 'ru', 'zh']; _i < _arr.length; _i++) {
+    _loop2();
+  }
 }
 
 cnino_sorcu();
