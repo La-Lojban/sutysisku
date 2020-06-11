@@ -7,7 +7,7 @@ const drata = document.getElementById('drata')
 const citri = document.getElementById('citri')
 const sidju = document.getElementById('sidju')
 const pb = document.getElementById('kernelo_lo_cpacu')
-const worker = new Worker('worker.js?sisku=1591871251699')
+const worker = new Worker('worker.js?sisku=1591871449573')
 const SiteTitle = document.querySelector('#title > font')
 const SiteTitleFull = document.querySelector('#site-title')
 let jvoPlumbsOn = false
@@ -409,7 +409,7 @@ newSearch = decodeUrl(params['sisku']).trim()
 href = href || window.location.search
 href = href.substring(href.indexOf('?') + 1)
 const search = new URLSearchParams(href)
-newSearch = decodeUrl(search.get('focus')).trim()
+newSearch = decodeUrl(search.get('focus')||'').trim()
 if (newSearch) {
 params = { sisku: newSearch, seskari: 'cnano' }
 } else return
