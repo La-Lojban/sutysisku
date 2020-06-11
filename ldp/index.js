@@ -7,7 +7,7 @@ const drata = document.getElementById('drata')
 const citri = document.getElementById('citri')
 const sidju = document.getElementById('sidju')
 const pb = document.getElementById('kernelo_lo_cpacu')
-const worker = new Worker('worker.js?sisku=1591871125986')
+const worker = new Worker('worker.js?sisku=1591871251699')
 const SiteTitle = document.querySelector('#title > font')
 const SiteTitleFull = document.querySelector('#site-title')
 let jvoPlumbsOn = false
@@ -403,7 +403,7 @@ localStorage.setItem('url', `#${href}`)
 }
 let params = parseQuery(href || window.location.hash)
 let newSearch
-if (params['sisku']) {
+if (params && params['sisku']) {
 newSearch = decodeUrl(params['sisku']).trim()
 } else {
 href = href || window.location.search
