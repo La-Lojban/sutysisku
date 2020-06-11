@@ -7,17 +7,17 @@ var urlsToCache = [
   'https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js',
   './',
   './index.html',
-  './index.js?detri=1591861671684',
-  './index.css?detri=1591861671684',
-  './bangu.js?sisku=1591861671684',
-  '../data/parsed-en.js?sisku=1591861671684',
-  '../sisku.js?sisku=1591861671684',
-  './worker.js?sisku=1591861671684',
-  '../assets/fonts/linux-libertine/LinLibertine_R.otf?sisku=1591861671684',
-  '../assets/fonts/linux-libertine/LinLibertine_RI.otf?sisku=1591861671684',
-  '../assets/fonts/linux-libertine/LinLibertine_RB.otf?sisku=1591861671684',
-  '../assets/fonts/linux-libertine/LinLibertine_RBI.otf?sisku=1591861671684',
-  '../assets/fonts/crisa-regular.otf?sisku=1591861671684',
+  './index.js?detri=1591861951958',
+  './index.css?detri=1591861951958',
+  './bangu.js?sisku=1591861951958',
+  '../data/parsed-en.js?sisku=1591861951958',
+  '../sisku.js?sisku=1591861951958',
+  './worker.js?sisku=1591861951958',
+  '../assets/fonts/linux-libertine/LinLibertine_R.otf?sisku=1591861951958',
+  '../assets/fonts/linux-libertine/LinLibertine_RI.otf?sisku=1591861951958',
+  '../assets/fonts/linux-libertine/LinLibertine_RB.otf?sisku=1591861951958',
+  '../assets/fonts/linux-libertine/LinLibertine_RBI.otf?sisku=1591861951958',
+  '../assets/fonts/crisa-regular.otf?sisku=1591861951958',
   '../assets/scripts/leader-line.min.js',
   '../pixra/cll.png',
   '../pixra/cmalu_snime.svg',
@@ -108,13 +108,12 @@ self.addEventListener('activate', function (event) {
         )
       )
       .then(() => {
-        console.log('V2 now ready to handle fetches!')
-        console.log(self.clients)
         self.clients.matchAll().then((clients) => {
-          console.log(clients);
+          console.log(clients)
           if (clients && clients.length) {
-            const client = clients[0]
-            client.postMessage('your message')
+            clients.map(function (client) {
+              client.postMessage({teminde: "ei ningau le sorcu"})
+            })
           }
         })
       })
