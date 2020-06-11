@@ -807,27 +807,27 @@ text-align: center;
 }
 @font-face {
 font-family: "Libertine";
-src: url("../assets/fonts/linux-libertine/LinLibertine_R.otf?sisku=1591861296871");
+src: url("../assets/fonts/linux-libertine/LinLibertine_R.otf?sisku=1591861353146");
 }
 @font-face {
 font-family: "Libertine";
-src: url("../assets/fonts/linux-libertine/LinLibertine_RI.otf?sisku=1591861296871");
+src: url("../assets/fonts/linux-libertine/LinLibertine_RI.otf?sisku=1591861353146");
 font-style: italic;
 }
 @font-face {
 font-family: "Libertine";
-src: url("../assets/fonts/linux-libertine/LinLibertine_RB.otf?sisku=1591861296871");
+src: url("../assets/fonts/linux-libertine/LinLibertine_RB.otf?sisku=1591861353146");
 font-weight: bold;
 }
 @font-face {
 font-family: "Libertine";
-src: url("../assets/fonts/linux-libertine/LinLibertine_RBI.otf?sisku=1591861296871");
+src: url("../assets/fonts/linux-libertine/LinLibertine_RBI.otf?sisku=1591861353146");
 font-style: italic;
 font-weight: bold;
 }
 @font-face {
 font-family: 'crisa-regular';
-src: url('../assets/fonts/crisa-regular.otf?sisku=1591861296871');
+src: url('../assets/fonts/crisa-regular.otf?sisku=1591861353146');
 }
 .valsi.zbalermorna {
 font-family: 'crisa-regular';
