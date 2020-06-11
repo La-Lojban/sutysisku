@@ -7,17 +7,17 @@ var urlsToCache = [
   'https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js',
   './',
   './index.html',
-  './index.js?detri=1591860938053',
-  './index.css?detri=1591860938053',
-  './bangu.js?sisku=1591860938053',
-  '../data/parsed-en.js?sisku=1591860938053',
-  '../sisku.js?sisku=1591860938053',
-  './worker.js?sisku=1591860938053',
-  '../assets/fonts/linux-libertine/LinLibertine_R.otf?sisku=1591860938053',
-  '../assets/fonts/linux-libertine/LinLibertine_RI.otf?sisku=1591860938053',
-  '../assets/fonts/linux-libertine/LinLibertine_RB.otf?sisku=1591860938053',
-  '../assets/fonts/linux-libertine/LinLibertine_RBI.otf?sisku=1591860938053',
-  '../assets/fonts/crisa-regular.otf?sisku=1591860938053',
+  './index.js?detri=1591861227708',
+  './index.css?detri=1591861227708',
+  './bangu.js?sisku=1591861227708',
+  '../data/parsed-en.js?sisku=1591861227708',
+  '../sisku.js?sisku=1591861227708',
+  './worker.js?sisku=1591861227708',
+  '../assets/fonts/linux-libertine/LinLibertine_R.otf?sisku=1591861227708',
+  '../assets/fonts/linux-libertine/LinLibertine_RI.otf?sisku=1591861227708',
+  '../assets/fonts/linux-libertine/LinLibertine_RB.otf?sisku=1591861227708',
+  '../assets/fonts/linux-libertine/LinLibertine_RBI.otf?sisku=1591861227708',
+  '../assets/fonts/crisa-regular.otf?sisku=1591861227708',
   '../assets/scripts/leader-line.min.js',
   '../pixra/cll.png',
   '../pixra/cmalu_snime.svg',
@@ -108,6 +108,11 @@ self.addEventListener('activate', function (event) {
         )
       )
       .then(() => {
+        self.clients.matchAll().then( (clients) => {
+          if (clients && clients.length) {
+              const client = clients[0];
+              client.postMessage("your message");
+          }
         console.log('V2 now ready to handle fetches!')
       })
   )
