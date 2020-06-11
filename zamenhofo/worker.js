@@ -5,7 +5,7 @@
     if (bau==='cipra'){bau='en';}
     var cll;
     postMessage({kind: 'loading'});
-    importScripts('bangu.js?sisku=1591876420366','../data/parsed-zamenhofo.js?sisku=1591876420366', '../sisku.js?sisku=1591876420366');
+    importScripts('bangu.js?sisku=1591876800291','../data/parsed-zamenhofo.js?sisku=1591876800291', '../sisku.js?sisku=1591876800291');
     postMessage({kind: 'ready'});
     this.onmessage = function(ev) {
       if (ev.data.kind == 'newSearch') {
