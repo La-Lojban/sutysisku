@@ -15,7 +15,7 @@ var drata = document.getElementById('drata');
 var citri = document.getElementById('citri');
 var sidju = document.getElementById('sidju');
 var pb = document.getElementById('kernelo_lo_cpacu');
-var worker = new Worker('worker.js?sisku=1591877635137');
+var worker = new Worker('worker.js?sisku=1591877818109');
 var SiteTitle = document.querySelector('#title > font');
 var SiteTitleFull = document.querySelector('#site-title');
 var jvoPlumbsOn = false;
@@ -1306,8 +1306,6 @@ function cnino_sorcu() {
     _loop2();
   }
 }
-
-cnino_sorcu();
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
