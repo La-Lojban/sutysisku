@@ -15,7 +15,7 @@ var drata = document.getElementById('drata');
 var citri = document.getElementById('citri');
 var sidju = document.getElementById('sidju');
 var pb = document.getElementById('kernelo_lo_cpacu');
-var worker = new Worker('worker.js?sisku=1591878609663');
+var worker = new Worker('worker.js?sisku=1591878800292');
 var SiteTitle = document.querySelector('#title > font');
 var SiteTitleFull = document.querySelector('#site-title');
 var jvoPlumbsOn = false;
@@ -712,7 +712,7 @@ function getCLLSections(te_gerna) {
 function CLL(_ref11) {
   var pre = _ref11.pre,
       valsi = _ref11.valsi;
-  if (!window.cll_url | (window.arrcll || []).length === 0) return;
+  if (!window.cll_url | (window.arrcll || []).length === 0) return {};
   if (pre && !valsi.match(/^[A-Zh]+[\+A-Zh0-9]*$/)) return {};
   var secs = getCLLSections(valsi);
   if (!secs) return {};
@@ -1247,11 +1247,11 @@ function skicu_palodovalsi(_ref17) {
   }
 
   if (index == 0 && seskari !== 'velcusku') {
-    var _ref18 = CLL({
+    var _CLL = CLL({
       valsi: def.w
-    }) || {},
-        secs = _ref18.secs,
-        div = _ref18.div;
+    }),
+        secs = _CLL.secs,
+        div = _CLL.div;
 
     if (secs && secs !== state.cll) out.appendChild(div);
   }
@@ -1350,19 +1350,19 @@ function escHtml(a, apos) {
   return a;
 }
 
-function skicu_rolodovalsi(_ref19) {
-  var query = _ref19.query,
-      seskari = _ref19.seskari;
+function skicu_rolodovalsi(_ref18) {
+  var query = _ref18.query,
+      seskari = _ref18.seskari;
   var displayUpTo = Math.min(window.jimte, results.length);
   state.cll = undefined;
 
   if (resultCount === 0) {
-    var _CLL = CLL({
+    var _CLL2 = CLL({
       pre: true,
       valsi: state.searching.query
     }),
-        secs = _CLL.secs,
-        div = _CLL.div;
+        secs = _CLL2.secs,
+        div = _CLL2.div;
 
     state.cll = secs;
     if (div) outp.appendChild(div);
@@ -1413,8 +1413,8 @@ function cnino_sorcu() {
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('./sw.js').then(function (_ref20) {
-      var scope = _ref20.scope;
+    navigator.serviceWorker.register('./sw.js').then(function (_ref19) {
+      var scope = _ref19.scope;
       console.log('ServiceWorker registration successful with scope: ', scope);
     }, function (err) {
       console.log('ServiceWorker registration failed: ', err);
