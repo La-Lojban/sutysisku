@@ -1,1 +1,1451 @@
-"use strict";var e=document.getElementById("content"),t=document.getElementById("ciska"),n=document.getElementById("clear"),a=document.getElementById("outp"),r=document.getElementById("descr"),i=document.getElementById("drata"),c=document.getElementById("citri"),s=document.getElementById("sidju"),o=document.getElementById("kernelo_lo_cpacu"),l=new Worker("worker.js?sisku=1591861423467"),u=document.querySelector("#title > font"),d=document.querySelector("#site-title"),p=!1,g=3500;d.classList.add("desktop-mode-title-color");var m=document.getElementById("galtu-dasri"),f=document.getElementById("catni"),h=document.getElementById("cnano"),v=document.getElementById("rimni"),y=document.querySelectorAll("#title > img"),k=document.getElementById("scrollToTop");function switchBorderScroll(){e.scrollTop>200?e.scrollTop=0:e.scrollTop=e.scrollHeight}e.onscroll=function(){e.scrollTop>200?(k.style.display="block",k.classList.remove("dizlo")):k.classList.add("dizlo")};var w,b,E,L={BE:"bei",BEI:"be'o",BY:"boi",COI:"do'u",DOI:"do'u",FIhO:"fe'u",FUhE:"fu'o",GIhA:"vau",GOI:"ge'u",JOhI:"te'u",KE:"ke'e",LAhE:"lu'u",LA:"ku",LE:"ku",LI:"lo'o",LOhU:"le'u",LU:"li'u",ME:"me'u","NAhE+BO":"lu'u",NOI:"ku'o",NUhI:"nu'u",NU:"kei",PA:"boi",PEhO:"ku'e",SEI:"se'u",SOI:"se'u",TO:"toi",TUhE:"tu'u",VEI:"ve'o",LOhAI:"sa'ai",SAhAI:"le'ai",LOhOI:"ku'au",NAhU:"te'u",NIhE:"te'u",MOhE:"te'u"},q=[],x=function(e,t){clearTimeout(E),E=setTimeout(e,t)},I={searching:{seskari:"cnano",query:""},displaying:{seskari:"cnano",query:""},citri:[]};function C(){I.citri.length>0&&(c.innerHTML=" ".concat(window.purc).concat(I.citri.filter((function(e){return"velcusku"!==e.seskari})).map((function(e){var t=e.seskari,n=e.query;return'<a class="a-'.concat(t,'" href="#seskari=').concat(t,"&sisku=").concat(be(n),'">').concat(Le(n),"</a>")})).join(", ")))}function S(e,t){var n=["velcusku","arxivo","cnano","rimni","catni"];n.includes(e)||(e="cnano"),m.className="kampu-dasri ".concat(e,"-dasri noselect"),d.classList.add("".concat(e,"-search-mode-title-color")),d.classList.remove("desktop-mode-title-color"),document.getElementById(e)&&document.getElementById(e).classList.add("".concat(e,"-tutci-hover"),"tutci-hover"),n.map((function(t){t!==e&&(d.classList.remove("".concat(t,"-search-mode-title-color")),document.getElementById(t)&&document.getElementById(t).classList.remove("".concat(t,"-tutci-hover"),"tutci-hover"))}));for(var a=0;a<y.length;a++)y[a].style.filter=t}function j(e){var a=e.action;if("complete"===document.readyState){var i=["logo"];"start"===a?(i.map((function(e){document.getElementById(e).classList.remove("stopRotate"),document.getElementById(e).classList.add("rotate")})),n.classList.add("pulsate-css"),setTimeout((function(){n.classList.contains("pulsate-css")&&t.classList.add("granim-css")}),500)):(i.map((function(e){document.getElementById(e).classList.add("stopRotate")})),t.classList.remove("granim-css"),n.classList.remove("pulsate-css"))}}function _(){Ie&&Ie.open()}function A(){MathJax.typesetPromise().then((function(){B(!0)}))}function T(t){var n=t.query,c=t.seskari;switch(N(),window.jimte="velcusku"===c?201:30,w=0,j({action:"stop"}),a.innerHTML="",qe({query:n,seskari:c}),I.displaying.query=n,I.displaying.seskari=c,a.style.display="block",r.style.display="none",i.style.display="none",s.style.display="flex",e.scrollTop=0,I.displaying.seskari){case"rimni":A(),S("rimni","sepia(1.0)");break;case"arxivo":S("arxivo","none");break;case"velcusku":S("velcusku","none");break;case"catni":A(),S("catni","none");break;case"cnano":default:A(),S("cnano","none")}x((function(){Z(),ga("send","pageview","#sisku/".concat(I.displaying.query));var e={dl:window.location.href,dt:document.title,dr:document.referrer,dp:"#sisku/".concat(I.displaying.query),dh:"".concat(window.location.protocol,"//").concat(window.location.hostname),z:Math.round(1e12*Math.random())};xe&&xe.emit("sisku",e)}),2e3)}function N(){[].forEach.call(document.querySelectorAll(".leader-line"),(function(e){e.parentNode.removeChild(e)}))}function O(){[].forEach.call(document.querySelectorAll(".leader-line"),(function(e){document.querySelector("#content").appendChild(e)}))}function B(e){N(),M(!e),ee=setTimeout((function(){if(!0!==e){var t=document.getElementsByClassName("jvo_plumber");p=!p;for(var n=0;n<t.length;n++){var a=t[n];a.value=ve(),p?a.classList.add("tutci-hover"):a.classList.remove("tutci-hover")}}if(p){var i=Array.from(document.querySelectorAll("[data-arr]")),r=function(){var e=i[n];if(e.attributes["data-head"]&&"1"!==e.attributes["data-head"].nodeValue)return"continue";var t=e.id,a=e.attributes["data-arr"].nodeValue.split(","),r=e.id.split("_").slice(0,-1),c=H(e);i.filter((function(e){var n=e.id.split("_").slice(0,-2),i=e.attributes["data-arr"].nodeValue.split(","),s=i[0].split(/(?=[0-9]+)/);if(1===i.length&&n.length===r.length&&n.join("_")===r.join("_")&&a.filter((function(e){var t=e.split(/(?=[0-9])/);return 0===s[0].indexOf(t[0])&&s[1]===t[1]})).length>0&&(c||H(e))){var o=e.attributes["data-color"].nodeValue;o="hsla(".concat(o,",100%,70%,0.62)"),new LeaderLine(document.getElementById(e.id),document.getElementById(t),{endPlugColor:o,color:o,dash:{animation:!0},startSocketGravity:[50,-67],endSocketGravity:[0,67],endPlug:"arrow2",endSocket:"bottom",size:3})}})),O()};for(n=0;n<i.length;n++)r()}}),!0===e?450:0)}function M(e){N(),X=setTimeout((function(){for(var e=document.querySelectorAll("[data-target]"),t=0;t<e.length;t++){var n=e[t];if(H(n)){var a=n.id,i=n.attributes["data-target"].nodeValue;new LeaderLine(document.getElementById(i),document.getElementById(a),{endPlugColor:"rgba(255, 120, 0, 0.33)",color:"rgba(255, 120, 0, 0.33)",dash:{animation:!0},startSocketGravity:[50,-67],endSocketGravity:[0,67],endPlug:"arrow2",endSocket:"bottom",size:3})}}O(),g=450}),e?0:g)}function H(e){var t=e.getBoundingClientRect();return t=t.top>=48&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)}function z(e){var t={},n="";n=0===e.search(/^#sisku\//)?[e.replace(/#sisku\/(.*)/,"sisku=$1")]:("#"===e[0]?e.substr(1):e).split("&");for(var a=0;a<n.length;a++){var i=n[a].split("=");t[decodeURIComponent(i[0])]=decodeURIComponent(i[1].replace(/[\+]/g," ")||"")}return t}function $(e){var t=e.href,n=e.replace;t&&(t=t.substring(t.indexOf("#")+1),localStorage.setItem("url","#".concat(t)));var a,i=z(t||window.location.hash);if(i.sisku)a=Ee(i.sisku).trim();else{if(t=(t=t||window.location.search).substring(t.indexOf("?")+1),!(a=Ee(new URLSearchParams(t).get("focus")).trim()))return;i={sisku:a,seskari:"cnano"}}I.searching.seskari===i.seskari&&I.searching.query===a||(i.seskari&&["velcusku","cnano","catni","rimni","arxivo"].includes(i.seskari)&&(I.searching.seskari=i.seskari),i.sisku&&(I.searching.query=a,G({replace:n})))}function J(e){var t=e.target;if("A"===t.nodeName){var n=t;if(n.ctrlKey||n.metaKey)return;$({replace:!1,href:n.getAttribute("href")})}}function R(e){var t=e.replace,n="".concat(window.location.href.split("?")[0].split("#")[0],"#seskari=").concat(I.searching.seskari,"&sisku=").concat(be(I.searching.query));""===I.searching.query?(n="",document.title="la sutysisku"):document.title="".concat(I.searching.query," - la sutysisku");var a=localStorage.getItem("url")||"";!0===t?window.history.replaceState({},null,n):window.location.hash!==n&&a!==n&&window.history.pushState({},null,n),localStorage.setItem("url",n)}function U(){I.searching.query=we(t.value),G({caller:"GetCiskaAndDispatch"})}function P(e){clearTimeout(b),b=setTimeout(U,e||250)}function D(){I.searching.query=we(t.value),G({})}function V(){G({empty:!0})}function Z(){if(""!==I.displaying.query&&"velcusku"!==I.displaying.seskari){var e=0;for(e=0;e<I.citri.length;e++)if(I.citri[e].query===I.displaying.query&&I.citri[e].seskari===I.displaying.seskari){I.citri.splice(e,1);break}I.citri.unshift(JSON.parse(JSON.stringify(I.displaying))),I.citri.length>10&&(I.citri.length=10),localStorage.setItem("citri",JSON.stringify(I.citri)),C()}}function G(e){var n=e.replace,a=e.caller,i=e.empty;if(Ie&&Ie.close(),I.searching.query=I.searching.query.trim(),R({replace:n}),localStorage.setItem("tcini",JSON.stringify(I.searching)),1==i)return I.searching.query="",W();if("velcusku"!==I.searching.seskari){if(""===I.searching.query)return W();if(JSON.stringify(I.searching)===JSON.stringify(I.displaying))return}switch(t.value=I.searching.query,j({action:"start"}),"GetCiskaAndDispatch"===a&&"velcusku"===I.searching.seskari&&(I.searching.seskari="cnano"),I.searching.seskari){case"arxivo":var r=JSON.parse(JSON.stringify(I.searching));"^"!==I.searching.query.charAt(0)&&"$"!==I.searching.query.slice(-1)[0]&&(r.query="\\b".concat(I.searching.query,"\\b")),r.max=20,xe&&xe.emit("cpedu_fi_la_arxivo",r);break;case"velcusku":_();break;default:l.postMessage({kind:"newSearch",query:I.searching.query,seskari:I.searching.seskari})}}function W(){N(),j({action:"stop"}),e.scrollTop=0;var t=I.displaying.query;I.displaying.query="",d.classList.add("desktop-mode-title-color"),d.classList.remove("catni-search-mode-title-color","cnano-search-mode-title-color","velcusku-search-mode-title-color","rimni-search-mode-title-color","arxivo-search-mode-title-color"),f.classList.remove("catni-tutci-hover","tutci-hover");try{h.classList.remove("cnano-tutci-hover","tutci-hover")}catch(e){}v.classList.remove("rimni-tutci-hover","tutci-hover"),m.className="kampu-dasri cnano-dasri",a.style.display="none",r.style.display="block";var n={"@CLL":[".inglic.","Reference Grammar","../pixra/cll.png",1,"https://lojban.pw/cll/uncll-1.2.7/xhtml_section_chunks/"],"@lojban.pw":[".inglic.","Lojban-Chan","../pixra/jbotcan.svg",1,"https://lojban.pw"],muplis:[0,"la muplis","../pixra/taplamuplis.svg",2.1],jb:[0,"English - Lojban examples","../pixra/snime-1.svg",1],en:[0,"English-Lojban","../pixra/selsku_lanci_eng.svg",1],jbo:[0,"fanva fi le'e lojbo ri","../pixra/lanci_jbo.svg",1],ja:[0,'日本 - <span style="white-space:pre;">ロジバン</span>',"../pixra/selsku_lanci_jpn.svg",1],"fr-facile":[0,"français facile - lojban","../pixra/selsku_lanci_fra.svg",1],ru:[0,"русский - ложбан","../pixra/selsku_lanci_rus.svg",1],eo:[0,"Esperanto - Loĵbano","../pixra/lanci_epo.svg",1],es:[0,"español - lojban","../pixra/selsku_lanci_spa.svg",1],zh:[0,"中文 - 逻辑语","../pixra/selsku_lanci_zho.svg",1],"@CC":[".inglic.","The Crash Course","../pixra/cogwheel-5.svg",1,"https://mw.lojban.org/papri/The_Crash_Course_in_Lojban"]},c="";for(var s in n)0!==n[s][0]&&n[s][0]!==window.bangu||(c+="<div class='DIV_1' style='height:".concat(100,"px;width:").concat(100*n[s][3],"px;'><div class='DIV_2' style='height:").concat(100,"px;width:").concat(100*n[s][3],"px;'><span class='SPAN_3' style='width:auto;'><b class='B_4'>").concat(n[s][1],"</b></span><a").concat(0===(n[s][4]||"").indexOf("http")?" rel='noreferrer' target='_blank'":"",' aria-label="').concat(n[s][1].replace(/<[^>]+?>/g,""),'" href="').concat(0===s.indexOf("@")?n[s][4]:"https://la-lojban.github.io/sutysisku/".concat(s,"/#seskari=").concat(I.displaying.seskari,"&sisku=").concat(be(t)),"\" class='A_7'><div class='DIV_8' style='height:").concat(100,"px;width:").concat(100*n[s][3],'px;background-image:url("').concat(n[s][2],"\")'></div></a></div></div>"));i.innerHTML=c,i.style.display="block"}function F(e){var n=e.keyCode;n&&191===n&&t.focus()}function K(){e.setAttribute("style","height:".concat(Math.max(document.documentElement.clientHeight,window.innerHeight||0),"px;"))}function Y(e){var t=window.arrcll[e];return t||(t=window.arrcll[e.replace(/[^A-Z]+$/,"")]),t}function Q(e){var t=e.pre,n=e.valsi;if(!(!window.cll_url|0===(window.arrcll||[]).length)){if(t&&!n.match(/^[A-Zh]+[\+A-Zh0-9]*$/))return{};var a=Y(n);if(!a)return{};var i="".concat(window.cllnotci,"<ul class='uoldeliste'>").concat(Object.keys(a).map((function(e){return"<li><a rel='noreferrer' target='_blank' href=\"".concat(window.cll_url).concat(e,'">').concat(Le(a[e]),"</a></li>")})).join(""),"</ul>"),r=document.createElement("div");return r.className="".concat(t?"sidju":"definition"," cll noselect"),r.innerHTML=i,{secs:a,div:r}}}!function(){try{var e=JSON.parse(localStorage.getItem("tcini"));e.seskari&&(I.searching.seskari=e.seskari),e.query&&(I.searching.query=e.query)}catch(e){}try{I.citri=JSON.parse(localStorage.getItem("citri"))||[]}catch(e){}}(),C(),l.onmessage=function(e){var t=e.data;if("ready"==t.kind){document.title="la sutysisku";var n=document.getElementById("loading");n.parentNode.removeChild(n),$({replace:!0})}else if("searchResults"==t.kind){if(JSON.stringify(t.req)!==JSON.stringify(I.searching))return;if(JSON.stringify(t.req)===JSON.stringify(I.displaying))return;q=t.results||[],T({query:t.req.query,seskari:t.req.seskari})}else"loading"==t.kind?(document.getElementById("caho_cpacu").textContent=window.bangubuild,o.style.width="51%"):"progress"==t.kind&&(o.style.width="".concat(100*t.percent,"%"))},c.addEventListener("click",J),window.addEventListener("popstate",$),t.addEventListener("paste",P(0)),t.addEventListener("keyup",(function(){P()})),t.addEventListener("keydown",(function(){clearTimeout(b)})),t.addEventListener("input",P()),t.addEventListener("textInput",P()),t.addEventListener("focus",D),n.addEventListener("click",V),document.getElementById("title").addEventListener("click",V),document.getElementById("rimni").addEventListener("click",(function(){I.searching={seskari:"rimni",query:we(t.value)},G({replace:!1})})),document.getElementById("cnano").addEventListener("click",(function(){I.searching={seskari:"cnano",query:we(t.value)},G({replace:!1})})),document.getElementById("catni").addEventListener("click",(function(){I.searching={seskari:"catni",query:we(t.value)},G({replace:!1})})),window.addEventListener("resize",K,!0),e.addEventListener("scroll",te),K(),document.attachEvent?document.attachEvent("onkeyup",F):document.addEventListener("keyup",F),"loading"===document.readyState&&(o.style.width="37%",document.title="la sutysisku");var X=null,ee=null;function te(e){var t=e.target;N(),null!==X&&clearTimeout(X),null!==ee&&clearTimeout(ee),"velcusku"!==I.displaying.seskari&&t.scrollTop+window.innerHeight>=a.clientHeight-700?(window.jimte+=10,qe(I.displaying),MathJax.typesetPromise().then((function(){B(!0)}))):B(!0)}function ne(e,t,n){return e=e.replace(/[\{\}_]/g,""),Math.abs(Math.round(e.split("").reduce((function(e,t){return(e=(e<<5)-e+t.charCodeAt(0))&e}),0)%t/n)*n)}function ae(e){var t=(e=e.substr(1,e.length-2).split("=")).map((function(e){return e.replace(/[^A-Za-z']/g,"")}));return{jalge:t,hasExpansion:e.length>1||t[0]&&"x"!==t[0]}}function re(e){var t=e.v,n=e.fullDef,a=e.subtype,i=e.dataArrAdded,r=e.b,c=e.veljvoLs;return i.includes(r)||"r"!==a&&"lujvo"!==n.t?"":(t=(t=(t=t.substr(1,t.length-2).split("=").map((function(e){return"r"===a?n.w+e.replace(/[^0-9]/g,""):e.replace(/[^0-9A-Za-z']/g,"")}))).filter((function(e){var t=e.replace(/[0-9]/g,"");if(!(c.filter((function(e){return 0===e.indexOf(t)&&e!==t})).length>0))return!0}))).join(","),' data-arr="'.concat(t,'"'))}function ie(e){var t=e.def,n=e.fullDef,a=e.query,i=e.seskari,r=e.type,c=e.index,s=0,o=[],l=[],u=[],d=[],p=!1;["cnano","catni","rimni"].includes(i)||(i="cnano");var g=t.replace(/\$.*?\$/g,(function(e,t,n){if("d"===r&&void 0!==c){var a=ae(e);a.hasExpansion&&(p=!0),d=d.concat(a.jalge);var i=n.substr(t),s=new RegExp("^(".concat(e.replace(/[^a-zA-Z0-9\{\}_]/g,"")," \\([^\\(\\)<>]+?\\)).*")),o=e;0===i.search(s)&&(o=i.replace(s,"$1"));var u={};u[e]=o,l.push(u)}return e}));return{tergeha:"<span>".concat(g.replace(/\$.*?\$/g,(function(e,t,a){if("d"===r&&void 0!==c){var i=a.substr(t),p=new RegExp("^(".concat(e.replace(/[^a-zA-Z0-9\{\}_]/g,"")," \\([^()<>]+?\\)).*")),g=e;if(0===i.search(p))g=i.replace(p,"$1");else{var m=l.filter((function(t){return t[e]&&t[e]!==g}))[0];m&&(g=m[e])}s++;var h="".concat(c,"_").concat(s),f={};f[e]=h,o.push(f);var v=e.replace(/[^a-zA-Z0-9]/g,""),y="";(n&&n.rfs||[]).length&&(y=' data-head="1"');var k=re({subtype:""!==y?"d":"r",v:e,fullDef:n,dataArrAdded:u,b:v,veljvoLs:d});e='<span id="'.concat(h,'" class="terbricmi" style="background-color: hsl(').concat(ne(g,256,16),", 100%, 90%);border-radius:").concat(ne(g,9,1)+3,'px"').concat(k).concat(y,' data-color="').concat(ne(g,256,16),'">').concat(e,"</span>"),u.push(v)}return e})).replace(/(<span [^<>]+?>[^\(\)<>]+?<\/span>) \([^\(\)<>]*?\bproperty of <span id="([^\(\)<>]+?)"[^<>]+?>([^\(\)<>]+?)<\/span>\)/g,(function(e,t,n,a){if("d"===r){var i=o.filter((function(e){return e[a]!==n&&e[a]}));i[0]&&i[0][a]&&(e=e.replace(/^<span /,'<span data-target="'.concat(i[0][a],'" ')))}return e})).replace(/\$.*?\$/g,(function(e){return e.replace(/\{/g,"\\curlyleft").replace(/\}/g,"\\curlyright")})).replace(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g,(function(e){var t='</span><a href="'.concat(e,'" rel="noreferrer" target="_blank">').concat(se({def:e,query:a}),"</a><span>");return e.match(/^https?:\/\/.*\.(jpg|png)$/)&&(t+="<img class='se-tcidu-pixra' alt='secusku' src=\"".concat(e,'"/>\n')),t})).replace(/\{.*?\}/g,(function(e){e=e.substring(1,e.length-1);return'</span><a class="a-'.concat(i,'" href="#seskari=').concat(i,"&sisku=").concat(be(e),'">').concat(se({def:Le(e,!0),query:a}),"</a><span>")})).replace(/\$.*?\$/g,(function(e){return e.replace(/\\curlyleft/g,"{").replace(/\\curlyright/g,"}")})),"</span>").replace(/<span><\/span>/g,"").replace(/(>[^<>$]+<|>[^<>$]+\$|\$[^<>$]+<)/g,(function(e){return se({def:e,query:a})})),hasExpansion:p}}function ce(e){return e.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}function se(e){var t=e.def,n=e.query;if(!n||""===n)return t;var a="(".concat(ce(n).replace(/ /g,"|"),"|").concat(ce(n).replace(/'/g,"h").replace(/ /g,"|"),")"),i=new RegExp(a,"igm");return t.replace(i,"<span class='basna'>$1</span>")}var oe=60800,le="ptkflscmx.' 1234bdgvrzjn`-,~    aeiouy    qw    AEIOUY";function ue(e){return e.replace(/\./g,"").replace(/^/,".").toLowerCase().replace(/([aeiou\.])u([aeiou])/g,"$1w$2").replace(/([aeiou\.])i([aeiou])/g,"$1ɩ$2").replace(/au/g,"ḁ").replace(/ai/g,"ą").replace(/ei/g,"ę").replace(/oi/g,"ǫ").replace(/\./g,"")}function de(e){return e.replace(/w/g,"u").replace(/ɩ/g,"i").replace(/ḁ/g,"au").replace(/ą/g,"ai").replace(/ę/g,"ei").replace(/ǫ/g,"oi")}function pe(e){var t=e.w,n=e.ot,a=e.rfs,i=ue(t);return n&&"vlaza'umei"===n?a.map((function(e){return pe(e)})).join(" "):(i=i.split(/(?=[ɩw])/).map((function(e){return de(e).split("").map((function(e){return ge(e)})).join("")})).join("")).replace(/,/g,"")}function ge(e){return e.codePointAt(0)>=60800?e:" "==e?" ":("h"!=e&&"H"!=e||(e="'"),le.includes(e)?String.fromCodePoint(oe+le.indexOf(e)):le.includes(e.toLowerCase())?String.fromCodePoint(oe+le.indexOf(e.toLowerCase())):"\n"==e?"\n":"\t"==e?"\t":e)}function me(e,t){for(var n,a=new RegExp(e,"g"),i=[];n=a.exec(t);)i.push(n.index);return i}function fe(e,t,n){return n.indexOf(e)===t}function he(e,t,n){var a=me(t,e);a=a.map((function(t){return(t=[t-n,t+n])[0]<0&&(t[0]=0),t[0]>=e.length&&(t[0]=e.length-1),t}));for(var i=0;i<a.length-1;i++)a[i][1]>a[i+1][0]&&(a[i][1]=a[i+1][1],a[i+1][0]=a[i][0]);if((a=a.map((function(e){return JSON.stringify(e)}))).length>0)a=(a=a.filter(fe).map((function(n){n=JSON.parse(n);var a=e.substr(n[0],n[1]-n[0]);return a=se({def:a,query:t}),n[0]>3&&(a="...".concat(a)),n[1]<e.length-4&&(a="".concat(a,"...")),a}))).join("<br/>");else{var r=e.substr(0,Math.min(100,e.length));r.length<e.length&&(r="".concat(r,"...")),a=r=se({def:r,query:t})}return a}function ve(){return p?"⇔":"↔"}function ye(e){var t=e.def,n=e.inner,a=e.query,i=e.seskari,r=e.index;a||(a=I.searching.query),i||(i=I.searching.seskari),t||(t=[]);var c=document.createElement("div");if(c.className=n?"terminner":"termouter",c.classList.add("term"),!n&&t.d&&t.d.nasezvafahi&&0===(t.rfs||[]).length&&(c.className="sidju cll noselect"),void 0!==L[t.s]){var s=document.createElement("h4");s.className="tfm",s.innerHTML='&nbsp;&nbsp;<i><sup>[&nbsp;...&nbsp;&nbsp;&nbsp;<a href="#seskari='.concat(i,"&sisku=").concat(be(L[t.s]),'">').concat(Le(L[t.s]),"</a>]</sup></i>")}var o=[];for(var l in L)L[l]===t.w&&o.push('<a href="#seskari='.concat(i,"&sisku=").concat(be(l),'">').concat(Le(l),"</a>"));if(0!==o.length){var u=document.createElement("div");u.classList.add("valsi"),t.l&&u.classList.add("nalojbo"),u.innerHTML="<i><sup>[".concat(o.join(", "),"&nbsp;&nbsp;&nbsp;...&nbsp;]</sup></i>&nbsp;&nbsp;")}if(t.s){var d;(d=document.createElement("a")).className="tutci klesi klesi-tutci";var g=se({def:Le(t.s),query:a});d.innerHTML=g,"velcusku"!==i&&(d.href="#seskari=".concat(i,"&sisku=").concat(be(t.s)))}if(t.t){var m;(m=document.createElement("a")).className="klesi link noselect";g=t.t;var h=be(t.w).replace(/_/g,"%20");m.href=window.judri?window.judri+h:"#seskari=".concat("catni"===i?"catni":"cnano","&sisku=").concat(h),window.judri&&(m.setAttribute("target","_blank"),m.setAttribute("rel","noreferrer"));var f="";t.t.search("sampu staile")>=0&&(f+="<img src='../pixra/plise.png' height='16' width='16' alt='lo staile poi sampu'>"),t.t.search("mansa staile")>=0&&(f+="<img src='../pixra/pelxuplise.png' height='16' width='16' alt=\"lo staile poi na mutce cinri\">"),t.t.search("plixau jufra")>=0&&(f+="<img src='../pixra/crinoplise.png' height='16' width='16' alt=\"lo jufra poi ka'e xamgu lo di'i fanva\">"),t.t.search("cnano staile")>=0&&(f+="<img src='../pixra/blabiplise.png' height='16' width='16' alt=\"lo staile poi ka'e pluja\">"),t.t.search("non-standard")>=0&&(f+="<img src='../pixra/cicnaplise.png' height='16' width='16' alt=\"na'e catni se ciska staile\">"),""!==f&&(g=f),window.xuzganalojudri&&!t.l&&(g="".concat(Le(t.t),"# "),t.d&&t.d.nasezvafahi&&(g="➕ ".concat(g))),m.innerHTML=g}t.date&&((m=document.createElement("div")).className="tutci klesi klesi-tutci",m.style.whiteSpace="nowrap",m.innerHTML=t.date);t.from&&((d=document.createElement("div")).className="tutci klesi klesi-tutci",d.innerHTML=t.from);var v=document.createElement("h4");v.classList.add("valsi"),v.setAttribute("data-valsi",encodeURIComponent(t.w)),t.l&&v.classList.add("nalojbo"),we(t.w)==a||"velcusku"==i?v.innerHTML="".concat(se({def:t.w,query:a})," "):v.innerHTML='<a class="valsi'.concat(t.l?"":" nalojbo",'" href="#seskari=').concat(i,"&sisku=").concat(be(t.w),'">').concat(se({def:Le(t.w,!0),query:a}),"</a> ");var y={};t.d&&!t.d.nasezvafahi&&(y=ie({def:t.d,fullDef:t,query:a,seskari:i,type:"d",index:r}));var k=document.createElement("h4");k.classList.add("valsi","zbalermorna"),k.textContent=pe(t);var w=document.createElement("heading");if(w.classList.add("heading"),u&&w.appendChild(u),w.appendChild(v),k&&t.w.length<=20&&!window.muplis&&w.appendChild(k),s&&w.appendChild(s),"lujvo"===t.t&&(t.rfs||[]).length>0&&y.hasExpansion){var b=document.createElement("input");b.type="button",b.classList.add("tutci","sance","jvo_plumber"),b.value=ve(),p?b.classList.add("tutci-hover"):b.classList.remove("tutci-hover"),b.onclick=B,w.appendChild(b)}var E=document.createElement("heading");E.style.flex=1,w.appendChild(E),m&&w.appendChild(m),d&&w.appendChild(d);try{var x=new Audio("/sutysisku/sance/vreji/".concat(ke(t.w),".mp3"));x.id="sance_".concat(ke(t.w)),x.addEventListener("canplaythrough",(function(){var e=Array.from(document.querySelectorAll('[data-valsi="'.concat(ke(t.w),'"]')))[0];e&&!document.getElementById("sance_".concat(ke(t.w)))&&(e.innerHTML+='<button class="tutci sance" onclick="document.getElementById(\'sance_'.concat(ke(t.w),"').play()\">▶</button>"),e.appendChild(x))}))}catch(e){}if(c.appendChild(w),k&&(window.muplis||t.w.length>20)&&c.appendChild(k),"arxivo"!==i&&t.d){if((C=document.createElement("div")).classList.add("definition","valsi"),t.d&&t.d.nasezvafahi){if(!t.t&&0===(t.rfs||[]).length)return;C.classList.add("nasezvafahi","noselect"),C.innerHTML=window.nasezvafahi}else{var q=y.tergeha;"velcusku"!==i&&(q="".concat(q.replace(/\n/g,"<br/>")," ")),C.innerHTML=q}c.appendChild(C)}if("arxivo"===i){var C,j=document.createElement("div");j.classList.add("definition","valsi","pointer"),j.innerHTML=he(t.d,a,50),j.addEventListener("click",(function(){j.style.display="none",j.nextElementSibling.style.display="block"})),c.appendChild(j),(C=document.createElement("div")).classList.add("definition","valsi"),C.style.display="none",t.d&&t.d.nasezvafahi?(C.classList.add("nasezvafahi","noselect"),C.innerHTML=window.nasezvafahi):(C.innerHTML="".concat(se({def:t.d,query:a}).replace(/\n/g,"<br/>")," "),C.addEventListener("click",(function(){C.style.display="none",C.previousElementSibling.style.display="block",C.parentElement.scrollIntoView()}))),c.appendChild(C)}t.n&&((C=document.createElement("div")).classList.add("notes","valsi"),C.innerHTML="".concat(ie({def:t.n,query:a,seskari:i}).tergeha," "),c.appendChild(C));if(0==r&&"velcusku"!==i){var S=Q({valsi:t.w}),_=S.secs,A=S.div;_&&_!==I.cll&&c.appendChild(A)}t.e&&((C=document.createElement("div")).classList.add("examples","valsi"),C.innerHTML="<table class='ciksi'>".concat(ie({def:"".concat(t.e,"\n").replace(/%/g,"\n").replace(/(.*?) — (.*?)\n/g,"<tr><td class='mupligreku'><b>$1</b></td><td class='mupligreku'><i>$2</i></td></tr>\n"),query:a,seskari:i}).tergeha,"</table> "),c.appendChild(C));t.k&&((C=document.createElement("div")).className="related",C.innerHTML="See also: ".concat(ie({def:t.k,query:a,seskari:i}).tergeha," "),c.appendChild(C));if((t.r||[]).length>0&&!t.l&&window.xuzganalojudri){var T=document.createElement("div");for(T.className="rafsi noselect",T.innerHTML="rafsi: ",z=0;z<t.r.length;z++){var N=document.createElement("span");N.className="pamei";var O=t.r[z];if((t.t||"").match(/lujvo/)){var M=document.createElement("a");M.setAttribute("href","#seskari=".concat(i,"&sisku=").concat(be(O))),M.text=O,N.appendChild(M)}else N.innerHTML=se({def:O,query:a});N.innerHTML="".concat(N.innerHTML," "),T.appendChild(N)}c.appendChild(T)}if((t.rfs||[]).length>0){var H=document.createElement("div");H.classList.add("definition","subdefinitions");for(var z=0;z<t.rfs.length;z++){var $=ye({def:t.rfs[z],inner:!0,index:"".concat(r,"_").concat(z)});$&&H.appendChild($)}c.appendChild(H)}return c.addEventListener("click",J),c}function ke(e){return encodeURIComponent(e).replace(/'/g,"h")}function we(e){return"^"!==e.charAt(0)&&"$"!==e.slice(-1)?e.replace(/\./g," ").replace(/ {2,}/g," ").replace(/’/g,"'").trim():e}function be(e){return encodeURIComponent((e||"").replace(/ /g,"_")).replace(/'/g,"%27")}function Ee(e){return decodeURIComponent(e.replace(/&amp;/g,"&").replace(/%27/g,"'")).replace(/[_]/g," ")}function Le(e,t){return e=(e||"").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/\(/g,"&#40;").replace(/\)/g,"&#41;"),t||(e=e.replace(/'/g,"&#039;")),e}function qe(e){var t=e.query,n=e.seskari,i=Math.min(window.jimte,q.length);if(I.cll=void 0,0===w){var r=Q({pre:!0,valsi:I.searching.query}),c=r.secs,s=r.div;I.cll=c,s&&a.appendChild(s)}for(;w<i;w++)a.appendChild(ye({def:q[w],query:t,seskari:n,length:q.length,index:w}))}"serviceWorker"in navigator?(navigator.serviceWorker.onmessage=function(e){console.log("e.data",e.data)},window.addEventListener("load",(function(){navigator.serviceWorker.register("./sw.js").then((function(e){var t=e.scope;console.log("ServiceWorker registration successful with scope: ",t)}),(function(e){console.log("ServiceWorker registration failed: ",e)}))}))):alert("Your browser is not supported. Please, upgrade to the latest Chrome / Firefox / Safari.");var xe,Ie,Ce=[["p","t","k","f","s","c"],["b","d","g","v","z","j"],["m","l","n","r",,"x","'"],["a","e","i","o","u","y"],[],["aia","aua"],["au","ai","ei","oi"]],Se=document.querySelector("#audio");function je(e,t,n){var a=document.createElement(e);return a.textContent=t,n&&(a.className=n),a}function _e(e,t,n){var a=document.createElement(e);return n&&(a.className=n),Array.isArray(t)?t.forEach((function(e){a.appendChild(e)})):t&&a.appendChild(t),a}function Ae(e){Se.src=e,Se.play()}document.querySelector("#table").appendChild(_e("table",Ce.map((function(e){return _e("tr",e.map((function(e){var t=je("button",e,"bangu");return t.onclick=function(){Ae("/sutysisku/sance/lerfu/".concat(encodeURIComponent(e),".ogg"))},_e("td",t)})))})),"centero")),t.focus();
+const content = document.getElementById('content')
+const ciska = document.getElementById('ciska')
+const clear = document.getElementById('clear')
+const outp = document.getElementById('outp')
+const descr = document.getElementById('descr')
+const drata = document.getElementById('drata')
+const citri = document.getElementById('citri')
+const sidju = document.getElementById('sidju')
+const pb = document.getElementById('kernelo_lo_cpacu')
+const worker = new Worker('worker.js?sisku=1591861537229')
+const SiteTitle = document.querySelector('#title > font')
+const SiteTitleFull = document.querySelector('#site-title')
+let jvoPlumbsOn = false
+let plumbsTimeout = 3500
+SiteTitleFull.classList.add('desktop-mode-title-color')
+const dasri = document.getElementById('galtu-dasri')
+const catni = document.getElementById('catni')
+const cnano = document.getElementById('cnano')
+const rimni = document.getElementById('rimni')
+const SiteImage = document.querySelectorAll('#title > img')
+const btnScrollToTop = document.getElementById('scrollToTop')
+content.onscroll = () => {
+if (content.scrollTop > 200) {
+btnScrollToTop.style.display = 'block'
+btnScrollToTop.classList.remove('dizlo')
+} else {
+btnScrollToTop.classList.add('dizlo')
+}
+}
+function switchBorderScroll() {
+if (content.scrollTop > 200) {
+content.scrollTop = 0
+} else {
+content.scrollTop = content.scrollHeight
+}
+}
+const fm = {
+BE: 'bei',
+BEI: "be'o",
+BY: 'boi',
+COI: "do'u",
+DOI: "do'u",
+FIhO: "fe'u",
+FUhE: "fu'o",
+GIhA: 'vau',
+GOI: "ge'u",
+JOhI: "te'u",
+KE: "ke'e",
+LAhE: "lu'u",
+LA: 'ku',
+LE: 'ku',
+LI: "lo'o",
+LOhU: "le'u",
+LU: "li'u",
+ME: "me'u",
+'NAhE+BO': "lu'u",
+NOI: "ku'o",
+NUhI: "nu'u",
+NU: 'kei',
+PA: 'boi',
+PEhO: "ku'e",
+SEI: "se'u",
+SOI: "se'u",
+TO: 'toi',
+TUhE: "tu'u",
+VEI: "ve'o",
+LOhAI: "sa'ai",
+SAhAI: "le'ai",
+LOhOI: "ku'au",
+NAhU: "te'u",
+NIhE: "te'u",
+MOhE: "te'u",
+}
+let resultCount
+let results = []
+let typingTimer
+let IdleTypingTimer
+const delay = (() => (callback, ms) => {
+clearTimeout(IdleTypingTimer)
+IdleTypingTimer = setTimeout(callback, ms)
+})()
+const state = {
+searching: {
+seskari: 'cnano',
+query: '',
+},
+displaying: {
+seskari: 'cnano',
+query: '',
+},
+citri: [],
+}
+;(() => {
+try {
+const tcini = JSON.parse(localStorage.getItem('tcini'))
+if (tcini.seskari) state.searching.seskari = tcini.seskari
+if (tcini.query) state.searching.query = tcini.query
+} catch (e) {}
+try {
+state.citri = JSON.parse(localStorage.getItem('citri')) || []
+} catch (e) {}
+})()
+RenderCitri()
+function RenderCitri() {
+if (state.citri.length > 0)
+citri.innerHTML = ` ${window.purc}${state.citri
+.filter(({ seskari }) => seskari !== 'velcusku')
+.map(
+({ seskari, query }) =>
+`<a class="a-${seskari}" href="#seskari=${seskari}&sisku=${encodeUrl(
+query
+)}">${escHtml(query)}</a>`
+)
+.join(', ')}`
+}
+function RenderDasri(seskari, sepia) {
+const colors = ['velcusku', 'arxivo', 'cnano', 'rimni', 'catni']
+if (!colors.includes(seskari)) seskari = 'cnano'
+dasri.className = `kampu-dasri ${seskari}-dasri noselect`
+SiteTitleFull.classList.add(`${seskari}-search-mode-title-color`)
+SiteTitleFull.classList.remove('desktop-mode-title-color')
+if (document.getElementById(seskari))
+document
+.getElementById(seskari)
+.classList.add(`${seskari}-tutci-hover`, 'tutci-hover')
+colors.map((c) => {
+if (c !== seskari) {
+SiteTitleFull.classList.remove(`${c}-search-mode-title-color`)
+if (document.getElementById(c))
+document
+.getElementById(c)
+.classList.remove(`${c}-tutci-hover`, 'tutci-hover')
+}
+})
+for (let i = 0; i < SiteImage.length; i++) {
+SiteImage[i].style.filter = sepia
+}
+}
+function SwitchRotation({ action }) {
+if (document.readyState !== 'complete') return
+const els = ['logo']
+if (action === 'start') {
+els.map((el) => {
+document.getElementById(el).classList.remove('stopRotate')
+document.getElementById(el).classList.add('rotate')
+})
+clear.classList.add('pulsate-css')
+setTimeout(() => {
+if (clear.classList.contains('pulsate-css'))
+ciska.classList.add('granim-css')
+}, 500)
+} else {
+els.map((el) => {
+document.getElementById(el).classList.add('stopRotate')
+})
+ciska.classList.remove('granim-css')
+clear.classList.remove('pulsate-css')
+}
+}
+function EmitVelcusku() {
+if (socket1Chat) socket1Chat.open()
+}
+function renderMathAndPlumbs() {
+MathJax.typesetPromise().then(() => {
+addJvoPlumbs(true)
+})
+}
+function RenderResults({ query, seskari }) {
+removePlumbs()
+window.jimte = seskari === 'velcusku' ? 201 : 30
+resultCount = 0
+SwitchRotation({
+action: 'stop',
+})
+outp.innerHTML = ''
+skicu_rolodovalsi({
+query,
+seskari,
+})
+state.displaying.query = query
+state.displaying.seskari = seskari
+outp.style.display = 'block'
+descr.style.display = 'none'
+drata.style.display = 'none'
+sidju.style.display = 'flex'
+content.scrollTop = 0
+switch (state.displaying.seskari) {
+case 'rimni':
+renderMathAndPlumbs()
+RenderDasri('rimni', 'sepia(1.0)')
+break
+case 'arxivo':
+RenderDasri('arxivo', 'none')
+break
+case 'velcusku':
+RenderDasri('velcusku', 'none')
+break
+case 'catni':
+renderMathAndPlumbs()
+RenderDasri('catni', 'none')
+break
+case 'cnano':
+default:
+renderMathAndPlumbs()
+RenderDasri('cnano', 'none')
+}
+delay(() => {
+DispatchCitri()
+ga('send', 'pageview', `#sisku/${state.displaying.query}`)
+const pageViewData = {
+dl: window.location.href,
+dt: document.title,
+dr: document.referrer,
+dp: `#sisku/${state.displaying.query}`,
+dh: `${window.location.protocol}//${window.location.hostname}`,
+z: Math.round(Math.random() * 1e12),
+}
+if (socket) socket.emit('sisku', pageViewData)
+}, 2000)
+}
+function removePlumbs() {
+;[].forEach.call(document.querySelectorAll('.leader-line'), function (e) {
+e.parentNode.removeChild(e)
+})
+}
+function appendPlumbs() {
+;[].forEach.call(document.querySelectorAll('.leader-line'), function (e) {
+document.querySelector('#content').appendChild(e)
+})
+}
+function addJvoPlumbs(force) {
+removePlumbs()
+addPlumbs(!force)
+scrollJvoTimer = setTimeout(
+() => {
+if (force !== true) {
+const plumbers = document.getElementsByClassName('jvo_plumber')
+jvoPlumbsOn = !jvoPlumbsOn
+for (var i = 0; i < plumbers.length; i++) {
+const plumber = plumbers[i]
+plumber.value = jvoValue()
+jvoPlumbsOn
+? plumber.classList.add('tutci-hover')
+: plumber.classList.remove('tutci-hover')
+}
+}
+if (!jvoPlumbsOn) return
+const targetedEls = Array.from(document.querySelectorAll('[data-arr]'))
+for (var i = 0; i < targetedEls.length; i++) {
+const el = targetedEls[i]
+if (
+el.attributes['data-head'] &&
+el.attributes['data-head'].nodeValue !== '1'
+)
+continue
+const id = el.id
+const arr = el.attributes['data-arr'].nodeValue.split(',')
+const tld = el.id.split('_')
+const tld_0 = tld.slice(0, -1)
+const kahe_zgana_el = kahe_sezgana(el)
+targetedEls.filter((e) => {
+const tld_inner = e.id.split('_')
+const tld_inner_0 = tld_inner.slice(0, -2)
+const arr_ = e.attributes['data-arr'].nodeValue.split(',')
+const t_ = arr_[0].split(/(?=[0-9]+)/)
+if (
+arr_.length === 1 &&
+tld_inner_0.length === tld_0.length &&
+tld_inner_0.join('_') === tld_0.join('_') &&
+arr.filter((ei) => {
+const t = ei.split(/(?=[0-9])/)
+return t_[0].indexOf(t[0]) === 0 && t_[1] === t[1]
+}).length > 0 &&
+(kahe_zgana_el || kahe_sezgana(e))
+) {
+let clr = e.attributes['data-color'].nodeValue
+clr = `hsla(${clr},100%,70%,0.62)`
+const t = new LeaderLine(
+document.getElementById(e.id),
+document.getElementById(id),
+{
+endPlugColor: clr,
+color: clr,
+dash: { animation: true },
+startSocketGravity: [50, -67],
+endSocketGravity: [0, 67],
+endPlug: 'arrow2',
+endSocket: 'bottom',
+size: 3,
+}
+)
+}
+})
+appendPlumbs()
+}
+},
+force === true ? 450 : 0
+)
+}
+function addPlumbs(force) {
+removePlumbs()
+scrollTimer = setTimeout(
+() => {
+const targetedEls = document.querySelectorAll('[data-target]')
+for (let i = 0; i < targetedEls.length; i++) {
+const el = targetedEls[i]
+if (kahe_sezgana(el)) {
+const id = el.id
+const target = el.attributes['data-target'].nodeValue
+const t = new LeaderLine(
+document.getElementById(target),
+document.getElementById(id),
+{
+endPlugColor: 'rgba(255, 120, 0, 0.33)',
+color: 'rgba(255, 120, 0, 0.33)',
+dash: { animation: true },
+startSocketGravity: [50, -67],
+endSocketGravity: [0, 67],
+endPlug: 'arrow2',
+endSocket: 'bottom',
+size: 3,
+}
+)
+}
+}
+appendPlumbs()
+plumbsTimeout = 450
+},
+force ? 0 : plumbsTimeout
+)
+}
+function kahe_sezgana(el) {
+let rect = el.getBoundingClientRect()
+rect =
+rect.top >= 48 &&
+rect.left >= 0 &&
+rect.bottom <=
+(window.innerHeight || document.documentElement.clientHeight) &&
+rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+return rect
+}
+worker.onmessage = (ev) => {
+const data = ev.data
+if (data.kind == 'ready') {
+document.title = 'la sutysisku'
+const loading = document.getElementById('loading')
+loading.parentNode.removeChild(loading)
+setStateFromUrl({
+replace: true,
+})
+} else if (data.kind == 'searchResults') {
+if (JSON.stringify(data.req) !== JSON.stringify(state.searching)) return
+if (JSON.stringify(data.req) === JSON.stringify(state.displaying)) return
+results = data.results || []
+RenderResults({
+query: data.req.query,
+seskari: data.req.seskari,
+})
+} else if (data.kind == 'loading') {
+document.getElementById('caho_cpacu').textContent = window.bangubuild
+pb.style.width = '51%'
+} else if (data.kind == 'progress') {
+pb.style.width = `${data.percent * 100}%`
+}
+}
+if (socket)
+socket.on('la_arxivo_cu_cusku', ({ seskari, query, message }) => {
+if (
+state.searching.seskari === seskari &&
+state.searching.query === query
+) {
+results = message || []
+RenderResults({
+query: query,
+seskari: seskari,
+})
+}
+})
+function parseQuery(queryString) {
+const query = {}
+let pairs = ''
+if (queryString.search(/^#sisku\//) === 0) {
+pairs = [queryString.replace(/#sisku\/(.*)/, 'sisku=$1')]
+} else {
+pairs = (queryString[0] === '#'
+? queryString.substr(1)
+: queryString
+).split('&')
+}
+for (let i = 0; i < pairs.length; i++) {
+const pair = pairs[i].split('=')
+query[decodeURIComponent(pair[0])] = decodeURIComponent(
+pair[1].replace(/[\+]/g, ' ') || ''
+)
+}
+return query
+}
+function setStateFromUrl({ href, replace }) {
+if (href) {
+href = href.substring(href.indexOf('#') + 1)
+localStorage.setItem('url', `#${href}`)
+}
+let params = parseQuery(href || window.location.hash)
+let newSearch
+if (params['sisku']) {
+newSearch = decodeUrl(params['sisku']).trim()
+} else {
+href = href || window.location.search
+href = href.substring(href.indexOf('?') + 1)
+const search = new URLSearchParams(href)
+newSearch = decodeUrl(search.get('focus')).trim()
+if (newSearch) {
+params = { sisku: newSearch, seskari: 'cnano' }
+} else return
+}
+if (
+state.searching.seskari !== params['seskari'] ||
+state.searching.query !== newSearch
+) {
+if (
+params['seskari'] &&
+['velcusku', 'cnano', 'catni', 'rimni', 'arxivo'].includes(
+params['seskari']
+)
+)
+state.searching.seskari = params['seskari']
+if (params['sisku']) {
+state.searching.query = newSearch
+DispatchState({
+replace,
+})
+}
+}
+}
+citri.addEventListener('click', clicked)
+function clicked({ target }) {
+if (target.nodeName === 'A') {
+const el = target
+if (el.ctrlKey || el.metaKey) return
+setStateFromUrl({
+replace: false,
+href: el.getAttribute('href'),
+})
+}
+return
+}
+function setUrlFromState({ replace }) {
+let url = `${window.location.href.split('?')[0].split('#')[0]}#seskari=${
+state.searching.seskari
+}&sisku=${encodeUrl(state.searching.query)}`
+if (state.searching.query === '') {
+url = ''
+document.title = 'la sutysisku'
+} else {
+document.title = `${state.searching.query} - la sutysisku`
+}
+const lastUrl = localStorage.getItem('url') || ''
+if (replace === true) {
+window.history.replaceState({}, null, url)
+} else if (window.location.hash !== url && lastUrl !== url) {
+window.history.pushState({}, null, url)
+}
+localStorage.setItem('url', url)
+}
+window.addEventListener('popstate', setStateFromUrl)
+ciska.addEventListener('paste', typing(0))
+ciska.addEventListener('keyup', () => {
+typing()
+})
+ciska.addEventListener('keydown', () => {
+clearTimeout(typingTimer)
+})
+ciska.addEventListener('input', typing())
+ciska.addEventListener('textInput', typing())
+function GetCiskaAndDispatch() {
+state.searching.query = plukaquery(ciska.value)
+DispatchState({
+caller: 'GetCiskaAndDispatch',
+})
+}
+function typing(a) {
+clearTimeout(typingTimer)
+typingTimer = setTimeout(GetCiskaAndDispatch, a ? a : 250)
+}
+ciska.addEventListener('focus', focusSearch)
+function focusSearch() {
+state.searching.query = plukaquery(ciska.value)
+DispatchState({})
+}
+clear.addEventListener('click', EmptyState)
+document.getElementById('title').addEventListener('click', EmptyState)
+function EmptyState() {
+DispatchState({
+empty: true,
+})
+}
+document.getElementById('rimni').addEventListener('click', () => {
+state.searching = {
+seskari: 'rimni',
+query: plukaquery(ciska.value),
+}
+DispatchState({
+replace: false,
+})
+})
+document.getElementById('cnano').addEventListener('click', () => {
+state.searching = {
+seskari: 'cnano',
+query: plukaquery(ciska.value),
+}
+DispatchState({
+replace: false,
+})
+})
+document.getElementById('catni').addEventListener('click', () => {
+state.searching = {
+seskari: 'catni',
+query: plukaquery(ciska.value),
+}
+DispatchState({
+replace: false,
+})
+})
+function DispatchCitri() {
+if (state.displaying.query === '' || state.displaying.seskari === 'velcusku')
+return
+let i = 0
+for (i = 0; i < state.citri.length; i++) {
+if (
+state.citri[i].query === state.displaying.query &&
+state.citri[i].seskari === state.displaying.seskari
+) {
+state.citri.splice(i, 1)
+break
+}
+}
+state.citri.unshift(JSON.parse(JSON.stringify(state.displaying)))
+if (state.citri.length > 10) state.citri.length = 10
+localStorage.setItem('citri', JSON.stringify(state.citri))
+RenderCitri()
+}
+function DispatchState({ replace, caller, empty }) {
+if (socket1Chat) socket1Chat.close()
+state.searching.query = state.searching.query.trim()
+setUrlFromState({
+replace,
+})
+localStorage.setItem('tcini', JSON.stringify(state.searching))
+if (empty == true) {
+state.searching.query = ''
+return RenderDesktop()
+} else if (state.searching.seskari !== 'velcusku') {
+if (state.searching.query === '') return RenderDesktop()
+if (JSON.stringify(state.searching) === JSON.stringify(state.displaying))
+return
+}
+ciska.value = state.searching.query
+SwitchRotation({
+action: 'start',
+})
+if (
+caller === 'GetCiskaAndDispatch' &&
+state.searching.seskari === 'velcusku'
+)
+state.searching.seskari = 'cnano'
+switch (state.searching.seskari) {
+case 'arxivo':
+const json = JSON.parse(JSON.stringify(state.searching))
+if (
+state.searching.query.charAt(0) !== '^' &&
+state.searching.query.slice(-1)[0] !== '$'
+)
+json.query = `\\b${state.searching.query}\\b`
+json.max = 20
+if (socket) socket.emit('cpedu_fi_la_arxivo', json)
+break
+case 'velcusku':
+EmitVelcusku()
+break
+default:
+worker.postMessage({
+kind: 'newSearch',
+query: state.searching.query,
+seskari: state.searching.seskari,
+})
+}
+}
+function RenderDesktop() {
+removePlumbs()
+SwitchRotation({
+action: 'stop',
+})
+content.scrollTop = 0
+const lastQuery = state.displaying.query
+state.displaying.query = ''
+SiteTitleFull.classList.add('desktop-mode-title-color')
+SiteTitleFull.classList.remove(
+'catni-search-mode-title-color',
+'cnano-search-mode-title-color',
+'velcusku-search-mode-title-color',
+'rimni-search-mode-title-color',
+'arxivo-search-mode-title-color'
+)
+catni.classList.remove('catni-tutci-hover', 'tutci-hover')
+try {
+cnano.classList.remove('cnano-tutci-hover', 'tutci-hover')
+} catch (error) {}
+rimni.classList.remove('rimni-tutci-hover', 'tutci-hover')
+dasri.className = 'kampu-dasri cnano-dasri'
+outp.style.display = 'none'
+descr.style.display = 'block'
+var obj = {
+'@CLL': [
+'.inglic.',
+'Reference Grammar',
+'../pixra/cll.png',
+1,
+'https://lojban.pw/cll/uncll-1.2.7/xhtml_section_chunks/',
+],
+'@lojban.pw': [
+'.inglic.',
+'Lojban-Chan',
+'../pixra/jbotcan.svg',
+1,
+'https://lojban.pw',
+],
+muplis: [0, 'la muplis', '../pixra/taplamuplis.svg', 2.1],
+jb: [0, 'English - Lojban examples', '../pixra/snime-1.svg', 1],
+en: [0, 'English-Lojban', '../pixra/selsku_lanci_eng.svg', 1],
+jbo: [0, "fanva fi le'e lojbo ri", '../pixra/lanci_jbo.svg', 1],
+ja: [
+0,
+'日本 - <span style="white-space:pre;">ロジバン</span>',
+'../pixra/selsku_lanci_jpn.svg',
+1,
+],
+'fr-facile': [
+0,
+'français facile - lojban',
+'../pixra/selsku_lanci_fra.svg',
+1,
+],
+ru: [0, 'русский - ложбан', '../pixra/selsku_lanci_rus.svg', 1],
+eo: [0, 'Esperanto - Loĵbano', '../pixra/lanci_epo.svg', 1],
+es: [0, 'español - lojban', '../pixra/selsku_lanci_spa.svg', 1],
+zh: [0, '中文 - 逻辑语', '../pixra/selsku_lanci_zho.svg', 1],
+'@CC': [
+'.inglic.',
+'The Crash Course',
+'../pixra/cogwheel-5.svg',
+1,
+'https://mw.lojban.org/papri/The_Crash_Course_in_Lojban',
+],
+}
+let acc = ''
+const cisn = 100
+for (const key in obj) {
+if (obj[key][0] === 0 || obj[key][0] === window.bangu) {
+acc += `<div class='DIV_1' style='height:${cisn}px;width:${
+obj[key][3] * cisn
+}px;'><div class='DIV_2' style='height:${cisn}px;width:${
+obj[key][3] * cisn
+}px;'><span class='SPAN_3' style='width:auto;'><b class='B_4'>${
+obj[key][1]
+}</b></span><a${
+(obj[key][4] || '').indexOf('http') === 0
+? " rel='noreferrer' target='_blank'"
+: ''
+} aria-label="${obj[key][1].replace(/<[^>]+?>/g, '')}" href="${
+key.indexOf('@') === 0
+? obj[key][4]
+: `https://la-lojban.github.io/sutysisku/${key}/#seskari=${
+state.displaying.seskari
+}&sisku=${encodeUrl(lastQuery)}`
+}" class='A_7'><div class='DIV_8' style='height:${cisn}px;width:${
+obj[key][3] * cisn
+}px;background-image:url("${obj[key][2]}")'></div></a></div></div>`
+}
+}
+drata.innerHTML = acc
+drata.style.display = 'block'
+}
+window.addEventListener('resize', calcVH, true)
+content.addEventListener('scroll', checkScrolledNearBottom)
+calcVH()
+if (document.attachEvent) {
+document.attachEvent('onkeyup', handler)
+} else {
+document.addEventListener('keyup', handler)
+}
+function handler({ keyCode }) {
+if (keyCode && keyCode === 191) ciska.focus()
+}
+if (document.readyState === 'loading') {
+pb.style.width = '37%'
+document.title = 'la sutysisku'
+}
+function calcVH() {
+content.setAttribute(
+'style',
+`height:${Math.max(
+document.documentElement.clientHeight,
+window.innerHeight || 0
+)}px;`
+)
+}
+function getCLLSections(te_gerna) {
+let a = window.arrcll[te_gerna]
+if (!a) {
+a = window.arrcll[te_gerna.replace(/[^A-Z]+$/, '')]
+}
+return a
+}
+function CLL({ pre, valsi }) {
+if (!window.cll_url | ((window.arrcll || []).length === 0)) return
+if (pre && !valsi.match(/^[A-Zh]+[\+A-Zh0-9]*$/)) return {}
+const secs = getCLLSections(valsi)
+if (!secs) return {}
+const cllHtmlLinksString = `${
+window.cllnotci
+}<ul class='uoldeliste'>${Object.keys(secs)
+.map(
+(sec) =>
+`<li><a rel='noreferrer' target='_blank' href="${
+window.cll_url
+}${sec}">${escHtml(secs[sec])}</a></li>`
+)
+.join('')}</ul>`
+const div = document.createElement('div')
+div.className = `${pre ? 'sidju' : 'definition'} cll noselect`
+div.innerHTML = cllHtmlLinksString
+return { secs, div }
+}
+var scrollTimer = null
+var scrollJvoTimer = null
+function checkScrolledNearBottom({ target }) {
+removePlumbs()
+if (scrollTimer !== null) {
+clearTimeout(scrollTimer)
+}
+if (scrollJvoTimer !== null) {
+clearTimeout(scrollJvoTimer)
+}
+if (
+state.displaying.seskari !== 'velcusku' &&
+target.scrollTop + window.innerHeight >= outp.clientHeight - 700
+) {
+window.jimte += 10
+skicu_rolodovalsi(state.displaying)
+MathJax.typesetPromise().then(() => {
+addJvoPlumbs(true)
+})
+} else {
+addJvoPlumbs(true)
+}
+}
+function string2Int(s, base, q) {
+s = s.replace(/[\{\}_]/g, '')
+return Math.abs(
+Math.round(
+(s.split('').reduce((a, b) => {
+a = (a << 5) - a + b.charCodeAt(0)
+return a & a
+}, 0) %
+base) /
+q
+) * q
+)
+}
+function veljvoLetters(v) {
+v = v.substr(1, v.length - 2).split('=')
+const jalge = v.map((i) => i.replace(/[^A-Za-z']/g, ''))
+return {
+jalge,
+hasExpansion: v.length > 1 || (jalge[0] && jalge[0] !== 'x'),
+}
+}
+function veljvoString({ v, fullDef, subtype, dataArrAdded, b, veljvoLs }) {
+if (dataArrAdded.includes(b)) return ''
+if (subtype !== 'r' && fullDef.t !== 'lujvo') return ''
+v = v
+.substr(1, v.length - 2)
+.split('=')
+.map((i) =>
+subtype === 'r'
+? fullDef.w + i.replace(/[^0-9]/g, '')
+: i.replace(/[^0-9A-Za-z']/g, '')
+)
+v = v.filter((i) => {
+const sI = i.replace(/[0-9]/g, '')
+if (veljvoLs.filter((j) => j.indexOf(sI) === 0 && j !== sI).length > 0)
+return
+return true
+})
+v = v.join(',')
+return ` data-arr="${v}"`
+}
+function melbi_uenzi({ def, fullDef, query, seskari, type, index }) {
+let iterTercricmiId = 0
+const jsonIds = []
+const types = []
+const dataArrAdded = []
+let veljvoLs = []
+let hasExpansion = false
+if (!['cnano', 'catni', 'rimni'].includes(seskari)) seskari = 'cnano'
+const res = def.replace(/\$.*?\$/g, (c, offset, string) => {
+if (type === 'd' && typeof index !== 'undefined') {
+const rt = veljvoLetters(c)
+if (rt.hasExpansion) hasExpansion = true
+veljvoLs = veljvoLs.concat(rt.jalge)
+const q = string.substr(offset)
+const r = new RegExp(
+`^(${c.replace(/[^a-zA-Z0-9\{\}_]/g, '')} \\([^\\(\\)<>]+?\\)).*`
+)
+let hc = c
+if (q.search(r) === 0) {
+hc = q.replace(r, '$1')
+}
+const k = {}
+k[c] = hc
+types.push(k)
+}
+return c
+})
+const jalge = `<span>${res
+.replace(/\$.*?\$/g, (c, offset, string) => {
+if (type === 'd' && typeof index !== 'undefined') {
+const q = string.substr(offset)
+const r = new RegExp(
+`^(${c.replace(/[^a-zA-Z0-9\{\}_]/g, '')} \\([^()<>]+?\\)).*`
+)
+let hc = c
+if (q.search(r) === 0) {
+hc = q.replace(r, '$1')
+} else {
+const seklesi = types.filter((i) => i[c] && i[c] !== hc)[0]
+if (seklesi) {
+hc = seklesi[c]
+}
+}
+iterTercricmiId++
+const combInd = `${index}_${iterTercricmiId}`
+const a = {}
+a[c] = combInd
+jsonIds.push(a)
+const b = c.replace(/[^a-zA-Z0-9]/g, '')
+let head = ''
+if (!!((fullDef && fullDef.rfs) || []).length) head = ` data-head="1"`
+const vel = veljvoString({
+subtype: head !== '' ? 'd' : 'r',
+v: c,
+fullDef,
+dataArrAdded,
+b,
+veljvoLs,
+})
+c = `<span id="${combInd}" class="terbricmi" style="background-color: hsl(${string2Int(
+hc,
+256,
+16
+)}, 100%, 90%);border-radius:${
+string2Int(hc, 9, 1) + 3
+}px"${vel}${head} data-color="${string2Int(hc, 256, 16)}">${c}</span>`
+dataArrAdded.push(b)
+}
+return c
+})
+.replace(
+/(<span [^<>]+?>[^\(\)<>]+?<\/span>) \([^\(\)<>]*?\bproperty of <span id="([^\(\)<>]+?)"[^<>]+?>([^\(\)<>]+?)<\/span>\)/g,
+(c, _, id, t) => {
+if (type === 'd') {
+const a = jsonIds.filter((e) => e[t] !== id && e[t])
+if (a[0] && a[0][t])
+c = c.replace(/^<span /, `<span data-target="${a[0][t]}" `)
+}
+return c
+}
+)
+.replace(/\$.*?\$/g, (c) =>
+c.replace(/\{/g, '\\curlyleft').replace(/\}/g, '\\curlyright')
+)
+.replace(
+/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g,
+(c) => {
+let res = `</span><a href="${c}" rel="noreferrer" target="_blank">${basna(
+{
+def: c,
+query,
+}
+)}</a><span>`
+if (c.match(/^https?:\/\/.*\.(jpg|png)$/))
+res += `<img class='se-tcidu-pixra' alt='secusku' src="${c}"/>\n`
+return res
+}
+)
+.replace(/\{.*?\}/g, (c) => {
+var c = c.substring(1, c.length - 1)
+return `</span><a class="a-${seskari}" href="#seskari=${seskari}&sisku=${encodeUrl(
+c
+)}">${basna({
+def: escHtml(c, true),
+query,
+})}</a><span>`
+})
+.replace(/\$.*?\$/g, (c) =>
+c.replace(/\\curlyleft/g, '{').replace(/\\curlyright/g, '}')
+)}</span>`
+.replace(/<span><\/span>/g, '')
+.replace(/(>[^<>$]+<|>[^<>$]+\$|\$[^<>$]+<)/g, (
+c // var c = c.substring(1, c.length - 1)
+) =>
+basna({
+def: c,
+query,
+})
+)
+return { tergeha: jalge, hasExpansion }
+}
+function escapeRegExp(string) {
+return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+function basna({ def, query }) {
+if (!query || query === '') return def
+const f = `(${escapeRegExp(query).replace(/ /g, '|')}|${escapeRegExp(query)
+.replace(/'/g, 'h')
+.replace(/ /g, '|')})`
+const rock = new RegExp(f, 'igm')
+return def.replace(rock, "<span class='basna'>$1</span>")
+}
+const UNICODE_START = 0xed80
+const lerfu_index = "ptkflscmx.' 1234bdgvrzjn`-,~    aeiouy    qw    AEIOUY"
+function krulermorna(t) {
+return t
+.replace(/\./g, '')
+.replace(/^/, '.')
+.toLowerCase()
+.replace(/([aeiou\.])u([aeiou])/g, '$1w$2')
+.replace(/([aeiou\.])i([aeiou])/g, '$1ɩ$2')
+.replace(/au/g, 'ḁ')
+.replace(/ai/g, 'ą')
+.replace(/ei/g, 'ę')
+.replace(/oi/g, 'ǫ')
+.replace(/\./g, '')
+}
+function cohukrulermorna(t) {
+return t
+.replace(/w/g, 'u')
+.replace(/ɩ/g, 'i')
+.replace(/ḁ/g, 'au')
+.replace(/ą/g, 'ai')
+.replace(/ę/g, 'ei')
+.replace(/ǫ/g, 'oi')
+}
+function zbalermornaize({ w, ot, rfs }) {
+let word = krulermorna(w)
+if (ot && ot === "vlaza'umei") {
+return rfs.map((def) => zbalermornaize(def)).join(' ')
+}
+word = word
+.split(/(?=[ɩw])/)
+.map((spisa) =>
+cohukrulermorna(spisa)
+.split('')
+.map((lerfu) => latinToZbalermorna(lerfu))
+.join('')
+)
+.join('')
+return word.replace(/,/g, '')
+}
+function latinToZbalermorna(c) {
+if (c.codePointAt(0) >= 0xed80) {
+return c
+}
+if (c == ' ') return ' '
+if (c == 'h' || c == 'H') c = "'"
+if (lerfu_index.includes(c))
+return String.fromCodePoint(UNICODE_START + lerfu_index.indexOf(c))
+else if (lerfu_index.includes(c.toLowerCase()))
+return String.fromCodePoint(
+UNICODE_START + lerfu_index.indexOf(c.toLowerCase())
+)
+if (c == '\n') return '\n'
+if (c == '\t') return '\t'
+return c
+}
+function getMatchIndices(query, d) {
+const regex = new RegExp(query, 'g')
+const result = []
+let match
+while ((match = regex.exec(d))) result.push(match.index)
+return result
+}
+function onlyUnique(value, index, self) {
+return self.indexOf(value) === index
+}
+function ConstructArxivoValsiExtract(d, query, range) {
+let locs = getMatchIndices(query, d)
+locs = locs.map((i) => {
+i = [i - range, i + range]
+if (i[0] < 0) i[0] = 0
+if (i[0] >= d.length) i[0] = d.length - 1
+return i
+})
+for (let i = 0; i < locs.length - 1; i++) {
+if (locs[i][1] > locs[i + 1][0]) {
+locs[i][1] = locs[i + 1][1]
+locs[i + 1][0] = locs[i][0]
+}
+}
+locs = locs.map((i) => JSON.stringify(i))
+if (locs.length > 0) {
+locs = locs.filter(onlyUnique).map((i) => {
+i = JSON.parse(i)
+let n = d.substr(i[0], i[1] - i[0])
+n = basna({
+def: n,
+query,
+})
+if (i[0] > 3) n = `...${n}`
+if (i[1] < d.length - 4) n = `${n}...`
+return n
+})
+locs = locs.join('<br/>')
+} else {
+let n = d.substr(0, Math.min(100, d.length))
+if (n.length < d.length) n = `${n}...`
+n = basna({
+def: n,
+query,
+})
+locs = n
+}
+return locs
+}
+function jvoValue() {
+return jvoPlumbsOn ? '⇔' : '↔'
+}
+function skicu_palodovalsi({ def, inner, query, seskari, index }) {
+if (!query) query = state.searching.query
+if (!seskari) seskari = state.searching.seskari
+if (!def) def = []
+const out = document.createElement('div')
+out.className = inner ? 'terminner' : 'termouter'
+out.classList.add('term')
+if (!inner && def.d && def.d.nasezvafahi && (def.rfs || []).length === 0) {
+out.className = 'sidju cll noselect'
+}
+if (typeof fm[def.s] !== 'undefined') {
+var fmm = document.createElement('h4')
+fmm.className = 'tfm'
+fmm.innerHTML = `&nbsp;&nbsp;<i><sup>[&nbsp;...&nbsp;&nbsp;&nbsp;<a href="#seskari=${seskari}&sisku=${encodeUrl(
+fm[def.s]
+)}">${escHtml(fm[def.s])}</a>]</sup></i>`
+}
+const sh = []
+for (const key in fm) {
+if (fm[key] === def.w)
+sh.push(
+`<a href="#seskari=${seskari}&sisku=${encodeUrl(key)}">${escHtml(
+key
+)}</a>`
+)
+}
+if (sh.length !== 0) {
+var tfm = document.createElement('div')
+tfm.classList.add('valsi')
+if (def.l) tfm.classList.add('nalojbo')
+tfm.innerHTML = `<i><sup>[${sh.join(
+', '
+)}&nbsp;&nbsp;&nbsp;...&nbsp;]</sup></i>&nbsp;&nbsp;`
+}
+if (def.s) {
+var ss = document.createElement('a')
+ss.className = 'tutci klesi klesi-tutci'
+var text = basna({
+def: escHtml(def.s),
+query,
+})
+ss.innerHTML = text
+if (seskari !== 'velcusku')
+ss.href = `#seskari=${seskari}&sisku=${encodeUrl(def.s)}`
+}
+if (def.t) {
+var jvs = document.createElement('a')
+jvs.className = 'klesi link noselect'
+var text = def.t
+const txt = encodeUrl(def.w).replace(/_/g, '%20')
+jvs.href = window.judri
+? window.judri + txt
+: `#seskari=${seskari === 'catni' ? 'catni' : 'cnano'}&sisku=${txt}`
+if (window.judri) {
+jvs.setAttribute('target', '_blank')
+jvs.setAttribute('rel', 'noreferrer')
+}
+let deft = ''
+if (def.t.search('sampu staile') >= 0)
+deft +=
+"<img src='../pixra/plise.png' height='16' width='16' alt='lo staile poi sampu'>"
+if (def.t.search('mansa staile') >= 0)
+deft +=
+"<img src='../pixra/pelxuplise.png' height='16' width='16' alt=\"lo staile poi na mutce cinri\">"
+if (def.t.search('plixau jufra') >= 0)
+deft +=
+"<img src='../pixra/crinoplise.png' height='16' width='16' alt=\"lo jufra poi ka'e xamgu lo di'i fanva\">"
+if (def.t.search('cnano staile') >= 0)
+deft +=
+"<img src='../pixra/blabiplise.png' height='16' width='16' alt=\"lo staile poi ka'e pluja\">"
+if (def.t.search('non-standard') >= 0)
+deft +=
+"<img src='../pixra/cicnaplise.png' height='16' width='16' alt=\"na'e catni se ciska staile\">"
+if (deft !== '') text = deft
+if (window.xuzganalojudri && !def.l) {
+text = `${escHtml(def.t)}# `
+if (def.d && def.d.nasezvafahi) text = `➕ ${text}`
+}
+jvs.innerHTML = text
+}
+if (def.date) {
+var jvs = document.createElement('div')
+jvs.className = 'tutci klesi klesi-tutci'
+jvs.style.whiteSpace = 'nowrap'
+jvs.innerHTML = def.date
+}
+if (def.from) {
+var ss = document.createElement('div')
+ss.className = 'tutci klesi klesi-tutci'
+ss.innerHTML = def.from
+}
+const word = document.createElement('h4')
+word.classList.add('valsi')
+word.setAttribute('data-valsi', encodeURIComponent(def.w))
+if (def.l) word.classList.add('nalojbo')
+if (plukaquery(def.w) == query || seskari == 'velcusku') {
+word.innerHTML = `${basna({
+def: def.w,
+query,
+})} `
+} else {
+word.innerHTML = `<a class="valsi${
+def.l ? '' : ' nalojbo'
+}" href="#seskari=${seskari}&sisku=${encodeUrl(def.w)}">${basna({
+def: escHtml(def.w, true),
+query,
+})}</a> `
+}
+let mu = {}
+if (def.d && !def.d.nasezvafahi)
+mu = melbi_uenzi({
+def: def.d,
+fullDef: def,
+query,
+seskari,
+type: 'd',
+index,
+})
+const zbalermorna = document.createElement('h4')
+zbalermorna.classList.add('valsi', 'zbalermorna')
+zbalermorna.textContent = zbalermornaize(def)
+const heading = document.createElement('heading')
+heading.classList.add('heading')
+if (tfm) heading.appendChild(tfm)
+heading.appendChild(word)
+if (zbalermorna && def.w.length <= 20 && !window.muplis)
+heading.appendChild(zbalermorna)
+if (fmm) heading.appendChild(fmm)
+if (def.t === 'lujvo' && (def.rfs || []).length > 0 && mu.hasExpansion) {
+const jvo = document.createElement('input')
+jvo.type = 'button'
+jvo.classList.add('tutci', 'sance', 'jvo_plumber')
+jvo.value = jvoValue()
+jvoPlumbsOn
+? jvo.classList.add('tutci-hover')
+: jvo.classList.remove('tutci-hover')
+jvo.onclick = addJvoPlumbs
+heading.appendChild(jvo)
+}
+const flex = document.createElement('heading')
+flex.style.flex = 1
+heading.appendChild(flex)
+if (jvs) heading.appendChild(jvs)
+if (ss) heading.appendChild(ss)
+try {
+const sance = new Audio(
+`/sutysisku/sance/vreji/${encodeValsiForWeb(def.w)}.mp3`
+)
+sance.id = `sance_${encodeValsiForWeb(def.w)}`
+sance.addEventListener('canplaythrough', (event) => {
+const hd = Array.from(
+document.querySelectorAll(`[data-valsi="${encodeValsiForWeb(def.w)}"]`)
+)[0]
+if (hd && !document.getElementById(`sance_${encodeValsiForWeb(def.w)}`)) {
+hd.innerHTML += `<button class="tutci sance" onclick="document.getElementById('sance_${encodeValsiForWeb(
+def.w
+)}').play()">▶</button>`
+hd.appendChild(sance)
+}
+})
+} catch (error) {}
+out.appendChild(heading)
+if (zbalermorna && (window.muplis || def.w.length > 20))
+out.appendChild(zbalermorna)
+if (seskari !== 'arxivo' && def.d) {
+var n = document.createElement('div')
+n.classList.add('definition', 'valsi')
+if (def.d && def.d.nasezvafahi) {
+if (!def.t && (def.rfs || []).length === 0) return
+n.classList.add('nasezvafahi', 'noselect')
+n.innerHTML = window.nasezvafahi
+} else {
+let melbi = mu.tergeha
+if (seskari !== 'velcusku') melbi = `${melbi.replace(/\n/g, '<br/>')} `
+n.innerHTML = melbi
+}
+out.appendChild(n)
+}
+if (seskari === 'arxivo') {
+const k = document.createElement('div')
+k.classList.add('definition', 'valsi', 'pointer')
+k.innerHTML = ConstructArxivoValsiExtract(def.d, query, 50)
+k.addEventListener('click', () => {
+k.style.display = 'none'
+k.nextElementSibling.style.display = 'block'
+})
+out.appendChild(k)
+var n = document.createElement('div')
+n.classList.add('definition', 'valsi')
+n.style.display = 'none'
+if (def.d && def.d.nasezvafahi) {
+n.classList.add('nasezvafahi', 'noselect')
+n.innerHTML = window.nasezvafahi
+} else {
+n.innerHTML = `${basna({
+def: def.d,
+query,
+}).replace(/\n/g, '<br/>')} `
+n.addEventListener('click', () => {
+n.style.display = 'none'
+n.previousElementSibling.style.display = 'block'
+n.parentElement.scrollIntoView()
+})
+}
+out.appendChild(n)
+}
+if (def.n) {
+var n = document.createElement('div')
+n.classList.add('notes', 'valsi')
+n.innerHTML = `${
+melbi_uenzi({
+def: def.n,
+query,
+seskari,
+}).tergeha
+} `
+out.appendChild(n)
+}
+if (index == 0 && seskari !== 'velcusku') {
+const { secs, div } = CLL({ valsi: def.w })
+if (secs && secs !== state.cll) out.appendChild(div)
+}
+if (def.e) {
+var n = document.createElement('div')
+n.classList.add('examples', 'valsi')
+n.innerHTML = `<table class='ciksi'>${
+melbi_uenzi({
+def: `${def.e}\n`
+.replace(/%/g, '\n')
+.replace(
+/(.*?) — (.*?)\n/g,
+"<tr><td class='mupligreku'><b>$1</b></td><td class='mupligreku'><i>$2</i></td></tr>\n"
+),
+query,
+seskari,
+}).tergeha
+}</table> `
+out.appendChild(n)
+}
+if (def.k) {
+var n = document.createElement('div')
+n.className = 'related'
+n.innerHTML = `See also: ${
+melbi_uenzi({
+def: def.k,
+query,
+seskari,
+}).tergeha
+} `
+out.appendChild(n)
+}
+if ((def.r || []).length > 0 && !def.l && window.xuzganalojudri) {
+const rafsi = document.createElement('div')
+rafsi.className = 'rafsi noselect'
+rafsi.innerHTML = 'rafsi: '
+for (i = 0; i < def.r.length; i++) {
+const rafElem = document.createElement('span')
+rafElem.className = 'pamei'
+const raf = def.r[i]
+if ((def.t || '').match(/lujvo/)) {
+const a = document.createElement('a')
+a.setAttribute('href', `#seskari=${seskari}&sisku=${encodeUrl(raf)}`)
+a.text = raf
+rafElem.appendChild(a)
+} else {
+rafElem.innerHTML = basna({
+def: raf,
+query,
+})
+}
+rafElem.innerHTML = `${rafElem.innerHTML} `
+rafsi.appendChild(rafElem)
+}
+out.appendChild(rafsi)
+}
+if ((def.rfs || []).length > 0) {
+const subDefs = document.createElement('div')
+subDefs.classList.add('definition', 'subdefinitions')
+for (var i = 0; i < def.rfs.length; i++) {
+const o = skicu_palodovalsi({
+def: def.rfs[i],
+inner: true,
+index: `${index}_${i}`,
+})
+if (o) subDefs.appendChild(o)
+}
+out.appendChild(subDefs)
+}
+out.addEventListener('click', clicked)
+return out
+}
+function encodeValsiForWeb(v) {
+return encodeURIComponent(v).replace(/'/g, 'h')
+}
+function plukaquery(a) {
+if (a.charAt(0) !== '^' && a.slice(-1) !== '$')
+return a
+.replace(/\./g, ' ')
+.replace(/ {2,}/g, ' ')
+.replace(/’/g, "'")
+.trim()
+return a
+}
+function encodeUrl(uenzi) {
+return encodeURIComponent((uenzi || '').replace(/ /g, '_')).replace(
+/'/g,
+'%27'
+)
+}
+function decodeUrl(urli) {
+return decodeURIComponent(
+urli.replace(/&amp;/g, '&').replace(/%27/g, "'")
+).replace(/[_]/g, ' ')
+}
+function escHtml(a, apos) {
+a = (a || '')
+.replace(/</g, '&lt;')
+.replace(/>/g, '&gt;')
+.replace(/"/g, '&quot;')
+.replace(/\(/g, '&#40;')
+.replace(/\)/g, '&#41;')
+if (!apos) a = a.replace(/'/g, '&#039;')
+return a
+}
+function skicu_rolodovalsi({ query, seskari }) {
+const displayUpTo = Math.min(window.jimte, results.length)
+state.cll = undefined
+if (resultCount === 0) {
+const { secs, div } = CLL({ pre: true, valsi: state.searching.query })
+state.cll = secs
+if (div) outp.appendChild(div)
+}
+for (; resultCount < displayUpTo; resultCount++) {
+outp.appendChild(
+skicu_palodovalsi({
+def: results[resultCount],
+query,
+seskari,
+length: results.length,
+index: resultCount,
+})
+)
+}
+}
+if ('serviceWorker' in navigator) {
+navigator.serviceWorker.onmessage = function (e) {
+console.log('e.data', e.data)
+}
+window.addEventListener('load', () => {
+navigator.serviceWorker.register('./sw.js').then(
+({ scope }) => {
+console.log('ServiceWorker registration successful with scope: ', scope)
+},
+(err) => {
+console.log('ServiceWorker registration failed: ', err)
+}
+)
+})
+} else {
+alert(
+'Your browser is not supported. Please, upgrade to the latest Chrome / Firefox / Safari.'
+)
+}
+const rows = [
+['p', 't', 'k', 'f', 's', 'c'],
+['b', 'd', 'g', 'v', 'z', 'j'],
+['m', 'l', 'n', 'r', , 'x', "'"],
+['a', 'e', 'i', 'o', 'u', 'y'],
+[],
+['aia', 'aua'],
+['au', 'ai', 'ei', 'oi'],
+]
+const audio = document.querySelector('#audio')
+function text(name, text, style) {
+const el = document.createElement(name)
+el.textContent = text
+if (style) el.className = style
+return el
+}
+function elem(name, contents, style) {
+const el = document.createElement(name)
+if (style) el.className = style
+if (Array.isArray(contents))
+contents.forEach((sub) => {
+el.appendChild(sub)
+})
+else if (contents) el.appendChild(contents)
+return el
+}
+function play(url) {
+audio.src = url
+audio.play()
+}
+document.querySelector('#table').appendChild(
+elem(
+'table',
+rows.map((row) =>
+elem(
+'tr',
+row.map((col) => {
+const button = text('button', col, 'bangu')
+button.onclick = () => {
+play(`/sutysisku/sance/lerfu/${encodeURIComponent(col)}.ogg`)
+}
+return elem('td', button)
+})
+)
+),
+'centero'
+)
+)
+var socket
+var socket1Chat
+ciska.focus()
