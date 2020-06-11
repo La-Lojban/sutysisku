@@ -7,7 +7,7 @@ const drata = document.getElementById('drata')
 const citri = document.getElementById('citri')
 const sidju = document.getElementById('sidju')
 const pb = document.getElementById('kernelo_lo_cpacu')
-const worker = new Worker('worker.js?sisku=1591861627692')
+const worker = new Worker('worker.js?sisku=1591861671684')
 const SiteTitle = document.querySelector('#title > font')
 const SiteTitleFull = document.querySelector('#site-title')
 let jvoPlumbsOn = false
