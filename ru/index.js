@@ -648,7 +648,7 @@ function RenderDesktop() {
   outp.style.display = 'none';
   descr.style.display = 'block';
   var obj = {
-    '@CLL': ['.inglic.', 'Reference Grammar', '../pixra/cll.png', 1, 'https://lojban.pw/cll/uncll-1.2.7/xhtml_section_chunks/'],
+    '@CLL': ['.inglic.', 'Reference Grammar', '../pixra/cll.png', 1, 'https://lojban.pw/cll/uncll-1.2.9/xhtml_section_chunks/'],
     '@lojban.pw': ['.inglic.', 'Lojban-Chan', '../pixra/jbotcan.svg', 1, 'https://lojban.pw'],
     muplis: [0, 'la muplis', '../pixra/taplamuplis.svg', 2.1],
     jb: [0, 'English - Lojban examples', '../pixra/snime-1.svg', 1],
