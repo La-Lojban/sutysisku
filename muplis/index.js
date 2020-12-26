@@ -1192,7 +1192,7 @@ function skicu_palodovalsi(_ref17) {
     n.classList.add('definition', 'valsi');
 
     if (def.d && def.d.nasezvafahi) {
-      if (!def.t && (def.rfs || []).length === 0) return;
+      //if (!def.t && (def.rfs || []).length === 0) return;
       n.classList.add('nasezvafahi', 'noselect');
       n.innerHTML = window.nasezvafahi;
     } else {
