@@ -660,7 +660,7 @@ function RenderDesktop() {
     eo: [0, 'Esperanto - Loĵbano', '../pixra/lanci_epo.svg', 1],
     es: [0, 'español - lojban', '../pixra/selsku_lanci_spa.svg', 1],
     zh: [0, '中文 - 逻辑语', '../pixra/selsku_lanci_zho.svg', 1],
-    '@CC': ['.inglic.', 'The Crash Course', '../pixra/cogwheel-5.svg', 1, 'https://mw.lojban.org/papri/The_Crash_Course_in_Lojban']
+    '@CC': ['.inglic.', 'Learn Lojban', '../pixra/cogwheel-5.svg', 1, 'https://lojban.pw/books/learn-lojban/']
   };
   var acc = '';
   var cisn = 100;
