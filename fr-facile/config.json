@@ -1,0 +1,14 @@
+{
+  "bangudesc": "<h1><b>la sutysisku</b> est un dictionnaire rapide pour le lojban.</h1><div style=\"text-align:justify;\">- Puis-je l'utilise si je perd l'accès à Internet ?<br/>- Oui, si cela arrive, essayer d'ouvrir cette même adresse depuis le même navigateur. Elle devrait encore s'ouvrir. Un version récente de Chrome, Safari ou Firefox est requise.<ul class='liste'><li>Presser <code>/</code> pour se focaliser sur le champ de recherche.</li><li>Pour des utilisateurs avancés: pour activer la recherche par expression régulière, commencez la recherhce avec <code>^</code> ou finissez la avec <code>$</code>. Par exemple: <code>^mi</code>, <code>gau$</code>.</li></ul>Pour plus d'informations, visitez <a href='http://mw.lojban.org/index.php?title=Lojban&setlang=fr' target='_blank'>le Wiki du Lojban</a>.</div>",
+  "bangusisku": "français - lojban",
+  "bangulo": "Nous chargeons le dictionnaire ...",
+  "bangu": "français",
+  "siskudescr": "Search the Lojban dictionary la jbovlaste.",
+  "opdescr": "Un dictionnaire pour le lojban, l'anglais et d'autres langues. Fonctionne aussi hors-ligne.",
+  "xuzganalojudri": "true",
+  "lojbo": "true",
+  "rimni": "rimes",
+  "catni": "chercher",
+  "kunti": "Effacer",
+  "pron_guide": "Guide de prononciation"
+}

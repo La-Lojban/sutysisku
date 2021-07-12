@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+
+<head>
+  <style>
+    body {
+      background: rgba(255, 255, 255, 1);
+      background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(247, 200, 129, 1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(247, 200, 129, 1)));
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(247, 200, 129, 1) 100%);
+      background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(247, 200, 129, 1) 100%);
+      background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(247, 200, 129, 1) 100%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(247, 200, 129, 1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7c881', GradientType=0);
+    }
+  </style>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script>
+  <script>
+    var socket = io.connect('https://jbotcan.org:3020');
+    socket.on('la_livla_cu_cusku', function(data) {
+      var messages = document.getElementById('messages');
+      messages.value = data.message;
+    });
+    socket.on('error', function() {
+      console.error(arguments)
+    });
+    socket.on('message', function() {
+      console.log(arguments)
+    });
+    var sendinput = function(prefix) {
+      if (typeof(prefix) === undefined) {
+        prefix = ""
+      } else {
+        prefix = "." + prefix + " "
+      };
+      try {
+        var input = document.getElementById('input_textarea').value;
+        if (input !== "") {
+          socket.emit('le_te_cusku_be_fi_la_livla', {
+            data: prefix + input
+          });
+        }
+      } catch (e) {
+        return;
+      }
+    }
+  </script>
+  <title>lo naxle be fi La Mensi</title>
+</head>
+
+<body>
+  <meta charset='utf-8' />
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .content {
+      float: left;
+      width: 30%;
+      border: none;
+      margin: 0.5em;
+    }
+
+    .rightcontent {
+      float: right;
+      width: 65%;
+      border: none;
+      margin-right: 0.5em;
+      margin-top: 0.5em;
+    }
+
+    .hspacer {
+      width: 5%;
+      float: left;
+    }
+
+    .clear {
+      clear: both;
+    }
+  </style>
+
+  <div class="content">
+    <span style="font: 12px arial, sans-serif;margin-top:0;margin:0.5em;"><i>La Mensi zo'u: pa'o le se catlu minra</i></span>
+    <center style="font: 15px arial, sans-serif;margin-top:0;margin:0.5em;">i se pruce fa di'e</center>
+    <form id="form1" name="form1" method="post" action="">
+      <textarea id="input_textarea" style="width:100%; font: 18px sans-serif;" rows="8" autofocus placeholder="ko ciska fi ti"></textarea>
+    </form>
+    <script>
+      //setup before functions
+      var typingTimer; //timer identifier
+      var doneTypingInterval = 500; //time in ms, 5 second for example
+      var input_textarea = document.getElementById('input_textarea');
+      input_textarea.addEventListener("keyup", function(e) {
+        clearTimeout(typingTimer);
+        typingTimer = setTimeout(sendinputi, doneTypingInterval);
+      });
+      input_textarea.addEventListener("keydown", function(e) {
+        clearTimeout(typingTimer);
+      });
+
+      function sendinputi() {
+        var input = document.getElementById('input_textarea').value;
+        socket.emit('le_te_cusku_be_fi_la_livla', {
+          data: input
+        });
+      }
+    </script>
+    <center style="font: 15px arial, sans-serif;margin-top:2em;margin:0.5em;">i te pruce fa di'e</center>
+    <textarea readonly name="messages" id='messages' style="background-color: #FEFFE1; width:100%; font: 18px sans-serif;" rows="8"></textarea>
+  </div>
+  <div class="hspacer">&nbsp;</div>
+  <div class="rightcontent">
+    <style>
+      .but {
+        height: 30px;
+        margin: 0.2em;
+        -moz-box-shadow: inset 0px -3px 7px 0px #29bbff;
+        -webkit-box-shadow: inset 0px -3px 7px 0px #29bbff;
+        box-shadow: inset 0px -3px 7px 0px #29bbff;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2dabf9), color-stop(1, #0688fa));
+        background: -moz-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+        background: -webkit-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+        background: -o-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+        background: -ms-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+        background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2dabf9', endColorstr='#0688fa', GradientType=0);
+        background-color: #2dabf9;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        border: 1px solid #0b0e07;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #263666;
+      }
+
+      .but:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0688fa), color-stop(1, #2dabf9));
+        background: -moz-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+        background: -webkit-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+        background: -o-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+        background: -ms-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+        background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0688fa', endColorstr='#2dabf9', GradientType=0);
+        background-color: #0688fa;
+      }
+
+      .but:active {
+        position: relative;
+        top: 1px;
+      }
+    </style>
+    <button type="button" onclick="sendinput('raw');" class="but" style="width:auto;">raw output</button> <button type="button" onclick="sendinput('ilm');" class="but" style="width:auto;">standard grammar</button> <button type="button" onclick="sendinput('yacc');"
+      class="but" style="width:auto;">YACC</button> <button type="button" onclick="sendinput('gerna');" class="but" style="width:auto;">jbofi'e</button> - parsers<br/>
+    <button type="button" onclick="sendinput('zei');" class="but" style="width:auto;">Split</button> compound particles and turn lujvo into zei-lujvo. <button type="button" onclick="sendinput('anji');" class="but" style="width:auto;">anji ( 漢字 )</button>
+    <hr>
+    <button type="button" onclick="sendinput('en');" class="but" style="width:80px;">English</button> <button type="button" onclick="sendinput('jb');" class="but" style="background:url('https://la-lojban.github.io/sutysisku/pixra/cmalu_snime.svg') no-repeat #2dabf9;background-position: left 5px top 5px;width:auto;padding:0 10px 0 30px;vertical-align: middle;"><div style="display: inline;vertical-align:middle;">Dictionary with Examples</div></button>    - search in the English dictionary. <button type="button" onclick="sendinput('gloss');" class="but" style="width:120px;">Lojban &gt; English</button><br/>
+    <button type="button" onclick="sendinput('jbo');" class="but" style="width:80px;">la Lojban</button> - mitysisku se pi'o lo lojbo vlaste<br/>
+    <button type="button" onclick="sendinput('es');" class="but" style="width:80px;">español</button> - búsqueda en el diccionario español<br/>
+    <button type="button" onclick="sendinput('fr-facile');" class="but" style="width:80px;">français</button> - recherche dans le dictionnaire français (facile)<br/>
+    <button type="button" onclick="sendinput('ru');" class="but" style="width:80px;">русский</button> - поиск в русском словаре<br/>
+    <button type="button" onclick="sendinput('de');" class="but" style="width:80px;">Deutsch</button> - Suche im Deutsch Wörterbuch<br/>
+    <button type="button" onclick="sendinput('eo');" class="but" style="width:80px;">Esperanto</button> - Serĉo en Esperanta vortaro<br/>
+    <button type="button" onclick="sendinput('zh');" class="but" style="width:80px;">汉语</button> - 汉语字典搜索<br/>
+    <button type="button" onclick="sendinput('loglan');" class="but" style="width:80px;">Loglan</button> <button type="button" onclick="sendinput('loi');" class="but" style="width:auto;">Loglan &lt; Lojban</button> <button type="button" onclick="sendinput('coi');"
+      class="but" style="width:auto;">Loglan &gt; Lojban</button> <button type="button" onclick="sendinput('toki');" class="but" style="width:80px;">toki pona</button> <button type="button" onclick="sendinput('laadan');" class="but" style="width:80px;">Láadan</button>    <button type="button" onclick="sendinput('wikt');" class="but" style="width:80px;">Wiktionary</button>
+    <h3>type mode (advanced users):</h3>The results will appear as you type.
+    <ul>
+      <li>Parsers: type &quot;.beta &quot; (experimental), &quot;.ilm &quot; (camxes), &quot;.gerna &quot; (jbofi'e), or &quot;.yacc &quot; (official yacc) followed by the text to show the structure of sentences.</li>
+      <li>Lojban dictionary: type &quot;.language-code word&quot;, where language code is one of jbo,en,ru,es,fr,ja,de,eo,zh. Additionally: jb is for the Dictionary with Examples (addendum to ‘Learn Lojban’ course), fr-facile is for Facile French.
+        This searches in both directions.</li>
+      <li>Type &quot;.zei &quot; followed by the text to split all compound particles and turn lujvo into zei-lujvo.</li>
+      <li>&quot;.selmaho ca'a&quot; gives &quot;CAhA&quot;, &quot;.selmaho CAhA&quot; gives &quot;bi'ai, ca'a, ...&quot;</li>
+      <li>&quot;.rafsi kulnu&quot; gives &quot;klu&quot;, &quot;.rafsi klu&quot; gives &quot;kulnu&quot;</li>
+      <li>Other conlang dictionaries: &quot;.toki &quot;, &quot;.laadan &quot;, &quot;.loglan &quot;</li>
+      <li>Lojban &lt;-&gt; Loglan conversion (incomplete): &quot;.coi &quot;, &quot;.loi &quot;</li>
+      <li>&quot;.tatoeba klama&quot; returns a random example sentence using &quot;klama&quot;</li>
+      <li>&quot;.wikt hello&quot; returns English definitions from Wiktionary</li>
+      <li>&quot;.wikt Spanish/hola&quot; returns Spanish definitions from Wiktionary. Similarly for other languages.</li>
+    </ul>
+  </div>
+  <div class="clear"></div>
+</body>
+
+</html>
