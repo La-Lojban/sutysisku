@@ -87,6 +87,7 @@ body {
   overflow: hidden;
   margin: 0;
   height: 100vh;
+  
 }
 #outp {
   padding-bottom: 10px;
@@ -747,7 +748,7 @@ ul > li > a {
   width: 100%;
   bottom: 0px;
   left: 0px;
-  position: absolute;
+  position: fixed;
   background: white;
 }
 
@@ -986,6 +987,7 @@ sub {
 
 .DIV_1:hover {
   outline: rgb(153, 153, 153) solid 3px;
+  
 }
 
 .DIV_1:active {
@@ -1015,7 +1017,7 @@ sub {
   
   
   
-  z-index: 999;
+  
   
   background: rgba(255, 255, 255, 0.6) none repeat scroll 0% 0% / auto
     padding-box border-box;
@@ -1138,9 +1140,9 @@ sub {
 #scrollToTop {
   display: none;
   position: fixed;
-  bottom: 26px;
-  right: 30px;
-  z-index: 99;
+  bottom: 35px;
+  right: 13px;
+  z-index: 999;
   border: none;
   outline: none;
   background-color: #222;
@@ -1206,21 +1208,21 @@ sub {
 
 @font-face {
   font-family: 'Libertine';
-  src: url('../assets/fonts/linux-libertine/LinLibertine_R.otf?sisku=1626078198281');
+  src: url('../assets/fonts/linux-libertine/LinLibertine_R.otf?sisku=1626620026413');
 }
 @font-face {
   font-family: 'Libertine';
-  src: url('../assets/fonts/linux-libertine/LinLibertine_RI.otf?sisku=1626078198281');
+  src: url('../assets/fonts/linux-libertine/LinLibertine_RI.otf?sisku=1626620026413');
   font-style: italic;
 }
 @font-face {
   font-family: 'Libertine';
-  src: url('../assets/fonts/linux-libertine/LinLibertine_RB.otf?sisku=1626078198281');
+  src: url('../assets/fonts/linux-libertine/LinLibertine_RB.otf?sisku=1626620026413');
   font-weight: bold;
 }
 @font-face {
   font-family: 'Libertine';
-  src: url('../assets/fonts/linux-libertine/LinLibertine_RBI.otf?sisku=1626078198281');
+  src: url('../assets/fonts/linux-libertine/LinLibertine_RBI.otf?sisku=1626620026413');
   font-style: italic;
   font-weight: bold;
 }
@@ -1228,7 +1230,7 @@ sub {
 
 @font-face {
   font-family: 'crisa-regular';
-  src: url('../assets/fonts/crisa-regular.otf?sisku=1626078198281');
+  src: url('../assets/fonts/crisa-regular.otf?sisku=1626620026413');
 }
 .valsi.zbalermorna {
   max-width: 50%;
