@@ -1,6 +1,6 @@
 ## A dictionary for Lojban, English and other languages
 
-https://la-lojban.github.io/sutysisku/en/
+[https://la-lojban.github.io/sutysisku/lojban/](https://la-lojban.github.io/sutysisku/lojban/)
 
 ### Features
 * Fast
@@ -13,12 +13,3 @@ To use it offline, simply try to load the site in your browser as usual. If your
 
 la sutysisku is released under the MIT license.
 
-### Testing
-
-/cipra folder doesn't have manifest file so it's fine for testing
-
-### Updating
-
-from the root of lagleki/livla directory run
-
-```npm run deploy```
