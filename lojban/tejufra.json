@@ -20,6 +20,7 @@
     "pron_guide": "Pronunciation guide",
     "window": {
       "Live chat for your questions": "Live chat for your questions",
+      "la muplis": "la muplis - useful phrases",
       "window.cmene": "English",
       "window.nasezvafahi": "No definition has been found",
       "window.rimni": "mitysisku lo'e rimni",
@@ -51,6 +52,7 @@
     "pron_guide": "Руководство по произношению",
     "window": {
       "Live chat for your questions": "Чат для Ваших вопросов",
+      "la muplis": "la muplis - полезные фразы",
       "window.cmene": "русский",
       "window.nasezvafahi": "не найдено",
       "window.rimni": "mitysisku lo'e rimni",
@@ -181,11 +183,11 @@
     }
   },
   "jbo": {
-    "bangudesc": "<p><b>la sutysisku</b> cu sutra tutci co jbobau vlaste<p>- .i xu mi kakne le ka pilno la sutysisku vau va'o le nu na ka'e kibro pilno<br>- .i ja'a go'i .i va'o le nu kibro kakne naku cu .e'u troci le ka gau do le brauzero cu cpacu le se judri be le me dei moi<br> .i la'a sai le mutpapri cu tolcanci to'e ri'a nai .i le mutce cnino klesi be la romge .a la tsafari .a la faglo'u cu jai sarcu le nu pilno la sutysisku<br><br>.i le nu djica co zenba co cilre tu'a la sutysisku cu .e'u banzu le nu tcidu fi <a href='https://mw.lojban.org' target='_blank'>la lojbo uitki</a>.",
-    "bangusisku": "sisku le ka lojbo",
+    "bangudesc": "<p><b>la sutysisku</b> cu sutra tutci co jbobau vlaste<p>- .i xu mi kakne loi ka pilno la sutysisku vau va'o le nu na ka'e kibro pilno<br>- .i ja'a go'i .i va'o le nu kibro kakne naku cu .e'u troci loi ka gau do le brauzero cu cpacu le se judri be le me dei moi<br> .i la'a sai le mutpapri cu tolcanci to'e ri'a nai .i le mutce cnino klesi be la romge .a la tsafari .a la faglo'u cu jai sarcu le nu pilno la sutysisku<br><br>.i le nu djica co zenba co cilre tu'a la sutysisku cu .e'u banzu le nu tcidu fi <a href='https://mw.lojban.org' target='_blank'>la lojbo uitki</a>.",
+    "bangusisku": "sisku loi ka lojbo",
     "bangulo": "ca'o cpacu lo vlaste",
-    "siskudescr": "sisku se pi'o lo lojbo vlaste be fa la jbovlaste",
-    "opdescr": "le vlaste cu liste lo valsi be fi la lojban. e le glibau .e lo drata gi'e ckaji le ka ka'e se pilno fau le nu na kibro jorne",
+    "siskudescr": "pilno la jbovlaste ku noi lojbo vlaste vau le nu sisku",
+    "opdescr": "le vlaste cu liste le'i valsi be fi la .lojban. e le glibau .e lo drata gi'e ckaji loi ka ka'e se pilno fau le nu na kibro jorne",
     "bangu": "lojban",
     "xuzganalojudri": "true",
     "lojbo": "true",
@@ -194,18 +196,19 @@
     "rimni": "mitysisku lo'e rimni",
     "pron_guide": "tadji le nu bacru le lance",
     "window": {
+      "la muplis": "xamgu jufra do'e la muplis",
       "window.nasezvafahi": ".i no da se zvafa'i",
-      "window.rimni": "mitysisku lo'e rimni",
+      "window.rimni": "sisku loi ka rimni",
       "window.bangubuild": "ca'o zbasu lo indice",
       "window.bangudecomp": "te katna",
       "window.xuzganalojudri": true,
       "window.judri": "http://jbovlaste.lojban.org/dict/",
-      "window.purc": "to ro moi le ka se mitysisku toi",
+      "window.purc": "to ro moi loi ka se mitysisku toi",
       "window.bangu": "lojban"
     }
   },
   "muplis": {
-    "bangudesc": "<h1>.i <b>la .muplis.</b> cu sutra tutci lo nu mitysisku lo mupli pe la'o zoi.<a href='http://tatoeba.org/jbo' target='_blank'>Tatoeba.org</a>.zoi.</h1><div style=\"text-align:justify;\">ni'o xu va'o lo nu zu'i na ka'e pilno le kibro vau zu'i ka'e pilno la .muplis.<br>.i ja'a go'i .i .e'u va'o lo nu zu'i na kakne tu'a le kibro cu troci le ka gau zu'i le brauzero cu cpacu lo se judri be le me dei moi .i la'a sai le mutpapri cu tolcanci to'e ri'a nai .i lo cnino klesi be la xromium .a la'oi Safari .a la'oi Firefox cu jai sarcu le ka pilno la .muplis.<br/>ni'o lo nu djica co zenba co cilre tu'a la .muplis. cu .e'u banzu lo nu tcidy fi <a href='https://lojban.pw' target='_blank'>le lojbo stuzi</a>.</div>",
+    "bangudesc": "<h1>.i <b>la .muplis.</b> cu sutra tutci lo nu mitysisku lo mupli pe la'o zoi.<a href='http://tatoeba.org/jbo' target='_blank'>Tatoeba.org</a>.zoi.</h1><div style=\"text-align:justify;\">ni'o xu va'o lo nu zu'i na ka'e pilno le kibro vau zu'i ka'e pilno la .muplis.<br>.i ja'a go'i .i .e'u va'o lo nu zu'i na kakne tu'a le kibro cu troci loi ka gau zu'i le brauzero cu cpacu lo se judri be le me dei moi .i la'a sai le mutpapri cu tolcanci to'e ri'a nai .i lo cnino klesi be la xromium .a la'oi Safari .a la'oi Firefox cu jai sarcu loi ka pilno la .muplis.<br/>ni'o lo nu djica co zenba co cilre tu'a la .muplis. cu .e'u banzu lo nu tcidy fi <a href='https://lojban.pw' target='_blank'>le lojbo stuzi</a>.</div>",
     "bangusisku": "sisku fi le'i jufra",
     "bangulo": "ca'o cpacu lo vlaste",
     "xuzganalojudri": "false",
@@ -234,7 +237,7 @@
       "window.xuzganalojudri": false,
       "window.bangudecomp": "te katna",
       "window.arrcll": {},
-      "window.purc": "to ro moi le ka se mitysisku toi",
+      "window.purc": "to ro moi loi ka se mitysisku toi",
       "window.muplis": true,
       "window.rimni": "rimni lo'e pa jufra",
       "window.bangu": "english"
