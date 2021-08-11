@@ -36,8 +36,8 @@ const title = document.getElementById('title')
 const SiteImage = document.querySelectorAll('#title > img')
 const btnScrollToTop = document.getElementById('scrollToTop')
 
-const worker = new Worker('worker.js?sisku=1628667010721')
-const sorcuWorker = new Worker('sorcuWorker.js?sisku=1628667010721')
+const worker = new Worker('worker.js?sisku=1628697950338')
+const sorcuWorker = new Worker('sorcuWorker.js?sisku=1628697950338')
 
 content.onscroll = () => {
   if (content.scrollTop > 200) {
