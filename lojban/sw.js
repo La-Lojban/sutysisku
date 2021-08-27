@@ -9,15 +9,15 @@ var urlsToCache = [
   'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.10.1/polyfill.min.js',
   './',
   './index.html',
-  './index.js?detri=1630079267782',
-  './index.css?detri=1630079267782',
-  './sorcuWorker.js?sisku=1630079267782',
-  './worker.js?sisku=1630079267782',
-  '../assets/fonts/linux-libertine/LinLibertine_R.otf?sisku=1630079267782',
-  '../assets/fonts/linux-libertine/LinLibertine_RI.otf?sisku=1630079267782',
-  '../assets/fonts/linux-libertine/LinLibertine_RB.otf?sisku=1630079267782',
-  '../assets/fonts/linux-libertine/LinLibertine_RBI.otf?sisku=1630079267782',
-  '../assets/fonts/crisa-regular.otf?sisku=1630079267782',
+  './index.js?detri=1630080314398',
+  './index.css?detri=1630080314398',
+  './sorcuWorker.js?sisku=1630080314398',
+  './worker.js?sisku=1630080314398',
+  '../assets/fonts/linux-libertine/LinLibertine_R.otf?sisku=1630080314398',
+  '../assets/fonts/linux-libertine/LinLibertine_RI.otf?sisku=1630080314398',
+  '../assets/fonts/linux-libertine/LinLibertine_RB.otf?sisku=1630080314398',
+  '../assets/fonts/linux-libertine/LinLibertine_RBI.otf?sisku=1630080314398',
+  '../assets/fonts/crisa-regular.otf?sisku=1630080314398',
   '../assets/scripts/leader-line.min.js',
   '../pixra/144.png',
   '../pixra/32.png',
@@ -89,17 +89,20 @@ self.addEventListener('fetch', function (event) {
     caches.match(event.request).then(function (response) {
       // Cache hit - return response
       if (response) {
-        const newHeaders = new Headers(response.headers);
-        newHeaders.set("Cross-Origin-Embedder-Policy", "require-corp");
-        newHeaders.set("Cross-Origin-Opener-Policy", "same-origin");
+        return response;
+        // if (response.status === 0) {
+        // }
+        // const newHeaders = new Headers(response.headers);
+        // newHeaders.set("Cross-Origin-Embedder-Policy", "require-corp");
+        // newHeaders.set("Cross-Origin-Opener-Policy", "same-origin");
 
-        return new Response(response.body, {
-          status: response.status,
-          statusText: response.statusText,
-          headers: newHeaders,
-        });
+        // return new Response(response.body, {
+        //   status: response.status,
+        //   statusText: response.statusText,
+        //   headers: newHeaders,
+        // });
       }
-      
+
       return fetch(event.request)
     })
   )
