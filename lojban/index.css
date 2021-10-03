@@ -1231,21 +1231,21 @@ sub {
 
 @font-face {
   font-family: 'Libertine';
-  src: url('../assets/fonts/linux-libertine/LinLibertine_R.otf?sisku=1632809328830');
+  src: url('../assets/fonts/linux-libertine/LinLibertine_R.otf?sisku=1633271934022');
 }
 @font-face {
   font-family: 'Libertine';
-  src: url('../assets/fonts/linux-libertine/LinLibertine_RI.otf?sisku=1632809328830');
+  src: url('../assets/fonts/linux-libertine/LinLibertine_RI.otf?sisku=1633271934022');
   font-style: italic;
 }
 @font-face {
   font-family: 'Libertine';
-  src: url('../assets/fonts/linux-libertine/LinLibertine_RB.otf?sisku=1632809328830');
+  src: url('../assets/fonts/linux-libertine/LinLibertine_RB.otf?sisku=1633271934022');
   font-weight: bold;
 }
 @font-face {
   font-family: 'Libertine';
-  src: url('../assets/fonts/linux-libertine/LinLibertine_RBI.otf?sisku=1632809328830');
+  src: url('../assets/fonts/linux-libertine/LinLibertine_RBI.otf?sisku=1633271934022');
   font-style: italic;
   font-weight: bold;
 }
@@ -1253,7 +1253,7 @@ sub {
 
 @font-face {
   font-family: 'crisa-regular';
-  src: url('../assets/fonts/crisa-regular.otf?sisku=1632809328830');
+  src: url('../assets/fonts/crisa-regular.otf?sisku=1633271934022');
 }
 .valsi.zbalermorna {
   max-width: 50%;
@@ -1284,4 +1284,73 @@ sub {
   border-color: #aaa;
   border-radius: 3px;
   white-space: nowrap;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s linear 0.1s, opacity 0.3s ease;
+}
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 21;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 24px;
+  color: #747474;
+  font-weight: bold;
+}
+.modal__close:hover {
+  color: #000;
+}
+.modal__container {
+  position: absolute;
+  z-index: 22;
+  width: 400px;
+  height: 300px;
+  top: 64px;
+  right: 10px;
+  bottom: 0;
+  box-shadow: 0 0 2px rgb(214, 177, 121);
+  padding: 0;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.modal textarea{
+  width: 345px;
+  height: 210px;
+}
+
+.modal button, button.simple {
+  margin: 5px;
 }

@@ -38,8 +38,8 @@ const title = document.getElementById('title')
 const SiteImage = document.querySelectorAll('#title > img')
 const btnScrollToTop = document.getElementById('scrollToTop')
 
-const worker = new Worker('worker.js?sisku=1632809328830')
-const sorcuWorker = new Worker('sorcuWorker.js?sisku=1632809328830')
+const worker = new Worker('worker.js?sisku=1633271934022')
+const sorcuWorker = new Worker('sorcuWorker.js?sisku=1633271934022')
 
 content.onscroll = () => {
   if (content.scrollTop > 200) {
@@ -2245,7 +2245,7 @@ const pollyParams = {
     tc: "tʃ",
     dz: "ʣ",
     ts: "ʦ",
-    "r(?=[^aeiouyḁąęǫ])": "ɹɹ",
+    "r(?=[^aeiouyḁąęǫ])": "rr.",
     "r(?=[aeiouyḁąęǫ])": "ɹ",
     n: "n",
     m: "m",
@@ -2259,6 +2259,7 @@ const pollyParams = {
   }
 }
 
+window.pollyParams = pollyParams
 function PollyPlayer(params) {
   AWS.config.credentials = new AWS.CognitoIdentityCredentials({
     IdentityPoolId: params.IdentityPoolId,
@@ -2300,7 +2301,7 @@ function PollyPlayer(params) {
     for (let w = 0; w < words.length; w++) {
       const currentWord = krulermorna(words[w])
       const nextWord = words[w + 1]
-      if (currentWord == ".i" || currentWord == "ni'o") {
+      if (["i", ".i", "ni'o"].includes(currentWord)) {
         output.push("</s>\n<s>");
       } else if (currentWord[0] == ".") {
         output.push('<break time="20ms" strength="x-weak" />');
@@ -2325,7 +2326,7 @@ function PollyPlayer(params) {
       //   output.push(`<phoneme alphabet="ipa" ph="${ph.join("")}">${currentWord}</phoneme>`);
       //   output.push(`</prosody>`);
       // }else{
-        output.push(`<phoneme alphabet="ipa" ph="${ph.join("")}">${currentWord}</phoneme>`);
+      output.push(`<phoneme alphabet="ipa" ph="${ph.join("")}">${currentWord}</phoneme>`);
       // }
       if (currentWord[currentWord.length - 1] == "." || famymaho.includes(currentWord)) {
         output.push(`<break time="20ms" strength="x-weak" />`);
@@ -2394,8 +2395,91 @@ function PollyPlayer(params) {
   }
 }
 
-const polly = PollyPlayer(pollyParams);
+let polly = PollyPlayer(window.pollyParams);
 
 window.runSpeakableAudio = function (textToSpeak, dontSpeak = false) {
   polly(textToSpeak, dontSpeak);
 }
+
+let audioParams
+try {
+  audioParams = JSON.parse(localStorage.getItem(`audioParams`))
+} catch (error) { }
+
+if (audioParams && audioParams.IdentityPoolId) {
+  window.pollyParams = audioParams
+} else {
+  localStorage.setItem(`audioParams`, JSON.stringify(window.pollyParams))
+}
+document.getElementById('audioParamsTextarea').value = JSON.stringify(window.pollyParams, null, 2)
+
+  
+  ; (function () {
+    function closeModal() {
+      
+      var closeButton = document.getElementsByClassName('jsModalClose');
+      var closeOverlay = document.getElementsByClassName('jsOverlay');
+
+      
+      for (var i = 0; i < closeButton.length; i++) {
+        closeButton[i].onclick = function () {
+          var modalWindow = this.parentNode.parentNode;
+
+          modalWindow.classList ? modalWindow.classList.remove('open') : modalWindow.className = modalWindow.className.replace(new RegExp('(^|\\b)' + 'open'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+        }
+      }
+
+      
+      for (var i = 0; i < closeOverlay.length; i++) {
+        closeOverlay[i].onclick = function () {
+          var modalWindow = this.parentNode;
+
+          modalWindow.classList ? modalWindow.classList.remove('open') : modalWindow.className = modalWindow.className.replace(new RegExp('(^|\\b)' + 'open'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+        }
+      }
+
+    }
+
+    
+    function ready(fn) {
+      if (document.readyState != 'loading') {
+        fn();
+      } else {
+        document.addEventListener('DOMContentLoaded', fn);
+      }
+    }
+
+    
+    ready(closeModal);
+  }());
+
+const textArea = document.getElementById('audioParamsTextarea');
+textArea.addEventListener('input', () => {
+  try {
+    const json = { ...pollyParams, ...window.pollyParams, ...JSON.parse(textArea.value) }
+    localStorage.setItem('audioParams', JSON.stringify(json))
+    polly = PollyPlayer(json);
+    localStorage.setItem('cachedAudio', null)
+  } catch (error) { }
+})
+
+function resetAudioParams() {
+  const json = pollyParams
+  localStorage.setItem('audioParams', JSON.stringify(json))
+  textArea.value = JSON.stringify(json, null, 2)
+  polly = PollyPlayer(json);
+  localStorage.setItem('cachedAudio', null)
+}
+
+
+function doc_keyUp(e) {
+
+  // this would test for whichever key is 40 (down arrow) and the ctrl key at the same time
+  if (e.ctrlKey && e.key === 'ArrowDown') {
+    // call your function to do the thing
+    var modalWindow = document.getElementById('jsModal');
+    modalWindow.classList ? modalWindow.classList.add('open') : modalWindow.className += ' ' + 'open';
+  }
+}
+
+document.addEventListener('keyup', doc_keyUp, false);
