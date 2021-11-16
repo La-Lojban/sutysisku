@@ -565,9 +565,11 @@ code {
     right: 4px;
     border-radius: 0 20% 0% 0%;
   }
-  #title > #site-title > font {
+
+  [data-jufra='titlelogo-inner'] {
     width: auto;
   }
+
   #kicne1,
   #kicne2 {
     display: none;
@@ -617,7 +619,7 @@ code {
   #title > #site-title > img:nth-child(1) ~ img {
     display: none;
   }
-  #title > #site-title > font {
+  [data-jufra='titlelogo-inner'] {
     display: none;
   }
   #kicne1 {
@@ -835,12 +837,21 @@ sub {
   
   cursor: pointer;
   color: #ffffff;
-  padding: 4px 10px 3px 10px;
+  padding: 4px 10px 4px 10px;
   margin: 0 0 0 8px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #263666;
   height: 24px;
 }
+.tutci.klesi {
+  padding: 0 10px 0 10px;
+}
+
+.tutci.klesi > * {
+  line-height: 24px;
+  vertical-align: middle;
+}
+
 .tutci:focus {
   outline: 0;
 }
@@ -1231,21 +1242,21 @@ sub {
 
 @font-face {
   font-family: 'Libertine';
-  src: url('../assets/fonts/linux-libertine/LinLibertine_R.otf?sisku=1633609187735');
+  src: url('../assets/fonts/linux-libertine/LinLibertine_R.otf');
 }
 @font-face {
   font-family: 'Libertine';
-  src: url('../assets/fonts/linux-libertine/LinLibertine_RI.otf?sisku=1633609187735');
+  src: url('../assets/fonts/linux-libertine/LinLibertine_RI.otf');
   font-style: italic;
 }
 @font-face {
   font-family: 'Libertine';
-  src: url('../assets/fonts/linux-libertine/LinLibertine_RB.otf?sisku=1633609187735');
+  src: url('../assets/fonts/linux-libertine/LinLibertine_RB.otf');
   font-weight: bold;
 }
 @font-face {
   font-family: 'Libertine';
-  src: url('../assets/fonts/linux-libertine/LinLibertine_RBI.otf?sisku=1633609187735');
+  src: url('../assets/fonts/linux-libertine/LinLibertine_RBI.otf');
   font-style: italic;
   font-weight: bold;
 }
@@ -1253,7 +1264,7 @@ sub {
 
 @font-face {
   font-family: 'crisa-regular';
-  src: url('../assets/fonts/crisa-regular.otf?sisku=1633609187735');
+  src: url('../assets/fonts/crisa-regular.otf');
 }
 .valsi.zbalermorna {
   max-width: 50%;
@@ -1285,7 +1296,6 @@ sub {
   border-radius: 3px;
   white-space: nowrap;
 }
-
 
 .modal {
   position: fixed;
@@ -1346,17 +1356,19 @@ sub {
   border-radius: 3px;
 }
 
-.modal textarea{
+.modal textarea {
   width: 345px;
   height: 210px;
 }
 
-.modal button, button.simple {
+.modal button,
+button.simple {
   margin: 5px;
 }
 
 @media (prefers-color-scheme: dark) {
-.content{
-  background: #000000;
-}
+  .content {
+    background-image: initial;
+    background-color: rgb(40, 40, 40) !important;
+  }
 }
