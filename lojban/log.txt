@@ -1,0 +1,23 @@
+
+assets by status 234 KiB [cached] 5 assets
+runtime modules 6.95 KiB 10 modules
+orphan modules 2.07 KiB [orphan] 1 module
+cacheable modules 256 KiB
+  modules by path ./build/sutysisku/lojban/*.js 159 KiB
+    ./build/sutysisku/lojban/cmaxes.js 25.8 KiB [built] [code generated]
+    ./build/sutysisku/lojban/coi.js 4.75 KiB [built] [code generated]
+    ./build/sutysisku/lojban/worker.js 36 KiB [built] [code generated] [1 error]
+    ./build/sutysisku/lojban/socket.io.js 92.6 KiB [built] [code generated]
+  ./build/sutysisku/lojban/index.js + 1 modules 83 KiB [built] [code generated]
+  ./build/sutysisku/lojban/asql/indexeddb-main-thread-worker-c78b01c2.js 13.6 KiB [built] [code generated]
+
+ERROR in ./build/sutysisku/lojban/worker.js 854:5
+Module parse failed: Unexpected token (854:5)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+| 				def.w.search(`\\b(${query_apos}|${query})`) >= 0 ||
+| 				def.w.search(`(${query_apos}|${query})\\b`) >= 0
+> 			) {
+| 				searchPriorityGroups.querySemiMatch.push(def)
+| 			} else if (def.d && typeof def.d === 'string') {
+
+webpack 5.60.0 compiled with 1 error in 495 ms
