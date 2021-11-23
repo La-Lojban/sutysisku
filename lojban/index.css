@@ -87,7 +87,7 @@ body {
   overflow: hidden;
   margin: 0;
   height: 100vh;
-  
+  /* height: calc(var(--vh, 1vh) * 100); */
 }
 #outp {
   padding-bottom: 10px;
@@ -140,7 +140,46 @@ h4 {
   color: inherit;
 }
 
+/*
+.border_gradient {
+border: 8px solid #000;
+padding: 5px 5px 5px 15px;
+width: 300px;
+}
 
+#grad:after  {
+  content: '';
+  position: absolute;
+  background-color: rgba(0,0,0, .7);
+  top: 8px;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  background-image: -webkit-gradient(
+          linear,right bottom,left bottom,
+          color-stop(.75, #52882d),
+          color-stop(0,  #eee)
+  );
+  border: 1px solid #fff;
+}
+div {
+display: block;
+height: 200px;
+width: 500px;
+border: solid 1px #CCC;
+border-bottom: none;
+position: relative;
+}
+div:after {
+content:"";
+background: -webkit-linear-gradient(left, rgba(92, 7, 52, 1) 0%, rgba(134, 29, 84, 1) 12%, rgba(255, 93, 177, 1) 47%, rgba(83, 0, 30, 1) 100%);
+display: block;
+height:10px;
+width: 500px;
+position: absolute;
+bottom: 0;
+}
+*/
 
 code {
   border: 1px solid #aaa;
@@ -179,17 +218,18 @@ code {
 
 .noselect {
   -webkit-touch-callout: none;
-  
+  /* iOS Safari */
   -webkit-user-select: none;
-  
+  /* Safari */
   -khtml-user-select: none;
-  
+  /* Konqueror HTML */
   -moz-user-select: none;
-  
+  /* Firefox */
   -ms-user-select: none;
-  
+  /* Internet Explorer/Edge */
   user-select: none;
-  
+  /* Non-prefixed version, currently
+                            supported by Chrome and Opera */
 }
 
 .nalojbo {
@@ -199,15 +239,15 @@ code {
 .valsi,
 .citri {
   padding: 0;
-  
+  /* These are technically the same, but use both */
   overflow-wrap: break-word;
   word-wrap: break-word;
   -ms-word-break: break-all;
-  
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
   word-break: break-all;
-  
+  /* Instead use this non-standard one: */
   word-break: break-word;
-  
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
   -ms-hyphens: auto;
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
@@ -216,9 +256,9 @@ code {
 
 .valsi pre {
   white-space: pre-wrap;
-  
+  /* Since CSS 2.1 */
   word-wrap: break-word;
-  
+  /* Internet Explorer 5.5+ */
 }
 
 .definition {
@@ -245,25 +285,25 @@ code {
   padding: 9px;
   text-align: justify;
   background: white;
-  
+  /**/
 }
 
-
+/**/
 
 .termouter:hover {
-  
+  /**/
   outline: #999999 solid 3px;
-  
-  
+  /**/
+  /**/
   z-index: 2;
 }
 
 .terminner {
-  
+  /**/
   border-top: solid 1px #ccc;
   border-right: solid 1px #ccc;
   border-bottom: solid 1px #ccc;
-  
+  /* box-shadow: 3px 3px 1px #ccc; */
   --tw-ring-offset-shadow: 0 0 transparent;
   --tw-ring-shadow: 0 0 transparent;
   --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -309,7 +349,13 @@ code {
 }
 
 .cnano-dasri {
-  
+  /* background: linear-gradient(
+    to bottom,
+    rgba(56,136,233, 1) 0%,
+    rgba(34,87,213, 1) 8%,
+    rgba(38,99,224, 1) 92%,
+    rgba(25,65,165, 1) 100%
+  ); */
   background: linear-gradient(
     180deg,
     #0997ff,
@@ -507,7 +553,9 @@ code {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-
+/* #ciska:not(.granim-css) {
+  padding-right: 30px;
+} */
 
 #title {
   cursor: default;
@@ -518,10 +566,10 @@ code {
 }
 
 #citri {
-  
+  /* display: inline; */
   padding: 0 3px 0 3px;
   margin: 8px 12px 6px;
-  
+  /* margin-bottom: 0; */
 }
 
 @media screen and (min-width: 700px) {
@@ -547,7 +595,11 @@ code {
   overflow: hidden;
 }
 
-
+/* #scrollableContent {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+} */
 
 @media screen and (min-width: 510px) and (max-width: 710px) {
   #galtu-dasri {
@@ -612,7 +664,7 @@ code {
     line-height: 150%;
   }
   #title > #site-title > img {
-    
+    /* padding: 0 4px 0 10px; */
     width: 23px;
     height: 23px;
   }
@@ -660,9 +712,9 @@ code {
   padding-left: 5px;
   padding-right: 5px;
   overflow: auto;
-  
+  /*height:100%;*/
   box-sizing: border-box;
-  
+  /**/
   background: #222222
     linear-gradient(
       -45deg,
@@ -675,9 +727,15 @@ code {
       transparent
     ) !important;
   background-size: 40px 40px !important;
-  
-  
-  
+  /**/
+  /*background: radial-gradient(circle farthest-side at 0% 50%, #FDBF00 23.5%, rgba(240, 166, 17, 0) 0)21px 30px,
+radial-gradient(circle farthest-side at 0% 50%, #BB7000 24%, rgba(240, 166, 17, 0) 0)19px 30px,
+linear-gradient(#FDBF00 14%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 85%, #FDBF00 0)0 0,
+linear-gradient(150deg, #FDBF00 24%, #BB7000 0, #BB7000 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, #BB7000 0, #BB7000 76%, #FDBF00 0)0 0,
+linear-gradient(30deg, #FDBF00 24%, #BB7000 0, #BB7000 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, #BB7000 0, #BB7000 76%, #FDBF00 0)0 0,
+linear-gradient(90deg, #BB7000 2%, #FDBF00 0, #FDBF00 98%, #BB7000 0%)0 0 #FDBF00;
+background-size: 40px 60px;*/
+  /**/
 }
 
 .content-panel {
@@ -690,9 +748,9 @@ code {
 .valsi,
 .definition:not(.subdefinitions),
 .rafsi {
-  
+  /* margin-bottom: 15px; */
   font-family: Libertine, Tahoma, Lato, sans-serif;
-  
+  /* font-size: 110%; */
 }
 
 .citri {
@@ -747,7 +805,7 @@ ul > li > a {
   height: 24px;
   width: 100%;
   top: 42px;
-  
+  /* bottom: 0px; */
   left: 0px;
   position: relative;
   background: white;
@@ -759,11 +817,11 @@ ul > li > a {
 #velsku {
   text-align: left;
   margin: 0;
-  
-  
-  
+  /* display: none; */
+  /* justify-content: baseline; */
+  /* align-items: flex-start; */
   padding: 0;
-  
+  /* height: 28px; */
   width: 100%;
   bottom: 0px;
   left: 0px;
@@ -834,7 +892,7 @@ sub {
   background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
   border-radius: 3px;
   border: 1px solid #000000;
-  
+  /* display: inline; */
   cursor: pointer;
   color: #ffffff;
   padding: 4px 10px 4px 10px;
@@ -906,7 +964,7 @@ sub {
 }
 
 .klesi {
-  
+  /* font-size: 90%; */
   font-style: italic;
   white-space: nowrap;
   overflow: hidden;
@@ -923,7 +981,7 @@ sub {
 
 .segerna {
   white-space: nowrap;
-  
+  /* text-decoration: underline; */
 }
 
 .sampu {
@@ -994,34 +1052,34 @@ sub {
 
 .arxivo-tutci:hover,
 .arxivo-tutci-hover {
-  
+  /* border:1px solid #967d09; */
   color: #000;
 }
 
 .DIV_1 {
-  
-  
-  
-  
+  /* border-collapse: collapse; */
+  /* bottom: 0px; */
+  /* box-shadow: rgb(255, 255, 204) 0px 0px 1px 0px inset; */
+  /* box-sizing: border-box; */
   display: inline-block;
-  
-  
+  /*height: 150px;*/
+  /* left: 0px; */
   position: relative;
-  
-  
-  
-  
-  
-  
-  
-  
+  /* right: 0px; */
+  /* text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px; */
+  /* top: 0px; */
+  /* width: 150px;*/
+  /* perspective-origin: 75px 75px; */
+  /* transform-origin: 75px 75px; */
+  /* user-select: none; */
+  /* font: normal normal normal normal 14px / 15.4px "Segoe UI", "Open Sans", sans-serif, serif; */
   margin: 5px;
-  
+  /*outline: rgb(153, 153, 153) solid 1px;*/
 }
 
 .DIV_1:hover {
   outline: rgb(153, 153, 153) solid 3px;
-  
+  /* transform: rotate3d(0,1,0,35deg); */
 }
 
 .DIV_1:active {
@@ -1030,29 +1088,39 @@ sub {
 }
 
 .DIV_2 {
-  
-  
-  
+  /* border-collapse: collapse;
+bottom: 0px;
+box-sizing: border-box; */
+  /* height: 150px;*/
+  /* left: 0px; */
   position: absolute;
-  
-  
-  
+  /* right: 0px;
+text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px;
+top: 0px; */
+  /*width: 150px;*/
+  /* perspective-origin: 75px 75px;
+transform-origin: 75px 75px;
+user-select: none;
+font: normal normal normal normal 14px / 15.4px "Segoe UI", "Open Sans", sans-serif, serif;
+overflow: hidden; */
 }
 
 .SPAN_3 {
-  
+  /* border-collapse: collapse; */
   bottom: 0px;
   box-sizing: border-box;
-  
-  
-  
+  /* display: block; */
+  /* height: 53px;*/
+  /*left: 10px;*/
   position: absolute;
   right: 0px;
-  
-  
-  
-  
-  
+  /* text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px; */
+  /*top: 97px;*/
+  /*width: 140px;*/
+  /* z-index: 999; */
+  /* perspective-origin: 70px 26.5px;
+transform-origin: 70px 26.5px;
+user-select: none; */
   background: rgba(255, 255, 255, 0.6) none repeat scroll 0% 0% / auto
     padding-box border-box;
   font: normal normal normal normal 14px / 15.4px 'Segoe UI', 'Open Sans',
@@ -1063,9 +1131,10 @@ sub {
 }
 
 .B_4 {
-  
+  /* border-collapse: collapse;
+box-sizing: border-box; */
   text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px;
-  
+  /* user-select: none; */
   font: normal normal bold normal 14px / 15.4px 'Segoe UI', 'Open Sans',
     sans-serif, serif;
 }
@@ -1074,31 +1143,36 @@ sub {
   display: inline-block;
   border-collapse: collapse;
   box-sizing: border-box;
-  
+  /*color: rgb(32, 134, 191);*/
   text-decoration: none;
   text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px;
-  
+  /*column-rule-color: rgb(32, 134, 191);*/
   user-select: none;
   border: 0;
   font: normal normal normal normal 14px / 15.4px 'Segoe UI', 'Open Sans',
     sans-serif, serif;
-  
+  /*outline: rgb(32, 134, 191) none 0px;*/
 }
 
 .DIV_8 {
-  
-  
-  
-  
-  
-  
+  /* border-collapse: collapse;
+box-sizing: border-box;
+/*color: rgb(32, 134, 191);*/
+  /* height: 150px;*/
+  /* text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px; */
+  /* width: 150px;*/
+  /* column-rule-color: rgb(32, 134, 191);
+perspective-origin: 75px 75px;
+transform-origin: 75px 75px;
+user-select: none; */
+  /*background: rgba(0, 0, 0, 0) no-repeat scroll 0% 0% / cover padding-box border-box;*/
   background-position: center;
   background-color: #ffffff;
   background-size: contain;
   background-repeat: no-repeat;
-  
-  
-  
+  /*border: 0px none rgb(32, 134, 191);*/
+  /* font: normal normal normal normal 14px / 15.4px "Segoe UI", "Open Sans", sans-serif, serif; */
+  /*outline: rgb(32, 134, 191) none 0px;*/
 }
 
 #leitutci {
@@ -1130,7 +1204,7 @@ sub {
   margin-top: 0px;
   margin-bottom: 15px;
   text-align: left;
-  
+  /*background: #F7F7F2;*/
   background: white;
   border-bottom-left-radius: 7px 7px;
   border-bottom-right-radius: 7px 7px;
@@ -1200,7 +1274,7 @@ sub {
 
 #scrollToTop:hover {
   background-color: #555;
-  
+  /* Add a dark-grey background on hover */
 }
 
 .se-tcidu-pixra {
@@ -1261,7 +1335,7 @@ sub {
   font-weight: bold;
 }
 
-
+/**/
 @font-face {
   font-family: 'crisa-regular';
   src: url('../assets/fonts/crisa-regular.otf');
@@ -1273,16 +1347,16 @@ sub {
   font-size: 130%;
   color: #888;
   font-weight: 100;
-  white-space: -moz-pre-wrap; 
-  white-space: -hp-pre-wrap; 
-  white-space: -o-pre-wrap; 
-  white-space: -pre-wrap; 
-  white-space: pre-wrap; 
-  white-space: pre-line; 
-  word-wrap: break-word; 
-  
+  white-space: -moz-pre-wrap; /* Mozilla */
+  white-space: -hp-pre-wrap; /* HP printers */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
+  /* word-break: break-all; */
 }
-
+/**/
 .display-block {
   display: block;
 }
