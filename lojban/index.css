@@ -1362,13 +1362,19 @@ user-select: none; */
 }
 
 .terbricmi {
-  border-style: dashed;
-  border-width: 1px;
-  padding: 0 7px 0 6px;
+  /* border-style: dashed; */
+  /* border-width: 1px; */
+  padding: 1px;
   margin: 0 2px 0 2px;
-  border-color: #aaa;
+  /* border-color: #aaa; */
   border-radius: 3px;
   white-space: nowrap;
+}
+.terbricmi:first-child {
+  margin: 0 2px 0 0;
+}
+.terbricmi >* {
+  margin: 0 6px 0 6px;
 }
 
 .modal {
