@@ -1369,24 +1369,14 @@ user-select: none; */
   /* border-color: #aaa; */
   border-radius: 3px;
   white-space: nowrap;
-  position: relative;
-  z-index: 2;
 }
 .terbricmi:first-child {
   margin: 0 2px 0 0;
 }
-.terbricmi > * {
+.terbricmi >* {
   margin: 0 6px 0 6px;
 }
-.veljvocmiterjonmaho {
-  position: relative;
-  z-index: 0;
-  background: #efebcd;
-  padding: 2px 8px 2px 8px;
-  border-radius: 7px;
-  margin: 0 -9px 0 -9px;
-  border: 1px solid #cfc368;
-}
+
 .modal {
   position: fixed;
   top: 0;
