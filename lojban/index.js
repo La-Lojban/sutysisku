@@ -1,2 +1,2858 @@
-/*! For license information please see index.js.LICENSE.txt */
-(()=>{var e,t,n={819:function(e){e.exports=function(){"use strict";function t(e){return t="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},t(e)}function n(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function r(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function i(e,t,n){return t&&r(e.prototype,t),n&&r(e,n),e}function s(){return s=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},s.apply(this,arguments)}function o(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&c(e,t)}function a(e){return a=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)},a(e)}function c(e,t){return c=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e},c(e,t)}function l(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],(function(){}))),!0}catch(e){return!1}}function u(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}function d(e,t){if(t&&("object"==typeof t||"function"==typeof t))return t;if(void 0!==t)throw new TypeError("Derived constructors may only return object or undefined");return u(e)}function p(e){var t=l();return function(){var n,r=a(e);if(t){var i=a(this).constructor;n=Reflect.construct(r,arguments,i)}else n=r.apply(this,arguments);return d(this,n)}}function h(e,t){for(;!Object.prototype.hasOwnProperty.call(e,t)&&null!==(e=a(e)););return e}function f(e,t,n){return f="undefined"!=typeof Reflect&&Reflect.get?Reflect.get:function(e,t,n){var r=h(e,t);if(r){var i=Object.getOwnPropertyDescriptor(r,t);return i.get?i.get.call(n):i.value}},f(e,t,n||e)}function g(e,t){if(e){if("string"==typeof e)return m(e,t);var n=Object.prototype.toString.call(e).slice(8,-1);return"Object"===n&&e.constructor&&(n=e.constructor.name),"Map"===n||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?m(e,t):void 0}}function m(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,r=new Array(t);n<t;n++)r[n]=e[n];return r}function y(e,t){var n="undefined"!=typeof Symbol&&e[Symbol.iterator]||e["@@iterator"];if(!n){if(Array.isArray(e)||(n=g(e))||t&&e&&"number"==typeof e.length){n&&(e=n);var r=0,i=function(){};return{s:i,n:function(){return r>=e.length?{done:!0}:{done:!1,value:e[r++]}},e:function(e){throw e},f:i}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var s,o=!0,a=!1;return{s:function(){n=n.call(e)},n:function(){var e=n.next();return o=e.done,e},e:function(e){a=!0,s=e},f:function(){try{o||null==n.return||n.return()}finally{if(a)throw s}}}}var v=/^(?:(?![^:@]+:[^:@\/]*@)(http|https|ws|wss):\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?((?:[a-f0-9]{0,4}:){2,7}[a-f0-9]{0,4}|[^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/,k=["source","protocol","authority","userInfo","user","password","host","port","relative","path","directory","file","query","anchor"],b=function(e){var t=e,n=e.indexOf("["),r=e.indexOf("]");-1!=n&&-1!=r&&(e=e.substring(0,n)+e.substring(n,r).replace(/:/g,";")+e.substring(r,e.length));for(var i=v.exec(e||""),s={},o=14;o--;)s[k[o]]=i[o]||"";return-1!=n&&-1!=r&&(s.source=t,s.host=s.host.substring(1,s.host.length-1).replace(/;/g,":"),s.authority=s.authority.replace("[","").replace("]","").replace(/;/g,":"),s.ipv6uri=!0),s.pathNames=w(s,s.path),s.queryKey=E(s,s.query),s};function w(e,t){var n=/\/{2,9}/g,r=t.replace(n,"/").split("/");return"/"!=t.substr(0,1)&&0!==t.length||r.splice(0,1),"/"==t.substr(t.length-1,1)&&r.splice(r.length-1,1),r}function E(e,t){var n={};return t.replace(/(?:^|&)([^&=]*)=?([^&]*)/g,(function(e,t,r){t&&(n[t]=r)})),n}function $(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"",n=arguments.length>2?arguments[2]:void 0,r=e;n=n||"undefined"!=typeof location&&location,null==e&&(e=n.protocol+"//"+n.host),"string"==typeof e&&("/"===e.charAt(0)&&(e="/"===e.charAt(1)?n.protocol+e:n.host+e),/^(https?|wss?):\/\//.test(e)||(e=void 0!==n?n.protocol+"//"+e:"https://"+e),r=b(e)),r.port||(/^(http|ws)$/.test(r.protocol)?r.port="80":/^(http|ws)s$/.test(r.protocol)&&(r.port="443")),r.path=r.path||"/";var i=-1!==r.host.indexOf(":")?"["+r.host+"]":r.host;return r.id=r.protocol+"://"+i+":"+r.port+t,r.href=r.protocol+"://"+i+(n&&n.port===r.port?"":":"+r.port),r}var x={exports:{}};try{x.exports="undefined"!=typeof XMLHttpRequest&&"withCredentials"in new XMLHttpRequest}catch(e){x.exports=!1}var C=x.exports,_="undefined"!=typeof self?self:"undefined"!=typeof window?window:Function("return this")();function L(e){var t=e.xdomain;try{if("undefined"!=typeof XMLHttpRequest&&(!t||C))return new XMLHttpRequest}catch(e){}if(!t)try{return new(_[["Active"].concat("Object").join("X")])("Microsoft.XMLHTTP")}catch(e){}}function j(e){for(var t=arguments.length,n=new Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];return n.reduce((function(t,n){return e.hasOwnProperty(n)&&(t[n]=e[n]),t}),{})}var A=setTimeout,S=clearTimeout;function T(e,t){t.useNativeTimers?(e.setTimeoutFn=A.bind(_),e.clearTimeoutFn=S.bind(_)):(e.setTimeoutFn=setTimeout.bind(_),e.clearTimeoutFn=clearTimeout.bind(_))}var R=O;function O(e){if(e)return I(e)}function I(e){for(var t in O.prototype)e[t]=O.prototype[t];return e}O.prototype.on=O.prototype.addEventListener=function(e,t){return this._callbacks=this._callbacks||{},(this._callbacks["$"+e]=this._callbacks["$"+e]||[]).push(t),this},O.prototype.once=function(e,t){function n(){this.off(e,n),t.apply(this,arguments)}return n.fn=t,this.on(e,n),this},O.prototype.off=O.prototype.removeListener=O.prototype.removeAllListeners=O.prototype.removeEventListener=function(e,t){if(this._callbacks=this._callbacks||{},0==arguments.length)return this._callbacks={},this;var n,r=this._callbacks["$"+e];if(!r)return this;if(1==arguments.length)return delete this._callbacks["$"+e],this;for(var i=0;i<r.length;i++)if((n=r[i])===t||n.fn===t){r.splice(i,1);break}return 0===r.length&&delete this._callbacks["$"+e],this},O.prototype.emit=function(e){this._callbacks=this._callbacks||{};for(var t=new Array(arguments.length-1),n=this._callbacks["$"+e],r=1;r<arguments.length;r++)t[r-1]=arguments[r];if(n){r=0;for(var i=(n=n.slice(0)).length;r<i;++r)n[r].apply(this,t)}return this},O.prototype.emitReserved=O.prototype.emit,O.prototype.listeners=function(e){return this._callbacks=this._callbacks||{},this._callbacks["$"+e]||[]},O.prototype.hasListeners=function(e){return!!this.listeners(e).length};var N=Object.create(null);N.open="0",N.close="1",N.ping="2",N.pong="3",N.message="4",N.upgrade="5",N.noop="6";var B=Object.create(null);Object.keys(N).forEach((function(e){B[N[e]]=e}));for(var q={type:"error",data:"parser error"},P="function"==typeof Blob||"undefined"!=typeof Blob&&"[object BlobConstructor]"===Object.prototype.toString.call(Blob),M="function"==typeof ArrayBuffer,V=function(e){return"function"==typeof ArrayBuffer.isView?ArrayBuffer.isView(e):e&&e.buffer instanceof ArrayBuffer},z=function(e,t,n){var r=e.type,i=e.data;return P&&i instanceof Blob?t?n(i):H(i,n):M&&(i instanceof ArrayBuffer||V(i))?t?n(i):H(new Blob([i]),n):n(N[r]+(i||""))},H=function(e,t){var n=new FileReader;return n.onload=function(){var e=n.result.split(",")[1];t("b"+e)},n.readAsDataURL(e)},D="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",U="undefined"==typeof Uint8Array?[]:new Uint8Array(256),F=0;F<D.length;F++)U[D.charCodeAt(F)]=F;var J,W=function(e){var t,n,r,i,s,o=.75*e.length,a=e.length,c=0;"="===e[e.length-1]&&(o--,"="===e[e.length-2]&&o--);var l=new ArrayBuffer(o),u=new Uint8Array(l);for(t=0;t<a;t+=4)n=U[e.charCodeAt(t)],r=U[e.charCodeAt(t+1)],i=U[e.charCodeAt(t+2)],s=U[e.charCodeAt(t+3)],u[c++]=n<<2|r>>4,u[c++]=(15&r)<<4|i>>2,u[c++]=(3&i)<<6|63&s;return l},K="function"==typeof ArrayBuffer,Y=function(e,t){if("string"!=typeof e)return{type:"message",data:X(e,t)};var n=e.charAt(0);return"b"===n?{type:"message",data:G(e.substring(1),t)}:B[n]?e.length>1?{type:B[n],data:e.substring(1)}:{type:B[n]}:q},G=function(e,t){if(K){var n=W(e);return X(n,t)}return{base64:!0,data:e}},X=function(e,t){return"blob"===t&&e instanceof ArrayBuffer?new Blob([e]):e},Z=String.fromCharCode(30),Q=function(e,t){var n=e.length,r=new Array(n),i=0;e.forEach((function(e,s){z(e,!1,(function(e){r[s]=e,++i===n&&t(r.join(Z))}))}))},ee=function(e,t){for(var n=e.split(Z),r=[],i=0;i<n.length;i++){var s=Y(n[i],t);if(r.push(s),"error"===s.type)break}return r},te=4,ne=function(e){o(r,e);var t=p(r);function r(e){var i;return n(this,r),(i=t.call(this)).writable=!1,T(u(i),e),i.opts=e,i.query=e.query,i.readyState="",i.socket=e.socket,i}return i(r,[{key:"onError",value:function(e,t){var n=new Error(e);return n.type="TransportError",n.description=t,f(a(r.prototype),"emit",this).call(this,"error",n),this}},{key:"open",value:function(){return"closed"!==this.readyState&&""!==this.readyState||(this.readyState="opening",this.doOpen()),this}},{key:"close",value:function(){return"opening"!==this.readyState&&"open"!==this.readyState||(this.doClose(),this.onClose()),this}},{key:"send",value:function(e){"open"===this.readyState&&this.write(e)}},{key:"onOpen",value:function(){this.readyState="open",this.writable=!0,f(a(r.prototype),"emit",this).call(this,"open")}},{key:"onData",value:function(e){var t=Y(e,this.socket.binaryType);this.onPacket(t)}},{key:"onPacket",value:function(e){f(a(r.prototype),"emit",this).call(this,"packet",e)}},{key:"onClose",value:function(){this.readyState="closed",f(a(r.prototype),"emit",this).call(this,"close")}}]),r}(R),re="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_".split(""),ie=64,se={},oe=0,ae=0;function ce(e){var t="";do{t=re[e%ie]+t,e=Math.floor(e/ie)}while(e>0);return t}function le(e){var t=0;for(ae=0;ae<e.length;ae++)t=t*ie+se[e.charAt(ae)];return t}function ue(){var e=ce(+new Date);return e!==J?(oe=0,J=e):e+"."+ce(oe++)}for(;ae<ie;ae++)se[re[ae]]=ae;ue.encode=ce,ue.decode=le;var de=ue,pe={encode:function(e){var t="";for(var n in e)e.hasOwnProperty(n)&&(t.length&&(t+="&"),t+=encodeURIComponent(n)+"="+encodeURIComponent(e[n]));return t},decode:function(e){for(var t={},n=e.split("&"),r=0,i=n.length;r<i;r++){var s=n[r].split("=");t[decodeURIComponent(s[0])]=decodeURIComponent(s[1])}return t}},he=function(e){o(r,e);var t=p(r);function r(){var e;return n(this,r),(e=t.apply(this,arguments)).polling=!1,e}return i(r,[{key:"name",get:function(){return"polling"}},{key:"doOpen",value:function(){this.poll()}},{key:"pause",value:function(e){var t=this;this.readyState="pausing";var n=function(){t.readyState="paused",e()};if(this.polling||!this.writable){var r=0;this.polling&&(r++,this.once("pollComplete",(function(){--r||n()}))),this.writable||(r++,this.once("drain",(function(){--r||n()})))}else n()}},{key:"poll",value:function(){this.polling=!0,this.doPoll(),this.emit("poll")}},{key:"onData",value:function(e){var t=this,n=function(e){if("opening"===t.readyState&&"open"===e.type&&t.onOpen(),"close"===e.type)return t.onClose(),!1;t.onPacket(e)};ee(e,this.socket.binaryType).forEach(n),"closed"!==this.readyState&&(this.polling=!1,this.emit("pollComplete"),"open"===this.readyState&&this.poll())}},{key:"doClose",value:function(){var e=this,t=function(){e.write([{type:"close"}])};"open"===this.readyState?t():this.once("open",t)}},{key:"write",value:function(e){var t=this;this.writable=!1,Q(e,(function(e){t.doWrite(e,(function(){t.writable=!0,t.emit("drain")}))}))}},{key:"uri",value:function(){var e=this.query||{},t=this.opts.secure?"https":"http",n="";!1!==this.opts.timestampRequests&&(e[this.opts.timestampParam]=de()),this.supportsBinary||e.sid||(e.b64=1),this.opts.port&&("https"===t&&443!==Number(this.opts.port)||"http"===t&&80!==Number(this.opts.port))&&(n=":"+this.opts.port);var r=pe.encode(e);return t+"://"+(-1!==this.opts.hostname.indexOf(":")?"["+this.opts.hostname+"]":this.opts.hostname)+n+this.opts.path+(r.length?"?"+r:"")}}]),r}(ne);function fe(){}var ge=null!=new L({xdomain:!1}).responseType,me=function(e){o(r,e);var t=p(r);function r(e){var i;if(n(this,r),i=t.call(this,e),"undefined"!=typeof location){var s="https:"===location.protocol,o=location.port;o||(o=s?"443":"80"),i.xd="undefined"!=typeof location&&e.hostname!==location.hostname||o!==e.port,i.xs=e.secure!==s}var a=e&&e.forceBase64;return i.supportsBinary=ge&&!a,i}return i(r,[{key:"request",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};return s(e,{xd:this.xd,xs:this.xs},this.opts),new ye(this.uri(),e)}},{key:"doWrite",value:function(e,t){var n=this,r=this.request({method:"POST",data:e});r.on("success",t),r.on("error",(function(e){n.onError("xhr post error",e)}))}},{key:"doPoll",value:function(){var e=this,t=this.request();t.on("data",this.onData.bind(this)),t.on("error",(function(t){e.onError("xhr poll error",t)})),this.pollXhr=t}}]),r}(he),ye=function(e){o(r,e);var t=p(r);function r(e,i){var s;return n(this,r),T(u(s=t.call(this)),i),s.opts=i,s.method=i.method||"GET",s.uri=e,s.async=!1!==i.async,s.data=void 0!==i.data?i.data:null,s.create(),s}return i(r,[{key:"create",value:function(){var e=this,t=j(this.opts,"agent","pfx","key","passphrase","cert","ca","ciphers","rejectUnauthorized","autoUnref");t.xdomain=!!this.opts.xd,t.xscheme=!!this.opts.xs;var n=this.xhr=new L(t);try{n.open(this.method,this.uri,this.async);try{if(this.opts.extraHeaders)for(var i in n.setDisableHeaderCheck&&n.setDisableHeaderCheck(!0),this.opts.extraHeaders)this.opts.extraHeaders.hasOwnProperty(i)&&n.setRequestHeader(i,this.opts.extraHeaders[i])}catch(e){}if("POST"===this.method)try{n.setRequestHeader("Content-type","text/plain;charset=UTF-8")}catch(e){}try{n.setRequestHeader("Accept","*/*")}catch(e){}"withCredentials"in n&&(n.withCredentials=this.opts.withCredentials),this.opts.requestTimeout&&(n.timeout=this.opts.requestTimeout),n.onreadystatechange=function(){4===n.readyState&&(200===n.status||1223===n.status?e.onLoad():e.setTimeoutFn((function(){e.onError("number"==typeof n.status?n.status:0)}),0))},n.send(this.data)}catch(t){return void this.setTimeoutFn((function(){e.onError(t)}),0)}"undefined"!=typeof document&&(this.index=r.requestsCount++,r.requests[this.index]=this)}},{key:"onSuccess",value:function(){this.emit("success"),this.cleanup()}},{key:"onData",value:function(e){this.emit("data",e),this.onSuccess()}},{key:"onError",value:function(e){this.emit("error",e),this.cleanup(!0)}},{key:"cleanup",value:function(e){if(void 0!==this.xhr&&null!==this.xhr){if(this.xhr.onreadystatechange=fe,e)try{this.xhr.abort()}catch(e){}"undefined"!=typeof document&&delete r.requests[this.index],this.xhr=null}}},{key:"onLoad",value:function(){var e=this.xhr.responseText;null!==e&&this.onData(e)}},{key:"abort",value:function(){this.cleanup()}}]),r}(R);function ve(){for(var e in ye.requests)ye.requests.hasOwnProperty(e)&&ye.requests[e].abort()}ye.requestsCount=0,ye.requests={},"undefined"!=typeof document&&("function"==typeof attachEvent?attachEvent("onunload",ve):"function"==typeof addEventListener&&addEventListener("onpagehide"in _?"pagehide":"unload",ve,!1));var ke="function"==typeof Promise&&"function"==typeof Promise.resolve?function(e){return Promise.resolve().then(e)}:function(e,t){return t(e,0)},be=_.WebSocket||_.MozWebSocket,we=!0,Ee="arraybuffer",$e="undefined"!=typeof navigator&&"string"==typeof navigator.product&&"reactnative"===navigator.product.toLowerCase(),xe=function(e){o(r,e);var t=p(r);function r(e){var i;return n(this,r),(i=t.call(this,e)).supportsBinary=!e.forceBase64,i}return i(r,[{key:"name",get:function(){return"websocket"}},{key:"doOpen",value:function(){if(this.check()){var e=this.uri(),t=this.opts.protocols,n=$e?{}:j(this.opts,"agent","perMessageDeflate","pfx","key","passphrase","cert","ca","ciphers","rejectUnauthorized","localAddress","protocolVersion","origin","maxPayload","family","checkServerIdentity");this.opts.extraHeaders&&(n.headers=this.opts.extraHeaders);try{this.ws=we&&!$e?t?new be(e,t):new be(e):new be(e,t,n)}catch(e){return this.emit("error",e)}this.ws.binaryType=this.socket.binaryType||Ee,this.addEventListeners()}}},{key:"addEventListeners",value:function(){var e=this;this.ws.onopen=function(){e.opts.autoUnref&&e.ws._socket.unref(),e.onOpen()},this.ws.onclose=this.onClose.bind(this),this.ws.onmessage=function(t){return e.onData(t.data)},this.ws.onerror=function(t){return e.onError("websocket error",t)}}},{key:"write",value:function(e){var t=this;this.writable=!1;for(var n=function(n){var r=e[n],i=n===e.length-1;z(r,t.supportsBinary,(function(e){try{we&&t.ws.send(e)}catch(e){}i&&ke((function(){t.writable=!0,t.emit("drain")}),t.setTimeoutFn)}))},r=0;r<e.length;r++)n(r)}},{key:"doClose",value:function(){void 0!==this.ws&&(this.ws.close(),this.ws=null)}},{key:"uri",value:function(){var e=this.query||{},t=this.opts.secure?"wss":"ws",n="";this.opts.port&&("wss"===t&&443!==Number(this.opts.port)||"ws"===t&&80!==Number(this.opts.port))&&(n=":"+this.opts.port),this.opts.timestampRequests&&(e[this.opts.timestampParam]=de()),this.supportsBinary||(e.b64=1);var r=pe.encode(e);return t+"://"+(-1!==this.opts.hostname.indexOf(":")?"["+this.opts.hostname+"]":this.opts.hostname)+n+this.opts.path+(r.length?"?"+r:"")}},{key:"check",value:function(){return!(!be||"__initialize"in be&&this.name===r.prototype.name)}}]),r}(ne),Ce={websocket:xe,polling:me},_e=function(e){o(a,e);var r=p(a);function a(e){var i,o=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};return n(this,a),i=r.call(this),e&&"object"===t(e)&&(o=e,e=null),e?(e=b(e),o.hostname=e.host,o.secure="https"===e.protocol||"wss"===e.protocol,o.port=e.port,e.query&&(o.query=e.query)):o.host&&(o.hostname=b(o.host).host),T(u(i),o),i.secure=null!=o.secure?o.secure:"undefined"!=typeof location&&"https:"===location.protocol,o.hostname&&!o.port&&(o.port=i.secure?"443":"80"),i.hostname=o.hostname||("undefined"!=typeof location?location.hostname:"localhost"),i.port=o.port||("undefined"!=typeof location&&location.port?location.port:i.secure?"443":"80"),i.transports=o.transports||["polling","websocket"],i.readyState="",i.writeBuffer=[],i.prevBufferLen=0,i.opts=s({path:"/engine.io",agent:!1,withCredentials:!1,upgrade:!0,timestampParam:"t",rememberUpgrade:!1,rejectUnauthorized:!0,perMessageDeflate:{threshold:1024},transportOptions:{},closeOnBeforeunload:!0},o),i.opts.path=i.opts.path.replace(/\/$/,"")+"/","string"==typeof i.opts.query&&(i.opts.query=pe.decode(i.opts.query)),i.id=null,i.upgrades=null,i.pingInterval=null,i.pingTimeout=null,i.pingTimeoutTimer=null,"function"==typeof addEventListener&&(i.opts.closeOnBeforeunload&&addEventListener("beforeunload",(function(){i.transport&&(i.transport.removeAllListeners(),i.transport.close())}),!1),"localhost"!==i.hostname&&(i.offlineEventListener=function(){i.onClose("transport close")},addEventListener("offline",i.offlineEventListener,!1))),i.open(),i}return i(a,[{key:"createTransport",value:function(e){var t=Le(this.opts.query);t.EIO=te,t.transport=e,this.id&&(t.sid=this.id);var n=s({},this.opts.transportOptions[e],this.opts,{query:t,socket:this,hostname:this.hostname,secure:this.secure,port:this.port});return new Ce[e](n)}},{key:"open",value:function(){var e,t=this;if(this.opts.rememberUpgrade&&a.priorWebsocketSuccess&&-1!==this.transports.indexOf("websocket"))e="websocket";else{if(0===this.transports.length)return void this.setTimeoutFn((function(){t.emitReserved("error","No transports available")}),0);e=this.transports[0]}this.readyState="opening";try{e=this.createTransport(e)}catch(e){return this.transports.shift(),void this.open()}e.open(),this.setTransport(e)}},{key:"setTransport",value:function(e){var t=this;this.transport&&this.transport.removeAllListeners(),this.transport=e,e.on("drain",this.onDrain.bind(this)).on("packet",this.onPacket.bind(this)).on("error",this.onError.bind(this)).on("close",(function(){t.onClose("transport close")}))}},{key:"probe",value:function(e){var t=this,n=this.createTransport(e),r=!1;a.priorWebsocketSuccess=!1;var i=function(){r||(n.send([{type:"ping",data:"probe"}]),n.once("packet",(function(e){if(!r)if("pong"===e.type&&"probe"===e.data){if(t.upgrading=!0,t.emitReserved("upgrading",n),!n)return;a.priorWebsocketSuccess="websocket"===n.name,t.transport.pause((function(){r||"closed"!==t.readyState&&(d(),t.setTransport(n),n.send([{type:"upgrade"}]),t.emitReserved("upgrade",n),n=null,t.upgrading=!1,t.flush())}))}else{var i=new Error("probe error");i.transport=n.name,t.emitReserved("upgradeError",i)}})))};function s(){r||(r=!0,d(),n.close(),n=null)}var o=function(e){var r=new Error("probe error: "+e);r.transport=n.name,s(),t.emitReserved("upgradeError",r)};function c(){o("transport closed")}function l(){o("socket closed")}function u(e){n&&e.name!==n.name&&s()}var d=function(){n.removeListener("open",i),n.removeListener("error",o),n.removeListener("close",c),t.off("close",l),t.off("upgrading",u)};n.once("open",i),n.once("error",o),n.once("close",c),this.once("close",l),this.once("upgrading",u),n.open()}},{key:"onOpen",value:function(){if(this.readyState="open",a.priorWebsocketSuccess="websocket"===this.transport.name,this.emitReserved("open"),this.flush(),"open"===this.readyState&&this.opts.upgrade&&this.transport.pause)for(var e=0,t=this.upgrades.length;e<t;e++)this.probe(this.upgrades[e])}},{key:"onPacket",value:function(e){if("opening"===this.readyState||"open"===this.readyState||"closing"===this.readyState)switch(this.emitReserved("packet",e),this.emitReserved("heartbeat"),e.type){case"open":this.onHandshake(JSON.parse(e.data));break;case"ping":this.resetPingTimeout(),this.sendPacket("pong"),this.emitReserved("ping"),this.emitReserved("pong");break;case"error":var t=new Error("server error");t.code=e.data,this.onError(t);break;case"message":this.emitReserved("data",e.data),this.emitReserved("message",e.data)}}},{key:"onHandshake",value:function(e){this.emitReserved("handshake",e),this.id=e.sid,this.transport.query.sid=e.sid,this.upgrades=this.filterUpgrades(e.upgrades),this.pingInterval=e.pingInterval,this.pingTimeout=e.pingTimeout,this.onOpen(),"closed"!==this.readyState&&this.resetPingTimeout()}},{key:"resetPingTimeout",value:function(){var e=this;this.clearTimeoutFn(this.pingTimeoutTimer),this.pingTimeoutTimer=this.setTimeoutFn((function(){e.onClose("ping timeout")}),this.pingInterval+this.pingTimeout),this.opts.autoUnref&&this.pingTimeoutTimer.unref()}},{key:"onDrain",value:function(){this.writeBuffer.splice(0,this.prevBufferLen),this.prevBufferLen=0,0===this.writeBuffer.length?this.emitReserved("drain"):this.flush()}},{key:"flush",value:function(){"closed"!==this.readyState&&this.transport.writable&&!this.upgrading&&this.writeBuffer.length&&(this.transport.send(this.writeBuffer),this.prevBufferLen=this.writeBuffer.length,this.emitReserved("flush"))}},{key:"write",value:function(e,t,n){return this.sendPacket("message",e,t,n),this}},{key:"send",value:function(e,t,n){return this.sendPacket("message",e,t,n),this}},{key:"sendPacket",value:function(e,t,n,r){if("function"==typeof t&&(r=t,t=void 0),"function"==typeof n&&(r=n,n=null),"closing"!==this.readyState&&"closed"!==this.readyState){(n=n||{}).compress=!1!==n.compress;var i={type:e,data:t,options:n};this.emitReserved("packetCreate",i),this.writeBuffer.push(i),r&&this.once("flush",r),this.flush()}}},{key:"close",value:function(){var e=this,t=function(){e.onClose("forced close"),e.transport.close()},n=function n(){e.off("upgrade",n),e.off("upgradeError",n),t()},r=function(){e.once("upgrade",n),e.once("upgradeError",n)};return"opening"!==this.readyState&&"open"!==this.readyState||(this.readyState="closing",this.writeBuffer.length?this.once("drain",(function(){e.upgrading?r():t()})):this.upgrading?r():t()),this}},{key:"onError",value:function(e){a.priorWebsocketSuccess=!1,this.emitReserved("error",e),this.onClose("transport error",e)}},{key:"onClose",value:function(e,t){"opening"!==this.readyState&&"open"!==this.readyState&&"closing"!==this.readyState||(this.clearTimeoutFn(this.pingTimeoutTimer),this.transport.removeAllListeners("close"),this.transport.close(),this.transport.removeAllListeners(),"function"==typeof removeEventListener&&removeEventListener("offline",this.offlineEventListener,!1),this.readyState="closed",this.id=null,this.emitReserved("close",e,t),this.writeBuffer=[],this.prevBufferLen=0)}},{key:"filterUpgrades",value:function(e){for(var t=[],n=0,r=e.length;n<r;n++)~this.transports.indexOf(e[n])&&t.push(e[n]);return t}}]),a}(R);function Le(e){var t={};for(var n in e)e.hasOwnProperty(n)&&(t[n]=e[n]);return t}_e.protocol=te;var je="function"==typeof ArrayBuffer,Ae=function(e){return"function"==typeof ArrayBuffer.isView?ArrayBuffer.isView(e):e.buffer instanceof ArrayBuffer},Se=Object.prototype.toString,Te="function"==typeof Blob||"undefined"!=typeof Blob&&"[object BlobConstructor]"===Se.call(Blob),Re="function"==typeof File||"undefined"!=typeof File&&"[object FileConstructor]"===Se.call(File);function Oe(e){return je&&(e instanceof ArrayBuffer||Ae(e))||Te&&e instanceof Blob||Re&&e instanceof File}function Ie(e,n){if(!e||"object"!==t(e))return!1;if(Array.isArray(e)){for(var r=0,i=e.length;r<i;r++)if(Ie(e[r]))return!0;return!1}if(Oe(e))return!0;if(e.toJSON&&"function"==typeof e.toJSON&&1===arguments.length)return Ie(e.toJSON(),!0);for(var s in e)if(Object.prototype.hasOwnProperty.call(e,s)&&Ie(e[s]))return!0;return!1}function Ne(e){var t=[],n=e.data,r=e;return r.data=Be(n,t),r.attachments=t.length,{packet:r,buffers:t}}function Be(e,n){if(!e)return e;if(Oe(e)){var r={_placeholder:!0,num:n.length};return n.push(e),r}if(Array.isArray(e)){for(var i=new Array(e.length),s=0;s<e.length;s++)i[s]=Be(e[s],n);return i}if("object"===t(e)&&!(e instanceof Date)){var o={};for(var a in e)e.hasOwnProperty(a)&&(o[a]=Be(e[a],n));return o}return e}function qe(e,t){return e.data=Pe(e.data,t),e.attachments=void 0,e}function Pe(e,n){if(!e)return e;if(e&&e._placeholder)return n[e.num];if(Array.isArray(e))for(var r=0;r<e.length;r++)e[r]=Pe(e[r],n);else if("object"===t(e))for(var i in e)e.hasOwnProperty(i)&&(e[i]=Pe(e[i],n));return e}var Me,Ve=5;!function(e){e[e.CONNECT=0]="CONNECT",e[e.DISCONNECT=1]="DISCONNECT",e[e.EVENT=2]="EVENT",e[e.ACK=3]="ACK",e[e.CONNECT_ERROR=4]="CONNECT_ERROR",e[e.BINARY_EVENT=5]="BINARY_EVENT",e[e.BINARY_ACK=6]="BINARY_ACK"}(Me||(Me={}));var ze=function(){function e(){n(this,e)}return i(e,[{key:"encode",value:function(e){return e.type!==Me.EVENT&&e.type!==Me.ACK||!Ie(e)?[this.encodeAsString(e)]:(e.type=e.type===Me.EVENT?Me.BINARY_EVENT:Me.BINARY_ACK,this.encodeAsBinary(e))}},{key:"encodeAsString",value:function(e){var t=""+e.type;return e.type!==Me.BINARY_EVENT&&e.type!==Me.BINARY_ACK||(t+=e.attachments+"-"),e.nsp&&"/"!==e.nsp&&(t+=e.nsp+","),null!=e.id&&(t+=e.id),null!=e.data&&(t+=JSON.stringify(e.data)),t}},{key:"encodeAsBinary",value:function(e){var t=Ne(e),n=this.encodeAsString(t.packet),r=t.buffers;return r.unshift(n),r}}]),e}(),He=function(e){o(s,e);var r=p(s);function s(){return n(this,s),r.call(this)}return i(s,[{key:"add",value:function(e){var t;if("string"==typeof e)(t=this.decodeString(e)).type===Me.BINARY_EVENT||t.type===Me.BINARY_ACK?(this.reconstructor=new Ue(t),0===t.attachments&&f(a(s.prototype),"emitReserved",this).call(this,"decoded",t)):f(a(s.prototype),"emitReserved",this).call(this,"decoded",t);else{if(!Oe(e)&&!e.base64)throw new Error("Unknown type: "+e);if(!this.reconstructor)throw new Error("got binary data when not reconstructing a packet");(t=this.reconstructor.takeBinaryData(e))&&(this.reconstructor=null,f(a(s.prototype),"emitReserved",this).call(this,"decoded",t))}}},{key:"decodeString",value:function(e){var t=0,n={type:Number(e.charAt(0))};if(void 0===Me[n.type])throw new Error("unknown packet type "+n.type);if(n.type===Me.BINARY_EVENT||n.type===Me.BINARY_ACK){for(var r=t+1;"-"!==e.charAt(++t)&&t!=e.length;);var i=e.substring(r,t);if(i!=Number(i)||"-"!==e.charAt(t))throw new Error("Illegal attachments");n.attachments=Number(i)}if("/"===e.charAt(t+1)){for(var o=t+1;++t&&","!==e.charAt(t)&&t!==e.length;);n.nsp=e.substring(o,t)}else n.nsp="/";var a=e.charAt(t+1);if(""!==a&&Number(a)==a){for(var c=t+1;++t;){var l=e.charAt(t);if(null==l||Number(l)!=l){--t;break}if(t===e.length)break}n.id=Number(e.substring(c,t+1))}if(e.charAt(++t)){var u=De(e.substr(t));if(!s.isPayloadValid(n.type,u))throw new Error("invalid payload");n.data=u}return n}},{key:"destroy",value:function(){this.reconstructor&&this.reconstructor.finishedReconstruction()}}],[{key:"isPayloadValid",value:function(e,n){switch(e){case Me.CONNECT:return"object"===t(n);case Me.DISCONNECT:return void 0===n;case Me.CONNECT_ERROR:return"string"==typeof n||"object"===t(n);case Me.EVENT:case Me.BINARY_EVENT:return Array.isArray(n)&&n.length>0;case Me.ACK:case Me.BINARY_ACK:return Array.isArray(n)}}}]),s}(R);function De(e){try{return JSON.parse(e)}catch(e){return!1}}var Ue=function(){function e(t){n(this,e),this.packet=t,this.buffers=[],this.reconPack=t}return i(e,[{key:"takeBinaryData",value:function(e){if(this.buffers.push(e),this.buffers.length===this.reconPack.attachments){var t=qe(this.reconPack,this.buffers);return this.finishedReconstruction(),t}return null}},{key:"finishedReconstruction",value:function(){this.reconPack=null,this.buffers=[]}}]),e}(),Fe=Object.freeze({__proto__:null,protocol:Ve,get PacketType(){return Me},Encoder:ze,Decoder:He});function Je(e,t,n){return e.on(t,n),function(){e.off(t,n)}}var We=Object.freeze({connect:1,connect_error:1,disconnect:1,disconnecting:1,newListener:1,removeListener:1}),Ke=function(e){o(r,e);var t=p(r);function r(e,i,s){var o;return n(this,r),(o=t.call(this)).connected=!1,o.disconnected=!0,o.receiveBuffer=[],o.sendBuffer=[],o.ids=0,o.acks={},o.flags={},o.io=e,o.nsp=i,s&&s.auth&&(o.auth=s.auth),o.io._autoConnect&&o.open(),o}return i(r,[{key:"subEvents",value:function(){if(!this.subs){var e=this.io;this.subs=[Je(e,"open",this.onopen.bind(this)),Je(e,"packet",this.onpacket.bind(this)),Je(e,"error",this.onerror.bind(this)),Je(e,"close",this.onclose.bind(this))]}}},{key:"active",get:function(){return!!this.subs}},{key:"connect",value:function(){return this.connected||(this.subEvents(),this.io._reconnecting||this.io.open(),"open"===this.io._readyState&&this.onopen()),this}},{key:"open",value:function(){return this.connect()}},{key:"send",value:function(){for(var e=arguments.length,t=new Array(e),n=0;n<e;n++)t[n]=arguments[n];return t.unshift("message"),this.emit.apply(this,t),this}},{key:"emit",value:function(e){if(We.hasOwnProperty(e))throw new Error('"'+e+'" is a reserved event name');for(var t=arguments.length,n=new Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];n.unshift(e);var i={type:Me.EVENT,data:n,options:{}};i.options.compress=!1!==this.flags.compress,"function"==typeof n[n.length-1]&&(this.acks[this.ids]=n.pop(),i.id=this.ids++);var s=this.io.engine&&this.io.engine.transport&&this.io.engine.transport.writable;return this.flags.volatile&&(!s||!this.connected)||(this.connected?this.packet(i):this.sendBuffer.push(i)),this.flags={},this}},{key:"packet",value:function(e){e.nsp=this.nsp,this.io._packet(e)}},{key:"onopen",value:function(){var e=this;"function"==typeof this.auth?this.auth((function(t){e.packet({type:Me.CONNECT,data:t})})):this.packet({type:Me.CONNECT,data:this.auth})}},{key:"onerror",value:function(e){this.connected||this.emitReserved("connect_error",e)}},{key:"onclose",value:function(e){this.connected=!1,this.disconnected=!0,delete this.id,this.emitReserved("disconnect",e)}},{key:"onpacket",value:function(e){if(e.nsp===this.nsp)switch(e.type){case Me.CONNECT:if(e.data&&e.data.sid){var t=e.data.sid;this.onconnect(t)}else this.emitReserved("connect_error",new Error("It seems you are trying to reach a Socket.IO server in v2.x with a v3.x client, but they are not compatible (more information here: https://socket.io/docs/v3/migrating-from-2-x-to-3-0/)"));break;case Me.EVENT:case Me.BINARY_EVENT:this.onevent(e);break;case Me.ACK:case Me.BINARY_ACK:this.onack(e);break;case Me.DISCONNECT:this.ondisconnect();break;case Me.CONNECT_ERROR:var n=new Error(e.data.message);n.data=e.data.data,this.emitReserved("connect_error",n)}}},{key:"onevent",value:function(e){var t=e.data||[];null!=e.id&&t.push(this.ack(e.id)),this.connected?this.emitEvent(t):this.receiveBuffer.push(Object.freeze(t))}},{key:"emitEvent",value:function(e){if(this._anyListeners&&this._anyListeners.length){var t,n=y(this._anyListeners.slice());try{for(n.s();!(t=n.n()).done;)t.value.apply(this,e)}catch(e){n.e(e)}finally{n.f()}}f(a(r.prototype),"emit",this).apply(this,e)}},{key:"ack",value:function(e){var t=this,n=!1;return function(){if(!n){n=!0;for(var r=arguments.length,i=new Array(r),s=0;s<r;s++)i[s]=arguments[s];t.packet({type:Me.ACK,id:e,data:i})}}}},{key:"onack",value:function(e){var t=this.acks[e.id];"function"==typeof t&&(t.apply(this,e.data),delete this.acks[e.id])}},{key:"onconnect",value:function(e){this.id=e,this.connected=!0,this.disconnected=!1,this.emitBuffered(),this.emitReserved("connect")}},{key:"emitBuffered",value:function(){var e=this;this.receiveBuffer.forEach((function(t){return e.emitEvent(t)})),this.receiveBuffer=[],this.sendBuffer.forEach((function(t){return e.packet(t)})),this.sendBuffer=[]}},{key:"ondisconnect",value:function(){this.destroy(),this.onclose("io server disconnect")}},{key:"destroy",value:function(){this.subs&&(this.subs.forEach((function(e){return e()})),this.subs=void 0),this.io._destroy(this)}},{key:"disconnect",value:function(){return this.connected&&this.packet({type:Me.DISCONNECT}),this.destroy(),this.connected&&this.onclose("io client disconnect"),this}},{key:"close",value:function(){return this.disconnect()}},{key:"compress",value:function(e){return this.flags.compress=e,this}},{key:"volatile",get:function(){return this.flags.volatile=!0,this}},{key:"onAny",value:function(e){return this._anyListeners=this._anyListeners||[],this._anyListeners.push(e),this}},{key:"prependAny",value:function(e){return this._anyListeners=this._anyListeners||[],this._anyListeners.unshift(e),this}},{key:"offAny",value:function(e){if(!this._anyListeners)return this;if(e){for(var t=this._anyListeners,n=0;n<t.length;n++)if(e===t[n])return t.splice(n,1),this}else this._anyListeners=[];return this}},{key:"listenersAny",value:function(){return this._anyListeners||[]}}]),r}(R),Ye=Ge;function Ge(e){e=e||{},this.ms=e.min||100,this.max=e.max||1e4,this.factor=e.factor||2,this.jitter=e.jitter>0&&e.jitter<=1?e.jitter:0,this.attempts=0}Ge.prototype.duration=function(){var e=this.ms*Math.pow(this.factor,this.attempts++);if(this.jitter){var t=Math.random(),n=Math.floor(t*this.jitter*e);e=0==(1&Math.floor(10*t))?e-n:e+n}return 0|Math.min(e,this.max)},Ge.prototype.reset=function(){this.attempts=0},Ge.prototype.setMin=function(e){this.ms=e},Ge.prototype.setMax=function(e){this.max=e},Ge.prototype.setJitter=function(e){this.jitter=e};var Xe=function(e){o(s,e);var r=p(s);function s(e,i){var o,a;n(this,s),(o=r.call(this)).nsps={},o.subs=[],e&&"object"===t(e)&&(i=e,e=void 0),(i=i||{}).path=i.path||"/socket.io",o.opts=i,T(u(o),i),o.reconnection(!1!==i.reconnection),o.reconnectionAttempts(i.reconnectionAttempts||1/0),o.reconnectionDelay(i.reconnectionDelay||1e3),o.reconnectionDelayMax(i.reconnectionDelayMax||5e3),o.randomizationFactor(null!==(a=i.randomizationFactor)&&void 0!==a?a:.5),o.backoff=new Ye({min:o.reconnectionDelay(),max:o.reconnectionDelayMax(),jitter:o.randomizationFactor()}),o.timeout(null==i.timeout?2e4:i.timeout),o._readyState="closed",o.uri=e;var c=i.parser||Fe;return o.encoder=new c.Encoder,o.decoder=new c.Decoder,o._autoConnect=!1!==i.autoConnect,o._autoConnect&&o.open(),o}return i(s,[{key:"reconnection",value:function(e){return arguments.length?(this._reconnection=!!e,this):this._reconnection}},{key:"reconnectionAttempts",value:function(e){return void 0===e?this._reconnectionAttempts:(this._reconnectionAttempts=e,this)}},{key:"reconnectionDelay",value:function(e){var t;return void 0===e?this._reconnectionDelay:(this._reconnectionDelay=e,null===(t=this.backoff)||void 0===t||t.setMin(e),this)}},{key:"randomizationFactor",value:function(e){var t;return void 0===e?this._randomizationFactor:(this._randomizationFactor=e,null===(t=this.backoff)||void 0===t||t.setJitter(e),this)}},{key:"reconnectionDelayMax",value:function(e){var t;return void 0===e?this._reconnectionDelayMax:(this._reconnectionDelayMax=e,null===(t=this.backoff)||void 0===t||t.setMax(e),this)}},{key:"timeout",value:function(e){return arguments.length?(this._timeout=e,this):this._timeout}},{key:"maybeReconnectOnOpen",value:function(){!this._reconnecting&&this._reconnection&&0===this.backoff.attempts&&this.reconnect()}},{key:"open",value:function(e){var t=this;if(~this._readyState.indexOf("open"))return this;this.engine=new _e(this.uri,this.opts);var n=this.engine,r=this;this._readyState="opening",this.skipReconnect=!1;var i=Je(n,"open",(function(){r.onopen(),e&&e()})),s=Je(n,"error",(function(n){r.cleanup(),r._readyState="closed",t.emitReserved("error",n),e?e(n):r.maybeReconnectOnOpen()}));if(!1!==this._timeout){var o=this._timeout;0===o&&i();var a=this.setTimeoutFn((function(){i(),n.close(),n.emit("error",new Error("timeout"))}),o);this.opts.autoUnref&&a.unref(),this.subs.push((function(){clearTimeout(a)}))}return this.subs.push(i),this.subs.push(s),this}},{key:"connect",value:function(e){return this.open(e)}},{key:"onopen",value:function(){this.cleanup(),this._readyState="open",this.emitReserved("open");var e=this.engine;this.subs.push(Je(e,"ping",this.onping.bind(this)),Je(e,"data",this.ondata.bind(this)),Je(e,"error",this.onerror.bind(this)),Je(e,"close",this.onclose.bind(this)),Je(this.decoder,"decoded",this.ondecoded.bind(this)))}},{key:"onping",value:function(){this.emitReserved("ping")}},{key:"ondata",value:function(e){this.decoder.add(e)}},{key:"ondecoded",value:function(e){this.emitReserved("packet",e)}},{key:"onerror",value:function(e){this.emitReserved("error",e)}},{key:"socket",value:function(e,t){var n=this.nsps[e];return n||(n=new Ke(this,e,t),this.nsps[e]=n),n}},{key:"_destroy",value:function(e){for(var t=0,n=Object.keys(this.nsps);t<n.length;t++){var r=n[t];if(this.nsps[r].active)return}this._close()}},{key:"_packet",value:function(e){for(var t=this.encoder.encode(e),n=0;n<t.length;n++)this.engine.write(t[n],e.options)}},{key:"cleanup",value:function(){this.subs.forEach((function(e){return e()})),this.subs.length=0,this.decoder.destroy()}},{key:"_close",value:function(){this.skipReconnect=!0,this._reconnecting=!1,"opening"===this._readyState&&this.cleanup(),this.backoff.reset(),this._readyState="closed",this.engine&&this.engine.close()}},{key:"disconnect",value:function(){return this._close()}},{key:"onclose",value:function(e){this.cleanup(),this.backoff.reset(),this._readyState="closed",this.emitReserved("close",e),this._reconnection&&!this.skipReconnect&&this.reconnect()}},{key:"reconnect",value:function(){var e=this;if(this._reconnecting||this.skipReconnect)return this;var t=this;if(this.backoff.attempts>=this._reconnectionAttempts)this.backoff.reset(),this.emitReserved("reconnect_failed"),this._reconnecting=!1;else{var n=this.backoff.duration();this._reconnecting=!0;var r=this.setTimeoutFn((function(){t.skipReconnect||(e.emitReserved("reconnect_attempt",t.backoff.attempts),t.skipReconnect||t.open((function(n){n?(t._reconnecting=!1,t.reconnect(),e.emitReserved("reconnect_error",n)):t.onreconnect()})))}),n);this.opts.autoUnref&&r.unref(),this.subs.push((function(){clearTimeout(r)}))}}},{key:"onreconnect",value:function(){var e=this.backoff.attempts;this._reconnecting=!1,this.backoff.reset(),this.emitReserved("reconnect",e)}}]),s}(R),Ze={};function Qe(e,n){"object"===t(e)&&(n=e,e=void 0);var r,i=$(e,(n=n||{}).path||"/socket.io"),s=i.source,o=i.id,a=i.path,c=Ze[o]&&a in Ze[o].nsps;return n.forceNew||n["force new connection"]||!1===n.multiplex||c?r=new Xe(s,n):(Ze[o]||(Ze[o]=new Xe(s,n)),r=Ze[o]),i.query&&!n.query&&(n.query=i.queryKey),r.socket(i.path,n)}return s(Qe,{Manager:Xe,Socket:Ke,io:Qe,connect:Qe}),e.exports=Qe,Qe}()}},r={};function s(e){var t=r[e];if(void 0!==t)return t.exports;var i=r[e]={exports:{}};return n[e].call(i.exports,i,i.exports,s),i.exports}s.m=n,s.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return s.d(t,{a:t}),t},s.d=(e,t)=>{for(var n in t)s.o(t,n)&&!s.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:t[n]})},s.f={},s.e=e=>Promise.all(Object.keys(s.f).reduce(((t,n)=>(s.f[n](e,t),t)),[])),s.u=e=>e+".js",s.g=function(){if("object"==typeof globalThis)return globalThis;try{return this||new Function("return this")()}catch(e){if("object"==typeof window)return window}}(),s.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="la_livla:",s.l=(n,r,i,o)=>{if(e[n])e[n].push(r);else{var a,c;if(void 0!==i)for(var l=document.getElementsByTagName("script"),u=0;u<l.length;u++){var d=l[u];if(d.getAttribute("src")==n||d.getAttribute("data-webpack")==t+i){a=d;break}}a||(c=!0,(a=document.createElement("script")).charset="utf-8",a.timeout=120,s.nc&&a.setAttribute("nonce",s.nc),a.setAttribute("data-webpack",t+i),a.src=n),e[n]=[r];var p=(t,r)=>{a.onerror=a.onload=null,clearTimeout(h);var i=e[n];if(delete e[n],a.parentNode&&a.parentNode.removeChild(a),i&&i.forEach((e=>e(r))),t)return t(r)},h=setTimeout(p.bind(null,void 0,{type:"timeout",target:a}),12e4);a.onerror=p.bind(null,a.onerror),a.onload=p.bind(null,a.onload),c&&document.head.appendChild(a)}},s.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},(()=>{var e;s.g.importScripts&&(e=s.g.location+"");var t=s.g.document;if(!e&&t&&(t.currentScript&&(e=t.currentScript.src),!e)){var n=t.getElementsByTagName("script");n.length&&(e=n[n.length-1].src)}if(!e)throw new Error("Automatic publicPath is not supported in this browser");e=e.replace(/#.*$/,"").replace(/\?.*$/,"").replace(/\/[^\/]+$/,"/"),s.p=e})(),(()=>{var e={826:0};s.f.j=(t,n)=>{var r=s.o(e,t)?e[t]:void 0;if(0!==r)if(r)n.push(r[2]);else{var i=new Promise(((n,i)=>r=e[t]=[n,i]));n.push(r[2]=i);var o=s.p+s.u(t),a=new Error;s.l(o,(n=>{if(s.o(e,t)&&(0!==(r=e[t])&&(e[t]=void 0),r)){var i=n&&("load"===n.type?"missing":n.type),o=n&&n.target&&n.target.src;a.message="Loading chunk "+t+" failed.\n("+i+": "+o+")",a.name="ChunkLoadError",a.type=i,a.request=o,r[1](a)}}),"chunk-"+t,t)}};var t=(t,n)=>{var r,i,[o,a,c]=n,l=0;if(o.some((t=>0!==e[t]))){for(r in a)s.o(a,r)&&(s.m[r]=a[r]);if(c)c(s)}for(t&&t(n);l<o.length;l++)i=o[l],s.o(e,i)&&e[i]&&e[i][0](),e[o[l]]=0},n=self.webpackChunkla_livla=self.webpackChunkla_livla||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})(),(()=>{"use strict";var e=s(819),t=s.n(e);function n(e){return(t,n,r)=>{if("undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope)throw new Error("`startWorkerFromMain` should only be called from the main thread");if("undefined"==typeof Worker)throw new Error("Web workers not available. sqlite3 requires web workers to work.");e().then((({default:e})=>{let i=new e;i.postMessage({type:"init",buffers:[t,n]}),i.addEventListener("message",(e=>{r.postMessage(e.data)}))}))}}const r=function(e,t){const r=n(t);return t=>{t.addEventListener("message",(n=>{if(n.data.type===e)r(n.data.argBuffer,n.data.resultBuffer,t)}))}}("__absurd:spawn-idb-worker",(()=>s.e(403).then(s.bind(s,403)))),o=document.getElementById("content"),a=document.getElementById("ciska"),c=document.getElementById("clear"),l=document.getElementById("outp"),u=document.getElementById("descr"),d=document.getElementById("drata"),p=document.getElementById("citri"),h=document.getElementById("sidju"),f=document.getElementById("kernelo_lo_cpacu");let g=document.querySelector("#site-title");const m=document.getElementById("galtu-dasri"),y=document.getElementById("catni"),v=document.getElementById("cnano"),k=document.getElementById("rimni"),b=document.querySelectorAll("#title > img"),w=document.getElementById("scrollToTop"),E=document.getElementById("audioParamsTextarea"),$=document.querySelector("#audio"),x=document.getElementById("loading"),C="sutysisku";window.leijufra={};let _=!0;const L="https://la-lojban.github.io/uncll/uncll-1.2.14/xhtml_section_chunks/",j="https://lojban.pw/books/learn-lojban/#",A={en:{n:"English",p:"selsku_lanci_eng"},muplis:{n:"la muplis"},"en-cll":{n:"The Book",p:"cukta"},"en-ll":{n:"Learn Lojban",p:"cukta"},jbo:{n:"lojbo",p:"lanci_jbo"},ru:{n:"русский",p:"selsku_lanci_rus"},eo:{n:"esperanto",p:"lanci_epo"},es:{n:"español",p:"selsku_lanci_spa"},"fr-facile":{n:"français",p:"selsku_lanci_fra"},ja:{n:"日本語",p:"selsku_lanci_jpn"},zh:{n:"中文",p:"selsku_lanci_zho"}},S={GA:"gi",GUhA:"gi",BE:"bei be'o",BEI:"be'o",BY:"boi",COI:"do'u",DOI:"do'u",FIhO:"fe'u",FUhE:"fu'o",GIhA:"vau",GOI:"ge'u",JOhI:"te'u",KE:"ke'e",LAhE:"lu'u",LA:"ku",LE:"ku",LI:"lo'o",LOhU:"le'u",LU:"li'u",ME:"me'u","NAhE+BO":"lu'u",NOI:"ku'o",NUhI:"nu'u",NU:"kei",PA:"boi",PEhO:"ku'e",SEI:"se'u",SOI:"se'u",TO:"toi",TUhE:"tu'u",VEI:"ve'o",LOhAI:"sa'ai",SAhAI:"le'ai",LOhOI:"ku'au",NAhU:"te'u",NIhE:"te'u",MOhE:"te'u"};let T,R,O=[];const I={searching:{seskari:"cnano",versio:"masno",query:"",bangu:"en"},displaying:{seskari:"cnano",versio:"masno",query:"",bangu:"en"},citri:[]},N={loading:!0,firstRun:!0,mathRendered:!1};try{const e=JSON.parse(localStorage.getItem("tcini"));e&&e.seskari&&(I.searching.seskari=e.seskari),e&&e.versio&&(I.searching.versio=e.versio),e&&e.bangu&&(I.searching.bangu=e.bangu)}catch(e){}I.citri=G();const B={vh:null,typing:null};let P=null;const M=60800,V="ptkflscmx.' 1234bdgvrzjn`-,~    aeiouy    qw    AEIOUY";let z,H;a.focus();const D={IdentityPoolId:"us-east-1:35da84f8-d67e-4977-b07d-37650808ea00",region:"us-east-1",VoiceId:"Vicki",LanguageCode:"de-DE",Engine:"neural",lojban2IPAMapping:{"«":"","-":".","»":"","\\?":"",",":"","\\.":"ʔ"," ":" ",ˈ:"ˈ",a:"aː","a\\b(?!')":"aː",e:"ɛ:","e\\b(?!')":"ɛ:ʔ",i:"i:",o:"ɔ:",u:"u:",y:"ə",ą:"aj",ę:"ɛj","ę\\b(?!')":"ɛjʔ",ǫ:"ɔj",ḁ:"aʊ",ɩa:"jaː",ɩe:"jɛ:",ɩi:"ji:",ɩo:"jɔ:",ɩu:"ju:",ɩy:"jə",ɩ:"j",wa:"waː",we:"wɛ:",wi:"wi:",wo:"wɔ:",wu:"wu:",wy:"wə",w:"w",c:"ʃ",j:"ʒ",s:"s",z:"z",f:"f",ev:"ɛ:ʔv",v:"v",x:"x","'":"h",dj:"dʒ",tc:"tʃ",dz:"ʣ",ts:"ʦ","r(?=[^aeiouyḁąęǫ])":"rr.","r(?=[aeiouyḁąęǫ])":"ɹ",n:"n",m:"m",l:"l",b:"b",d:"d",g:"g",k:"k",p:"p",t:"t"}};let U;window.pollyParams=D;try{U=JSON.parse(localStorage.getItem("audioParams"))}catch(e){}U&&U.IdentityPoolId?window.pollyParams=U:localStorage.setItem("audioParams",JSON.stringify(window.pollyParams)),window.delay=(e,t,n)=>{clearTimeout(B[n]),B[n]=setTimeout(e,t)},document.addEventListener("animationstart",(function(e){"nodeInserted"==e.animationName&&(!0!==N.loading&&Be(),Q({action:"stop"}))}),!1),p.addEventListener("click",ce),window.addEventListener("popstate",ae),a.addEventListener("paste",ue(0)),a.addEventListener("keyup",(()=>{ue()})),a.addEventListener("keydown",(()=>{clearTimeout(R)})),a.addEventListener("input",ue()),a.addEventListener("textInput",ue()),a.addEventListener("focus",(function(){if(N.firstRun)return void(N.firstRun=!1);I.searching.query=Ae(a.value),de({quickRotation:!0})})),c.addEventListener("click",window.EmptyState),k.addEventListener("click",(()=>{I.searching={...I.displaying,seskari:"rimni",versio:"masno",query:Ae(a.value)},de({replace:!1})})),document.getElementById("cnano").addEventListener("click",(()=>{I.searching={...I.displaying,seskari:"cnano",versio:"masno",query:Ae(a.value)},de({replace:!1})})),document.getElementById("catni").addEventListener("click",(()=>{I.searching={...I.displaying,seskari:"catni",versio:"masno",query:Ae(a.value)},de({replace:!1})})),window.addEventListener("resize",ge,!0),o.addEventListener("scroll",(function({target:e}){ne(),!1;null!==P&&clearTimeout(P);"velcusku"!==I.displaying.seskari&&e.scrollTop+window.innerHeight>=l.clientHeight-700?(window.jimte+=10,Oe(I.displaying),MathJax.typesetPromise().then((()=>{ie(!0)}))):ie(!0);Be()})),document.attachEvent?document.attachEvent("onkeyup",fe):document.addEventListener("keyup",fe),E.addEventListener("input",(()=>{try{const e={...D,...window.pollyParams,...JSON.parse(E.value)};localStorage.setItem("audioParams",JSON.stringify(e)),J=Ve(e),localStorage.setItem("cachedAudio",null)}catch(e){}})),document.addEventListener("keyup",(function(e){if(e.ctrlKey&&"ArrowDown"===e.key){const e=document.getElementById("jsModal");e.classList?e.classList.add("open"):e.className+=" open"}}),!1);const F=new Worker("worker.js?sisku=1638172747640");r(F);try{ae({replace:!0})}catch(e){}X(),ge();let J=Ve(window.pollyParams);function W(){N.loading=!1,Be(),delete N.resultsHash,x.style.display="none",document.getElementById("contentWrapper").style.paddingBottom="0"}function K({completedRows:e,totalRows:t,bangu:n,hideProgress:r}){x.style.display="inline-flex",document.getElementById("contentWrapper").style.paddingBottom="28px";const i=document.getElementById("cpacu");if(r)i.style.display="none";else{const n=Math.min(100,Math.max(10,100*parseFloat(e)/parseFloat(t)));i.style.display="block",f.style.width=`${n}%`}document.getElementById("bangu_loading").innerHTML=n}async function Y({mode:e}){const t=await caches.open(C),n=await async function(){const e=await caches.open(C);return await e.keys()}(),r=n.length,i=await fetch(`/sutysisku/data/tcini.json?sisku=${(new Date).getTime()}`);if(!i.ok)return 0===r&&alert("Are you offline? We can't fetch the source."),!1;const s=(await i.json()).vreji.map((e=>new URL(e,window.location.origin+window.location.pathname).href));let o=!1;for(let n=0;n<s.length;n++){const r=s[n];if("co'a"===e&&!/(\.(js|wasm|html|css)|\/$)/.test(r))continue;await t.match(r)||(await t.add(r),o=!0,"co'a"===e&&K({completedRows:n,totalRows:s.length,bangu:"📦 💾 📁 🛠️"}))}for(const e of n)s.includes(e.url)||(await t.delete(e.url,{ignoreMethod:!0,ignoreVary:!0}),console.log({event:"removing cache",url:e.url}));return o&&await t.add(new URL("index.html",window.location.origin+window.location.pathname).href),W(),"co'a"===e&&o&&window.location.reload(),!0}function G(){let e=[];try{return JSON.parse(localStorage.getItem("citri"))||e}catch(e){}return e}function X(){I.citri.length>0&&(p.innerHTML=` <span class="romoi_lehiseciska" data-jufra="window.purc">${window.purc||""}</span>${I.citri.filter((({seskari:e})=>"velcusku"!==e)).map((({seskari:e,versio:t,query:n,bangu:r})=>`<a class="a-${e}${"masno"!==t?` a-${t}`:""}" href="#seskari=${e}&versio=${t}&sisku=${Se(n)}&bangu=${r}">${Re(n)}</a>`)).join(", ")}`)}function Z({seskari:e,sepia:t}){const n=["velcusku","arxivo","cnano","rimni","catni","fanva"];if("muplis"===I.displaying.bangu?document.getElementById("leitutci").style.display="none":document.getElementById("leitutci").style.display="flex",n.includes(e)||(e="cnano"),m.className=`kampu-dasri ${e}-dasri noselect`,g.classList.add(`${e}-search-mode-title-color`),g.classList.remove("desktop-mode-title-color"),document.getElementById(e)&&document.getElementById(e).classList.add(`${e}-tutci-hover`,"tutci-hover"),n.map((t=>{t!==e&&(g.classList.remove(`${t}-search-mode-title-color`),document.getElementById(t)&&document.getElementById(t).classList.remove(`${t}-tutci-hover`,"tutci-hover"))})),t)for(let e=0;e<b.length;e++)b[e].style.filter=t}function Q({action:e,quick:t}){if("complete"!==document.readyState)return;const n=["logo"];"start"===e?(n.map((e=>{document.getElementById(e).classList.remove("stopRotate"),document.getElementById(e).classList.add("rotate")})),c.classList.add("pulsate-css"),setTimeout((()=>{c.classList.contains("pulsate-css")&&a.classList.add("granim-css")}),t?100:500)):(n.map((e=>{document.getElementById(e).classList.add("stopRotate")})),a.classList.remove("granim-css"),c.classList.remove("pulsate-css"))}function ee(){MathJax.typesetPromise().then((()=>{ie(!0)}))}document.getElementById("audioParamsTextarea").value=JSON.stringify(window.pollyParams,null,2),window.addEventListener("load",(async()=>{await Y({mode:"co'a"}),console.log({crossOriginIsolated:window.crossOriginIsolated}),F.postMessage({kind:"fancu",cmene:"ningau_lesorcu",...I.searching}),pe(),"serviceWorker"in navigator||("https:"===location.protocol?alert("Your browser is not supported. Please, upgrade to the latest Chrome / Firefox / Safari and don't use the app in incognito / private browsing mode (it needs to save dictionary data to disk to work successfully)."):(alert("HTTP protocol, la sutysisku won't work."),console.log("http protocol, service worker won't work")))})),o.onscroll=()=>{o.scrollTop>200?(w.style.display="block",w.classList.remove("dizlo")):w.classList.add("dizlo")},window.switchBorderScroll=()=>{o.scrollTop>200?o.scrollTop=0:o.scrollTop=o.scrollHeight};function te({query:e,seskari:t,bangu:n,versio:r}){if(N.loading){const r=(({query:e,seskari:t,bangu:n,len:r})=>`${e}${t}${n}${r}`)({query:e,seskari:t,bangu:n,len:O.length});if(""!==I.displaying.query&&N.resultsHash===r)return;N.resultsHash=r}switch(ne(),window.jimte="velcusku"===t?201:30,T=0,l.innerHTML="",Oe({query:e,seskari:t,bangu:n,versio:r}),0===O.length&&Q({action:"stop"}),I.displaying={...I.displaying,query:e,versio:r,seskari:t,bangu:n},l.style.display="block",u.style.display="none",d.style.display="none",h.style.display="flex",o.scrollTop=0,I.displaying.seskari){case"rimni":ee(),Z({seskari:"rimni",sepia:"sepia(}1.0)"});break;case"arxivo":Z({seskari:"arxivo",sepia:"none"});break;case"velcusku":Z({seskari:"velcusku",sepia:"none"});break;case"catni":ee(),Z({seskari:"catni",sepia:"none"});break;case"fanva":ee(),Z({seskari:"fanva",sepia:"none"});break;default:ee(),Z({seskari:"cnano",sepia:"none"})}!function(){if(["fanva","velcusku"].includes(I.displaying.seskari)||""===I.displaying.query)return;let e=0;for(e=0;e<I.citri.length;e++)if(I.citri[e].query===I.displaying.query&&I.citri[e].seskari===I.displaying.seskari){I.citri.splice(e,1);break}I.citri.unshift({...I.displaying}),I.citri.length>10&&(I.citri.length=10);localStorage.setItem("citri",JSON.stringify(I.citri)),X()}(),ga("send","pageview",`#sisku/${I.displaying.query}`);window.location.href,document.title,document.referrer,I.displaying.query,window.location.protocol,window.location.hostname,Math.round(1e12*Math.random())}function ne(){[].forEach.call(document.querySelectorAll(".leader-line"),(function(e){e.parentNode.removeChild(e)}))}function re(){[].forEach.call(document.querySelectorAll(".leader-line"),(function(e){document.querySelector("#content").appendChild(e)}))}function ie(e){P=setTimeout((()=>{if(ne(),function(){const e=document.querySelectorAll("[data-target]");for(let t=0;t<e.length;t++){const n=e[t];if(se(n)){const e=n.id,t=n.attributes["data-target"].nodeValue;let r=document.getElementById(t).attributes["data-color"].nodeValue;r=`hsla(${r},100%,70%,0.62)`,new LeaderLine(document.getElementById(t),document.getElementById(e),{endPlugColor:r,color:r,dash:{animation:!0},startSocketGravity:[50,-67],endSocketGravity:[0,67],endPlug:"arrow2",endSocket:"bottom",size:3})}}re()}(),!0!==e){const e=document.getElementsByClassName("jvo_plumber");_=!_;for(var t=0;t<e.length;t++){const n=e[t];n.value=_e(),_?n.classList.add("tutci-hover"):n.classList.remove("tutci-hover")}}if(!_)return;const n=Array.from(document.querySelectorAll("[data-arr]"));for(let e=0;e<n.length;e++){const t=n[e],r=t.id,i=t.attributes["data-arr"].nodeValue.split(","),s=t.id.split("_").slice(0,-1),o=se(t);n.filter((e=>{const t=e.id.split("_").slice(0,-2),n=e.attributes["data-arr"].nodeValue.split(","),a=n[0].split(/(?=[0-9]+)/);if(1===n.length&&t.length===s.length&&t.join("_")===s.join("_")&&i.filter((e=>{const t=e.split(/(?=[0-9])/);return 0===a[0].indexOf(t[0])&&a[1]===t[1]})).length>0&&(o||se(e))){let t=e.attributes["data-color"].nodeValue;t=`hsla(${t},100%,70%,0.62)`,new LeaderLine(document.getElementById(e.id),document.getElementById(r),{endPlugColor:t,color:t,dash:{animation:!0},startSocketGravity:[50,-67],endSocketGravity:[0,67],endPlug:"arrow2",endSocket:"bottom",size:3})}})),re()}}),!0===e?450:0)}function se(e){const t=e.getBoundingClientRect();return t.top>=42&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)}function oe(e={},t={}){let n=!0;if(Object.keys(e).length==Object.keys(t).length){for(const r in e)if(e[r]!=t[r]){n=!1;break}}else n=!1;return n}function ae({href:e,replace:t}){e&&(e=e.substring(e.indexOf("#")+1),localStorage.setItem("url",`#${e}`));let n,r=function(e){if(""===e)return;const t={};let n="";n=0===e.search(/^#sisku\//)?[e.replace(/#sisku\/(.*)/,"sisku=$1")]:("#"===e[0]?e.substr(1):e).split("&");for(let e=0;e<n.length;e++){const r=n[e].split("=");r[1]&&(t[decodeURIComponent(r[0])]=decodeURIComponent(r[1].replace(/[\+]/g," ")||""))}return t}(e||window.location.hash)||{};if(r&&r.sisku)n=Te(r.sisku);else{e=(e=e||window.location.search).substring(e.indexOf("?")+1);n=Te(new URLSearchParams(e).get("focus")||""),n&&(r={sisku:n,seskari:"cnano"})}const i={...I.searching};r.seskari&&["velcusku","cnano","catni","rimni","arxivo","fanva"].includes(r.seskari)&&(i.seskari=r.seskari),i.versio="masno",r.versio&&["selmaho"].includes(r.versio)&&(i.versio=r.versio),r.bangu&&Object.keys(A).includes(r.bangu)&&(i.bangu=r.bangu),r.sisku&&(i.query=n),oe(i,I.searching)||(I.searching={...I.searching,...i},de({replace:t}))}function ce({target:e}){if("A"===e.nodeName){const t=e;if(t.ctrlKey||t.metaKey)return;ae({replace:!1,href:t.getAttribute("href")})}}function le(){I.searching.query=Ae(a.value),de({caller:"GetCiskaAndDispatch"})}function ue(e){clearTimeout(R);"muplis"===I.searching.bangu&&(e=500),"selmaho"===I.searching.versio&&(I.searching={...I.searching,seskari:"catni",versio:"masno"}),R=setTimeout(le,e||250)}function de({replace:e,caller:t,empty:n,quickRotation:r}){if(pe(),I.searching.query=I.searching.query,function({replace:e}){let t="";I.searching.versio&&(t=`&versio=${I.searching.versio}`);let n=`${window.location.href.split("?")[0].split("#")[0]}#seskari=${I.searching.seskari}&sisku=${Se(I.searching.query)}&bangu=${I.searching.bangu}${t}`;""===I.searching.query?(n="",document.title="la sutysisku"):document.title=`${I.searching.query} - la sutysisku`;const r=localStorage.getItem("url")||"";!0===e?window.history.replaceState({},null,n):window.location.hash!==n&&r!==n&&window.history.pushState({},null,n),localStorage.setItem("url",n)}({replace:e}),localStorage.setItem("tcini",JSON.stringify(I.searching)),1==n)return I.searching.query="",he();if("velcusku"!==I.searching.seskari){if(""===I.searching.query)return he();if(oe(I.searching,I.displaying))return}switch(a.value=I.searching.query,Q({action:"start",quick:r}),"GetCiskaAndDispatch"===t&&"velcusku"===I.searching.seskari&&(I.searching.seskari="cnano"),I.searching.seskari){case"arxivo":const e={...I.searching};"^"!==I.searching.query.charAt(0)&&"$"!==I.searching.query.slice(-1)[0]&&(e.query=`\\b${I.searching.query}\\b`),e.max=20;break;case"velcusku":break;default:N.loading&&F.postMessage({kind:"fancu",cmene:"cnino_bangu",...I.searching}),F.postMessage({kind:"newSearch",versio:"masno",...I.searching,leijufra:window.leijufra,loadingState:N})}}function pe(){F.postMessage({kind:"fancu",cmene:"tejufra",...I.searching})}function he(e){e||Q({action:"stop"}),e=e||I.displaying,ne(),o.scrollTop=0;const t=e.query;I.displaying.query="",g.classList.add("desktop-mode-title-color"),g.classList.remove("catni-search-mode-title-color","cnano-search-mode-title-color","velcusku-search-mode-title-color","rimni-search-mode-title-color","fanva-search-mode-title-color","arxivo-search-mode-title-color");try{y.classList.remove("catni-tutci-hover","tutci-hover")}catch(e){}try{v.classList.remove("cnano-tutci-hover","tutci-hover")}catch(e){}try{k.classList.remove("rimni-tutci-hover","tutci-hover")}catch(e){}m.className="kampu-dasri cnano-dasri",l.style.display="none",u.style.display="block";const n={"@CLL":{bangu:"english",cmene:"Reference Grammar",pixra:"../pixra/cll.png",url:L},"@lojban.pw":{cmene:"Live chat for your questions",pixra:"../pixra/nunsku.svg",url:`#seskari=cnano&sisku=lai jbosnu&bangu=${Pe()}&versio=masno`},"@LL":{bangu:"english",cmene:"Learn Lojban",pixra:"../pixra/cogwheel-5.svg",url:j},muplis:{cmene:"la muplis",pixra:"../pixra/taplamuplis.svg",width:2.1},en:{cmene:"English-Lojban",pixra:"../pixra/selsku_lanci_eng.svg"},jbo:{cmene:"fanva fi le'e lojbo ri",pixra:"../pixra/lanci_jbo.svg"},ja:{cmene:'日本 - <span style="white-space:pre;">ロジバン</span>',pixra:"../pixra/selsku_lanci_jpn.svg"},"fr-facile":{cmene:"français facile - lojban",pixra:"../pixra/selsku_lanci_fra.svg"},ru:{cmene:"русский - ложбан",pixra:"../pixra/selsku_lanci_rus.svg"},eo:{cmene:"Esperanto - Loĵbano",pixra:"../pixra/lanci_epo.svg"},es:{cmene:"español - lojban",pixra:"../pixra/selsku_lanci_spa.svg"},zh:{cmene:"中文 - 逻辑语",pixra:"../pixra/selsku_lanci_zho.svg"}};let r="";const i=100;for(const s in n){let{bangu:o,width:a,pixra:c,url:l,cmene:u}=n[s];a||(a=1),o&&o!==window.bangu||(r+=`<div class='DIV_1' style='height:100px;width:${a*i}px;'><div class='DIV_2' style='height:100px;width:${a*i}px;'><span class='SPAN_3' style='width:auto;'><b class='B_4'>${window.leijufra[u]||u}</b></span><a${0===(l||"").indexOf("http")?" rel='noreferrer' target='_blank'":""} aria-label="${u.replace(/<[^>]+?>/g,"")}" onclick="window.ningau_lepasorcu('${s}')" href="${0===s.indexOf("@")?l:`#seskari=${"fanva"!==e.seskari?e.seskari:"catni"}&sisku=${Se(t)}&bangu=${s}&versio=masno`}" class='A_7'><div class='DIV_8' style='height:100px;width:${a*i}px;background-image:url("${c}")'></div></a></div></div>`)}d.innerHTML=r,d.style.display="block"}function fe({keyCode:e}){e&&191===e&&a.focus()}function ge(){const{clientHeight:e}=document.getElementById("galtu-dasri"),{clientHeight:t}=document.getElementById("loading"),{clientHeight:n}=document.getElementById("velsku");o.setAttribute("style",`height:${Math.max(document.documentElement.clientHeight-e-t-n,window.innerHeight-e-t-n,50)}px;`)}function me(e,{s:t,l:n}){const r=`,${t||"90%"},${n||"80%"}`,i=e.split(",");let s=[];for(let e=0;e<i.length;e++){const t=ye(i[e],256,32);0===e?s.push(`hsl(${t}${r}),hsl(${t}${r}) ${100*(e+1)/i.length}%`):e===i.length-1?s.push(`hsl(${t}${r}) ${100*e/i.length}%,hsl(${t}${r})`):s.push(`hsl(${t}${r}) ${100*e/i.length}%,hsl(${t}${r}) ${100*(e+1)/i.length}%`)}return s.join(",")}F.onmessage=e=>{const{data:t}=e,{kind:n,cmene:r}=t;if("searchResults"==n){if(delete N.searching,!t.force&&!oe(t.req,I.searching))return;O=t.results||[],te({...t.req})}else if("parse"==n&&t.req&&"audioLink"==t.req.operation){let e=(t.req.tegerna||"").replace(/"/g,"");if(!e)return;const n=je(e);t.results=t.results.map((e=>[e[0],e[1].replace(/-/g,"")]));if(!function(e,{allowCmevla:t=!1,allowCmavo:n=!1}){const{C:r,V:i,I:s,D:o,T:a,R:c,J:l,h:u}=Me(),d=RegExp(`^(${o}${i}${r}${i}|${r}${i}${r}${r}${i})$`),p=RegExp(`^${r}${i}${r}${r}${s}$`),h=RegExp(`^${i}${r}${r}${i}$`),f=RegExp(`^${l}${i}${r}${r}${i}$`),g=RegExp(`^${a}${i}${c}${i}$`),m=RegExp(`^${o}${i}${r}${i}${r}${i}$`),y=RegExp(`^${o}${i}${r}${i}${r}${r}${i}$`),v=RegExp(`^${r}${i}${c}${i}${r}${r}${i}$`),k=RegExp(`^${r}${i}${c}${i}${r}${i}$`),b=RegExp(`^${o}${i}${r}${r}${i}$`),w=RegExp(`^${r}${i}${r}${r}${i}${u}${i}$`),E=RegExp(`^${r}${r}${i}${r}${i}${u}${i}$`);return e.every((e=>"gismu"===e[0]||d.test(e[1])||h.test(e[1])||f.test(e[1])||g.test(e[1])||m.test(e[1])||k.test(e[1])||p.test(e[1])||w.test(e[1])||E.test(e[1])||b.test(e[1])||y.test(e[1])||v.test(e[1])||t&&"cmevla"===e[0]||n&&"cmavo"===e[0]))}(t.results,{allowCmavo:!0,allowCmevla:!0}))return;e=t.results.map((e=>e[1])).join(" ");const r=Array.from(document.querySelectorAll(`[data-valsi="${n}"]`))[0],i=Array.from(document.querySelectorAll(`[data-valsi-play="${n}"]`))[0];if(r&&!i)try{window.runSpeakableAudio(e,!0)&&r.insertAdjacentHTML("afterend",`<button class="tutci sance" data-valsi-play="${n}" onclick="window.runSpeakableAudio(&quot;${e}&quot;)">▶</button>`)}catch(e){}}else if("loader"==n)"loading"===r?(t.banguRaw!==I.searching.bangu&&0!==t.completedRows&&t.completedRows!==t.totalRows||t.completedRows!==t.totalRows&&oe(N.searching,I.searching)||(N.searching=I.searching,N.loading=!0,F.postMessage({kind:"newSearch",versio:"masno",...I.searching,leijufra:window.leijufra,loadingState:N})),K({completedRows:t.completedRows,totalRows:t.totalRows,bangu:"🗃️ "+t.bangu})):"loaded"===r?(W(),Y({mode:"ca'o"})):"booting"===r&&K({completedRows:1,totalRows:3,bangu:"🗃️ "+(window.booting||"")}),ge();else if("fancu"==n&&"tejufra"===r)!function(e,t){if(!e.window)return;for(const t in e.window){const n=t.replace("window.","");window.leijufra[n]=window[n]=e.window[t]}Array.from(document.querySelectorAll("[data-jufra]")).forEach((t=>{const n=t.attributes["data-jufra"].nodeValue;let r=e[n];if(0===n.indexOf("window.")){r=e.window[n];const t=n.replace("window.","");window[t]=e.window[n]}if("INPUT"===t.nodeName)t.placeholder=r||t.placeholder;else t.innerHTML=r||t.innerHTML})),g=document.querySelector("#site-title"),Z({...t,sepia:"none"}),""===I.displaying.query&&he(t);const n=document.getElementById("velsku_sebenji");n&&(n.href=`#seskari=cnano&sisku=lai jbosnu&bangu=${Pe()}&versio=masno`)}(t.results,{...I.searching,...t.datni})},window.EmptyState=e=>{"string"==typeof e&&(I.searching.bangu=e,pe()),de({empty:!0})},"loading"===document.readyState&&(f.style.width="37%",document.title="la sutysisku");function ye(e,t,n){return e=e.replace(/[\{\}_]/g,""),Math.abs(Math.round(function(e,t=0){let n=3735928559^t,r=1103547991^t;for(let t,i=0;i<e.length;i++)t=e.charCodeAt(i),n=Math.imul(n^t,2654435761),r=Math.imul(r^t,1597334677);return n=Math.imul(n^n>>>16,2246822507)^Math.imul(r^r>>>13,3266489909),r=Math.imul(r^r>>>16,2246822507)^Math.imul(n^n>>>13,3266489909),4294967296*(2097151&r)+(n>>>0)}(e)%t/n)*n)}function ve(e){const t=(e=e.substr(1,e.length-2).split("=")).map((e=>e.replace(/[^A-Za-z']/g,"")));return{jalge:t,hasExpansion:e.length>1||t[0]&&"x"!==t[0]}}function ke({def:e,fullDef:t,query:n,seskari:r,versio:i,bangu:s,type:o,index:a}){if(t){if(t.bangu.indexOf("-cll")>=0){return{tergeha:`<ul class='uoldeliste' style="list-style-image: url(../pixra/cukta.svg);">${Object.keys(e).map((t=>{const n=e[t];return`<li><a rel='noreferrer' target='_blank' href="${L}${t}">${n}</a></li>`})).join("")}</ul>`,hasExpansion:!1}}if(t.bangu.indexOf("-ll")>=0){return{tergeha:`<ul class='uoldeliste' style="list-style-image: url(../pixra/certu.svg);">${Object.keys(e).map((t=>{const n=e[t];return`<li><a rel='noreferrer' target='_blank' href="${j}${t}">${n}</a></li>`})).join("")}</ul>`,hasExpansion:!1}}}const c=/<\/?a [\s\S]*>/i.test(e);let l=0;const u=[],d=[],p=[];let h=!1;["cnano","catni","rimni"].includes(r)||(r="cnano");const f=e.match(/\$.*?\$/g)||[];for(const e of f)if("d"===o&&void 0!==a){let n;ve(e).hasExpansion&&(h=!0);try{n=new RegExp(`^(${e.replace(/[^a-zA-Z0-9\{\}_]/g,"").replace(/([\{\}])/g,"\\$1")} \\([^\\(\\)<>]+?\\)).*`)}catch(n){console.log(e,t,n)}d.push({[e]:0!==e.search(n)?e:q.replace(n,"$1")})}let g=e.replace(/\$=\$/g,(e=>'$<span class="veljvocmiterjonmaho">=</span>$')).replace(/\$.*?\$/g,((e,n)=>{l++;const r=`${a}_${l}`;"d"===o&&u.push({[e]:r});const i=e.replace(/[^a-zA-Z0-9]/g,""),s=!!(t&&(t.rfs||[]).length>0),c=function({placeTag:e,fullDef:t,isHead:n,dataArrAdded:r,clearedPlaceTag:i}){if(n&&"lujvo"!==t.t)return{dataArr:!1,replacement:e,stringifiedPlaceTag:e};const s=(t.rfs||[]).map((e=>e.w)),o=e.substr(1,e.length-2).split("=").map((e=>{const r=e.split(/(?=[_0-9].*)/),i=s.filter((e=>0===e.indexOf(r[0])))[0];return{full:n?i||r[0]:t.w,number:r.slice(1).join(""),short:n?r[0]:t.w,hasMatchInRFS:!!i}})),a=o.filter((e=>e.hasMatchInRFS||!n)).map((e=>e.full+e.number.replace(/[_\{\}]/g,""))).join(",")||i,c=o.map((e=>e.full+e.number)).join("=");return{stringifiedPlaceTag:a,dataArr:!r.includes(i),replacement:`$${c}$`}}({isHead:s,placeTag:e,fullDef:t,dataArrAdded:p,clearedPlaceTag:i}),d=s?c.replacement:e,h=me(c.stringifiedPlaceTag,{s:"90%",l:"100%"}),f=me(c.stringifiedPlaceTag,{s:"100%",l:"40%"}),g=document.createElement("span");return"d"===o&&(g.id=r),g.classList.add("terbricmi"),g.style=`background: repeating-linear-gradient(to right,${h}), linear-gradient(90deg, ${f});background-origin: content-box, padding-box;background-clip: content-box, padding-box;padding: 1px;border-radius:999px;`,c.dataArr&&"d"===o&&g.setAttribute("data-arr",c.stringifiedPlaceTag),s||g.setAttribute("data-color",ye(c.stringifiedPlaceTag,256,32)),g.innerHTML=d,g.outerHTML})).replace(/(<span [^<>]+?>[^\(\)<>]+?<\/span>) \([^\(\)<>]*?\bproperty of <span id="([^\(\)<>]+?)"[^<>]+?>([^\(\)<>]+?)<\/span>\)/g,((e,t,n,r)=>{if("d"===o){const t=u.filter((e=>e[r]!==n&&e[r]));t[0]&&t[0][r]&&(e=e.replace(/^<span /,`<span data-target="${t[0][r]}" `))}return e})).replace(/\$.*?\$/g,(e=>e.replace(/\{/g,"\\curlyleft").replace(/\}/g,"\\curlyright")));return c||(g=g.replace(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g,(e=>{let t=`</span><a href="${e}" rel="noreferrer" target="_blank">${we({def:e,query:n})}</a><span>`;return e.match(/^https?:\/\/.*\.(jpg|png)$/)&&(t+=`<img class='se-tcidu-pixra' alt='secusku' src="${e}"/>\n`),t}))),g=g.replace(/\{.*?\}/g,(e=>{e=e.substring(1,e.length-1);return`</span><a class="a-${r}" href="#seskari=${r}&sisku=${Se(e)}&bangu=${s}&versio=masno">${we({def:Re(e,!0),query:n})}</a><span>`})).replace(/\$.*?\$/g,(e=>e.replace(/\\curlyleft/g,"{").replace(/\\curlyright/g,"}"))),g=`<span>${g}</span>`,g=g.replace(/<span><\/span>/g,"").replace(/(>[^<>$]+<|>[^<>$]+\$|\$[^<>$]+<)/g,(e=>we({def:e,query:n}))).replace(/\n/g,"<br/>"),{tergeha:g,hasExpansion:h}}function be(e){return e.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}function we({def:e,query:t}){if(!t||t.length<=2)return e;let n=be(t=t.trim().replace(/[\|\(\)\{\}<>]/g,".")).split(" ").filter((e=>e.length>2)).concat(be(t.replace(/'/g,"h")).split(" ").filter((e=>e.length>2)));if(0===n.length)return e;const r=`(${n.join("|")})`;return e.replace(new RegExp(r,"igm"),"<span class='basna'>$1</span>")}function Ee(e){return e.replace(/\./g,"").replace(/^/,".").toLowerCase().replace(/([aeiou\.])u([aeiou])/g,"$1w$2").replace(/([aeiou\.])i([aeiou])/g,"$1ɩ$2").replace(/au/g,"ḁ").replace(/ai/g,"ą").replace(/ei/g,"ę").replace(/oi/g,"ǫ").replace(/\./g,"")}function $e({w:e,ot:t,rfs:n}){let r=Ee(e);return r=r.split(/(?=[ɩw])/).map((e=>{return(t=e,t.replace(/w/g,"u").replace(/ɩ/g,"i").replace(/ḁ/g,"au").replace(/ą/g,"ai").replace(/ę/g,"ei").replace(/ǫ/g,"oi")).split("").map((e=>function(e){if(e.codePointAt(0)>=60800)return e;if(" "==e)return" ";"h"!=e&&"H"!=e||(e="'");if(V.includes(e))return String.fromCodePoint(M+V.indexOf(e));if(V.includes(e.toLowerCase()))return String.fromCodePoint(M+V.indexOf(e.toLowerCase()));return"\n"==e?"\n":"\t"==e?"\t":e}(e))).join("");var t})).join(""),r.replace(/,/g,"")}function xe(e,t,n){return n.indexOf(e)===t}function Ce(e,t,n){let r=function(e,t){const n=new RegExp(e,"g"),r=[];let i;for(;i=n.exec(t);)r.push(i.index);return r}(t,e);r=r.map((t=>((t=[t-n,t+n])[0]<0&&(t[0]=0),t[0]>=e.length&&(t[0]=e.length-1),t)));for(let e=0;e<r.length-1;e++)r[e][1]>r[e+1][0]&&(r[e][1]=r[e+1][1],r[e+1][0]=r[e][0]);if(r=r.map((e=>JSON.stringify(e))),r.length>0)r=r.filter(xe).map((n=>{n=JSON.parse(n);let r=e.substr(n[0],n[1]-n[0]);return r=we({def:r,query:t}),n[0]>3&&(r=`...${r}`),n[1]<e.length-4&&(r=`${r}...`),r})),r=r.join("<br/>");else{let n=e.substr(0,Math.min(100,e.length));n.length<e.length&&(n=`${n}...`),n=we({def:n,query:t}),r=n}return r}function _e(){return _?"⇔":"↔"}function Le({def:e,inner:t,query:n,seskari:r,versio:s,bangu:o,index:a}){n||(n=I.searching.query),r||(r=I.searching.seskari),o=(o=e.bangu||o||I.searching.bangu).replace(/-cll/,""),e||(e=[]);const c=document.createElement("div");c.className=t?"terminner":"termouter",c.classList.add("term"),!t&&e.d&&e.d.nasezvafahi&&0===(e.rfs||[]).length&&(c.className="sidju sidju-normal cll noselect"),0===a&&c.classList.add("searchRendered");var l="string"==typeof e.s&&S[e.s]?S[e.s].split(" "):void 0;if(void 0!==l){let e="";var u=document.createElement("h4");u.className="tfm";for(let t of l)e+=`&nbsp;&nbsp;<i><sup>[&nbsp;...&nbsp;&nbsp;&nbsp;<a href="#seskari=${r}&sisku=${Se(t)}&bangu=${o}&versio=masno">${Re(t)}</a>]</sup></i>`;u.innerHTML=e}const d=[];for(const t in S)S[t].split(" ").includes(e.w)&&d.push(`<a href="#seskari=${r}&versio=selmaho&sisku=${Se(t)}&bangu=${o}">${Re(t)}</a>`);if(0!==d.length){var p=document.createElement("div");p.classList.add("valsi"),e.l&&p.classList.add("nalojbo"),p.innerHTML=`<i><sup>[${d.join(", ")}&nbsp;&nbsp;&nbsp;...&nbsp;]</sup></i>&nbsp;&nbsp;`}let h;if(e.s){const t="string"==typeof e.s?e.s.split(" "):e.s;if(t.length>0){h=document.createElement("div");for(const e of t){(g=document.createElement("button")).className="tutci klesi klesi-tutci";var f=we({def:Re(e),query:n});g.innerHTML=f,g.setAttribute("onclick",`window.runSearch("${r}","${e}","${o}")`),h.appendChild(g)}}}var g;e.from&&((g=document.createElement("div")).className="tutci klesi klesi-tutci",g.innerHTML=e.from);let m=!1;const y=document.createElement("h4");if(y.classList.add("valsi"),e.d&&!e.d.nasezvafahi&&y.setAttribute("data-valsi",je(e.w)),e.l&&y.classList.add("nalojbo"),e.t===window.bangudecomp||"fanva"===r||Ae(e.w)!=n&&"velcusku"!=r){let t=r;"fanva"===r&&(t="catni"),y.innerHTML=`<a class="valsi${e.l?"":" nalojbo"}" href="#seskari=${t}&sisku=${Se(e.w)}&bangu=${o}&versio=masno">${we({def:Re(e.w,!0),query:n})}</a> `}else m=!0,y.innerHTML=`${we({def:e.q||e.w,query:n})} `;let v;if(e.t&&!e.t.type){e.t="bangudecomp"===e.t?window.bangudecomp:e.t,v=document.createElement("a"),v.className="klesi link";let t=e.t;const n=Se(e.w).replace(/_/g,"%20");v.href=window.judri?window.judri+n:`#seskari=${"catni"===r?"catni":"cnano"}&sisku=${n}&bangu=${o}&versio=masno`,window.judri&&(v.setAttribute("target","_blank"),v.setAttribute("rel","noreferrer")),window.xuzganalojudri&&!e.l&&(t=`${Re(e.t)}# `,e.d&&e.d.nasezvafahi&&(t=`➕ ${t}`)),v.innerHTML=t}e.t&&e.t.type&&(v=document.createElement("a"),v.href="javascript:;",v.className="klesi",v.innerHTML=e.t.type,e.t.bangu&&"lojbo"!==e.t.bangu&&y.classList.add("na_eisesance")),e.date&&(v=document.createElement("div"),v.className="tutci klesi klesi-tutci",v.style.whiteSpace="nowrap",v.innerHTML=e.date);let k,b={};e.d&&!e.d.nasezvafahi&&(b=ke({def:e.d,fullDef:e,query:n,seskari:r,versio:s,bangu:o,type:"d",index:a})),e.t&&0===e.t.k||"fanva"===r&&0!==a||(k=document.createElement("h4"),k.classList.add("valsi","zbalermorna","segerna","sampu"),k.textContent=$e(e));const w=document.createElement("heading");let E;w.classList.add("heading"),p&&w.appendChild(p),w.appendChild(y),m&&(E=document.createElement("button"),E.className="fanva-tutci tutci klesi klesi-tutci",E.onclick=function(){I.searching={...I.searching,seskari:"fanva",query:Ae(e.w)},de({replace:!1})},E.innerHTML="🌍");const $=document.createElement("div");$.classList.add("segerna","sampu","noselect");const x=e.bangu&&A[e.bangu].n?A[e.bangu].n:e.bangu||"";if($.innerHTML=x,u&&w.appendChild(u),v){const e=document.createElement("div");e.classList.add("sampu","noselect"),e.appendChild(v),v=e}let C;"lujvo"===e.t&&(e.rfs||[]).length>0&&b.hasExpansion&&(C=document.createElement("input"),C.type="button",C.classList.add("tutci","sance","jvo_plumber"),C.value=_e(),_?C.classList.add("tutci-hover"):C.classList.remove("tutci-hover"),C.onclick=ie);let L=[];k&&!h&&e.w.length<10&&!C&&(L.push("zbalermorna"),w.appendChild(k));const j=document.createElement("heading");j.style.flex=1,w.appendChild(j),h||(w.appendChild($),L.push("banguEl"),v&&(w.appendChild(v),L.push("jvs"))),m&&e.w.length<20&&(w.appendChild(E),L.push("translateButton")),C&&w.appendChild(C),h&&w.appendChild(h);const T=document.createElement("input");T.type="button",T.classList.add("tutci","sance","klesi-tutci"),T.value="📋",T.addEventListener("click",(function(){!function(e){const t=document.createElement("textarea");t.value=e,document.body.appendChild(t),t.select(),document.execCommand("Copy"),document.body.removeChild(t),K({bangu:window.copied||"📋",hideProgress:!0}),setTimeout((()=>{W()}),2e3)}([e.w,e.d,e.n].filter(Boolean).join("\r\n"))})),w.appendChild(T),c.appendChild(w);const R=document.createElement("heading");R.classList.add("heading","heading2"),k&&!L.includes("zbalermorna")&&R.appendChild(k);const O=document.createElement("heading");if(O.style.flex=1,R.appendChild(O),L.includes("banguEl")||R.appendChild($),v&&!L.includes("jvs")&&R.appendChild(v),E&&!L.includes("translateButton")&&R.appendChild(E),c.appendChild(R),"arxivo"!==r&&e.d){if((N=document.createElement("div")).classList.add("definition","valsi"),e.d&&e.d.nasezvafahi){if(!e.t&&0===(e.rfs||[]).length)return;N.classList.add("nasezvafahi","noselect"),N.innerHTML=window.nasezvafahi}else{let e=b.tergeha;N.innerHTML=e}c.appendChild(N)}if("arxivo"===r){const t=document.createElement("div");t.classList.add("definition","valsi","pointer"),t.innerHTML=Ce(e.d,n,50),t.addEventListener("click",(()=>{t.style.display="none",t.nextElementSibling.style.display="block"})),c.appendChild(t),(N=document.createElement("div")).classList.add("definition","valsi"),N.style.display="none",e.d&&e.d.nasezvafahi?(N.classList.add("nasezvafahi","noselect"),N.innerHTML=window.nasezvafahi):(N.innerHTML=`${we({def:e.d,query:n})} `,N.addEventListener("click",(()=>{N.style.display="none",N.previousElementSibling.style.display="block",N.parentElement.scrollIntoView()}))),c.appendChild(N)}var N;e.n&&((N=document.createElement("div")).classList.add("notes","valsi"),N.innerHTML=`${ke({def:e.n,fullDef:e,query:n,seskari:r,versio:s,type:"n",index:a,bangu:o}).tergeha} `,c.appendChild(N));e.e&&((N=document.createElement("div")).classList.add("examples","valsi"),N.innerHTML=`<table class='ciksi'>${ke({def:`${e.e}\n`.replace(/%/g,"\n").replace(/(.*?) — (.*?)\n/g,"<tr><td class='mupligreku'><b>$1</b></td><td class='mupligreku'><i>$2</i></td></tr>\n"),query:n,seskari:r,versio:s,bangu:o}).tergeha}</table> `,c.appendChild(N));e.k&&((N=document.createElement("div")).className="related",N.innerHTML=`See also: ${ke({def:e.k,query:n,seskari:r,versio:s,bangu:o}).tergeha} `,c.appendChild(N));if((e.r||[]).length>0&&!e.l&&window.xuzganalojudri){const t=document.createElement("div");t.className="rafsi noselect";const r=document.createElement("div");r.className="tanxe zunle_tanxe",r.innerHTML="rafsi",t.appendChild(r);const i=document.createElement("div");i.className="tanxe pritu_tanxe";for(let t=0;t<e.r.length;t++){const r=document.createElement("span");r.className="pamei";const s=e.r[t];r.innerHTML=we({def:s,query:n}),i.appendChild(r)}t.appendChild(i),c.appendChild(t)}if((e.b||[]).length>0&&!e.l&&window.xuzganalojudri){const t=document.createElement("div");t.className="rafsi noselect hue_rotate";const s=document.createElement("div");s.className="tanxe zunle_tanxe kurfa_tanxe",s.innerHTML="BAI",t.appendChild(s);const a=document.createElement("div");for(a.className="tanxe pritu_tanxe kurfa_tanxe",i=0;i<e.b.length;i++){const t=document.createElement("span");t.className="pamei";const s=e.b[i];t.innerHTML=`</span><a class="hue_rotate_back a-${r}" href="#seskari=${r}&sisku=${Se(s)}&bangu=${o}&versio=masno">${we({def:Re(s,!0),query:n})}</a><span>`,a.appendChild(t)}t.appendChild(a),c.appendChild(t)}if((e.rfs||[]).length>0){const t=document.createElement("div");t.classList.add("definition","subdefinitions");for(let i=0;i<e.rfs.length;i++){const c=Le({def:e.rfs[i],inner:!0,index:`${a}_${i}`,query:n,seskari:r,versio:s,bangu:o});c&&t.appendChild(c)}c.appendChild(t)}return c.addEventListener("click",ce),c}function je(e){return encodeURIComponent(e).replace(/'/g,"h")}function Ae(e){return"^"!==e.charAt(0)&&"$"!==e.slice(-1)?e.replace(/\./g," ").replace(/ {2,}/g," ").replace(/’/g,"'"):e}function Se(e){return encodeURIComponent((e||"").replace(/ /g,"_")).replace(/'/g,"%27")}function Te(e){return decodeURIComponent(e.replace(/&amp;/g,"&").replace(/%27/g,"'")).replace(/[_]/g," ")}function Re(e,t){return e=(e||"").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/\(/g,"&#40;").replace(/\)/g,"&#41;"),t||(e=e.replace(/'/g,"&#039;")),e}function Oe({query:e,seskari:t,bangu:n,versio:r}){const i=Math.min(window.jimte,O.length);for(I.cll=void 0;T<i;T++){const i=Le({def:O[T],query:e,seskari:t,versio:r,bangu:n,length:O.length,index:T});i&&l.appendChild(i)}}async function Ie(e){F.postMessage({kind:"parse",operation:"audioLink",tegerna:e.replace(/"/g,"")})}function Ne(e){return new Promise((t=>setTimeout(t,e)))}async function Be(){const e=Array.from(document.querySelectorAll(":not(.na_eisesance)[data-valsi]"));for(let t of e)se(t)&&(t=t.textContent.trim(),Ie(t),await Ne(500))}function qe(e,t,n){const r=document.createElement(e);return n&&(r.className=n),Array.isArray(t)?t.forEach((e=>{r.appendChild(e)})):t&&r.appendChild(t),r}function Pe(){const e=G()[0];return e&&e.bangu?I.searching.bangu:"en"}if(window.ningau_lepasorcu=e=>{0!==e.indexOf("@")&&F.postMessage({kind:"fancu",cmene:"ningau_lepasorcu",...I.searching,bangu:e})},window.runSearch=(e,t,n)=>{I.searching={seskari:e,versio:"selmaho",query:t,bangu:n},de({replace:!1})},document.querySelector("#table").appendChild(qe("table",[["p","t","k","f","s","c"],["b","d","g","v","z","j"],["m","l","n","r",,"x","'"],["a","e","i","o","u","y"],[],["aia","aua"],["au","ai","ei","oi"]].map((e=>qe("tr",e.map((e=>{const t=function(e,t,n){const r=document.createElement(e);return r.textContent=t,n&&(r.className=n),r}("button",e,"bangu");return t.onclick=()=>{var t;t=`/sutysisku/sance/lerfu/${encodeURIComponent(e)}.ogg`,$.src=t,$.play()},qe("td",t)}))))),"centero")),z=t()("wss://jbotcan.org:9091",{transports:["polling","websocket"]}),z){function e(e){return e.replace(/[\n\r]+$/gims," ").split("<")[0]}z.on("connect",(function(){H=!0})),z.on("connect_error",(function(){console.log("1chat connection error")})),z.on("sentFrom",(function(t){if(N.loading||!H)return;var n=t.data,r=e(n.chunk),i=n.channelId,s=n.author;const o=document.getElementById("velsku_sebenji");o.innerHTML=`<img src='../pixra/nunsku.svg' class="velsku_pixra"/> <span class="velsku_pamei">[${i}] ${s}: ${r}</span>`,o.style.display="flex",o.href=`#seskari=cnano&sisku=lai jbosnu&bangu=${Pe()}&versio=masno`})),z.on("history",(function(t){if(N.loading||!H)return;const n=document.getElementById("velsku_sebenji"),r=t.slice(-1)[0];if(!r)return;const i=e(r.chunk),s=r.channelId,o=r.author;n.innerHTML=`<img src='../pixra/nunsku.svg' class="velsku_pixra"/> <span class="velsku_pamei">[${s}] ${o}: ${i}</span>`,n.style.display="flex",n.href=`#seskari=cnano&sisku=lai jbosnu&bangu=${Pe()}&versio=masno`}))}function Me(){const e="[bdgjvzcfkpstxlmnr]",t="(pl|pr|fl|fr|bl|br|vl|vr|cp|cf|ct|ck|cm|cn|cl|cr|jb|jv|jd|jg|jm|sp|sf|st|sk|sm|sn|sl|sr|zb|zv|zd|zg|zm|tc|tr|ts|kl|kr|dj|dr|dz|gl|gr|ml|mr|xl|xr)";return{C:e,V:"(a|e|i|o|u)",I:"(ai|ei|oi|au|ḁ|ą|ę|ǫ)",D:t,T:"(cfr|cfl|sfr|sfl|jvr|jvl|zvr|zvl|cpr|cpl|spr|spl|jbr|jbl|zbr|zbl|ckr|ckl|skr|skl|jgr|jgl|zgr|zgl|ctr|str|jdr|zdr|cmr|cml|smr|sml|jmr|jml|zmr|zml)",R:`((?!${t})${e}${e})`,J:"(i|u)(?=[aeiouyḁąęǫ])",h:"[h']"}}function Ve(e){function t(e,t){let n="^";const r=e.replace(/[\.\?»«]/g,"");for(let e=0;e<t.length;e++)"?"==t[e]?n+=".":"*"==t[e]?n+=".*":"C"==t[e]?n+="[^aeiouyḁąęǫ]":"V"==t[e]?n+="[aeiouyḁąęǫ]":"I"==t[e]&&(n+="[iu]");n+="$";return new RegExp(n).test(r)}function n(e,t){const n=Object.keys(e).filter((e=>RegExp(`^${e}`).test(t))).sort(((e,t)=>t.length-e.length))[0]??"-";return{match:n,value:e[n]}}async function r(r,i){const s=function(r){const i=["kei","vau","ku'o","li'u","le'u","ge'u","zo'u"],s=r.replace(/(?:\r\n|\r|\n)/g," ").split(" ");let o=['<speak><prosody rate="slow">',"<s>"];for(let r=0;r<s.length;r++){const a=Ee(s[r]);["i",".i","ni'o"].includes(a)?o.push("</s>\n<s>"):"."==a[0]&&o.push('<break time="20ms" strength="x-weak" />');let c=[];for(let i=0;i<[...a].length;i++){t(a,"VCV")&&0==i||t(a,"CVCV")&&0==i||t(a,"VCCV")&&0==i?c.push("ˈ"):t(a,"CVCCI")||t(a,"CVCCV")||t(a,"IVCCV")||t(a,"CCVCV")?(0==i&&c.push("ˈ"),3==i&&c.push(".")):t(a,"CCVCCV")?(0==i&&c.push("ˈ"),4==i&&c.push(".")):t(a,"CCCVCCV")?(0==i&&c.push("ˈ"),5==i&&c.push(".")):t(a,"CCVCVCV")||t(a,"CVCCVCV")?(3==i&&c.push(".ˈ"),5==i&&c.push(".")):(t(a,"CCVCVCCV")||t(a,"CVCCVCCV"))&&(3==i&&c.push(".ˈ"),6==i&&c.push("."));const{match:o,value:l}=n(e.lojban2IPAMapping,a.slice(i)+" "+s.concat("").slice(r+1).join(" "));c.push(l),i=i-1+o.replace(/\\/g,"").replace(/\(\?.*\)/g,"").length}const{C:l,V:u,I:d}=Me();(RegExp(`(${l})$`).test(a)||RegExp(`^(${u}|${d})`).test(a))&&c.unshift("?");const p=c.join("").replace(/ʔ+/g,"ʔ").replace(/\.+/g,".");o.push(`<phoneme alphabet="ipa" ph="${p}">${a}</phoneme>`),("."==a[a.length-1]||i.includes(a))&&o.push('<break time="20ms" strength="x-weak" />')}return o.push("</s>","</prosody></speak>"),o.join("\n")}(r),o=function(e){const t=(JSON.parse(localStorage.getItem("cachedAudio"))||[]).filter((t=>t.text===e))[0];if(!t)return;return JSON.parse(t.audio).data}(s)||await function(t,n){return new Promise((function(r,i){(new AWS.Polly).synthesizeSpeech({Text:t,VoiceId:e.VoiceId,LanguageCode:e.LanguageCode,Engine:e.Engine,OutputFormat:"mp3",TextType:"ssml",SampleRate:"24000"},((e,s)=>{e?i():(!function(e,t,n){let r=JSON.parse(localStorage.getItem("cachedAudio"))||[];r=r.slice(n?-20:-10),r.push({text:e,audio:JSON.stringify(t)}),localStorage.setItem("cachedAudio",JSON.stringify(r))}(t,s.AudioStream,n),r(s.AudioStream))}))}))}(s,i);return!!i||new Promise((e=>{$.src=URL.createObjectURL(new Blob([new Uint8Array(o).buffer])),$.addEventListener("ended",(()=>e(!0))),$.pause(),$.play()}))}return AWS.config.credentials=new AWS.CognitoIdentityCredentials({IdentityPoolId:e.IdentityPoolId}),AWS.config.region=e.region,function(e,t){return r(e,t)}}var ze;window.runSpeakableAudio=function(e,t=!1){return J(e,t)},ze=function(){for(var e=document.getElementsByClassName("jsModalClose"),t=document.getElementsByClassName("jsOverlay"),n=0;n<e.length;n++)e[n].onclick=function(){var e=this.parentNode.parentNode;e.classList?e.classList.remove("open"):e.className=e.className.replace(new RegExp("(^|\\b)"+"open".split(" ").join("|")+"(\\b|$)","gi")," ")};for(n=0;n<t.length;n++)t[n].onclick=function(){var e=this.parentNode;e.classList?e.classList.remove("open"):e.className=e.className.replace(new RegExp("(^|\\b)"+"open".split(" ").join("|")+"(\\b|$)","gi")," ")}},"loading"!=document.readyState?ze():document.addEventListener("DOMContentLoaded",ze),window.resetAudioParams=()=>{const e=D;localStorage.setItem("audioParams",JSON.stringify(e)),E.value=JSON.stringify(e,null,2),J=Ve(e),localStorage.setItem("cachedAudio",null)}})()})();
+//imports:
+import io from './socket.io.js'
+import { initBackend } from './asql/indexeddb-main-thread.js'
+
+//DOM element vars:
+const content = document.getElementById('content')
+const ciska = document.getElementById('ciska')
+const clear = document.getElementById('clear')
+const outp = document.getElementById('outp')
+const descr = document.getElementById('descr')
+const drata = document.getElementById('drata')
+const citri = document.getElementById('citri')
+const sidju = document.getElementById('sidju')
+const pb = document.getElementById('kernelo_lo_cpacu')
+let SiteTitleFull = document.querySelector('#site-title')
+const dasri = document.getElementById('galtu-dasri')
+const catni = document.getElementById('catni')
+const cnano = document.getElementById('cnano')
+const rimni = document.getElementById('rimni')
+// var arxivo = document.getElementById("arxivo");
+const SiteImage = document.querySelectorAll('#title > img')
+const btnScrollToTop = document.getElementById('scrollToTop')
+const audio = document.querySelector('#audio')
+const loading = document.getElementById('loading')
+const modalWindow = document.getElementById('jsModal')
+
+// generic vars:
+
+const CACHE_NAME = 'sutysisku'
+
+window.leijufra = {}
+let jvoPlumbsOn = true
+const uncll_url = `https://la-lojban.github.io/uncll/uncll-1.2.14/xhtml_section_chunks/`
+const learnlojban_url = 'https://lojban.pw/books/learn-lojban/#'
+const supportedLangs = {
+  en: { n: 'English', p: 'selsku_lanci_eng' },
+  muplis: { n: 'la muplis' },
+  'en-cll': { n: 'The Book', p: 'cukta' },
+  'en-ll': { n: 'Learn Lojban', p: 'cukta' },
+  jbo: { n: 'lojbo', p: 'lanci_jbo' },
+  ru: { n: 'русский', p: 'selsku_lanci_rus' },
+  eo: { n: 'esperanto', p: 'lanci_epo' },
+  es: { n: 'español', p: 'selsku_lanci_spa' },
+  'fr-facile': { n: 'français', p: 'selsku_lanci_fra' },
+  ja: { n: '日本語', p: 'selsku_lanci_jpn' },
+  zh: { n: '中文', p: 'selsku_lanci_zho' },
+}
+
+const listFamymaho = {
+  GA: "gi",
+  GUhA: "gi",
+  BE: "bei be'o",
+  BEI: "be'o",
+  BY: 'boi',
+  COI: "do'u",
+  DOI: "do'u",
+  FIhO: "fe'u",
+  FUhE: "fu'o",
+  GIhA: 'vau',
+  GOI: "ge'u",
+  JOhI: "te'u",
+  KE: "ke'e",
+  LAhE: "lu'u",
+  LA: 'ku',
+  LE: 'ku',
+  LI: "lo'o",
+  LOhU: "le'u",
+  LU: "li'u",
+  ME: "me'u",
+  'NAhE+BO': "lu'u",
+  NOI: "ku'o",
+  NUhI: "nu'u",
+  NU: 'kei',
+  PA: 'boi',
+  PEhO: "ku'e",
+  SEI: "se'u",
+  SOI: "se'u",
+  TO: 'toi',
+  TUhE: "tu'u",
+  VEI: "ve'o",
+  LOhAI: "sa'ai",
+  SAhAI: "le'ai",
+  LOhOI: "ku'au",
+  NAhU: "te'u",
+  NIhE: "te'u",
+  MOhE: "te'u",
+}
+let resultCount
+let results = []
+
+//search after timeout
+let typingTimer
+//prepare:
+const state = {
+  searching: {
+    seskari: 'cnano',
+    versio: 'masno',
+    query: '',
+    bangu: 'en',
+  },
+  displaying: {
+    seskari: 'cnano',
+    versio: 'masno',
+    query: '',
+    bangu: 'en',
+  },
+  citri: [],
+}
+const loadingState = {
+  loading: true,
+  firstRun: true,
+  mathRendered: false
+}
+
+try {
+  const tcini = JSON.parse(localStorage.getItem('tcini'))
+  if (tcini && tcini.seskari) state.searching.seskari = tcini.seskari
+  if (tcini && tcini.versio) state.searching.versio = tcini.versio
+  // if (tcini.query) state.searching.query = tcini.query
+  if (tcini && tcini.bangu) state.searching.bangu = tcini.bangu
+} catch (error) { }
+
+state.citri = macitri()
+
+const timers = {
+  vh: null,
+  typing: null,
+}
+
+let scrollTimer = null
+let scrollJvoTimer = null
+
+const UNICODE_START = 0xed80
+const lerfu_index = "ptkflscmx.' 1234bdgvrzjn`-,~    aeiouy    qw    AEIOUY"
+
+
+//pronunciation guide
+const rows = [
+  ['p', 't', 'k', 'f', 's', 'c'],
+  ['b', 'd', 'g', 'v', 'z', 'j'],
+  ['m', 'l', 'n', 'r', , 'x', "'"],
+  ['a', 'e', 'i', 'o', 'u', 'y'],
+  [],
+  ['aia', 'aua'],
+  ['au', 'ai', 'ei', 'oi'],
+]
+
+let socket, socket1Chat, socket1Chat_connected
+ciska.focus()
+
+const pollyParams = {
+  IdentityPoolId: 'us-east-1:35da84f8-d67e-4977-b07d-37650808ea00',
+  region: 'us-east-1',
+  VoiceId: 'Vicki',
+  LanguageCode: 'de-DE',
+  Engine: 'neural',
+  lojban2IPAMapping: {
+    '«': '',
+    '-': '.',
+    '»': '',
+    '\\?': '',
+    ',': '',
+    '\\.': 'ʔ',
+    ' ': ' ',
+    ˈ: 'ˈ',
+    a: 'aː',
+    "a\\b(?!')": 'aː',
+    e: 'ɛ:',
+    "e\\b(?!')": 'ɛ:ʔ',
+    i: 'i:',
+    o: 'ɔ:',
+    u: 'u:',
+    y: 'ə',
+    ą: 'aj',
+    ę: 'ɛj',
+    "ę\\b(?!')": 'ɛjʔ',
+    ǫ: 'ɔj',
+    ḁ: 'aʊ',
+    ɩa: 'jaː',
+    ɩe: 'jɛ:',
+    ɩi: 'ji:',
+    ɩo: 'jɔ:',
+    ɩu: 'ju:',
+    ɩy: 'jə',
+    ɩ: 'j',
+    wa: 'waː',
+    we: 'wɛ:',
+    wi: 'wi:',
+    wo: 'wɔ:',
+    wu: 'wu:',
+    wy: 'wə',
+    w: 'w',
+    c: 'ʃ',
+    j: 'ʒ',
+    s: 's',
+    z: 'z',
+    f: 'f',
+    ev: 'ɛ:ʔv',
+    v: 'v',
+    x: 'x',
+    "'": 'h',
+    dj: 'dʒ',
+    tc: 'tʃ',
+    dz: 'ʣ',
+    ts: 'ʦ',
+    'r(?=[^aeiouyḁąęǫ])': 'rr.',
+    'r(?=[aeiouyḁąęǫ])': 'ɹ',
+    n: 'n',
+    m: 'm',
+    l: 'l',
+    b: 'b',
+    d: 'd',
+    g: 'g',
+    k: 'k',
+    p: 'p',
+    t: 't',
+  },
+}
+window.pollyParams = pollyParams
+
+let audioParams
+try {
+  audioParams = JSON.parse(localStorage.getItem(`audioParams`))
+} catch (error) { }
+
+
+if (audioParams && audioParams.IdentityPoolId) {
+  window.pollyParams = audioParams
+} else {
+  localStorage.setItem(`audioParams`, JSON.stringify(window.pollyParams))
+}
+
+window.delay = (() => (callback, ms, timer) => {
+  clearTimeout(timers[timer])
+  timers[timer] = setTimeout(callback, ms)
+})()
+
+//commands:
+
+const worker = new Worker('worker.js?sisku=1638525479127')
+initBackend(worker)
+
+try {
+  setStateFromUrl({
+    replace: true,
+  })
+} catch (error) { }
+
+RenderCitri()
+calcVH()
+let polly = PollyPlayer(window.pollyParams)
+//listeners:
+document.addEventListener('animationstart', listenToSearchRendered, false)
+citri.addEventListener('click', clicked)//clicked link > push it
+window.addEventListener('popstate', setStateFromUrl)//typed, stopped typing > push
+ciska.addEventListener('paste', typing(0))
+ciska.addEventListener('keyup', () => {
+  typing()
+})
+ciska.addEventListener('keydown', () => {
+  clearTimeout(typingTimer)
+})
+ciska.addEventListener('input', typing())
+ciska.addEventListener('textInput', typing())
+ciska.addEventListener('focus', focusSearch)//focus > push
+clear.addEventListener('click', window.EmptyState)
+
+rimni.addEventListener('click', () => {//change seskari
+  state.searching = {
+    ...state.displaying,
+    seskari: 'rimni',
+    versio: 'masno',
+    query: plukaquery(ciska.value),
+  }
+  DispatchState({
+    replace: false,
+  })
+})
+
+document.getElementById('cnano').addEventListener('click', () => {
+  state.searching = {
+    ...state.displaying,
+    seskari: 'cnano',
+    versio: 'masno',
+    query: plukaquery(ciska.value),
+  }
+  DispatchState({
+    replace: false,
+  })
+})
+
+document.getElementById('catni').addEventListener('click', () => {
+  state.searching = {
+    ...state.displaying,
+    seskari: 'catni',
+    versio: 'masno',
+    query: plukaquery(ciska.value),
+  }
+  DispatchState({
+    replace: false,
+  })
+})
+
+window.addEventListener('resize', calcVH, true)
+content.addEventListener('scroll', checkScrolledNearBottom)
+
+if (document.attachEvent) {
+  document.attachEvent('onkeyup', handler)
+} else {
+  document.addEventListener('keyup', handler)
+}
+
+window.applyNewPollyParams = function (input) {
+  try {
+    const json = {
+      ...pollyParams,
+      ...window.pollyParams,
+      ...JSON.parse(input.value),
+    }
+    localStorage.setItem('audioParams', JSON.stringify(json))
+    polly = PollyPlayer(json)
+    localStorage.setItem('cachedAudio', null)
+  } catch (error) { }
+}
+
+document.addEventListener('keyup', function (e) {
+  if (e.ctrlKey && e.key === 'ArrowDown') {
+    openModal({
+      innerHTML: `
+    <textarea id="modal_textArea" name="textarea" rows="10" onkeyup = "window.applyNewPollyParams(this)">${JSON.stringify(
+        window.pollyParams,
+        null,
+        2
+      )
+        }</textarea>
+    <button onclick="resetAudioParams(document.getElementById('modal_textArea'))">${window.modal_reset}</button>
+  `})
+  }
+}, false)
+
+window.addEventListener('load', async () => {
+  await getCache({ mode: "co'a" })
+  // if (!cacheIsFine) return
+
+  // if (window.crossOriginIsolated) {
+  console.log({ crossOriginIsolated: window.crossOriginIsolated })
+  //check if our db is filled
+  worker.postMessage({
+    kind: 'fancu',
+    cmene: 'ningau_lesorcu',
+    ...state.searching,
+  })
+  updateLocales()
+  // }
+
+  // jimpe fi le jei su'o cnino sorcu ka'e se pilno ca lo nu jai gau akti fai le cnino papri
+  if ('serviceWorker' in navigator) {
+    // navigator.serviceWorker.addEventListener('controllerchange',
+    //   function () {
+    //     if (window.refreshing) return;
+    //     window.refreshing = true;
+    //     setTimeout(() => {
+    //       window.location.reload();
+    //     }, 2000)
+    //   }
+    // );
+    // navigator.serviceWorker.addEventListener('message', event => {
+    //   if (event.data.event === 'loading cache') {
+    //     console.log(event.data);
+
+    //   }
+
+    // });
+
+    // navigator.serviceWorker.onmessage = function ({ data }) {
+    //   console.log(data);
+
+    // if (data && data.teminde && data.teminde === "co'a jmina le vreji") {
+    //   console.log('updating cache started')
+    // } else if (data && data.teminde && data.teminde === "mo'u jmina le vreji") {
+    //   console.log('updating cache done')
+    //   window.location.reload()
+    //   // worker.postMessage({
+    //   //   kind: 'fancu',
+    //   //   cmene: 'ningau_lerosorcu',
+    //   //   ...state.searching,
+    //   // })
+    // }
+    // }
+    //   navigator.serviceWorker.register('./sw.js', {
+    //     scope: './'
+    //   }).then(
+    //     function (registration) {
+    //       // console.log("COOP/COEP Service Worker registered", registration.scope);
+    //       // // If the registration is active, but it's not controlling the page
+    //       // if (registration.active && !navigator.serviceWorker.controller) {
+    //       //   window.location.reload();
+    //       // }
+    //     },
+    //     (err) => {
+    //       console.log('ServiceWorker registration failed: ', err)
+    //     }
+    //   )
+  } else if (location.protocol === 'https:') {
+    alert(
+      'Your browser is not supported. Please, upgrade to the latest Chrome / Firefox / Safari and don\'t use the app in incognito / private browsing mode (it needs to save dictionary data to disk to work successfully).'
+    )
+  } else {
+    alert("HTTP protocol, la sutysisku won't work.")
+    console.log("http protocol, service worker won't work")
+  }
+})
+
+//functions:
+function showLoaded() {
+  loadingState.loading = false
+  addAudioLinks()
+  delete loadingState.resultsHash
+  loading.style.display = 'none'
+  document.getElementById('contentWrapper').style.paddingBottom = '0'
+}
+
+function showLoading({ completedRows, totalRows, bangu, hideProgress }) {
+  loading.style.display = 'inline-flex'
+  document.getElementById('contentWrapper').style.paddingBottom = '28px'
+  const cpacu = document.getElementById('cpacu')
+  if (hideProgress) {
+    cpacu.style.display = 'none'
+  } else {
+    const percent = Math.min(
+      100,
+      Math.max(
+        10,
+        (parseFloat(completedRows) * 100) / parseFloat(totalRows)
+      )
+    )
+    cpacu.style.display = 'block'
+    pb.style.width = `${percent}%`
+  }
+  document.getElementById('bangu_loading').innerHTML = bangu
+}
+
+async function getCache({ mode }) {
+  const cacheStorage = await caches.open(CACHE_NAME);
+  const cachedList = await getCachedList();
+  const initialCacheListLength = cachedList.length
+
+  const response = await fetch(`/sutysisku/data/tcini.json?sisku=${new Date().getTime()}`)
+  if (!response.ok) {
+    if (initialCacheListLength === 0) alert("Are you offline? We can't fetch the source.")
+    return false
+  }
+  const vreji = (await response.json()).vreji.map(v => new URL(v, window.location.origin + window.location.pathname).href)
+  let cacheUpdated = false
+  for (let i = 0; i < vreji.length; i++) {
+    const url = vreji[i]
+    if (mode === "co'a" && !/(\.(js|wasm|html|css)|\/$)/.test(url)) continue
+    const cachedResponse = await cacheStorage.match(url);
+    if (!cachedResponse) {
+      await cacheStorage.add(url);
+      cacheUpdated = true
+      if (mode === "co'a") showLoading({ completedRows: i, totalRows: vreji.length, bangu: `📦 💾 📁 🛠️` })
+    }
+  }
+
+  for (const key of cachedList) {
+    if (!vreji.includes(key.url)) {
+      await cacheStorage.delete(key.url, { ignoreMethod: true, ignoreVary: true });
+      console.log({ event: 'removing cache', url: key.url });
+    }
+  }
+  if (cacheUpdated) await cacheStorage.add(new URL('index.html', window.location.origin + window.location.pathname).href);
+  showLoaded()
+  if (mode === "co'a" && cacheUpdated) {
+    window.location.reload()
+  }
+  //  else if (!window.crossOriginIsolated) {
+  //   alert("la sutysisku will likely not work. Please, use Chrome/Chromium browser.")
+  //   return false
+  // }
+  return true
+}
+
+async function getCachedList() {
+  const cacheStorage = await caches.open(CACHE_NAME);
+  return await cacheStorage.keys()
+}
+
+
+content.onscroll = () => {
+  if (content.scrollTop > 200) {
+    btnScrollToTop.style.display = 'block'
+    btnScrollToTop.classList.remove('dizlo')
+  } else {
+    // btnScrollToTop.style.display = "none";
+    btnScrollToTop.classList.add('dizlo')
+  }
+}
+
+window.switchBorderScroll = () => {
+  if (content.scrollTop > 200) {
+    content.scrollTop = 0
+  } else {
+    content.scrollTop = content.scrollHeight
+  }
+}
+
+
+function macitri() {
+  let citri = []
+  try {
+    return JSON.parse(localStorage.getItem('citri')) || citri
+  } catch (e) { }
+  return citri
+}
+
+function RenderCitri() {
+  if (state.citri.length > 0)
+    citri.innerHTML = ` <span class="romoi_lehiseciska" data-jufra="window.purc">${window.purc || ''
+      }</span>${state.citri
+        .filter(({ seskari }) => seskari !== 'velcusku')
+        .map(
+          ({ seskari, versio, query, bangu }) =>
+            `<a class="a-${seskari}${versio !== 'masno' ? ` a-${versio}` : ''}" href="#seskari=${seskari}&versio=${versio}&sisku=${encodeUrl(
+              query
+            )}&bangu=${bangu}">${escHtml(query)}</a>`
+        )
+        .join(', ')}`
+}
+
+function RenderDasri({ seskari, sepia }) {
+  const colors = ['velcusku', 'arxivo', 'cnano', 'rimni', 'catni', 'fanva']
+  if (state.displaying.bangu === 'muplis') {
+    document.getElementById('leitutci').style.display = 'none'
+  } else {
+    document.getElementById('leitutci').style.display = 'flex'
+  }
+  if (!colors.includes(seskari)) seskari = 'cnano'
+  dasri.className = `kampu-dasri ${seskari}-dasri noselect`
+  SiteTitleFull.classList.add(`${seskari}-search-mode-title-color`)
+  SiteTitleFull.classList.remove('desktop-mode-title-color')
+  if (document.getElementById(seskari))
+    document
+      .getElementById(seskari)
+      .classList.add(`${seskari}-tutci-hover`, 'tutci-hover')
+  colors.map((c) => {
+    if (c !== seskari) {
+      SiteTitleFull.classList.remove(`${c}-search-mode-title-color`)
+      if (document.getElementById(c))
+        document
+          .getElementById(c)
+          .classList.remove(`${c}-tutci-hover`, 'tutci-hover')
+    }
+  })
+  if (sepia)
+    for (let i = 0; i < SiteImage.length; i++) {
+      SiteImage[i].style.filter = sepia
+    }
+}
+
+function listenToSearchRendered(event) {
+  if (event.animationName == 'nodeInserted') {
+    if (loadingState.loading !== true) addAudioLinks()
+    SwitchRotation({
+      action: 'stop',
+    })
+  }
+}
+
+function SwitchRotation({ action, quick }) {
+  if (document.readyState !== 'complete') return
+  const els = ['logo']
+  if (action === 'start') {
+    els.map((el) => {
+      document.getElementById(el).classList.remove('stopRotate')
+      document.getElementById(el).classList.add('rotate')
+    })
+    clear.classList.add('pulsate-css')
+    setTimeout(
+      () => {
+        if (clear.classList.contains('pulsate-css'))
+          ciska.classList.add('granim-css')
+      },
+      quick ? 100 : 500
+    )
+  } else {
+    els.map((el) => {
+      document.getElementById(el).classList.add('stopRotate')
+    })
+    ciska.classList.remove('granim-css')
+    clear.classList.remove('pulsate-css')
+  }
+}
+
+function EmitVelcusku() {
+  // if (socket1Chat) socket1Chat.open()
+}
+
+function renderMathAndPlumbs() {
+  MathJax.typesetPromise().then(() => {
+    addJvoPlumbs(true)
+  })
+}
+
+const hashResults = ({ query, seskari, bangu, len }) =>
+  `${query}${seskari}${bangu}${len}`
+
+function RenderResults({ query, seskari, bangu, versio }) {
+  if (loadingState.loading) {
+    const currentHash = hashResults({
+      query,
+      seskari,
+      bangu,
+      len: results.length,
+    })
+    if (
+      state.displaying.query !== '' &&
+      loadingState.resultsHash === currentHash
+    )
+      return
+    loadingState.resultsHash = currentHash
+  }
+  removePlumbs()
+  window.jimte = seskari === 'velcusku' ? 201 : 30
+  resultCount = 0
+  outp.innerHTML = ''
+  skicu_rolodovalsi({
+    query,
+    seskari,
+    bangu,
+    versio,
+  })
+  if (results.length === 0)
+    SwitchRotation({
+      action: 'stop',
+    })
+  state.displaying = { ...state.displaying, query, versio, seskari, bangu }
+  outp.style.display = 'block'
+  descr.style.display = 'none'
+  drata.style.display = 'none'
+  sidju.style.display = 'flex'
+  content.scrollTop = 0
+  switch (state.displaying.seskari) {
+    case 'rimni':
+      renderMathAndPlumbs()
+      RenderDasri({ seskari: 'rimni', sepia: 'sepia(}1.0)' })
+      break
+    case 'arxivo':
+      RenderDasri({ seskari: 'arxivo', sepia: 'none' })
+      break
+    case 'velcusku':
+      RenderDasri({ seskari: 'velcusku', sepia: 'none' })
+      break
+    case 'catni':
+      renderMathAndPlumbs()
+      RenderDasri({ seskari: 'catni', sepia: 'none' })
+      break
+    case 'fanva':
+      renderMathAndPlumbs()
+      RenderDasri({ seskari: 'fanva', sepia: 'none' })
+      break
+    case 'cnano':
+    default:
+      renderMathAndPlumbs()
+      RenderDasri({ seskari: 'cnano', sepia: 'none' })
+  }
+
+
+  //todo: arrpurc or state.history
+  DispatchCitri()
+
+  ga('send', 'pageview', `#sisku/${state.displaying.query}`)
+  const pageViewData = {
+    dl: window.location.href,
+    dt: document.title,
+    dr: document.referrer,
+    dp: `#sisku/${state.displaying.query}`,
+    dh: `${window.location.protocol}//${window.location.hostname}`,
+    z: Math.round(Math.random() * 1e12),
+  }
+  if (socket) socket.emit('sisku', pageViewData)
+
+}
+
+function removePlumbs() {
+  ;[].forEach.call(document.querySelectorAll('.leader-line'), function (e) {
+    e.parentNode.removeChild(e)
+  })
+}
+
+function appendPlumbs() {
+  ;[].forEach.call(document.querySelectorAll('.leader-line'), function (e) {
+    document.querySelector('#content').appendChild(e)
+  })
+}
+
+function addJvoPlumbs(force) {
+  scrollJvoTimer = setTimeout(
+    () => {
+      removePlumbs()
+      addPlumbs()
+      if (force !== true) {
+        const plumbers = document.getElementsByClassName('jvo_plumber')
+        jvoPlumbsOn = !jvoPlumbsOn
+        for (var i = 0; i < plumbers.length; i++) {
+          const plumber = plumbers[i]
+          plumber.value = jvoValue()
+          jvoPlumbsOn
+            ? plumber.classList.add('tutci-hover')
+            : plumber.classList.remove('tutci-hover')
+        }
+      }
+      if (!jvoPlumbsOn) return
+      const targetedEls = Array.from(document.querySelectorAll('[data-arr]'))
+      for (let targetedElIndex = 0; targetedElIndex < targetedEls.length; targetedElIndex++) {
+        const target = targetedEls[targetedElIndex]
+        const target_id = target.id
+        const targetVeljvoElements = target.attributes['data-arr'].nodeValue.split(',')
+        const targetIdComponents = target.id.split('_')
+        const targetFinalIndex = targetIdComponents.slice(0, -1)
+        const WeCanSeeThisElement = kahe_sezgana(target)
+        targetedEls.filter((startElement) => {
+          const startElIdComponents = startElement.id.split('_')
+          const startElFinalIndexes = startElIdComponents.slice(0, -2)
+          const startElVeljvoElements = startElement.attributes['data-arr'].nodeValue.split(',')
+          const startVeljvoElementComponents = startElVeljvoElements[0].split(/(?=[0-9]+)/)
+          if (
+            startElVeljvoElements.length === 1 &&
+            startElFinalIndexes.length === targetFinalIndex.length &&
+            startElFinalIndexes.join('_') === targetFinalIndex.join('_') &&
+            targetVeljvoElements.filter((targetVeljvoElement) => {
+              const targetVeljvoElementComponents = targetVeljvoElement.split(/(?=[0-9])/)
+              return startVeljvoElementComponents[0].indexOf(targetVeljvoElementComponents[0]) === 0 && startVeljvoElementComponents[1] === targetVeljvoElementComponents[1]
+            }).length > 0 &&
+            (WeCanSeeThisElement || kahe_sezgana(startElement))
+          ) {
+            let color = startElement.attributes['data-color'].nodeValue
+            color = `hsla(${color},100%,70%,0.62)`
+              ; new LeaderLine(
+                document.getElementById(startElement.id),
+                document.getElementById(target_id),
+                {
+                  endPlugColor: color,
+                  color: color,
+                  dash: { animation: true },
+                  startSocketGravity: [50, -67],
+                  endSocketGravity: [0, 67],
+                  endPlug: 'arrow2',
+                  endSocket: 'bottom',
+                  size: 3,
+                }
+              )
+          }
+        })
+
+        appendPlumbs()
+      }
+    },
+    force === true ? 450 : 0
+  )
+}
+
+function addPlumbs() {
+  //plumbs for in-terbri interactions
+  const targetedEls = document.querySelectorAll('[data-target]')
+  for (let i = 0; i < targetedEls.length; i++) {
+    const target = targetedEls[i]
+    if (kahe_sezgana(target)) {
+      const target_id = target.id
+      const start = target.attributes['data-target'].nodeValue
+      let color = document.getElementById(start).attributes['data-color'].nodeValue
+      color = `hsla(${color},100%,70%,0.62)`
+        ; new LeaderLine(
+          document.getElementById(start),
+          document.getElementById(target_id),
+          {
+            // gradient: {
+            //   startColor: 'rgba(135, 0, 0, 0.4)',
+            //   endColor: 'rgba(255, 120, 0, 0.4)',
+            // },
+            endPlugColor: color,
+            color: color,
+            dash: { animation: true },
+            // outlineColor: '#111',
+            // outline: true,
+            startSocketGravity: [50, -67],
+            endSocketGravity: [0, 67],
+            endPlug: 'arrow2',
+            // startSocket: 'top',
+            endSocket: 'bottom',
+            size: 3,
+          }
+        )
+    }
+  }
+  appendPlumbs()
+}
+
+function kahe_sezgana(el) {
+  const rect = el.getBoundingClientRect()
+  return rect.top >= 42 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+    (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+}
+
+function twoJsonsAreEqual(obj1 = {}, obj2 = {}) {
+  let flag = true
+
+  if (Object.keys(obj1).length == Object.keys(obj2).length) {
+    for (const key in obj1) {
+      if (obj1[key] == obj2[key]) {
+        continue
+      } else {
+        flag = false
+        break
+      }
+    }
+  } else {
+    flag = false
+  }
+  return flag
+}
+//listeners
+worker.onmessage = (ev) => {
+  const { data } = ev
+  const { kind, cmene } = data
+  if (kind == 'searchResults') {
+    delete loadingState.searching
+    if (!data.force && !twoJsonsAreEqual(data.req, state.searching)) return
+    results = data.results || []
+    RenderResults({
+      ...data.req,
+    })
+  } else if (kind == 'parse' && data.req && data.req.operation == 'audioLink') {
+    let word = (data.req.tegerna || '').replace(/"/g, '')
+    if (!word) return
+    const encodedWord = encodeValsiForWeb(word)
+    data.results = data.results.map((i) => [i[0], i[1].replace(/-/g, '')])
+    const isReliableText = allAreSafeWords(data.results, {
+      allowCmavo: true,
+      allowCmevla: true,
+    })
+
+    if (!isReliableText) return
+    word = data.results.map((i) => i[1]).join(' ')
+
+    const hd = Array.from(
+      document.querySelectorAll(`[data-valsi="${encodedWord}"]`)
+    )[0]
+    const hd2 = Array.from(
+      document.querySelectorAll(`[data-valsi-play="${encodedWord}"]`)
+    )[0]
+    if (hd && !hd2) {
+      try {
+        const gotAudio = window.runSpeakableAudio(word, true)
+        if (gotAudio) hd.insertAdjacentHTML(
+          'afterend',
+          `<button class="tutci sance" data-valsi-play="${encodedWord}" onclick="window.runSpeakableAudio(&quot;${word}&quot;)">▶</button>`
+        )
+      } catch (error) {
+
+      }
+    }
+
+    // } else if (data.kind == 'fancu') {
+    //   const { cmene, results } = data
+    //   switch (cmene) {
+    //     case 'tejufra':
+    //       updateDOMWithLocales(results, { ...state.searching, ...data.datni })
+    //       break
+    //   }
+  } else if (kind == 'loader') {
+    if (cmene === 'loading') {
+      if (
+        data.banguRaw === state.searching.bangu ||
+        data.completedRows === 0 ||
+        data.completedRows === data.totalRows
+      ) {
+        if (
+          data.completedRows === data.totalRows ||
+          !twoJsonsAreEqual(loadingState.searching, state.searching)
+        ) {
+          loadingState.searching = state.searching
+          loadingState.loading = true
+          worker.postMessage({
+            kind: 'newSearch',
+            versio: 'masno',
+            ...state.searching,
+            leijufra: window.leijufra,
+            loadingState,
+          })
+        }
+      }
+      showLoading({ completedRows: data.completedRows, totalRows: data.totalRows, bangu: "🗃️ " + data.bangu })
+    } else if (cmene === 'loaded') {
+      showLoaded()
+      getCache({ mode: "ca'o" })
+    } else if (cmene === 'booting') {
+      showLoading({ completedRows: 1, totalRows: 3, bangu: "🗃️ " + (window.booting || '') })
+    }
+    calcVH()
+  } else if (kind == 'fancu') {
+    switch (cmene) {
+      case 'tejufra':
+        updateDOMWithLocales(data.results, {
+          ...state.searching,
+          ...data.datni,
+        })
+        break
+    }
+  }
+}
+if (socket)
+  socket.on('la_arxivo_cu_cusku', ({ seskari, query, message }) => {
+    if (
+      state.searching.seskari === seskari &&
+      state.searching.query === query
+    ) {
+      results = message || []
+      RenderResults({
+        query: query,
+        seskari: seskari,
+      })
+    }
+  })
+
+//loaded doc > from url > push new seskari/query, update url
+//get events:
+function parseQuery(queryString) {
+  if (queryString === '') return
+  const query = {}
+  let pairs = ''
+  //legacy support:
+  if (queryString.search(/^#sisku\//) === 0) {
+    pairs = [queryString.replace(/#sisku\/(.*)/, 'sisku=$1')]
+  } else {
+    pairs = (
+      queryString[0] === '#' ? queryString.substr(1) : queryString
+    ).split('&')
+  }
+  for (let i = 0; i < pairs.length; i++) {
+    const pair = pairs[i].split('=')
+    if (pair[1])
+      query[decodeURIComponent(pair[0])] = decodeURIComponent(
+        pair[1].replace(/[\+]/g, ' ') || ''
+      )
+  }
+  return query
+}
+
+function setStateFromUrl({ href, replace }) {
+  if (href) {
+    href = href.substring(href.indexOf('#') + 1)
+    localStorage.setItem('url', `#${href}`)
+  }
+  let params = parseQuery(href || window.location.hash) || {}
+  let newSearch
+  if (params && params['sisku']) {
+    newSearch = decodeUrl(params['sisku'])
+  } else {
+    href = href || window.location.search
+    href = href.substring(href.indexOf('?') + 1)
+    const search = new URLSearchParams(href)
+    newSearch = decodeUrl(search.get('focus') || '')
+    if (newSearch) {
+      params = { sisku: newSearch, seskari: 'cnano' }
+    }
+  }
+  const stateToUpdate = { ...state.searching }
+  if (
+    params['seskari'] &&
+    ['velcusku', 'cnano', 'catni', 'rimni', 'arxivo', 'fanva'].includes(
+      params['seskari']
+    )
+  ) {
+    stateToUpdate.seskari = params['seskari']
+  }
+  stateToUpdate.versio = 'masno'
+  if (params['versio'] && ['selmaho'].includes(params['versio'])) {
+    stateToUpdate.versio = params['versio']
+  }
+  if (
+    params['bangu'] &&
+    Object.keys(supportedLangs).includes(params['bangu'])
+  ) {
+    stateToUpdate.bangu = params['bangu']
+  }
+  if (params['sisku']) {
+    stateToUpdate.query = newSearch
+  }
+  if (!twoJsonsAreEqual(stateToUpdate, state.searching)) {
+    state.searching = { ...state.searching, ...stateToUpdate }
+    DispatchState({
+      replace,
+    })
+  }
+}
+
+function clicked({ target }) {
+  if (target.nodeName === 'A') {
+    const el = target
+    if (el.ctrlKey || el.metaKey) return
+    setStateFromUrl({
+      replace: false,
+      href: el.getAttribute('href'),
+    })
+  }
+  return
+}
+
+function setUrlFromState({ replace }) {
+  let versio = ''
+  if (state.searching.versio) {
+    versio = `&versio=${state.searching.versio}`
+  }
+  let url = `${window.location.href.split('?')[0].split('#')[0]}#seskari=${state.searching.seskari
+    }&sisku=${encodeUrl(state.searching.query)}&bangu=${state.searching.bangu
+    }${versio}`
+  if (state.searching.query === '') {
+    url = ''
+    document.title = 'la sutysisku'
+  } else {
+    document.title = `${state.searching.query} - la sutysisku`
+  }
+  const lastUrl = localStorage.getItem('url') || ''
+  if (replace === true) {
+    window.history.replaceState({}, null, url)
+  } else if (window.location.hash !== url && lastUrl !== url) {
+    window.history.pushState({}, null, url)
+  }
+  localStorage.setItem('url', url)
+}
+
+function GetCiskaAndDispatch() {
+  state.searching.query = plukaquery(ciska.value)
+  // state.searching.versio = 'masno'
+  DispatchState({
+    caller: 'GetCiskaAndDispatch',
+  })
+}
+
+function typing(timeout) {
+  clearTimeout(typingTimer)
+  const defaultTimeout = 250
+  if (state.searching.bangu === 'muplis') timeout = 500
+  if (state.searching.versio === 'selmaho') state.searching = { ...state.searching, seskari: 'catni', versio: 'masno' }
+  typingTimer = setTimeout(GetCiskaAndDispatch, timeout ? timeout : defaultTimeout)
+}
+
+
+function focusSearch() {
+  if (loadingState.firstRun) {
+    loadingState.firstRun = false
+    return
+  }
+  state.searching.query = plukaquery(ciska.value)
+  DispatchState({ quickRotation: true })
+}
+
+window.EmptyState = (bangu) => {
+  if (typeof bangu === 'string') {
+    state.searching.bangu = bangu
+    updateLocales()
+  }
+  DispatchState({
+    empty: true,
+  })
+}
+
+document.getElementById("report_feedback_main").addEventListener("click", function () {
+  window.tmp_value = state.displaying;
+  openModal({
+    innerHTML: `
+        <h2>${window.report_feedback}</h2>
+        <h3 class="valsi">${state.displaying.query}</h3>
+        <h4 class="valsi">${supportedLangs[state.displaying.bangu].n}</h4>
+        <textarea id="modal__textarea" class="modal__textarea" row="10" placeholder="${window.report_feedback_description}"></textarea>
+        <button class="tutci feedback" onclick="this.firstElementChild.classList.remove('d-none');window.send_feedback({state: window.tmp_value, comment: document.getElementById('modal__textarea').value})"><div class="spinner d-none"></div>${window.report_feedback}</button>
+  `})
+})
+// document.getElementById("arxivo").addEventListener("click", function () {
+//   state.searching = {
+//     seskari: "arxivo",
+//     query: plukaquery(ciska.value)
+//   };
+//   DispatchState({
+//     replace: false
+//   });
+// });
+
+// document.getElementById("velcusku").addEventListener("click", function () {
+//   state.searching = {
+//     seskari: "velcusku",
+//     query: plukaquery(ciska.value)
+//   };
+//   DispatchState({
+//     replace: false
+//   });
+// });
+
+function DispatchCitri() {
+  if (
+    ['fanva', 'velcusku'].includes(state.displaying.seskari) ||
+    state.displaying.query === ''
+  )
+    return
+  let i = 0
+  for (i = 0; i < state.citri.length; i++) {
+    if (
+      state.citri[i].query === state.displaying.query &&
+      state.citri[i].seskari === state.displaying.seskari
+    ) {
+      state.citri.splice(i, 1)
+      break
+    }
+  }
+  state.citri.unshift({ ...state.displaying })
+  if (state.citri.length > 10) state.citri.length = 10
+  localStorage.setItem('citri', JSON.stringify(state.citri))
+  RenderCitri()
+}
+//Dispatch State
+function DispatchState({ replace, caller, empty, quickRotation }) {
+  updateLocales()
+  // if (socket1Chat) socket1Chat.close()
+  state.searching.query = state.searching.query
+  setUrlFromState({
+    replace,
+  })
+  localStorage.setItem('tcini', JSON.stringify(state.searching))
+  if (empty == true) {
+    state.searching.query = ''
+    return RenderDesktop()
+  } else if (state.searching.seskari !== 'velcusku') {
+    if (state.searching.query === '') return RenderDesktop()
+    if (twoJsonsAreEqual(state.searching, state.displaying)) return
+  }
+  //emit search
+  ciska.value = state.searching.query
+
+  SwitchRotation({
+    action: 'start',
+    quick: quickRotation,
+  })
+  if (
+    caller === 'GetCiskaAndDispatch' &&
+    state.searching.seskari === 'velcusku'
+  )
+    state.searching.seskari = 'cnano'
+  switch (state.searching.seskari) {
+    case 'arxivo':
+      const json = { ...state.searching }
+      if (
+        state.searching.query.charAt(0) !== '^' &&
+        state.searching.query.slice(-1)[0] !== '$'
+      )
+        json.query = `\\b${state.searching.query}\\b`
+      json.max = 20
+      if (socket) socket.emit('cpedu_fi_la_arxivo', json)
+      break
+    case 'velcusku':
+      EmitVelcusku()
+      break
+    default:
+      if (loadingState.loading)
+        worker.postMessage({
+          kind: 'fancu',
+          cmene: 'cnino_bangu',
+          ...state.searching,
+        })
+      worker.postMessage({
+        kind: 'newSearch',
+        versio: 'masno',
+        ...state.searching,
+        leijufra: window.leijufra,
+        loadingState,
+      })
+  }
+}
+
+function updateDOMWithLocales(jufra, miniState) {
+  if (!jufra.window) return
+  for (const key in jufra.window) {
+    const subKey = key.replace('window.', '')
+    window.leijufra[subKey] = window[subKey] = jufra.window[key]
+  }
+
+  Array.from(document.querySelectorAll('[data-jufra]')).forEach((node) => {
+    const key = node.attributes['data-jufra'].nodeValue
+    let val = jufra[key]
+    if (key.indexOf('window.') === 0) {
+      val = jufra.window[key]
+      const subKey = key.replace('window.', '')
+      window[subKey] = jufra.window[key]
+    }
+    switch (node.nodeName) {
+      case 'INPUT':
+        node.placeholder = val || node.placeholder
+        break
+      default:
+        node.innerHTML = val || node.innerHTML
+    }
+  })
+  SiteTitleFull = document.querySelector('#site-title')
+  RenderDasri({ ...miniState, sepia: 'none' })
+  if (state.displaying.query === '') RenderDesktop(miniState)
+  const velsku = document.getElementById('velsku_sebenji')
+  if (velsku)
+    velsku.href = `#seskari=cnano&sisku=lai jbosnu&bangu=${getStateBangu()}&versio=masno`
+}
+
+function updateLocales() {
+  worker.postMessage({ kind: 'fancu', cmene: 'tejufra', ...state.searching })
+}
+
+//rendering
+function RenderDesktop(tempState) {
+  if (!tempState)
+    SwitchRotation({
+      action: 'stop',
+    })
+  tempState = tempState || state.displaying
+  removePlumbs()
+  content.scrollTop = 0
+  const lastQuery = tempState.query
+  state.displaying.query = ''
+  // ciska.value = "";
+  SiteTitleFull.classList.add('desktop-mode-title-color')
+  SiteTitleFull.classList.remove(
+    'catni-search-mode-title-color',
+    'cnano-search-mode-title-color',
+    'velcusku-search-mode-title-color',
+    'rimni-search-mode-title-color',
+    'fanva-search-mode-title-color',
+    'arxivo-search-mode-title-color'
+  )
+  try {
+    catni.classList.remove('catni-tutci-hover', 'tutci-hover')
+  } catch (error) { }
+  try {
+    cnano.classList.remove('cnano-tutci-hover', 'tutci-hover')
+  } catch (error) { }
+  try {
+    rimni.classList.remove('rimni-tutci-hover', 'tutci-hover')
+  } catch (error) { }
+  // velcusku.classList.remove("velcusku-tutci-hover", "tutci-hover");
+  // arxivo.classList.remove("arxivo-tutci-hover", "tutci-hover");
+  dasri.className = 'kampu-dasri cnano-dasri'
+  outp.style.display = 'none'
+  descr.style.display = 'block'
+  
+  const obj = {
+    '@CLL': {
+      bangu: 'english',
+      cmene: 'Reference Grammar',
+      pixra: '../pixra/cll.png',
+      url: uncll_url,
+    },
+    '@lojban.pw': {
+      cmene: 'Live chat for your questions',
+      pixra: '../pixra/nunsku.svg',
+      url: `#seskari=cnano&sisku=lai jbosnu&bangu=${getStateBangu()}&versio=masno`,
+    },
+    '@LL': {
+      bangu: 'english',
+      cmene: 'Learn Lojban',
+      pixra: '../pixra/cogwheel-5.svg',
+      url: learnlojban_url,
+    },
+    muplis: {
+      cmene: 'la muplis',
+      pixra: '../pixra/taplamuplis.svg',
+      width: 2.1,
+    },
+    en: { cmene: 'English-Lojban', pixra: '../pixra/selsku_lanci_eng.svg' },
+    jbo: { cmene: "fanva fi le'e lojbo ri", pixra: '../pixra/lanci_jbo.svg' },
+    ja: {
+      cmene: '日本 - <span style="white-space:pre;">ロジバン</span>',
+      pixra: '../pixra/selsku_lanci_jpn.svg',
+    },
+    'fr-facile': {
+      cmene: 'français facile - lojban',
+      pixra: '../pixra/selsku_lanci_fra.svg',
+    },
+    ru: { cmene: 'русский - ложбан', pixra: '../pixra/selsku_lanci_rus.svg' },
+    eo: { cmene: 'Esperanto - Loĵbano', pixra: '../pixra/lanci_epo.svg' },
+    es: { cmene: 'español - lojban', pixra: '../pixra/selsku_lanci_spa.svg' },
+    zh: { cmene: '中文 - 逻辑语', pixra: '../pixra/selsku_lanci_zho.svg' },
+  }
+
+  
+  
+  let acc = ''
+  const cisn = 100
+  for (const key in obj) {
+    let { bangu, width, pixra, url, cmene } = obj[key]
+    if (!width) width = 1
+    if (!bangu || bangu === window.bangu) {
+      acc += `<div class='DIV_1' style='height:${cisn}px;width:${width * cisn
+        }px;'><div class='DIV_2' style='height:${cisn}px;width:${width * cisn
+        }px;'><span class='SPAN_3' style='width:auto;'><b class='B_4'>${window.leijufra[cmene] || cmene
+        }</b></span><a${(url || '').indexOf('http') === 0
+          ? " rel='noreferrer' target='_blank'"
+          : ''
+        } aria-label="${cmene.replace(
+          /<[^>]+?>/g,
+          ''
+        )}" onclick="window.ningau_lepasorcu('${key}')" href="${key.indexOf('@') === 0
+          ? url
+          : `#seskari=${tempState.seskari !== 'fanva' ? tempState.seskari : 'catni'
+          }&sisku=${encodeUrl(lastQuery)}&bangu=${key}&versio=masno`
+        }" class='A_7'><div class='DIV_8' style='height:${cisn}px;width:${width * cisn
+        }px;background-image:url("${pixra}")'></div></a></div></div>`
+    }
+  }
+  drata.innerHTML = acc
+  drata.style.display = 'block'
+}
+
+function handler({ keyCode }) {
+  if (keyCode && keyCode === 191) ciska.focus()
+}
+if (document.readyState === 'loading') {
+  pb.style.width = '37%'
+  document.title = 'la sutysisku'
+}
+
+function calcVH() {
+  const { clientHeight: dasriHeight } =
+    document.getElementById('galtu-dasri')
+  const { clientHeight: loadingHeight } = document.getElementById('loading')
+  const { clientHeight: velskuHeight } = document.getElementById('velsku')
+  content.setAttribute(
+    'style',
+    `height:${Math.max(
+      document.documentElement.clientHeight -
+      dasriHeight -
+      loadingHeight -
+      velskuHeight,
+      window.innerHeight - dasriHeight - loadingHeight - velskuHeight,
+      50
+    )}px;`
+  )
+
+}
+
+
+// function getCLLSections(te_gerna) {
+//   let a = window.arrcll[te_gerna]
+//   if (!a) {
+//     te_gerna = te_gerna.replace(/[^A-Z]+$/, '')
+//     if (te_gerna === '') return
+//     a = window.arrcll[te_gerna]
+//   }
+//   return a
+// }
+
+// function CLL({ pre, valsi }) {
+//   if (!window.cll_url | ((window.arrcll || []).length === 0)) return {}
+//   if (pre && !valsi.match(/^[A-Zh]+[\+A-Zh0-9]*$/)) return {}
+//   const secs = getCLLSections(valsi)
+//   if (!secs) return {}
+//   const cllHtmlLinksString = `${
+//     window.cllnotci
+//   }<ul class='uoldeliste'>${Object.keys(secs)
+//     .map(
+//       (sec) =>
+//         `<li><a rel='noreferrer' target='_blank' href="${
+//           window.cll_url
+//         }${sec}">${escHtml(secs[sec])}</a></li>`
+//     )
+//     .join('')}</ul>`
+//   const div = document.createElement('div')
+//   div.className = `${pre ? 'sidju' : 'definition'} cll noselect`
+//   div.innerHTML = cllHtmlLinksString
+//   return { secs, div }
+// }
+
+
+
+function checkScrolledNearBottom({ target }) {
+  removePlumbs()
+  if (scrollTimer !== null) {
+    clearTimeout(scrollTimer)
+  }
+  if (scrollJvoTimer !== null) {
+    clearTimeout(scrollJvoTimer)
+  }
+  if (
+    state.displaying.seskari !== 'velcusku' &&
+    target.scrollTop + window.innerHeight >= outp.clientHeight - 700
+  ) {
+    window.jimte += 10
+    skicu_rolodovalsi(state.displaying)
+    MathJax.typesetPromise().then(() => {
+      addJvoPlumbs(true)
+    })
+  } else {
+    addJvoPlumbs(true)
+  }
+  addAudioLinks()
+}
+
+function bgString2Int(string, { s, l }) {
+  const sl = `,${s || '90%'},${l || '80%'}`
+  const array = string.split(",");
+  let acc = []
+  for (let i = 0; i < array.length; i++) {
+    const color = string2Int(array[i], 256, 32)
+    if (i === 0) {
+      acc.push(`hsl(${color}${sl}),hsl(${color}${sl}) ${100 * (i + 1) / array.length}%`)
+    } else if (i === array.length - 1) {
+      acc.push(`hsl(${color}${sl}) ${100 * i / array.length}%,hsl(${color}${sl})`)
+    } else {
+      acc.push(`hsl(${color}${sl}) ${100 * i / array.length}%,hsl(${color}${sl}) ${100 * (i + 1) / array.length}%`)
+    }
+  }
+  return acc.join(",")
+}
+const cyrb53 = function (str, seed = 0) {
+  let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
+  for (let i = 0, ch; i < str.length; i++) {
+    ch = str.charCodeAt(i);
+    h1 = Math.imul(h1 ^ ch, 2654435761);
+    h2 = Math.imul(h2 ^ ch, 1597334677);
+  }
+  h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507) ^ Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+  h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507) ^ Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+  return 4294967296 * (2097151 & h2) + (h1 >>> 0);
+};
+
+function string2Int(stringToHash, maxNumber, quantifier) {
+  stringToHash = stringToHash.replace(/[\{\}_]/g, '')
+  return Math.abs(
+    Math.round(
+      (cyrb53(stringToHash) %
+        maxNumber) /
+      quantifier
+    ) * quantifier
+  )
+}
+function getVeljvoLetters(v) {
+  v = v.substr(1, v.length - 2).split('=')
+
+  const jalge = v.map((i) => i.replace(/[^A-Za-z']/g, ''))
+  return {
+    jalge,
+    hasExpansion: v.length > 1 || (jalge[0] && jalge[0] !== 'x'),
+  }
+}
+
+function getVeljvoString({ placeTag, fullDef, isHead, dataArrAdded, clearedPlaceTag }) {
+  if (isHead && fullDef.t !== 'lujvo') return { dataArr: false, replacement: placeTag, stringifiedPlaceTag: placeTag }
+  const rfsWords = (fullDef.rfs || []).map(i => i.w)
+  const arrayPlaceTags = placeTag
+    .substr(1, placeTag.length - 2)
+    .split('=')
+    .map((i) => {
+      const arrayTag = i.split(/(?=[_0-9].*)/)
+      const candidateWord = rfsWords.filter(word => word.indexOf(arrayTag[0]) === 0)[0]
+      return {
+        full: isHead ? candidateWord || arrayTag[0] : fullDef.w,
+        number: arrayTag.slice(1).join(""),
+        short: isHead ? arrayTag[0] : fullDef.w,
+        hasMatchInRFS: !!candidateWord
+      }
+    })
+  const stringifiedPlaceTag = arrayPlaceTags.filter(i => i.hasMatchInRFS || !isHead).map(i => i.full + i.number.replace(/[_\{\}]/g, '')).join(',') || clearedPlaceTag
+  const replacingPlaceTag = arrayPlaceTags.map(i => i.full + i.number).join("=")
+  return { stringifiedPlaceTag, dataArr: !dataArrAdded.includes(clearedPlaceTag), replacement: `$${replacingPlaceTag}$` }
+}
+
+function melbi_uenzi({ def, fullDef, query, seskari, versio, bangu, type, index }) {
+  if (fullDef) {
+    if (fullDef.bangu.indexOf('-cll') >= 0) {
+      const d = Object.keys(def)
+        .map((address) => {
+          const velcki = def[address]
+          return `<li><a rel='noreferrer' target='_blank' href="${uncll_url}${address}">${velcki}</a></li>`
+        })
+        .join('')
+      return {
+        tergeha: `<ul class='uoldeliste' style="list-style-image: url(../pixra/cukta.svg);">${d}</ul>`,
+        hasExpansion: false,
+      }
+    } else if (fullDef.bangu.indexOf('-ll') >= 0) {
+      const d = Object.keys(def)
+        .map((address) => {
+          const velcki = def[address]
+          return `<li><a rel='noreferrer' target='_blank' href="${learnlojban_url}${address}">${velcki}</a></li>`
+        })
+        .join('')
+      return {
+        tergeha: `<ul class='uoldeliste' style="list-style-image: url(../pixra/certu.svg);">${d}</ul>`,
+        hasExpansion: false,
+      }
+    }
+  }
+
+  const hasHtml = /<\/?a [\s\S]*>/i.test(def)
+  let iterTercricmiId = 0
+  const jsonIds = []
+  const types = []
+  const dataArrAdded = []
+  let hasExpansion = false
+  if (!['cnano', 'catni', 'rimni'].includes(seskari)) seskari = 'cnano'
+
+  const placeTags = def.match(/\$.*?\$/g) || []
+  for (const placeTag of placeTags) {
+    if (type === 'd' && typeof index !== 'undefined') {
+      const rt = getVeljvoLetters(placeTag)
+      if (rt.hasExpansion) hasExpansion = true
+      let regexpForPrettifiedPlaceTag
+      try {
+        regexpForPrettifiedPlaceTag = new RegExp(
+          `^(${placeTag
+            .replace(/[^a-zA-Z0-9\{\}_]/g, '')
+            .replace(/([\{\}])/g, '\\$1')} \\([^\\(\\)<>]+?\\)).*`
+        )
+      } catch (error) {
+        console.log(placeTag, fullDef, error)
+      }
+      types.push({ [placeTag]: placeTag.search(regexpForPrettifiedPlaceTag) !== 0 ? placeTag : q.replace(regexpForPrettifiedPlaceTag, '$1') })
+    }
+  }
+
+  let jalge = def
+    .replace(/\$=\$/g, (placeTag) => {
+      return `$<span class="veljvocmiterjonmaho">=</span>$`
+    })
+    .replace(/\$.*?\$/g, (placeTag, offset) => {
+      iterTercricmiId++
+      const combInd = `${index}_${iterTercricmiId}`
+
+      if (type === 'd') jsonIds.push({ [placeTag]: combInd })
+      const clearedPlaceTag = placeTag.replace(/[^a-zA-Z0-9]/g, '')
+      const isHead = fullDef && (fullDef.rfs || []).length > 0 ? true : false
+
+      const objectVeljvoReplacement = getVeljvoString({
+        isHead,
+        placeTag,
+        fullDef,
+        dataArrAdded,
+        clearedPlaceTag,
+      })
+      const replacementTag = isHead ? objectVeljvoReplacement.replacement : placeTag;
+      const gradient = bgString2Int(objectVeljvoReplacement.stringifiedPlaceTag, { s: '90%', l: '100%' });
+      const gradientBorder = bgString2Int(objectVeljvoReplacement.stringifiedPlaceTag, { s: '100%', l: '40%' });
+      // dataArrAdded.push(clearedPlaceTag)
+      const span = document.createElement('span')
+      if (type === 'd') span.id = combInd
+      span.classList.add("terbricmi")
+      span.style = `background: repeating-linear-gradient(to right,${gradient}), linear-gradient(90deg, ${gradientBorder});background-origin: content-box, padding-box;background-clip: content-box, padding-box;padding: 1px;border-radius:999px;`
+      if (objectVeljvoReplacement.dataArr && (type === 'd')) span.setAttribute("data-arr", objectVeljvoReplacement.stringifiedPlaceTag)
+      if (!isHead) span.setAttribute("data-color", string2Int(objectVeljvoReplacement.stringifiedPlaceTag, 256, 32))
+      span.innerHTML = replacementTag.replace(/\{/g, '\\curlyleft').replace(/\}/g, '\\curlyright')
+      return span.outerHTML
+    })
+    .replace(
+      /(<span [^<>]+?>[^\(\)<>]+?<\/span>) \([^\(\)<>]*?\bproperty of <span id="([^\(\)<>]+?)"[^<>]+?>([^\(\)<>]+?)<\/span>\)/g,
+      (c, _, id, t) => {
+        if (type === 'd') {
+          const a = jsonIds.filter((e) => e[t] !== id && e[t])
+          if (a[0] && a[0][t])
+            c = c.replace(/^<span /, `<span data-target="${a[0][t]}" `)
+        }
+        return c
+      }
+    )
+  if (!hasHtml)
+    jalge = jalge.replace(
+      /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g,
+      (c) => {
+        let res = `</span><a href="${c}" rel="noreferrer" target="_blank">${basna(
+          {
+            def: c,
+            query,
+          }
+        )}</a><span>`
+        if (c.match(/^https?:\/\/.*\.(jpg|png)$/))
+          res += `<img class='se-tcidu-pixra' alt='secusku' src="${c}"/>\n`
+        return res
+      }
+    )
+  jalge = jalge
+    .replace(/\{.*?\}/g, (c) => {
+      var c = c.substring(1, c.length - 1)
+      return `</span><a class="a-${seskari}" href="#seskari=${seskari}&sisku=${encodeUrl(
+        c
+      )}&bangu=${bangu}&versio=masno">${basna({
+        def: escHtml(c, true),
+        query,
+      })}</a><span>`
+    })
+    .replace(/\$.*?\$/g, (c) =>
+      c.replace(/\\curlyleft/g, '{').replace(/\\curlyright/g, '}')
+    )
+  jalge = `<span>${jalge}</span>`
+  jalge = jalge
+    .replace(/<span><\/span>/g, '')
+    .replace(
+      /(>[^<>$]+<|>[^<>$]+\$|\$[^<>$]+<)/g,
+      (
+        c // var c = c.substring(1, c.length - 1)
+      ) =>
+        basna({
+          def: c,
+          query,
+        })
+    )
+    .replace(/\n/g, '<br/>')
+  return { tergeha: jalge, hasExpansion }
+}
+
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
+function basna({ def, query }) {
+  if (!query || query.length <= 2) return def
+  query = query.trim().replace(/[\|\(\)\{\}<>]/g, '.')
+  let wordsToHilite = escapeRegExp(query).split(" ").filter(i => i.length > 2).concat(escapeRegExp(query.replace(/'/g, 'h')).split(" ").filter(i => i.length > 2))
+  if (wordsToHilite.length === 0) return def;
+
+  const regexpToHilite = `(${wordsToHilite.join("|")})`
+  return def.replace(new RegExp(regexpToHilite, 'igm'), "<span class='basna'>$1</span>")
+}
+
+
+function krulermorna(text) {
+  return text
+    .replace(/\./g, '')
+    .replace(/^/, '.')
+    .toLowerCase()
+    .replace(/([aeiou\.])u([aeiou])/g, '$1w$2')
+    .replace(/([aeiou\.])i([aeiou])/g, '$1ɩ$2')
+    .replace(/au/g, 'ḁ')
+    .replace(/ai/g, 'ą')
+    .replace(/ei/g, 'ę')
+    .replace(/oi/g, 'ǫ')
+    .replace(/\./g, '')
+}
+function cohukrulermorna(text) {
+  return text
+    .replace(/w/g, 'u')
+    .replace(/ɩ/g, 'i')
+    .replace(/ḁ/g, 'au')
+    .replace(/ą/g, 'ai')
+    .replace(/ę/g, 'ei')
+    .replace(/ǫ/g, 'oi')
+}
+
+function zbalermornaize({ w, ot, rfs }) {
+  let word = krulermorna(w)
+  word = word
+    .split(/(?=[ɩw])/)
+    .map((spisa) =>
+      cohukrulermorna(spisa)
+        .split('')
+        .map((lerfu) => latinToZbalermorna(lerfu))
+        .join('')
+    )
+    .join('')
+  return word.replace(/,/g, '')
+}
+
+function latinToZbalermorna(c) {
+  if (c.codePointAt(0) >= 0xed80) {
+    return c
+  }
+  if (c == ' ') return ' '
+  if (c == 'h' || c == 'H') c = "'"
+  if (lerfu_index.includes(c))
+    return String.fromCodePoint(UNICODE_START + lerfu_index.indexOf(c))
+  else if (lerfu_index.includes(c.toLowerCase()))
+    return String.fromCodePoint(
+      UNICODE_START + lerfu_index.indexOf(c.toLowerCase())
+    )
+  if (c == '\n') return '\n'
+  if (c == '\t') return '\t'
+  return c
+}
+
+
+function getMatchIndices(query, d) {
+  const regex = new RegExp(query, 'g')
+  const result = []
+  let match
+  while ((match = regex.exec(d))) result.push(match.index)
+  return result
+}
+
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index
+}
+
+function ConstructArxivoValsiExtract(d, query, range) {
+  let locs = getMatchIndices(query, d)
+  locs = locs.map((i) => {
+    i = [i - range, i + range]
+    if (i[0] < 0) i[0] = 0
+    if (i[0] >= d.length) i[0] = d.length - 1
+    return i
+  })
+  for (let i = 0; i < locs.length - 1; i++) {
+    if (locs[i][1] > locs[i + 1][0]) {
+      locs[i][1] = locs[i + 1][1]
+      locs[i + 1][0] = locs[i][0]
+    }
+  }
+  locs = locs.map((i) => JSON.stringify(i))
+  if (locs.length > 0) {
+    locs = locs.filter(onlyUnique).map((i) => {
+      i = JSON.parse(i)
+      let n = d.substr(i[0], i[1] - i[0])
+      n = basna({
+        def: n,
+        query,
+      })
+      if (i[0] > 3) n = `...${n}`
+      if (i[1] < d.length - 4) n = `${n}...`
+      return n
+    })
+    locs = locs.join('<br/>')
+  } else {
+    let n = d.substr(0, Math.min(100, d.length))
+    if (n.length < d.length) n = `${n}...`
+    n = basna({
+      def: n,
+      query,
+    })
+    locs = n
+  }
+  return locs
+}
+
+function jvoValue() {
+  return jvoPlumbsOn ? '⇔' : '↔'
+}
+
+window.ningau_lepasorcu = (bangu) => {
+  if (bangu.indexOf('@') === 0) return
+  worker.postMessage({
+    kind: 'fancu',
+    cmene: 'ningau_lepasorcu',
+    ...state.searching,
+    bangu,
+  })
+}
+
+window.runSearch = (seskari, selmaho, bangu) => {
+  state.searching = {
+    seskari,
+    versio: 'selmaho',
+    query: selmaho,
+    bangu,
+  }
+  DispatchState({
+    replace: false,
+  })
+}
+
+function skicu_palodovalsi({ def, inner, query, seskari, versio, bangu, index }) {
+  if (!query) query = state.searching.query
+  if (!seskari) seskari = state.searching.seskari
+  bangu = def.bangu || bangu || state.searching.bangu
+  bangu = bangu.replace(/-cll/, '')
+  if (!def) def = []
+  const out = document.createElement('div')
+  out.className = inner ? 'terminner' : 'termouter'
+  out.classList.add('term')
+  if (!inner && def.d && def.d.nasezvafahi && (def.rfs || []).length === 0) {
+    out.className = 'sidju sidju-normal cll noselect'
+  }
+  if (index === 0) out.classList.add('searchRendered')
+  var famymahos =
+    typeof def.s === 'string' && listFamymaho[def.s]
+      ? listFamymaho[def.s].split(' ')
+      : undefined
+  if (typeof famymahos !== 'undefined') {
+    let innerHTML = ''
+    var fmm = document.createElement('h4')
+    fmm.className = 'tfm'
+    for (let famymaho of famymahos) {
+      innerHTML += `&nbsp;&nbsp;<i><sup>[&nbsp;...&nbsp;&nbsp;&nbsp;<a href="#seskari=${seskari}&sisku=${encodeUrl(
+        famymaho
+      )}&bangu=${bangu}&versio=masno">${escHtml(famymaho)}</a>]</sup></i>`
+    }
+    fmm.innerHTML = innerHTML
+  }
+  const sh = []
+  for (const key in listFamymaho) {
+    if (listFamymaho[key].split(' ').includes(def.w))
+      sh.push(
+        `<a href="#seskari=${seskari}&versio=selmaho&sisku=${encodeUrl(
+          key
+        )}&bangu=${bangu}">${escHtml(key)}</a>`
+      )
+  }
+  if (sh.length !== 0) {
+    var tfm = document.createElement('div')
+    tfm.classList.add('valsi')
+    if (def.l) tfm.classList.add('nalojbo')
+    tfm.innerHTML = `<i><sup>[${sh.join(
+      ', '
+    )}&nbsp;&nbsp;&nbsp;...&nbsp;]</sup></i>&nbsp;&nbsp;`
+  }
+  let selms
+  if (def.s) {
+    const selmahos = typeof def.s === 'string' ? def.s.split(' ') : def.s
+    if (selmahos.length > 0) {
+      selms = document.createElement('div')
+      for (const selmaho of selmahos) {
+        var ss = document.createElement('button')
+        ss.className = 'tutci klesi klesi-tutci'
+        var text = basna({
+          def: escHtml(selmaho),
+          query,
+        })
+        ss.innerHTML = text
+        // ss.onclick = window.runSearch(seskari,selmaho,bangu)
+        ss.setAttribute(
+          'onclick',
+          `window.runSearch("${seskari}","${selmaho}","${bangu}")`
+        )
+        selms.appendChild(ss)
+      }
+    }
+  }
+  if (def.from) {
+    var ss = document.createElement('div')
+    ss.className = 'tutci klesi klesi-tutci'
+    ss.innerHTML = def.from
+  }
+  let hasTranslateButton = false
+  const word = document.createElement('h4')
+  word.classList.add('valsi')
+  if (def.d && !def.d.nasezvafahi)
+    word.setAttribute('data-valsi', encodeValsiForWeb(def.w))
+  if (def.l) word.classList.add('nalojbo')
+  if (
+    def.t !== window.bangudecomp &&
+    seskari !== 'fanva' &&
+    (plukaquery(def.w) == query || seskari == 'velcusku')
+  ) {
+    hasTranslateButton = true
+    word.innerHTML = `${basna({
+      def: def.q || def.w,
+      query,
+    })} `
+  } else {
+    let seskari2 = seskari
+    if (seskari === 'fanva') seskari2 = 'catni'
+    word.innerHTML = `<a class="valsi${def.l ? '' : ' nalojbo'
+      }" href="#seskari=${seskari2}&sisku=${encodeUrl(
+        def.w
+      )}&bangu=${bangu}&versio=masno">${basna({
+        def: escHtml(def.w, true),
+        query,
+      })}</a> `
+  }
+
+  let jvs
+  if (def.t && !def.t.type) {
+    def.t = def.t === 'bangudecomp' ? window.bangudecomp : def.t
+    jvs = document.createElement('a')
+    jvs.className = 'klesi link'
+    let text = def.t
+    const txt = encodeUrl(def.w).replace(/_/g, '%20')
+    jvs.href = window.judri
+      ? window.judri + txt
+      : `#seskari=${seskari === 'catni' ? 'catni' : 'cnano'
+      }&sisku=${txt}&bangu=${bangu}&versio=masno`
+    if (window.judri) {
+      jvs.setAttribute('target', '_blank')
+      jvs.setAttribute('rel', 'noreferrer')
+    }
+    if (window.xuzganalojudri && !def.l) {
+      text = `${escHtml(def.t)}# `
+      if (def.d && def.d.nasezvafahi) text = `➕ ${text}`
+    }
+    jvs.innerHTML = text
+  }
+  if (def.t && def.t.type) {
+    jvs = document.createElement('a')
+    jvs.href = 'javascript:;'
+    jvs.className = 'klesi'
+    jvs.innerHTML = def.t.type
+
+    if (def.t.bangu && def.t.bangu !== "lojbo") word.classList.add('na_eisesance')
+  }
+  if (def.date) {
+    jvs = document.createElement('div')
+    jvs.className = 'tutci klesi klesi-tutci'
+    jvs.style.whiteSpace = 'nowrap'
+    jvs.innerHTML = def.date
+  }
+
+  let mu = {}
+  if (def.d && !def.d.nasezvafahi)
+    mu = melbi_uenzi({
+      def: def.d,
+      fullDef: def,
+      query,
+      seskari,
+      versio,
+      bangu,
+      type: 'd',
+      index,
+    })
+
+  
+  let zbalermorna
+  if (!(def.t && def.t.k === 0) && (seskari !== 'fanva' || index === 0)) {
+    zbalermorna = document.createElement('h4')
+    zbalermorna.classList.add('valsi', 'zbalermorna', 'segerna', 'sampu')
+    zbalermorna.textContent = zbalermornaize(def)
+  }
+  
+
+  const heading = document.createElement('heading')
+  heading.classList.add('heading')
+
+  if (tfm) heading.appendChild(tfm)
+
+  heading.appendChild(word)
+
+  let translateButton
+  if (hasTranslateButton) {
+    translateButton = document.createElement('button')
+    translateButton.className = 'fanva-tutci tutci klesi klesi-tutci'
+    translateButton.onclick = function () {
+      state.searching = {
+        ...state.searching,
+        seskari: 'fanva',
+        query: plukaquery(def.w),
+      }
+      DispatchState({
+        replace: false,
+      })
+    }
+    // translateButton.innerHTML = `<img src="../pixra/fanva.svg" class="cukta"/>`
+    translateButton.innerHTML = `🌍`
+  }
+
+  const banguEl = document.createElement('div')
+  banguEl.classList.add('segerna', 'sampu', 'noselect')
+  // if (supportedLangs[bangu]) {
+  //   banguEl.innerHTML = `<div style='background-size:cover;background-image: url("../pixra/${supportedLangs[bangu].p}.svg");width:40px;height:21px'></div>`
+  // } else
+  const ban =
+    def.bangu && supportedLangs[def.bangu].n
+      ? supportedLangs[def.bangu].n
+      : def.bangu || ''
+  banguEl.innerHTML = ban
+  // banguEl.onclick = function () {
+  //   EmptyState(def.bangu);
+  //   window.location = `#seskari=catni&sisku=&bangu=${def.bangu.replace(/-(cll)/, '')}`
+  // }
+
+  if (fmm) heading.appendChild(fmm)
+
+  if (jvs) {
+    const div1 = document.createElement('div')
+    div1.classList.add('sampu', 'noselect')
+    div1.appendChild(jvs)
+    jvs = div1
+  }
+
+  
+  let jvo
+  if (def.t === 'lujvo' && (def.rfs || []).length > 0 && mu.hasExpansion) {
+    jvo = document.createElement('input')
+    jvo.type = 'button'
+    jvo.classList.add('tutci', 'sance', 'jvo_plumber')
+    jvo.value = jvoValue()
+    jvoPlumbsOn
+      ? jvo.classList.add('tutci-hover')
+      : jvo.classList.remove('tutci-hover')
+    jvo.onclick = addJvoPlumbs
+  }
+
+  
+
+  let whoIsFirstLine = []
+
+  if (zbalermorna && !selms && def.w.length < 10 && !jvo) {
+    whoIsFirstLine.push('zbalermorna')
+    heading.appendChild(zbalermorna)
+  }
+
+  const flex = document.createElement('heading')
+  flex.style.flex = 1
+  heading.appendChild(flex)
+
+  if (!selms) {
+    heading.appendChild(banguEl)
+    whoIsFirstLine.push('banguEl')
+    if (jvs) {
+      heading.appendChild(jvs)
+      whoIsFirstLine.push('jvs')
+    }
+  }
+
+  if (hasTranslateButton && def.w.length < 20) {
+    heading.appendChild(translateButton)
+    whoIsFirstLine.push('translateButton')
+  }
+
+  
+  if (jvo) heading.appendChild(jvo)
+  
+
+  if (selms) heading.appendChild(selms)
+
+  const copy = document.createElement('input')
+  copy.type = 'button'
+  copy.classList.add('tutci', 'sance', 'klesi-tutci')
+  copy.value = "📋"
+  copy.addEventListener('click', function () {
+    copyToClipboard([def.w, def.d, def.n].filter(Boolean).join("\r\n"))
+  });
+  heading.appendChild(copy)
+
+  out.appendChild(heading)
+  //new line buttons
+  const heading2 = document.createElement('heading')
+  heading2.classList.add('heading', 'heading2')
+  
+  if (zbalermorna && !whoIsFirstLine.includes('zbalermorna'))
+    heading2.appendChild(zbalermorna)
+  
+  const flex2 = document.createElement('heading')
+  flex2.style.flex = 1
+  heading2.appendChild(flex2)
+  if (!whoIsFirstLine.includes('banguEl')) heading2.appendChild(banguEl)
+  if (jvs && !whoIsFirstLine.includes('jvs')) heading2.appendChild(jvs)
+  if (translateButton && !whoIsFirstLine.includes('translateButton'))
+    heading2.appendChild(translateButton)
+  out.appendChild(heading2)
+  // }
+
+  if (bangu.indexOf("muplis") === 0) {
+    //add feedback button
+    const row = document.createElement('button')
+    row.className = 'tutci klesi klesi-tutci align-right'
+    row.onclick = () => window.send_muplis_feedback(def);
+    row.setAttribute("data-jufra", `window.report_feedback`)
+    row.innerText = window.report_feedback
+    out.appendChild(row)
+  }
+
+  if (seskari !== 'arxivo' && def.d) {
+    var n = document.createElement('div')
+    n.classList.add('definition', 'valsi')
+    if (def.d && def.d.nasezvafahi) {
+      if (!def.t && (def.rfs || []).length === 0) return
+      n.classList.add('nasezvafahi', 'noselect')
+      n.innerHTML = window.nasezvafahi
+    } else {
+      let melbi = mu.tergeha
+      // if (seskari !== 'velcusku') melbi = `${melbi.replace(/\n/g, '<br/>')} `
+      n.innerHTML = melbi
+    }
+    out.appendChild(n)
+  }
+  if (seskari === 'arxivo') {
+    const k = document.createElement('div')
+    k.classList.add('definition', 'valsi', 'pointer')
+    k.innerHTML = ConstructArxivoValsiExtract(def.d, query, 50)
+    k.addEventListener('click', () => {
+      k.style.display = 'none'
+      k.nextElementSibling.style.display = 'block'
+    })
+    out.appendChild(k)
+
+    var n = document.createElement('div')
+    n.classList.add('definition', 'valsi')
+    n.style.display = 'none'
+    if (def.d && def.d.nasezvafahi) {
+      n.classList.add('nasezvafahi', 'noselect')
+      n.innerHTML = window.nasezvafahi
+    } else {
+      n.innerHTML = `${basna({
+        def: def.d,
+        query,
+      })} `
+      n.addEventListener('click', () => {
+        n.style.display = 'none'
+        n.previousElementSibling.style.display = 'block'
+        n.parentElement.scrollIntoView()
+      })
+    }
+    out.appendChild(n)
+    //add two divs. first is hidden. on click hide and display the other
+  }
+  if (def.n) {
+    var n = document.createElement('div')
+    n.classList.add('notes', 'valsi')
+    n.innerHTML = `${melbi_uenzi({
+      def: def.n,
+      fullDef: def,
+      query,
+      seskari,
+      versio,
+      type: 'n',
+      index,
+      bangu,
+    }).tergeha
+      } `
+    out.appendChild(n)
+  }
+  
+  // if (index == 0 && seskari !== 'velcusku') {
+  //   const { secs, div } = CLL({ valsi: def.w })
+  //   if (secs && secs !== state.cll) out.appendChild(div)
+  // }
+  
+  if (def.e) {
+    var n = document.createElement('div')
+    n.classList.add('examples', 'valsi')
+    n.innerHTML = `<table class='ciksi'>${melbi_uenzi({
+      def: `${def.e}\n`
+        .replace(/%/g, '\n')
+        .replace(
+          /(.*?) — (.*?)\n/g,
+          "<tr><td class='mupligreku'><b>$1</b></td><td class='mupligreku'><i>$2</i></td></tr>\n"
+        ),
+      query,
+      seskari,
+      versio,
+      bangu,
+    }).tergeha
+      }</table> `
+    out.appendChild(n)
+  }
+  if (def.k) {
+    var n = document.createElement('div')
+    n.className = 'related'
+    n.innerHTML = `See also: ${melbi_uenzi({
+      def: def.k,
+      query,
+      seskari,
+      versio,
+      bangu,
+    }).tergeha
+      } `
+    out.appendChild(n)
+  }
+  if ((def.r || []).length > 0 && !def.l && window.xuzganalojudri) {
+    const tanxe_leirafsi = document.createElement('div')
+    tanxe_leirafsi.className = 'rafsi noselect'
+
+    const rafcme = document.createElement('div')
+    rafcme.className = 'tanxe zunle_tanxe'
+    rafcme.innerHTML = 'rafsi'
+    tanxe_leirafsi.appendChild(rafcme)
+
+    const rafsi = document.createElement('div')
+    rafsi.className = 'tanxe pritu_tanxe'
+    for (let i = 0; i < def.r.length; i++) {
+      const rafElem = document.createElement('span')
+      rafElem.className = 'pamei'
+      const raf = def.r[i]
+      // if ((def.t || '').match(/lujvo/)) {
+      //   const a = document.createElement('a')
+      //   a.setAttribute(
+      //     'href',
+      //     `#seskari=${seskari}&sisku=${encodeUrl(raf)}&bangu=${bangu}`
+      //   )
+      //   a.text = raf
+      //   rafElem.appendChild(a)
+      // } else {
+      rafElem.innerHTML = basna({
+        def: raf,
+        query,
+      })
+      // }
+      rafsi.appendChild(rafElem)
+    }
+    tanxe_leirafsi.appendChild(rafsi)
+    out.appendChild(tanxe_leirafsi)
+  }
+  if ((def.b || []).length > 0 && !def.l && window.xuzganalojudri) {
+    const tanxe_leirafsi = document.createElement('div')
+    tanxe_leirafsi.className = 'rafsi noselect hue_rotate'
+
+    const rafcme = document.createElement('div')
+    rafcme.className = 'tanxe zunle_tanxe kurfa_tanxe'
+    rafcme.innerHTML = 'BAI'
+    tanxe_leirafsi.appendChild(rafcme)
+
+    const rafsi = document.createElement('div')
+    rafsi.className = 'tanxe pritu_tanxe kurfa_tanxe'
+    for (i = 0; i < def.b.length; i++) {
+      const rafElem = document.createElement('span')
+      rafElem.className = 'pamei'
+      const raf = def.b[i]
+      rafElem.innerHTML = `</span><a class="hue_rotate_back a-${seskari}" href="#seskari=${seskari}&sisku=${encodeUrl(
+        raf
+      )}&bangu=${bangu}&versio=masno">${basna({
+        def: escHtml(raf, true),
+        query,
+      })}</a><span>`
+      rafsi.appendChild(rafElem)
+    }
+    tanxe_leirafsi.appendChild(rafsi)
+    out.appendChild(tanxe_leirafsi)
+  }
+  if ((def.rfs || []).length > 0) {
+    const subDefs = document.createElement('div')
+    subDefs.classList.add('definition', 'subdefinitions')
+    for (let i = 0; i < def.rfs.length; i++) {
+      const o = skicu_palodovalsi({
+        def: def.rfs[i],
+        inner: true,
+        index: `${index}_${i}`,
+        query,
+        seskari,
+        versio,
+        bangu,
+      })
+      if (o) subDefs.appendChild(o)
+    }
+    out.appendChild(subDefs)
+  }
+
+  out.addEventListener('click', clicked)
+  return out
+}
+
+function encodeValsiForWeb(v) {
+  return encodeURIComponent(v).replace(/'/g, 'h')
+}
+function plukaquery(a) {
+  if (a.charAt(0) !== '^' && a.slice(-1) !== '$')
+    return a.replace(/\./g, ' ').replace(/ {2,}/g, ' ').replace(/’/g, "'")
+  return a
+}
+
+function encodeUrl(uenzi) {
+  //for bookmarkable urls
+  return encodeURIComponent((uenzi || '').replace(/ /g, '_')).replace(
+    /'/g,
+    '%27'
+  )
+}
+
+function decodeUrl(urli) {
+  return decodeURIComponent(
+    urli.replace(/&amp;/g, '&').replace(/%27/g, "'")
+  ).replace(/[_]/g, ' ')
+}
+
+function escHtml(a, apos) {
+  //for displaying text
+  a = (a || '')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/\(/g, '&#40;')
+    .replace(/\)/g, '&#41;')
+  if (!apos) a = a.replace(/'/g, '&#039;')
+  return a
+}
+
+function skicu_rolodovalsi({ query, seskari, bangu, versio }) {
+  const displayUpTo = Math.min(window.jimte, results.length)
+  state.cll = undefined
+  // if (resultCount === 0) {
+  //   const { secs, div } = CLL({ pre: true, valsi: state.searching.query })
+  //   state.cll = secs
+  //   if (div) outp.appendChild(div)
+  // }
+  for (; resultCount < displayUpTo; resultCount++) {
+    const a = skicu_palodovalsi({
+      def: results[resultCount],
+      query,
+      seskari,
+      versio,
+      bangu,
+      length: results.length,
+      index: resultCount,
+    })
+    if (a) outp.appendChild(a)
+  }
+}
+
+async function addAudioLinkForExternalSpeaker(word) {
+  worker.postMessage({
+    kind: 'parse',
+    operation: 'audioLink',
+    tegerna: word.replace(/"/g, ''),
+  })
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
+async function addAudioLinks() {
+  
+  //audio
+  const els = Array.from(document.querySelectorAll(':not(.na_eisesance)[data-valsi]'))
+  for (let el of els) {
+    if (!kahe_sezgana(el)) continue
+    el = el.textContent.trim()
+    addAudioLinkForExternalSpeaker(el)
+    await sleep(500)
+
+    // await new Promise(resolve => {
+    //   try {
+    //     const urli = `/sutysisku/sance/vreji/${encodeValsiForWeb(el)}.mp3`
+    //     var http = new XMLHttpRequest()
+    //     http.open('HEAD', urli, true)
+    //     http.send()
+    //     http.onload = function () {
+    //       if (this.status == 200) {
+    //         const sance = new Audio(urli)
+    //         sance.id = `sance_${encodeValsiForWeb(el)}`
+    //         sance.addEventListener('canplaythrough', (event) => {
+    //           const hd = Array.from(
+    //             document.querySelectorAll(
+    //               `[data-valsi="${encodeValsiForWeb(el)}"]`
+    //             )
+    //           )[0]
+    //           if (
+    //             hd &&
+    //             !document.getElementById(`sance_${encodeValsiForWeb(el)}`)
+    //           ) {
+    //             hd.insertAdjacentHTML('afterend', `<button class="tutci sance" onclick="document.getElementById('sance_${encodeValsiForWeb(
+    //               el
+    //             )}').play()">▶</button>`)
+    //             hd.appendChild(sance)
+    //           }
+    //         })
+    //       } else {
+    //         addAudioLinkForExternalSpeaker(el)
+    //       }
+    //       resolve()
+    //     }
+    //     http.onerror = () => {
+    //       addAudioLinkForExternalSpeaker(el)
+    //       resolve()
+    //     }
+    //   } catch (error) {
+    //     addAudioLinkForExternalSpeaker(el)
+    //     resolve()
+    //   }
+    // })
+  }
+  
+}
+
+
+
+//pronunciation guide
+function text(name, text, style) {
+  const el = document.createElement(name)
+  el.textContent = text
+  if (style) el.className = style
+  return el
+}
+
+function elem(name, contents, style) {
+  const el = document.createElement(name)
+  if (style) el.className = style
+  if (Array.isArray(contents))
+    contents.forEach((sub) => {
+      el.appendChild(sub)
+    })
+  else if (contents) el.appendChild(contents)
+  return el
+}
+
+function play(url) {
+  audio.src = url
+  audio.play()
+}
+document.querySelector('#table').appendChild(
+  elem(
+    'table',
+    rows.map((row) =>
+      elem(
+        'tr',
+        row.map((col) => {
+          const button = text('button', col, 'bangu')
+          button.onclick = () => {
+            play(`/sutysisku/sance/lerfu/${encodeURIComponent(col)}.ogg`)
+          }
+          return elem('td', button)
+        })
+      )
+    ),
+    'centero'
+  )
+)
+
+
+
+function getStateBangu() {
+  const citri = macitri()[0]
+  if (citri && citri.bangu) return state.searching.bangu
+  return 'en'
+}
+
+//sockets
+// socket = io ? io.connect("https://jbotcan.org:3020"):undefined;
+// if (socket) socket.on("connect", function () {
+//   document.getElementById("arxivo").style.display = "inline-block";
+// });
+// if (socket) socket.on("connect_error", function () {
+//   document.getElementById("arxivo").style.display = "none";
+// });
+// if (socket) socket.on("disconnect", function () {
+//   document.getElementById("arxivo").style.display = "none";
+// });
+socket1Chat = io('wss://jbotcan.org:9091', {
+  transports: ['polling', 'websocket'],
+})
+if (socket1Chat) {
+  socket1Chat.on('connect', function () {
+    socket1Chat_connected = true
+  })
+  socket1Chat.on('connect_error', function () {
+    console.log('1chat connection error')
+    // document.getElementById("velcusku").style.display = "none";
+  })
+  // socket1Chat.on("disconnect", function() {
+  //   document.getElementById("velcusku").style.display = "none";
+  // });
+  function trimSocketChunk(text) {
+    return text.replace(/[\n\r]+$/gims, ' ').split('<')[0]
+  }
+  socket1Chat.on('sentFrom', function (data) {
+    if (loadingState.loading || !socket1Chat_connected) return
+    var i = data.data
+    var msg = {
+      d: trimSocketChunk(i.chunk),
+      s: i.channelId,
+      w: i.author,
+    }
+
+    const velsku = document.getElementById('velsku_sebenji')
+    velsku.innerHTML = `<img src='../pixra/nunsku.svg' class="velsku_pixra"/> <span class="velsku_pamei">[${msg.s}] ${msg.w}: ${msg.d}</span>`
+    velsku.style.display = 'flex'
+    velsku.href = `#seskari=cnano&sisku=lai jbosnu&bangu=${getStateBangu()}&versio=masno`
+
+    // if (msg.s === channel)
+    // outp.appendChild(
+    //   skicu_palodovalsi({
+    //     def: msg,
+    //     query: state.searching.query,
+    //     seskari: "velcusku"
+    //   })
+    // );
+    // outp.childNodes.length = Math.min(outp.childNodes.length, 201);
+    // content.scrollTop = content.scrollHeight;
+  })
+  socket1Chat.on('history', function (data) {
+    if (loadingState.loading || !socket1Chat_connected) return
+    const velsku = document.getElementById('velsku_sebenji')
+    const i = data.slice(-1)[0]
+    if (!i) return
+    const msg = {
+      d: trimSocketChunk(i.chunk),
+      s: i.channelId,
+      w: i.author,
+    }
+    velsku.innerHTML = `<img src='../pixra/nunsku.svg' class="velsku_pixra"/> <span class="velsku_pamei">[${msg.s}] ${msg.w}: ${msg.d}</span>`
+    velsku.style.display = 'flex'
+    velsku.href = `#seskari=cnano&sisku=lai jbosnu&bangu=${getStateBangu()}&versio=masno`
+  })
+}
+
+function getPhonemeClasses() {
+  const C = '[bdgjvzcfkpstxlmnr]'
+  const V = '(a|e|i|o|u)'
+  const I = '(ai|ei|oi|au|ḁ|ą|ę|ǫ)'
+  const D =
+    '(pl|pr|fl|fr|bl|br|vl|vr|cp|cf|ct|ck|cm|cn|cl|cr|jb|jv|jd|jg|jm|sp|sf|st|sk|sm|sn|sl|sr|zb|zv|zd|zg|zm|tc|tr|ts|kl|kr|dj|dr|dz|gl|gr|ml|mr|xl|xr)'
+  const T =
+    '(cfr|cfl|sfr|sfl|jvr|jvl|zvr|zvl|cpr|cpl|spr|spl|jbr|jbl|zbr|zbl|ckr|ckl|skr|skl|jgr|jgl|zgr|zgl|ctr|str|jdr|zdr|cmr|cml|smr|sml|jmr|jml|zmr|zml)'
+  const R = `((?!${D})${C}${C})`
+  const J = '(i|u)(?=[aeiouyḁąęǫ])'
+  const h = "[h']"
+  return { C, V, I, D, T, R, J, h }
+}
+function allAreSafeWords(array, { allowCmevla = false, allowCmavo = false }) {
+  const { C, V, I, D, T, R, J, h } = getPhonemeClasses()
+  //this is the complete regular expression matching any possible gismu and only them
+  const gismu = RegExp(`^(${D}${V}${C}${V}|${C}${V}${C}${C}${V})$`)
+  const nornau = RegExp(`^${C}${V}${C}${C}${I}$`)
+  const ismu = RegExp(`^${V}${C}${C}${V}$`)
+  const iismu = RegExp(`^${J}${V}${C}${C}${V}$`)
+  const strelka = RegExp(`^${T}${V}${R}${V}$`)
+  const flokati = RegExp(`^${D}${V}${C}${V}${C}${V}$`)
+  const prulamdei = RegExp(`^${D}${V}${C}${V}${C}${C}${V}$`)
+  const cinjikca = RegExp(`^${C}${V}${R}${V}${C}${C}${V}$`)
+  const sorpeka = RegExp(`^${C}${V}${R}${V}${C}${V}$`)
+  const snazga = RegExp(`^${D}${V}${C}${C}${V}$`)
+  const kaltahu = RegExp(`^${C}${V}${C}${C}${V}${h}${V}$`)
+  const cmalahu = RegExp(`^${C}${C}${V}${C}${V}${h}${V}$`)
+  return array.every(
+    (el) =>
+      el[0] === 'gismu' ||
+      gismu.test(el[1]) ||
+      ismu.test(el[1]) ||
+      iismu.test(el[1]) ||
+      strelka.test(el[1]) ||
+      flokati.test(el[1]) ||
+      sorpeka.test(el[1]) ||
+      nornau.test(el[1]) ||
+      kaltahu.test(el[1]) ||
+      cmalahu.test(el[1]) ||
+      snazga.test(el[1]) ||
+      prulamdei.test(el[1]) ||
+      cinjikca.test(el[1]) ||
+      (allowCmevla && el[0] === 'cmevla') ||
+      (allowCmavo && el[0] === 'cmavo')
+  )
+}
+
+function PollyPlayer(params) {
+  AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+    IdentityPoolId: params.IdentityPoolId,
+  })
+  AWS.config.region = params.region
+
+  function matchForm(word, form) {
+    let regex = '^'
+    const working = word.replace(/[\.\?»«]/g, '')
+    for (let f = 0; f < form.length; f++) {
+      if (form[f] == '?') regex += '.'
+      else if (form[f] == '*') regex += '.*'
+      else if (form[f] == 'C') regex += '[^aeiouyḁąęǫ]'
+      else if (form[f] == 'V') regex += '[aeiouyḁąęǫ]'
+      else if (form[f] == 'I') regex += '[iu]'
+    }
+    regex += '$'
+    const re = new RegExp(regex)
+    return re.test(working)
+  }
+
+  // function isBrivla(word) {
+  //   return allAreSafeWords([["", word]], { allowCmavo: false })
+  // }
+
+  function getValByKeyRegex(json, testedString) {
+    const match =
+      Object.keys(json)
+        .filter((key) => RegExp(`^${key}`).test(testedString))
+        .sort((a, b) => b.length - a.length)[0] ?? '-'
+    return { match, value: json[match] }
+  }
+
+  function text2SSML(textToSpeak) {
+    const famymaho = ['kei', 'vau', "ku'o", "li'u", "le'u", "ge'u", "zo'u"]
+    // const stresslessWords = ["lo","le","lei","loi","ku"]
+    const words = textToSpeak.replace(/(?:\r\n|\r|\n)/g, ' ').split(' ')
+    let output = [`<speak><prosody rate="slow">`, '<s>']
+    for (let w = 0; w < words.length; w++) {
+      const currentWord = krulermorna(words[w])
+      // const nextWord = words[w + 1]
+      if (['i', '.i', "ni'o"].includes(currentWord)) {
+        output.push('</s>\n<s>')
+      } else if (currentWord[0] == '.') {
+        output.push('<break time="20ms" strength="x-weak" />')
+      }
+
+      let ph = []
+      for (let i = 0; i < [...currentWord].length; i++) {
+        // if (matchForm(currentWord, "CV") && (i == 0) && nextWord && !isBrivla(nextWord) && !stresslessWords.includes(currentWord))
+        //   ph.push('ˈ');
+        if (matchForm(currentWord, 'VCV') && i == 0) ph.push('ˈ')
+        else if (matchForm(currentWord, 'CVCV') && i == 0) ph.push('ˈ')
+        else if (matchForm(currentWord, 'VCCV') && i == 0) ph.push('ˈ')
+        else if (
+          matchForm(currentWord, 'CVCCI') ||
+          matchForm(currentWord, 'CVCCV') ||
+          matchForm(currentWord, 'IVCCV') ||
+          matchForm(currentWord, 'CCVCV')
+        ) {
+          if (i == 0) ph.push('ˈ')
+          if (i == 3) ph.push('.')
+        } else if (matchForm(currentWord, 'CCVCCV')) {
+          if (i == 0) ph.push('ˈ')
+          if (i == 4) ph.push('.')
+        } else if (matchForm(currentWord, 'CCCVCCV')) {
+          if (i == 0) ph.push('ˈ')
+          if (i == 5) ph.push('.')
+        } else if (matchForm(currentWord, 'CCVCVCV')) {
+          if (i == 3) ph.push('.ˈ')
+          if (i == 5) ph.push('.')
+        } else if (matchForm(currentWord, 'CVCCVCV')) {
+          if (i == 3) ph.push('.ˈ')
+          if (i == 5) ph.push('.')
+        } else if (matchForm(currentWord, 'CCVCVCCV')) {
+          if (i == 3) ph.push('.ˈ')
+          if (i == 6) ph.push('.')
+        } else if (matchForm(currentWord, 'CVCCVCCV')) {
+          if (i == 3) ph.push('.ˈ')
+          if (i == 6) ph.push('.')
+        }
+        const { match, value } = getValByKeyRegex(
+          params.lojban2IPAMapping,
+          currentWord.slice(i) +
+          ' ' +
+          words
+            .concat('')
+            .slice(w + 1)
+            .join(' ')
+        )
+        ph.push(value)
+        i = i - 1 + match.replace(/\\/g, '').replace(/\(\?.*\)/g, '').length
+      }
+
+      const { C, V, I } = getPhonemeClasses()
+      if (RegExp(`(${C})$`).test(currentWord)) {
+        ph.unshift("ʔ")
+      }
+      if (RegExp(`^(${V}|${I})`).test(currentWord)) {
+        ph.unshift("ʔ")
+      }
+      // if (["mo", "ma", "xu", "xo"].includes(currentWord)) {
+      //   output.push(`<prosody volume="loud">`);
+      //   output.push(`<phoneme alphabet="ipa" ph="${ph.join("")}">${currentWord}</phoneme>`);
+      //   output.push(`</prosody>`);
+      // }else{
+      const compiledWord = ph.join("").replace(/ʔ+/g, 'ʔ').replace(/\.+/g, '.')
+      output.push(`<phoneme alphabet="ipa" ph="${compiledWord}">${currentWord}</phoneme>`)
+      // }
+      if (
+        currentWord[currentWord.length - 1] == '.' ||
+        famymaho.includes(currentWord) ||
+        RegExp(`(${C})$`).test(currentWord)
+      ) {
+        output.push(`<break time="1ms" strength="x-weak" />`)
+      }
+    }
+
+    output.push('</s>', '</prosody></speak>')
+    return output.join('\n')
+  }
+
+  async function getAndPlayAudio(textToSpeak, dontSpeak) {
+    const text = text2SSML(textToSpeak)
+    const sance_datni =
+      getLocalAudio(text) || (await downloadAudio(text, dontSpeak))
+    if (dontSpeak) return true
+    return new Promise((resolve) => {
+      audio.src = URL.createObjectURL(new Blob([new Uint8Array(sance_datni).buffer]))
+      audio.addEventListener('ended', () => resolve(true))
+      audio.pause()
+      audio.play()
+    })
+  }
+
+  function downloadAudio(Text, dontSpeak) {
+    return new Promise(function (resolve, reject) {
+      const polly = new AWS.Polly()
+      polly.synthesizeSpeech(
+        {
+          Text,
+          VoiceId: params.VoiceId,
+          LanguageCode: params.LanguageCode,
+          Engine: params.Engine,
+          OutputFormat: 'mp3',
+          TextType: 'ssml',
+          SampleRate: '24000',
+        },
+        (error, data) => {
+          if (error) {
+            reject()
+          } else {
+            cacheAudio(Text, data.AudioStream, dontSpeak)
+            resolve(data.AudioStream)
+          }
+        }
+      )
+    })
+  }
+
+  function cacheAudio(text, audio, dontSpeak) {
+    let cache = JSON.parse(localStorage.getItem('cachedAudio')) || []
+    cache = cache.slice(dontSpeak ? -20 : -10)
+    cache.push({
+      text,
+      audio: JSON.stringify(audio),
+    })
+    localStorage.setItem('cachedAudio', JSON.stringify(cache))
+  }
+
+  function getLocalAudio(text) {
+    const audioStreamArray =
+      JSON.parse(localStorage.getItem('cachedAudio')) || []
+    const sance_datni = audioStreamArray.filter(
+      (record) => record.text === text
+    )[0]
+    if (!sance_datni) return
+    return JSON.parse(sance_datni.audio).data
+  }
+
+  return function (text, dontSpeak) {
+    return getAndPlayAudio(text, dontSpeak)
+  }
+}
+
+window.runSpeakableAudio = function (textToSpeak, dontSpeak = false) {
+  return polly(textToSpeak, dontSpeak)
+}
+
+
+
+  ; (function () {
+    function closeModal() {
+      /* Get close button */
+      const closeButton = document.getElementsByClassName('jsModalClose')
+      const closeOverlay = document.getElementsByClassName('jsOverlay')
+
+      /* Set onclick event handler for close buttons */
+      for (let i = 0; i < closeButton.length; i++) {
+        closeButton[i].onclick = function () {
+          const modalWindow = this.parentNode.parentNode
+
+          modalWindow.classList
+            ? modalWindow.classList.remove('open')
+            : (modalWindow.className = modalWindow.className.replace(
+              new RegExp(
+                '(^|\\b)' + 'open'.split(' ').join('|') + '(\\b|$)',
+                'gi'
+              ),
+              ' '
+            ))
+        }
+      }
+
+      /* Set onclick event handler for modal overlay */
+      for (let i = 0; i < closeOverlay.length; i++) {
+        closeOverlay[i].onclick = function () {
+          const modalWindow = this.parentNode
+
+          modalWindow.classList
+            ? modalWindow.classList.remove('open')
+            : (modalWindow.className = modalWindow.className.replace(
+              new RegExp(
+                '(^|\\b)' + 'open'.split(' ').join('|') + '(\\b|$)',
+                'gi'
+              ),
+              ' '
+            ))
+        }
+      }
+    }
+
+    /* Handling domready event IE9+ */
+    function ready(fn) {
+      if (document.readyState != 'loading') {
+        fn()
+      } else {
+        document.addEventListener('DOMContentLoaded', fn)
+      }
+    }
+
+    /* Triggering modal window function after dom ready */
+    ready(closeModal)
+  })()
+
+window.resetAudioParams = (input) => {
+  const json = pollyParams
+  localStorage.setItem('audioParams', JSON.stringify(json))
+  input.value = JSON.stringify(json, null, 2)
+  polly = PollyPlayer(json)
+  localStorage.setItem('cachedAudio', null)
+}
+
+window.send_feedback = async function ({ def = {}, state = {}, comment }) {
+  let defCompiled = '', queryCompiled = ''
+  if (def.w) {
+    defCompiled = `**${def.w}**\n*${def.d}*`
+  }
+  if (state.query) {
+    queryCompiled = `**${state.query}**\n*${supportedLangs[state.bangu].n}*`
+  }
+  const url = "https://sutysisku-report.herokuapp.com/";
+  const response = await fetch(url, {
+    method: 'POST',
+    mode: 'cors',
+    cache: 'no-cache',
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify({ body: `${[defCompiled, queryCompiled].join("\n\n")}\n\n----\n\n${comment}`, title: def.w || state.query }) // body data type must match "Content-Type" header
+  });
+
+  if (response.status < 400) {
+    modalWindow.classList.remove('open')
+    openModal({
+      innerHTML: `
+          <h2>${window.report_feedback_thankyou}</h2>
+          <button class="tutci feedback" onclick="document.getElementById('jsModal').classList.remove('open')">${window.report_feedback_has_been_submitted}</button>
+          <a href="https://github.com/La-Lojban/pinka/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc" target="_blank">${window.report_feedback_issues_repo}</a>
+    `}
+    )
+  } else {
+    modalWindow.classList.remove('open')
+    openModal({
+      innerHTML: `
+          <div>${window.report_feedback_problem}</div>
+          <button class="tutci feedback" onclick="document.getElementById('jsModal').classList.remove('open')">✔️</button>
+          <a href="https://github.com/La-Lojban/pinka/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc" target="_blank">${window.report_feedback_issues_repo}</a>
+    `}
+    )
+
+  }
+}
+
+window.send_muplis_feedback = function (def) {
+  window.tmp_value = def;
+  openModal({
+    innerHTML: `
+        <h2>${window.report_feedback}</h2>
+        <h3 class="valsi">${def.w}</h3>
+        <div class="definition valsi">${def.d}</div>
+        <textarea id="modal__textarea" class="modal__textarea" row="10" placeholder="${window.report_feedback_description}"></textarea>
+        <button class="tutci feedback" onclick="this.firstElementChild.classList.remove('d-none');window.send_feedback({def: window.tmp_value, comment: document.getElementById('modal__textarea').value})"><div class="spinner d-none"></div>${window.report_feedback}</button>
+  `})
+}
+
+function openModal({ innerHTML }) {
+  const modal__container = document.getElementById('modal__container')
+  modal__container.innerHTML = innerHTML
+  modalWindow.classList
+    ? modalWindow.classList.add('open')
+    : (modalWindow.className += ' ' + 'open')
+}
+
+function copyToClipboard(text) {
+  const myTemporaryInputElement = document.createElement("textarea");
+  myTemporaryInputElement.value = text;
+
+  document.body.appendChild(myTemporaryInputElement);
+
+  myTemporaryInputElement.select();
+  document.execCommand("Copy");
+
+  document.body.removeChild(myTemporaryInputElement);
+  showLoading({ bangu: window.copied || '📋', hideProgress: true })
+  setTimeout(() => {
+    showLoaded()
+  }, 2000)
+}

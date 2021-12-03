@@ -32,7 +32,18 @@
       "window.bangu": "english",
       "window.muplis": true,
       "window.booting": "Booting the data for you",
-      "window.copied": "Copied to clipboard!"
+      "window.copied": "Copied to clipboard!",
+      "window.feedback": "Feedback",
+      "window.modal_reset": "Reset",
+      "window.report_feedback_main": "Feedback",
+      "window.report_feedback": "Send suggestion",
+      "window.report_feedback_corrected original": "Corrected Lojban phrase",
+      "window.report_feedback_corrected translation": "Corrected translation from Lojban",
+      "window.report_feedback_description": "Describe your issue or share your ideas",
+      "window.report_feedback_thankyou": "Thank you!",
+      "window.report_feedback_has_been_submitted": "Your feedback has been submitted.",
+      "window.report_feedback_issues_repo": "Read the issues",
+      "window.report_feedback_problem": "We had a problem sending your feedback. Please, try again later or report to the live chat instead."
     }
   },
   "ru": {
@@ -244,7 +255,15 @@
       "window.purc": "to ro moi loi ka se mitysisku toi",
       "window.muplis": true,
       "window.rimni": "rimni lo'e pa jufra",
-      "window.bangu": "english"
+      "window.bangu": "english",
+      "window.report_feedback": "Send suggestion",
+      "window.report_feedback_corrected original": "Corrected Lojban phrase",
+      "window.report_feedback_corrected translation": "Corrected translation from Lojban",
+      "window.report_feedback_description": "Describe your issue or share your ideas",
+      "window.report_feedback_thankyou": "Thank you!",
+      "window.report_feedback_has_been_submitted": "Your feedback has been submitted.",
+      "window.report_feedback_issues_repo": "Read the issues",
+      "window.report_feedback_problem": "We had a problem sending your feedback. Please, try again later or report directly to the live chat/issues repository instead."
     }
   },
   "zh": {
