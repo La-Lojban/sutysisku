@@ -7,34 +7,24 @@
 >
   <head>
     <meta charset="UTF-8" />
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-45171210-6"
+    ></script>
     <script>
-      ;(function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r
-        ;(i[r] =
-          i[r] ||
-          function () {
-            ;(i[r].q = i[r].q || []).push(arguments)
-          }),
-          (i[r].l = 1 * new Date())
-        ;(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
-        a.async = 1
-        a.src = g
-        m.parentNode.insertBefore(a, m)
-      })(
-        window,
-        document,
-        'script',
-        '//www.google-analytics.com/analytics.js',
-        'ga'
-      )
-      ga('create', 'UA-45171210-6', 'auto', {
-        allowLinker: true,
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', "UA-45171210-6", {
+        linker: {
+          domains: ["la-lojban.github.io/sutysisku"],
+        },
+        forceSSL: true,
       })
-      ga('require', 'linker')
-      ga('linker:autoLink', ['la-lojban.github.io/sutysisku'])
-      ga('set', 'forceSSL', true)
-      ga('send', 'pageview')
     </script>
     <script defer>
       ArcBTracker = {
@@ -119,7 +109,7 @@
       href="/sutysisku/lojban/sisku.xml"
       title="sutysisku"
     />
-    <link rel="stylesheet" href="./index.css?detri=1640437478048" />
+    <link rel="stylesheet" href="./index.css?detri=1640507009770" />
     <link rel="manifest" href="../manifest.json" />
     <script defer src="../assets/scripts/leader-line.min.js"></script>
     <script
@@ -141,9 +131,9 @@
       }
     </script>
     <script defer src="../assets/scripts/aws-sdk.min.js"></script>
-    <script defer src="./index.js?detri=1640437478048"></script>
+    <script defer src="./index.js?detri=1640507009770"></script>
     <script defer src="./coi.js"></script>
-    <script defer src="./bangu.js?sisku=1640437478048"></script>
+    <script defer src="./bangu.js?sisku=1640507009770"></script>
   </head>
 
   <body>
@@ -221,7 +211,11 @@
                 search
               </button>
               
-                <button class="xp-btn ralju-tutci" data-jufra="cnano" id="cnano">
+                <button
+                  class="xp-btn ralju-tutci"
+                  data-jufra="cnano"
+                  id="cnano"
+                >
                   +
                 </button>
               
