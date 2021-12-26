@@ -708,13 +708,7 @@ code {
   text-shadow: none;
 }
 
-.content {
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow: auto;
-  /*height:100%;*/
-  box-sizing: border-box;
-  /**/
+.content-sutysisku {
   background: #222222
     linear-gradient(
       -45deg,
@@ -727,15 +721,25 @@ code {
       transparent
     ) !important;
   background-size: 40px 40px !important;
-  /**/
-  /*background: radial-gradient(circle farthest-side at 0% 50%, #FDBF00 23.5%, rgba(240, 166, 17, 0) 0)21px 30px,
-radial-gradient(circle farthest-side at 0% 50%, #BB7000 24%, rgba(240, 166, 17, 0) 0)19px 30px,
-linear-gradient(#FDBF00 14%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 85%, #FDBF00 0)0 0,
-linear-gradient(150deg, #FDBF00 24%, #BB7000 0, #BB7000 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, #BB7000 0, #BB7000 76%, #FDBF00 0)0 0,
-linear-gradient(30deg, #FDBF00 24%, #BB7000 0, #BB7000 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, #BB7000 0, #BB7000 76%, #FDBF00 0)0 0,
-linear-gradient(90deg, #BB7000 2%, #FDBF00 0, #FDBF00 98%, #BB7000 0%)0 0 #FDBF00;
-background-size: 40px 60px;*/
-  /**/
+}
+
+.content-muplis {
+  /* background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7f/Mysunsetimage.jpg') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; */
+  background-color: #fdbf00;
+  background-image: url('../pixra/bifce.svg');
+  background-image: url('../pixra/bifce.svg'),
+    linear-gradient(to bottom right, hsl(45, 100%, 35%), #bb7000, #bb7000);
+}
+
+.content {
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow: auto;
+  /*height:100%;*/
+  box-sizing: border-box;
 }
 
 .content-panel {
@@ -1518,7 +1522,12 @@ user-select: none; */
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   border: 1px solid #003c74;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(236, 235, 229, 1) 86%, rgba(216, 208, 196, 1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(236, 235, 229, 1) 86%,
+    rgba(216, 208, 196, 1) 100%
+  );
   box-shadow: none;
   border-radius: 3px;
   height: 33px;
@@ -1530,15 +1539,28 @@ user-select: none; */
   border-style: dashed;
 }
 
-.catni-tutci-hover, .cnano-tutci-hover, .rimni-tutci-hover, .xp-btn:not(:disabled):active, .xp-btn:not(:disabled).active {
+.catni-tutci-hover,
+.cnano-tutci-hover,
+.rimni-tutci-hover,
+.xp-btn:not(:disabled):active,
+.xp-btn:not(:disabled).active {
   box-shadow: none;
-  background: linear-gradient(180deg, rgba(205, 202, 195, 1) 0%, rgba(227, 227, 219, 1) 8%, rgba(229, 229, 222, 1) 94%, rgba(242, 242, 241, 1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(205, 202, 195, 1) 0%,
+    rgba(227, 227, 219, 1) 8%,
+    rgba(229, 229, 222, 1) 94%,
+    rgba(242, 242, 241, 1) 100%
+  );
 }
 .xp-btn:not(:disabled):hover {
-  box-shadow: inset -1px 1px #fff0cf, inset 1px 2px #fdd889, inset -2px 2px #fbc761, inset 2px -2px #e5a01a;
+  box-shadow: inset -1px 1px #fff0cf, inset 1px 2px #fdd889,
+    inset -2px 2px #fbc761, inset 2px -2px #e5a01a;
 }
-.xp-btn:focus, .xp-btn.focused {
-  box-shadow: inset -1px 1px #cee7ff, inset 1px 2px #98b8ea, inset -2px 2px #bcd4f6, inset 1px -1px #89ade4, inset 2px -2px #89ade4;
+.xp-btn:focus,
+.xp-btn.focused {
+  box-shadow: inset -1px 1px #cee7ff, inset 1px 2px #98b8ea,
+    inset -2px 2px #bcd4f6, inset 1px -1px #89ade4, inset 2px -2px #89ade4;
 }
 .xp-btn::-moz-focus-inner {
   border: 0;
