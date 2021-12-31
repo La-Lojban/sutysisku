@@ -1614,12 +1614,12 @@ user-select: none; */
   user-select: none;
   cursor: default;
   -webkit-animation-name: leisihesle_cu_farlu, leisihesle_cu_slilu;
-  -webkit-animation-duration: 10s, 3s;
+  -webkit-animation-duration: 10s, 7s;
   -webkit-animation-timing-function: linear, ease-in-out;
   -webkit-animation-iteration-count: infinite, infinite;
   -webkit-animation-play-state: running, running;
   animation-name: leisihesle_cu_farlu, leisihesle_cu_slilu;
-  animation-duration: 10s, 3s;
+  animation-duration: 10s, 7s;
   animation-timing-function: linear, ease-in-out;
   animation-iteration-count: infinite, infinite;
   animation-play-state: running, running;
