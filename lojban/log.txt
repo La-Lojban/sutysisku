@@ -1,23 +1,27 @@
 
-assets by status 241 KiB [cached] 5 assets
-runtime modules 6.95 KiB 10 modules
-orphan modules 2.07 KiB [orphan] 1 module
-cacheable modules 263 KiB
-  modules by path ./build/sutysisku/lojban/*.js 160 KiB
-    ./build/sutysisku/lojban/cmaxes.js 25.8 KiB [built] [code generated]
-    ./build/sutysisku/lojban/coi.js 4.75 KiB [built] [code generated]
-    ./build/sutysisku/lojban/worker.js 36.8 KiB [built] [code generated] [1 error]
-    ./build/sutysisku/lojban/socket.io.js 92.6 KiB [built] [code generated]
-  ./build/sutysisku/lojban/index.js + 1 modules 89.6 KiB [built] [code generated]
-  ./build/sutysisku/lojban/asql/indexeddb-main-thread-worker-c78b01c2.js 13.6 KiB [built] [code generated]
+assets by status 399 KiB [cached] 4 assets
+runtime modules 786 bytes 4 modules
+orphan modules 39.7 KiB [orphan] 2 modules
+modules by path ./ 453 KiB
+  modules by path ./node_modules/ 192 KiB
+    modules by path ./node_modules/brotli/ 133 KiB 11 modules
+    4 modules
+  modules by path ./build/sutysisku/lojban/ 261 KiB
+    modules by path ./build/sutysisku/lojban/*.js 118 KiB 3 modules
+    ./build/sutysisku/lojban/worker.js + 2 modules 77.3 KiB [built] [code generated]
+    ./build/sutysisku/lojban/sqljs/sql-wasm.js 65.8 KiB [built] [code generated]
+path (ignored) 15 bytes [built] [code generated]
+fs (ignored) 15 bytes [built] [code generated]
+crypto (ignored) 15 bytes [optional] [built] [code generated]
+fs (ignored) 15 bytes [built] [code generated]
 
-ERROR in ./build/sutysisku/lojban/worker.js 335:20
-Module parse failed: Cannot use keyword 'await' outside an async function (335:20)
+ERROR in ./build/sutysisku/lojban/index.js 2659:158
+Module parse failed: Unexpected token (2659:158)
 You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
-| 			let json = {}
-| 			const url = `/sutysisku/lojban/tejufra.json?sisku=${new Date().getTime()}`
-> 			const response = await fetch(url)
-| 			if (response.ok) json = await response.json()
-| 			else console.log({ event: 'HTTP error', status: response.status, url })
+|         const rnd40 = rnd(40)
+|         const rnd3 = rnd(3)
+>         return `<div class="sihesle" style="left: ${rnd(100)}%;-webkit-animation-delay: ${rnd40}s, ${rnd3}s;animation-delay: ${rnd40}s, ${rnd3}s;">${_}</div>`)
+|       }
+|         .join("")
 
-webpack 5.60.0 compiled with 1 error in 499 ms
+webpack 5.60.0 compiled with 1 error in 4184 ms
