@@ -15,13 +15,13 @@ fs (ignored) 15 bytes [built] [code generated]
 crypto (ignored) 15 bytes [optional] [built] [code generated]
 fs (ignored) 15 bytes [built] [code generated]
 
-ERROR in ./build/sutysisku/lojban/index.js 2659:158
-Module parse failed: Unexpected token (2659:158)
+ERROR in ./build/sutysisku/lojban/index.js 2665:10
+Module parse failed: Identifier 'elemDiv' has already been declared (2665:10)
 You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
-|         const rnd40 = rnd(40)
-|         const rnd3 = rnd(3)
->         return `<div class="sihesle" style="left: ${rnd(100)}%;-webkit-animation-delay: ${rnd40}s, ${rnd3}s;animation-delay: ${rnd40}s, ${rnd3}s;">${_}</div>`)
-|       }
-|         .join("")
+|     //<div class="sihesle"><img src="../pixra/snime.svg" height='13' width='13' alt='sihesle'/></div>
+|     document.body.appendChild(elemDiv);
+>     const elemDiv = document.createElement('div');
+|     SiteTitleFull.insertAdjacentHTML('afterend', '<div class="pyro"></div>');
+|   }
 
-webpack 5.60.0 compiled with 1 error in 4184 ms
+webpack 5.60.0 compiled with 1 error in 3987 ms

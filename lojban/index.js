@@ -4775,7 +4775,7 @@ window.delay = (() => (callback, ms, timer) => {
 
 //commands:
 
-const worker = new Worker('worker.js?sisku=1640981075044')
+const worker = new Worker('worker.js?sisku=1641122501116')
 initBackend(worker)
 
 try {
@@ -5615,6 +5615,15 @@ window.EmptyState = (bangu) => {
   DispatchState({
     empty: true,
   })
+  if (state.ninynaha) {
+    try { document.getElementById("pyro").remove(); } catch (error) { }
+    if (Math.random() > 0.618) {
+      SiteTitleFull.insertAdjacentHTML('afterend', '<div id="pyro" class="pyro"></div>');
+      setTimeout(() => {
+        try { document.getElementById("pyro").remove(); } catch (error) { }
+      }, 3000)
+    }
+  }
 }
 
 document.getElementById("report_feedback_main").addEventListener("click", function () {
@@ -7181,6 +7190,7 @@ function zgana_sihesle() {
   const oneDay = 1000 * 60 * 60 * 24;
   const day = Math.floor(diff / oneDay);
   if (day >= 340 || day < 10) {
+    state.ninynaha = true
     const elemDiv = document.createElement('div');
     const rnd = (max, min = 1) => (Math.random() * max / min).toFixed(2)
     elemDiv.innerHTML = `<div class="leisihesle" aria-hidden="true">${Array(4).fill(["❅", "❆"]).flat()
