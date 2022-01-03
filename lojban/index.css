@@ -704,7 +704,7 @@ code {
   text-shadow: none;
 }
 
-.content-sutysisku {
+.body-sutysisku {
   background: #222222
     linear-gradient(
       -45deg,
@@ -719,15 +719,36 @@ code {
   background-size: 40px 40px !important;
 }
 
-.content-muplis {
-  /* background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7f/Mysunsetimage.jpg') !important;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center; */
+/* .body-muplis {
   background-color: #fdbf00;
   background-image: url('../pixra/bifce.svg');
   background-image: url('../pixra/bifce.svg'),
     linear-gradient(to bottom right, hsl(45, 100%, 35%), #bb7000, #bb7000);
+} */
+
+.body-muplis::before {
+  content: "";
+  z-index: -1;
+  position: inherit;
+  inset: -3px;
+  width: inherit;
+  height: inherit;
+  background-image: inherit;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: blur(2px) brightness(0.6);
+}
+
+.body-muplis {
+  background-image: url('../pixra/murse.jpg') !important;
+  background-size: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
 }
 
 .content {
