@@ -82,13 +82,6 @@ blockquote {
   background-color: transparent;
 }
 
-body {
-  font-family: Tahoma, Roboto, Helvetica, sans-serif;
-  overflow: hidden;
-  margin: 0;
-  height: 100vh;
-  /* height: calc(var(--vh, 1vh) * 100); */
-}
 #outp {
   padding-bottom: 10px;
 }
@@ -704,7 +697,12 @@ code {
   text-shadow: none;
 }
 
-.body-sutysisku {
+body {
+  font-family: Tahoma, Roboto, Helvetica, sans-serif;
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+  /* height: calc(var(--vh, 1vh) * 100); */
   background: #222222
     linear-gradient(
       -45deg,
@@ -716,6 +714,9 @@ code {
       transparent 75%,
       transparent
     ) !important;
+}
+
+.body-sutysisku {
   background-size: 40px 40px !important;
 }
 
@@ -748,7 +749,6 @@ code {
 }
 
 .body-muplis {
-  background: #222222;
   background-image: url('../pixra/murse.jpg') !important;
   background-size: 0 0;
   background-size: cover;
