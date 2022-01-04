@@ -741,6 +741,7 @@ code {
 }
 
 .body-muplis {
+  background: #222222;
   background-image: url('../pixra/murse.jpg') !important;
   background-size: 0 0;
   background-size: cover;
