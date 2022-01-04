@@ -719,6 +719,13 @@ code {
   background-size: 40px 40px !important;
 }
 
+/* @media (prefers-color-scheme: dark) {
+  .body-sutysisku {
+    background-image: initial;
+    background-color: rgb(40, 40, 40) !important;
+  }
+} */
+
 /* .body-muplis {
   background-color: #fdbf00;
   background-image: url('../pixra/bifce.svg');
@@ -1466,12 +1473,6 @@ user-select: none; */
   padding: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .content {
-    background-image: initial;
-    background-color: rgb(40, 40, 40) !important;
-  }
-}
 .d-none {
   display: none !important;
 }
