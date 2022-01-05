@@ -1,27 +1,23 @@
 
-assets by status 399 KiB [cached] 4 assets
-runtime modules 786 bytes 4 modules
-orphan modules 39.7 KiB [orphan] 2 modules
-modules by path ./ 453 KiB
-  modules by path ./node_modules/ 192 KiB
-    modules by path ./node_modules/brotli/ 133 KiB 11 modules
-    4 modules
-  modules by path ./build/sutysisku/lojban/ 261 KiB
-    modules by path ./build/sutysisku/lojban/*.js 118 KiB 3 modules
-    ./build/sutysisku/lojban/worker.js + 2 modules 77.3 KiB [built] [code generated]
-    ./build/sutysisku/lojban/sqljs/sql-wasm.js 65.8 KiB [built] [code generated]
-path (ignored) 15 bytes [built] [code generated]
-fs (ignored) 15 bytes [built] [code generated]
-crypto (ignored) 15 bytes [optional] [built] [code generated]
-fs (ignored) 15 bytes [built] [code generated]
+assets by status 241 KiB [cached] 5 assets
+runtime modules 6.95 KiB 10 modules
+orphan modules 2.07 KiB [orphan] 1 module
+cacheable modules 265 KiB
+  modules by path ./build/sutysisku/lojban/*.js 162 KiB
+    ./build/sutysisku/lojban/cmaxes.js 25.8 KiB [built] [code generated]
+    ./build/sutysisku/lojban/coi.js 4.75 KiB [built] [code generated]
+    ./build/sutysisku/lojban/worker.js 38.8 KiB [built] [code generated] [1 error]
+    ./build/sutysisku/lojban/socket.io.js 92.6 KiB [built] [code generated]
+  ./build/sutysisku/lojban/index.js + 1 modules 89.9 KiB [built] [code generated]
+  ./build/sutysisku/lojban/asql/indexeddb-main-thread-worker-c78b01c2.js 13.6 KiB [built] [code generated]
 
-ERROR in ./build/sutysisku/lojban/index.js 2665:10
-Module parse failed: Identifier 'elemDiv' has already been declared (2665:10)
+ERROR in ./build/sutysisku/lojban/worker.js 621:8
+Module parse failed: Identifier 'array' has already been declared (621:8)
 You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
-|     //<div class="sihesle"><img src="../pixra/snime.svg" height='13' width='13' alt='sihesle'/></div>
-|     document.body.appendChild(elemDiv);
->     const elemDiv = document.createElement('div');
-|     SiteTitleFull.insertAdjacentHTML('afterend', '<div class="pyro"></div>');
-|   }
+| 			.map((i) => `'${i.replace(/'/g, "''")}'`)
+| 		const splitQuery_apos = query_apos.split(" ").filter(_ => _ !== '')
+> 		const array = [...new Set([...queryDecomposition, query_apos, ...splitQuery_apos])]
+| 		const mergedArray = array.map((i) => `'${i.replace(/'/g, "''")}'`)
+| 			.join(',')
 
-webpack 5.60.0 compiled with 1 error in 3987 ms
+webpack 5.60.0 compiled with 1 error in 581 ms
