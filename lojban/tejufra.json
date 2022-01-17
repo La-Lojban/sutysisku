@@ -19,6 +19,9 @@
     "ogtitle": "Kukduvri",
     "pron_guide": "Pronunciation guide",
     "window": {
+      "window.uncll_url_title": "Reference Grammar",
+      "window.uncll_url": "http://www.loglan.org/Loglan1/",
+      "window.uncll_url_picture": "../pixra/loglan-refgram.png",
       "Live chat for your questions": "Live chat for your questions",
       "la muplis": "la muplis - useful phrases",
       "window.cmene": "English",
@@ -67,6 +70,9 @@
     "ogtitle": "Sutysisku",
     "pron_guide": "Pronunciation guide",
     "window": {
+      "window.uncll_url_title": "Reference Grammar",
+      "window.uncll_url": "https://la-lojban.github.io/uncll/uncll-1.2.14/xhtml_section_chunks/",
+      "window.uncll_url_picture": "../pixra/cll.png",
       "Live chat for your questions": "Live chat for your questions",
       "la muplis": "la muplis - useful phrases",
       "window.cmene": "English",
@@ -295,6 +301,7 @@
     "icon32": "../pixra/plise.svg",
     "ogtitle": "Muplis",
     "window": {
+      "window.uncll_url": "https://la-lojban.github.io/uncll/uncll-1.2.14/xhtml_section_chunks/",
       "window.nasezvafahi": "na se zvafa'i",
       "window.bangubuild": "ca'o zbasu lo indice",
       "window.xuzganalojudri": false,
