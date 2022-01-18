@@ -19,12 +19,23 @@
     "ogtitle": "Kukduvri",
     "pron_guide": "Pronunciation guide",
     "window": {
-      "window.uncll_url_title": "Reference Grammar",
-      "window.uncll_url": "http://www.loglan.org/Loglan1/",
-      "window.uncll_url_picture": "../pixra/loglan-refgram.png",
-      "introbook_url": "http://www.loglan.org/Articles/easy-loglan-introduction.html",
-      "introbook_url_title": "Easy Loglan",
-      "introbook_url_picture": "../pixra/murse.jpg",
+      "window.queryLanguage": "loglan",
+      "window.custom_links": [
+        {
+          "uncll": {
+            "title": "Reference Grammar",
+            "url": "http://www.loglan.org/Loglan1/",
+            "picture": "../pixra/loglan-refgram.png"
+          }
+        },
+        {
+          "introbook": {
+            "url": "http://www.loglan.org/Articles/easy-loglan-introduction.html",
+            "title": "Easy Loglan",
+            "picture": "../pixra/murse.jpg"
+          }
+        }
+      ],
       "Live chat for your questions": "Live chat for your questions",
       "la muplis": "la muplis - useful phrases",
       "window.cmene": "English",
@@ -73,12 +84,37 @@
     "ogtitle": "Sutysisku",
     "pron_guide": "Pronunciation guide",
     "window": {
-      "window.uncll_url_title": "Reference Grammar",
-      "window.uncll_url": "https://la-lojban.github.io/uncll/uncll-1.2.14/xhtml_section_chunks/",
-      "window.uncll_url_picture": "../pixra/cll.png",
-      "introbook_url": "https://lojban.pw/books/learn-lojban/#",
-      "introbook_url_title": "Learn Lojban",
-      "introbook_url_picture": "../pixra/cogwheel-5.svg",
+      "window.custom_links": [
+        {
+          "uncll": {
+            "title": "Reference Grammar",
+            "url": "https://la-lojban.github.io/uncll/uncll-1.2.14/xhtml_section_chunks/",
+            "picture": "../pixra/cll.png"
+          }
+        },
+        {
+          "introbook": {
+            "url": "https://lojban.pw/books/learn-lojban/#",
+            "title": "Learn Lojban",
+            "picture": "../pixra/cogwheel-5.svg"
+          }
+        },
+        {
+          "chat": {
+            "url": "#seskari=cnano&sisku=lai jbosnu&bangu=en&versio=masno",
+            "title": "Live chat for your questions",
+            "picture": "../pixra/nunsku.svg"
+          }
+        },
+        {
+          "muplis": {
+            "url": "#seskari=cnano&sisku={lastQuery}&bangu=muplis",
+            "title": "Phrases",
+            "picture": "../pixra/taplamuplis.svg",
+            "width": 2.1
+          }
+        }
+      ],
       "Live chat for your questions": "Live chat for your questions",
       "la muplis": "la muplis - useful phrases",
       "window.cmene": "English",
