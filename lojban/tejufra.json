@@ -34,6 +34,13 @@
             "title": "Easy Loglan",
             "picture": "../pixra/murse.jpg"
           }
+        },
+        {
+          "parser": {
+            "url": "https://tli-loglan.github.io/loglan-parser/parse.html",
+            "title": "Grammar checker",
+            "picture": "../pixra/shuffle.svg"
+          }
         }
       ],
       "Live chat for your questions": "Live chat for your questions",
