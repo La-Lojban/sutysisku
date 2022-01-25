@@ -114,6 +114,13 @@
           }
         },
         {
+          "chat": {
+            "url": "https://la-lojban.github.io/valsr/",
+            "title": "'Guess the word' game",
+            "picture": "../pixra/valsr.png"
+          }
+        },
+        {
           "muplis": {
             "url": "#seskari=cnano&sisku={lastQuery}&bangu=muplis",
             "title": "Phrases",
