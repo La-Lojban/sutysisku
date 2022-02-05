@@ -28,6 +28,13 @@
           }
         },
         {
+          "chat": {
+            "url": "#seskari=cnano&sisku=lepo_takna&bangu=loglan&versio=masno",
+            "title": "Live chat for your questions",
+            "picture": "../pixra/nunsku.svg"
+          }
+        },
+        {
           "introbook": {
             "url": "http://www.loglan.org/Articles/easy-loglan-introduction.html",
             "title": "Easy Loglan",
