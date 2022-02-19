@@ -961,6 +961,12 @@ sub {
   padding: 0 10px 0 10px;
   margin-left: 10px !important;
 }
+.tutci.pixra {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:90% 90%;
+  width: 25px;
+}
 
 .tutci.klesi > * {
   line-height: 24px;
