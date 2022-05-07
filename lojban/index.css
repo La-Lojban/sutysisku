@@ -717,7 +717,7 @@ code {
 }
 
 body {
-  font-family: Tahoma, Roboto, Helvetica, sans-serif;
+  font-family: Libertine, Tahoma, Roboto, Helvetica, sans-serif;
   overflow: hidden;
   margin: 0;
   height: 100vh;
@@ -840,7 +840,7 @@ ul>li>a {
   text-align: center;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
   color: #333;
-  font-size: 90%;
+  /* font-size: 90%; */
 }
 
 #loading {
@@ -1115,7 +1115,6 @@ sub {
   /* perspective-origin: 75px 75px; */
   /* transform-origin: 75px 75px; */
   /* user-select: none; */
-  /* font: normal normal normal normal 14px / 15.4px "Segoe UI", "Open Sans", sans-serif, serif; */
   margin: 5px;
   /*outline: rgb(153, 153, 153) solid 1px;*/
 }
@@ -1144,7 +1143,6 @@ top: 0px; */
   /* perspective-origin: 75px 75px;
 transform-origin: 75px 75px;
 user-select: none;
-font: normal normal normal normal 14px / 15.4px "Segoe UI", "Open Sans", sans-serif, serif;
 overflow: hidden; */
 }
 
@@ -1165,8 +1163,7 @@ overflow: hidden; */
 transform-origin: 70px 26.5px;
 user-select: none; */
   background: rgba(255, 255, 255, 0.6) none repeat scroll 0% 0% / auto padding-box border-box;
-  font: normal normal normal normal 14px / 15.4px 'Segoe UI', 'Open Sans',
-    sans-serif, serif;
+  font: bold italic 15px 'Libertine', sans-serif, serif;
   padding: 4px 4px;
   pointer-events: none;
   text-align: right;
@@ -1177,8 +1174,7 @@ user-select: none; */
 box-sizing: border-box; */
   text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 4px;
   /* user-select: none; */
-  font: normal normal bold normal 14px / 15.4px 'Segoe UI', 'Open Sans',
-    sans-serif, serif;
+  font: bold italic 15px 'Libertine', sans-serif, serif;
 }
 
 .A_7 {
@@ -1191,8 +1187,7 @@ box-sizing: border-box; */
   /*column-rule-color: rgb(32, 134, 191);*/
   user-select: none;
   border: 0;
-  font: normal normal normal normal 14px / 15.4px 'Segoe UI', 'Open Sans',
-    sans-serif, serif;
+  font: bold italic 15px 'Libertine', sans-serif, serif;
   /*outline: rgb(32, 134, 191) none 0px;*/
 }
 
@@ -1216,7 +1211,7 @@ user-select: none; */
   background-size: contain;
   background-repeat: no-repeat;
   /*border: 0px none rgb(32, 134, 191);*/
-  /* font: normal normal normal normal 14px / 15.4px "Segoe UI", "Open Sans", sans-serif, serif; */
+  /* font: bold italic 15px 'Libertine', sans-serif, serif; */
   /*outline: rgb(32, 134, 191) none 0px;*/
 }
 

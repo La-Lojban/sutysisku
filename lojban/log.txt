@@ -8,7 +8,7 @@ cacheable modules 12.8 MiB
     modules by path ../../node_modules/brotli/ 133 KiB 11 modules
     modules by path ../../node_modules/seedrandom/ 26.4 KiB 8 modules
   modules by path ../../build/sutysisku/lojban/ 12 MiB
-    modules by path ../../build/sutysisku/lojban/*.js 121 KiB 3 modules
+    modules by path ../../build/sutysisku/lojban/*.js 123 KiB 3 modules
     3 modules
   optional modules 60 bytes [optional]
     crypto (ignored) 15 bytes [optional] [built] [code generated]
@@ -16,13 +16,13 @@ cacheable modules 12.8 MiB
     crypto (ignored) 15 bytes [optional] [built] [code generated]
     crypto (ignored) 15 bytes [optional] [built] [code generated]
 
-ERROR in ../../build/sutysisku/lojban/index.js 1918:6
-Module parse failed: Unexpected token (1918:6)
+ERROR in ../../build/sutysisku/lojban/index.js 474:15
+Module parse failed: Identifier 'getCache' has already been declared (474:15)
 You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
-|     if (supportedLangs[bangu].zbalermorna_defined) {
-|       const aTag = document.createElement('a');
->       #seskari = catni & versio=masno & sisku=zbalermorna & bangu=en
-|       aTag.setAttribute('href', `#seskari=${seskari}&sisku=zbalermorna&bangu=${bangu}`);
-|       aTag.innerText = textContent;
+| }
+| 
+> async function getCache({ mode }) {
+|   const cachedList = await getCachedList();
+|   const initialCacheListLength = cachedList.length
 
-webpack 5.60.0 compiled with 1 error in 8759 ms
+webpack 5.60.0 compiled with 1 error in 6530 ms
