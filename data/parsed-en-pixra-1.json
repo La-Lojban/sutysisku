@@ -1,0 +1,1 @@
+{"formatName":"dexie","formatVersion":1,"data":{"databaseName":"sorcu1","databaseVersion":1,"tables":[{"name":"valsi","schema":"++id, bangu, w, d, n, t, g, *r, *cache","rowCount":1}],"data":[{"tableName":"valsi","inbound":true,"rows":[{"w":"klama","d":"../pixra/ninxraste/klama.svg"}]}]}}

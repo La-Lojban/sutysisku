@@ -272,6 +272,10 @@ code {
   margin-bottom: 10px;
 }
 
+.definition img {
+  max-width: 100%;
+}
+
 .notes {
   margin-left: 10px;
 }
