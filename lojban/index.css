@@ -819,6 +819,14 @@ ul>li>a {
   color: #7d0505;
 }
 
+.citrycmi {
+  margin-left: 5px;
+  border-left: 1px #ccc solid;
+  border-top: 1px #ccc solid;
+  padding: 3px;
+  display: inline-block;
+}
+
 .a-selmaho {
   color: #0c741d;
 }
