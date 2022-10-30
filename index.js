@@ -17,7 +17,7 @@ const catni = document.getElementById('catni')
 const cnano = document.getElementById('cnano')
 const rimni = document.getElementById('rimni')
 const SiteImage = document.querySelectorAll('#title > img')
-const uncll_url = `https://lojban.pw/cll/uncll-1.2.12/xhtml_section_chunks/`
+const uncll_url = `https://la-lojban.github.io/uncll/uncll-1.2.14/xhtml_section_chunks/`
 const supportedLangs = {
 'en': { n: 'English', "p": "selsku_lanci_eng" },
 'muplis': { n: 'la muplis' },
