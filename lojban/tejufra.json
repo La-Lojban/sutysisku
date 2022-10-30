@@ -101,7 +101,7 @@
         {
           "uncll": {
             "title": "Reference Grammar",
-            "url": "https://la-lojban.github.io/uncll/uncll-1.2.14/xhtml_section_chunks/",
+            "url": "https://la-lojban.github.io/uncll/uncll-1.2.15/xhtml_section_chunks/",
             "picture": "../pixra/cll.png"
           }
         },
@@ -367,7 +367,7 @@
     "icon32": "../pixra/plise.svg",
     "ogtitle": "Muplis",
     "window": {
-      "window.uncll_url": "https://la-lojban.github.io/uncll/uncll-1.2.14/xhtml_section_chunks/",
+      "window.uncll_url": "https://la-lojban.github.io/uncll/uncll-1.2.15/xhtml_section_chunks/",
       "window.nasezvafahi": "na se zvafa'i",
       "window.bangubuild": "ca'o zbasu lo indice",
       "window.xuzganalojudri": false,
